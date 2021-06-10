@@ -1,0 +1,11 @@
+C:\Users\Sebas\Downloads\Pantallas_proyecto\bin\Debug\Pantallas_proyecto.exe.config
+C:\Users\Sebas\Downloads\Pantallas_proyecto\bin\Debug\Pantallas_proyecto.exe
+C:\Users\Sebas\Downloads\Pantallas_proyecto\bin\Debug\Pantallas_proyecto.pdb
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.csprojAssemblyReference.cache
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.exe
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
