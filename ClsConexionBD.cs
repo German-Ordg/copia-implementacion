@@ -9,7 +9,7 @@ namespace Pantallas_proyecto
 {
     public class ClsConexionBD
     {
-        public SqlConnection conexion = new SqlConnection("server= .; database=HEAVEN_STORE ; integrated security = true");
+        public SqlConnection conexion = new SqlConnection("server=SQL5053.site4now.net ; database=db_a75e9e_bderickmoncada ; integrated security = true ; User=db_a75e9e_bderickmoncada_admin ; Password=grp5admin");
         public void abrir()
         {
             try
