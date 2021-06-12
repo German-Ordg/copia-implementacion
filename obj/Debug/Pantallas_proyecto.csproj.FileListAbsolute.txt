@@ -28,3 +28,22 @@ C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUP
 C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmProveedores.resources
 C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
 C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\bin\Debug\Pantallas_proyecto.exe.config
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\bin\Debug\Pantallas_proyecto.exe
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\bin\Debug\Pantallas_proyecto.pdb
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.csprojAssemblyReference.cache
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.frmInventarioParaEmpleado.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.frmPantallaFacturacion.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.frmReportes.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.frmProveedores.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.exe
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.pdb
