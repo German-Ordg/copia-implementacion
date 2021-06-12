@@ -9,7 +9,7 @@ namespace Pantallas_proyecto
 {
     public class ClsConexionBD
     {
-        public SqlConnection conexion = new SqlConnection("server=SQL5053.site4now.net ; database=db_a75e9e_bderickmoncada ; integrated security = true ; User=db_a75e9e_bderickmoncada_admin ; Password=grp5admin");
+        public SqlConnection conexion = new SqlConnection("Data Source = SQL5053.site4now.net; Initial Catalog = db_a75e9e_bderickmoncada; User Id = db_a75e9e_bderickmoncada_admin; Password = grp5admin");
         public void abrir()
         {
             try
@@ -27,7 +27,7 @@ namespace Pantallas_proyecto
         }
         protected SqlConnection GetSqlConnection()
         {
-            return new SqlConnection("server=SQL5053.site4now.net ; database=db_a75e9e_bderickmoncada ; integrated security = true ; User=db_a75e9e_bderickmoncada_admin ; Password=grp5admin");
+            return new SqlConnection("Data Source = SQL5053.site4now.net; Initial Catalog = db_a75e9e_bderickmoncada; User Id = db_a75e9e_bderickmoncada_admin; Password = grp5admin");
         }
 
     }
