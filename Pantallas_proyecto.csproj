@@ -54,11 +54,35 @@
     <Compile Include="FrmAcceso.Designer.cs">
       <DependentUpon>FrmAcceso.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMenu.cs">
+    <Compile Include="FrmImpresionFactura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMenu.Designer.cs">
-      <DependentUpon>FrmMenu.cs</DependentUpon>
+    <Compile Include="FrmImpresionFactura.Designer.cs">
+      <DependentUpon>FrmImpresionFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventarioParaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventarioParaEmpleado.Designer.cs">
+      <DependentUpon>frmInventarioParaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuCRUD.Designer.cs">
+      <DependentUpon>FrmMenuCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPantallaFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPantallaFacturacion.Designer.cs">
+      <DependentUpon>frmPantallaFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPuestosTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPuestosTrabajo.Designer.cs">
+      <DependentUpon>frmPuestosTrabajo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmRecuperaContra.cs">
       <SubType>Form</SubType>
@@ -66,13 +90,52 @@
     <Compile Include="FrmRecuperaContra.Designer.cs">
       <DependentUpon>FrmRecuperaContra.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProveedores.Designer.cs">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmAcceso.resx">
       <DependentUpon>FrmAcceso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmImpresionFactura.resx">
+      <DependentUpon>FrmImpresionFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventarioParaEmpleado.resx">
+      <DependentUpon>frmInventarioParaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuCRUD.resx">
+      <DependentUpon>FrmMenuCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPantallaFacturacion.resx">
+      <DependentUpon>frmPantallaFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPuestosTrabajo.resx">
+      <DependentUpon>frmPuestosTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRecuperaContra.resx">
       <DependentUpon>FrmRecuperaContra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,7 +145,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="frmProveedores.resx">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,6 +162,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonclientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonclientes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MetodoDePago.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libro-de-contactos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camion-de-reparto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carnet-de-identidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjeta-de-debito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonUsuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonEmpleados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonEmpleados2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonProveedores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonclientes2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

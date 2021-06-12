@@ -47,7 +47,7 @@ namespace Pantallas_proyecto
                     var validar = usuario.Login(txtUsuario.Text, txtContrasena.Text);
                     if (validar == true)
                     {                     
-                        FrmMenu menu = new FrmMenu();                      
+                        FrmMenuCRUD menu = new FrmMenuCRUD();                      
                         menu.Show();
                         menu.FormClosed += cerrarSesion;
                         this.Hide();

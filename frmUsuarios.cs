@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Pantallas_proyecto
 {
-    public partial class FrmMenu : Form
+    public partial class frmUsuarios : Form
     {
-        public FrmMenu()
+        public frmUsuarios()
         {
             InitializeComponent();
         }
