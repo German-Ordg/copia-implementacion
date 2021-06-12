@@ -9,7 +9,7 @@ namespace Pantallas_proyecto
 {
     public class ClsConexionBD
     {
-        public SqlConnection conexion = new SqlConnection("server=DESKTOP-5N4UQS3\\SQLEXPRESS ; database=HEAVEN_STORE ; integrated security = true");
+        public SqlConnection conexion = new SqlConnection("server= .; database=HEAVEN_STORE ; integrated security = true");
         public void abrir()
         {
             try
@@ -27,7 +27,7 @@ namespace Pantallas_proyecto
         }
         protected SqlConnection GetSqlConnection()
         {
-            return new SqlConnection("server=DESKTOP-5N4UQS3\\SQLEXPRESS ; database=HEAVEN_STORE ; integrated security = true");
+            return new SqlConnection("server=. ; database=HEAVEN_STORE ; integrated security = true");
         }
 
     }

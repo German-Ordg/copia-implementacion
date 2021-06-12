@@ -48,7 +48,7 @@ namespace Pantallas_proyecto
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(532, 276);
+            this.button1.Location = new System.Drawing.Point(538, 212);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 40);
             this.button1.TabIndex = 10;
@@ -62,7 +62,7 @@ namespace Pantallas_proyecto
             this.btnIngreso.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngreso.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnIngreso.Location = new System.Drawing.Point(532, 210);
+            this.btnIngreso.Location = new System.Drawing.Point(538, 146);
             this.btnIngreso.Name = "btnIngreso";
             this.btnIngreso.Size = new System.Drawing.Size(98, 40);
             this.btnIngreso.TabIndex = 9;
@@ -76,7 +76,7 @@ namespace Pantallas_proyecto
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(29, 98);
+            this.groupBox1.Location = new System.Drawing.Point(22, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(354, 254);
             this.groupBox1.TabIndex = 8;
@@ -139,7 +139,7 @@ namespace Pantallas_proyecto
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 62F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(402, 98);
+            this.label2.Location = new System.Drawing.Point(395, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(370, 94);
             this.label2.TabIndex = 7;
@@ -150,7 +150,7 @@ namespace Pantallas_proyecto
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(787, 417);
+            this.ClientSize = new System.Drawing.Size(787, 316);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnIngreso);
             this.Controls.Add(this.groupBox1);
