@@ -54,11 +54,29 @@
     <Compile Include="FrmAcceso.Designer.cs">
       <DependentUpon>FrmAcceso.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpleados.Designer.cs">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmImpresionFactura.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmImpresionFactura.Designer.cs">
       <DependentUpon>FrmImpresionFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventario.Designer.cs">
+      <DependentUpon>FrmInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInventarioParaEmpleado.cs">
       <SubType>Form</SubType>
@@ -66,11 +84,29 @@
     <Compile Include="frmInventarioParaEmpleado.Designer.cs">
       <DependentUpon>frmInventarioParaEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInventario_Gerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventario_Gerente.Designer.cs">
+      <DependentUpon>FrmInventario_Gerente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenuCRUD.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMenuCRUD.Designer.cs">
       <DependentUpon>FrmMenuCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuPrincipal.Designer.cs">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMetodosdePago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMetodosdePago.Designer.cs">
+      <DependentUpon>FrmMetodosdePago.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPantallaFacturacion.cs">
       <SubType>Form</SubType>
@@ -113,14 +149,32 @@
     <EmbeddedResource Include="FrmAcceso.resx">
       <DependentUpon>FrmAcceso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmImpresionFactura.resx">
       <DependentUpon>FrmImpresionFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventario.resx">
+      <DependentUpon>FrmInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInventarioParaEmpleado.resx">
       <DependentUpon>frmInventarioParaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventario_Gerente.resx">
+      <DependentUpon>FrmInventario_Gerente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuCRUD.resx">
       <DependentUpon>FrmMenuCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuPrincipal.resx">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMetodosdePago.resx">
+      <DependentUpon>FrmMetodosdePago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPantallaFacturacion.resx">
       <DependentUpon>frmPantallaFacturacion.cs</DependentUpon>
@@ -204,6 +258,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\botonclientes2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton inventario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton Reportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton Facturacion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advertencia.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
