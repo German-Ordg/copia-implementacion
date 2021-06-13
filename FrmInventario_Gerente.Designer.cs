@@ -54,7 +54,7 @@ namespace Pantallas_proyecto
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(522, 134);
+            this.button1.Location = new System.Drawing.Point(522, 105);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 29);
             this.button1.TabIndex = 34;
@@ -78,7 +78,7 @@ namespace Pantallas_proyecto
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(331, 139);
+            this.textBox2.Location = new System.Drawing.Point(332, 111);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(175, 20);
             this.textBox2.TabIndex = 32;
@@ -88,7 +88,7 @@ namespace Pantallas_proyecto
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label3.Location = new System.Drawing.Point(237, 137);
+            this.label3.Location = new System.Drawing.Point(238, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 22);
             this.label3.TabIndex = 31;
@@ -103,7 +103,7 @@ namespace Pantallas_proyecto
             this.Categoria,
             this.Precio,
             this.Cantidad});
-            this.dataGridView1.Location = new System.Drawing.Point(17, 177);
+            this.dataGridView1.Location = new System.Drawing.Point(17, 155);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(706, 245);
             this.dataGridView1.TabIndex = 30;
@@ -140,7 +140,7 @@ namespace Pantallas_proyecto
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(99, 139);
+            this.textBox1.Location = new System.Drawing.Point(97, 111);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(122, 20);
             this.textBox1.TabIndex = 29;
@@ -150,7 +150,7 @@ namespace Pantallas_proyecto
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label1.Location = new System.Drawing.Point(26, 134);
+            this.label1.Location = new System.Drawing.Point(24, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 22);
             this.label1.TabIndex = 28;
@@ -161,7 +161,7 @@ namespace Pantallas_proyecto
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 62F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(179, 28);
+            this.label2.Location = new System.Drawing.Point(168, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(370, 94);
             this.label2.TabIndex = 27;
@@ -175,7 +175,7 @@ namespace Pantallas_proyecto
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(620, 134);
+            this.button2.Location = new System.Drawing.Point(631, 105);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(92, 29);
             this.button2.TabIndex = 35;
@@ -187,7 +187,7 @@ namespace Pantallas_proyecto
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(736, 429);
+            this.ClientSize = new System.Drawing.Size(736, 411);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);

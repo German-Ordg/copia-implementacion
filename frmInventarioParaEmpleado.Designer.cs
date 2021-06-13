@@ -38,8 +38,19 @@ namespace Pantallas_proyecto
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Location = new System.Drawing.Point(59, 119);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(82, 20);
+            label2.TabIndex = 33;
+            label2.Text = "Categoria:";
             // 
             // button7
             // 
@@ -78,16 +89,6 @@ namespace Pantallas_proyecto
             this.label3.Size = new System.Drawing.Size(96, 20);
             this.label3.TabIndex = 34;
             this.label3.Text = "Descripción:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(59, 119);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(82, 20);
-            label2.TabIndex = 33;
-            label2.Text = "Categoria:";
             // 
             // label1
             // 
@@ -133,12 +134,24 @@ namespace Pantallas_proyecto
             this.button2.Text = "Aceptar";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Gold;
+            this.label6.Location = new System.Drawing.Point(259, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(191, 49);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "HEAVEN";
+            // 
             // frmInventarioParaEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(813, 415);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox2);
@@ -166,5 +179,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label6;
     }
 }

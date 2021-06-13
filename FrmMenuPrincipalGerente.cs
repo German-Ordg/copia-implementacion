@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Pantallas_proyecto
 {
-    public partial class frmUsuarios : Form
+    public partial class FrmMenuPrincipalGerente : Form
     {
-        public frmUsuarios()
+        public FrmMenuPrincipalGerente()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

@@ -32,6 +32,11 @@ namespace Pantallas_proyecto
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAcceso));
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.chkMostrarContra = new System.Windows.Forms.CheckBox();
+            this.picError = new System.Windows.Forms.PictureBox();
+            this.lblError = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,11 +45,6 @@ namespace Pantallas_proyecto
             this.btnSalir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.picError = new System.Windows.Forms.PictureBox();
-            this.lblError = new System.Windows.Forms.Label();
-            this.chkMostrarContra = new System.Windows.Forms.CheckBox();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picError)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +76,75 @@ namespace Pantallas_proyecto
             this.groupBox1.Size = new System.Drawing.Size(268, 277);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BackColor = System.Drawing.Color.White;
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsuario.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txtUsuario.Location = new System.Drawing.Point(115, 107);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(127, 25);
+            this.txtUsuario.TabIndex = 20;
+            this.txtUsuario.Text = "Usuario";
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.BackColor = System.Drawing.Color.White;
+            this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtContrasena.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txtContrasena.Location = new System.Drawing.Point(114, 164);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(127, 25);
+            this.txtContrasena.TabIndex = 19;
+            this.txtContrasena.Text = "Contraseña";
+            this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
+            this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
+            this.txtContrasena.Leave += new System.EventHandler(this.txtContrasena_Leave);
+            // 
+            // chkMostrarContra
+            // 
+            this.chkMostrarContra.AutoSize = true;
+            this.chkMostrarContra.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMostrarContra.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.chkMostrarContra.Location = new System.Drawing.Point(115, 203);
+            this.chkMostrarContra.Name = "chkMostrarContra";
+            this.chkMostrarContra.Size = new System.Drawing.Size(141, 21);
+            this.chkMostrarContra.TabIndex = 18;
+            this.chkMostrarContra.Text = "Mostrar Contraseña";
+            this.chkMostrarContra.UseVisualStyleBackColor = true;
+            this.chkMostrarContra.CheckedChanged += new System.EventHandler(this.chkMostrarContra_CheckedChanged);
+            // 
+            // picError
+            // 
+            this.picError.Image = ((System.Drawing.Image)(resources.GetObject("picError.Image")));
+            this.picError.Location = new System.Drawing.Point(24, 236);
+            this.picError.Name = "picError";
+            this.picError.Size = new System.Drawing.Size(20, 20);
+            this.picError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picError.TabIndex = 17;
+            this.picError.TabStop = false;
+            this.picError.Visible = false;
+            this.picError.Click += new System.EventHandler(this.picError_Click);
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblError.Location = new System.Drawing.Point(57, 236);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(37, 16);
+            this.lblError.TabIndex = 16;
+            this.lblError.Text = "label2";
+            this.lblError.Visible = false;
+            this.lblError.Click += new System.EventHandler(this.lblError_Click);
             // 
             // label6
             // 
@@ -114,7 +183,7 @@ namespace Pantallas_proyecto
             // 
             // btnIngreso
             // 
-            this.btnIngreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnIngreso.BackColor = System.Drawing.Color.Maroon;
             this.btnIngreso.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnIngreso.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,7 +198,7 @@ namespace Pantallas_proyecto
             // 
             // btnRecuperar
             // 
-            this.btnRecuperar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnRecuperar.BackColor = System.Drawing.Color.Maroon;
             this.btnRecuperar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRecuperar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecuperar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -143,7 +212,7 @@ namespace Pantallas_proyecto
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnSalir.BackColor = System.Drawing.Color.Maroon;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -178,76 +247,7 @@ namespace Pantallas_proyecto
             this.label8.TabIndex = 7;
             this.label8.Text = "12:47";
             // 
-            // picError
-            // 
-            this.picError.Image = ((System.Drawing.Image)(resources.GetObject("picError.Image")));
-            this.picError.Location = new System.Drawing.Point(24, 236);
-            this.picError.Name = "picError";
-            this.picError.Size = new System.Drawing.Size(20, 20);
-            this.picError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picError.TabIndex = 17;
-            this.picError.TabStop = false;
-            this.picError.Visible = false;
-            this.picError.Click += new System.EventHandler(this.picError_Click);
-            // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblError.Location = new System.Drawing.Point(57, 236);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(37, 16);
-            this.lblError.TabIndex = 16;
-            this.lblError.Text = "label2";
-            this.lblError.Visible = false;
-            this.lblError.Click += new System.EventHandler(this.lblError_Click);
-            // 
-            // chkMostrarContra
-            // 
-            this.chkMostrarContra.AutoSize = true;
-            this.chkMostrarContra.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkMostrarContra.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.chkMostrarContra.Location = new System.Drawing.Point(115, 203);
-            this.chkMostrarContra.Name = "chkMostrarContra";
-            this.chkMostrarContra.Size = new System.Drawing.Size(141, 21);
-            this.chkMostrarContra.TabIndex = 18;
-            this.chkMostrarContra.Text = "Mostrar Contraseña";
-            this.chkMostrarContra.UseVisualStyleBackColor = true;
-            this.chkMostrarContra.CheckedChanged += new System.EventHandler(this.chkMostrarContra_CheckedChanged);
-            // 
-            // txtContrasena
-            // 
-            this.txtContrasena.BackColor = System.Drawing.Color.White;
-            this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtContrasena.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtContrasena.Location = new System.Drawing.Point(114, 164);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(127, 25);
-            this.txtContrasena.TabIndex = 19;
-            this.txtContrasena.Text = "Contraseña";
-            this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
-            this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
-            this.txtContrasena.Leave += new System.EventHandler(this.txtContrasena_Leave);
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.BackColor = System.Drawing.Color.White;
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsuario.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtUsuario.Location = new System.Drawing.Point(115, 107);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(127, 25);
-            this.txtUsuario.TabIndex = 20;
-            this.txtUsuario.Text = "Usuario";
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
-            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
-            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
-            // 
-            // Form1
+            // FrmAcceso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -260,7 +260,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.btnIngreso);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
-            this.Name = "Form1";
+            this.Name = "FrmAcceso";
             this.RightToLeftLayout = true;
             this.Text = "Heaven Store";
             this.Load += new System.EventHandler(this.Form1_Load);
