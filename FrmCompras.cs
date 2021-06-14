@@ -34,7 +34,9 @@ namespace Pantallas_proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            FrmMenuPrincipalGerente gerente = new FrmMenuPrincipalGerente();
+            gerente.Show();
+            gerente.Hide();
         }
     }
 }

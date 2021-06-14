@@ -43,9 +43,9 @@ namespace Pantallas_proyecto
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
             this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
             label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +73,7 @@ namespace Pantallas_proyecto
             this.button1.TabIndex = 11;
             this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -186,6 +187,17 @@ namespace Pantallas_proyecto
             this.dataGridView1.Size = new System.Drawing.Size(293, 227);
             this.dataGridView1.TabIndex = 25;
             // 
+            // Usuario
+            // 
+            this.Usuario.HeaderText = "Usuario";
+            this.Usuario.Name = "Usuario";
+            // 
+            // Correo
+            // 
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            this.Correo.Width = 150;
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Maroon;
@@ -200,17 +212,6 @@ namespace Pantallas_proyecto
             this.button3.Text = "Eliminar Usuario";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // Usuario
-            // 
-            this.Usuario.HeaderText = "Usuario";
-            this.Usuario.Name = "Usuario";
-            // 
-            // Correo
-            // 
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
-            this.Correo.Width = 150;
             // 
             // frmUsuarios
             // 

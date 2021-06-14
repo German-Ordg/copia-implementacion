@@ -16,5 +16,12 @@ namespace Pantallas_proyecto
         {
             InitializeComponent();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            frmPantallaFacturacion facturacion = new frmPantallaFacturacion();
+            facturacion.Show();
+            this.Hide();
+        }
     }
 }

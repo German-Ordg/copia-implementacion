@@ -21,5 +21,12 @@ namespace Pantallas_proyecto
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FrmMenuCRUD cRUD = new FrmMenuCRUD();
+            cRUD.Show();
+            cRUD.Hide();
+        }
     }
 }

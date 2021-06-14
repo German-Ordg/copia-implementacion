@@ -31,7 +31,6 @@ namespace Pantallas_proyecto
         {
             this.button8 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
@@ -50,6 +49,7 @@ namespace Pantallas_proyecto
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -63,6 +63,7 @@ namespace Pantallas_proyecto
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -81,6 +82,12 @@ namespace Pantallas_proyecto
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -88,14 +95,7 @@ namespace Pantallas_proyecto
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Lista)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -115,6 +115,7 @@ namespace Pantallas_proyecto
             this.button8.TabIndex = 23;
             this.button8.Text = "Regresar";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // groupBox5
             // 
@@ -143,20 +144,6 @@ namespace Pantallas_proyecto
             this.groupBox5.TabIndex = 22;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Resumen";
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Maroon;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(759, 450);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(151, 35);
-            this.button5.TabIndex = 28;
-            this.button5.Text = "Calcular Factura";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox19
             // 
@@ -303,6 +290,20 @@ namespace Pantallas_proyecto
             this.label20.TabIndex = 11;
             this.label20.Text = "Sub Total L.:";
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Maroon;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(759, 450);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(151, 35);
+            this.button5.TabIndex = 28;
+            this.button5.Text = "Calcular Factura";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Maroon;
@@ -441,6 +442,15 @@ namespace Pantallas_proyecto
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cliente";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(225, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "(Opcional)";
             // 
             // textBox10
             // 
@@ -618,6 +628,58 @@ namespace Pantallas_proyecto
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Producto";
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Maroon;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(341, 136);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(120, 30);
+            this.button9.TabIndex = 18;
+            this.button9.Text = "Eliminar Todo";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(369, 105);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(41, 21);
+            this.textBox5.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(242, 108);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(121, 15);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Descuento Producto:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(99, 105);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 21);
+            this.textBox4.TabIndex = 15;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(369, 20);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(41, 21);
+            this.textBox2.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 15);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "del Producto";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -684,58 +746,6 @@ namespace Pantallas_proyecto
             this.label6.TabIndex = 26;
             this.label6.Text = "HEAVEN";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 72);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 15);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "del Producto";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(369, 20);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(41, 21);
-            this.textBox2.TabIndex = 14;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(99, 105);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 21);
-            this.textBox4.TabIndex = 15;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(242, 108);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 15);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Descuento Producto:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(369, 105);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(41, 21);
-            this.textBox5.TabIndex = 17;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Maroon;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(341, 136);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(120, 30);
-            this.button9.TabIndex = 18;
-            this.button9.Text = "Eliminar Todo";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Maroon;
@@ -748,15 +758,6 @@ namespace Pantallas_proyecto
             this.button4.TabIndex = 29;
             this.button4.Text = "Imprimir Factura";
             this.button4.UseVisualStyleBackColor = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(225, 55);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "(Opcional)";
             // 
             // frmPantallaFacturacion
             // 

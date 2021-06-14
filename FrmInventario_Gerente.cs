@@ -16,5 +16,12 @@ namespace Pantallas_proyecto
         {
             InitializeComponent();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmMenuPrincipalGerente gerente = new FrmMenuPrincipalGerente();
+            gerente.Show();
+            this.Hide();
+        }
     }
 }

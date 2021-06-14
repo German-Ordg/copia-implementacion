@@ -20,5 +20,12 @@ namespace Pantallas_proyecto
         private void label1_Click(object sender, EventArgs e)
         {
                     }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FrmMenuPrincipal menu = new FrmMenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

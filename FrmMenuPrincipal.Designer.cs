@@ -99,6 +99,7 @@ namespace Pantallas_proyecto
             this.button4.TabIndex = 24;
             this.button4.Text = "Regresar";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -114,6 +115,7 @@ namespace Pantallas_proyecto
             this.button5.TabIndex = 25;
             this.button5.Text = "Salir";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox1
             // 
@@ -139,6 +141,7 @@ namespace Pantallas_proyecto
             this.button2.Size = new System.Drawing.Size(238, 91);
             this.button2.TabIndex = 20;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -154,6 +157,7 @@ namespace Pantallas_proyecto
             this.button3.Size = new System.Drawing.Size(238, 91);
             this.button3.TabIndex = 18;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label5
             // 

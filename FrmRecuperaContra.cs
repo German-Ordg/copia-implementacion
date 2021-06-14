@@ -16,5 +16,12 @@ namespace Pantallas_proyecto
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmAcceso acceso = new FrmAcceso();
+            acceso.Show();
+            this.Hide();
+        }
     }
 }

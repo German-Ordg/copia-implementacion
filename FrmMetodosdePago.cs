@@ -16,5 +16,12 @@ namespace Pantallas_proyecto
         {
             InitializeComponent();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmMenuCRUD cRUD = new FrmMenuCRUD();
+            cRUD.Show();
+            this.Hide();
+        }
     }
 }

@@ -36,5 +36,12 @@ namespace Pantallas_proyecto
         {
 
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            FrmMenuPrincipal menu = new FrmMenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

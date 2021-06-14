@@ -64,6 +64,7 @@ namespace Pantallas_proyecto
             this.button7.TabIndex = 31;
             this.button7.Text = "Regresar";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // textBox3
             // 
