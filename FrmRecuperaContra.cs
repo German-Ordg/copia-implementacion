@@ -39,11 +39,32 @@ namespace Pantallas_proyecto
         private void FrmRecuperaContra_Load(object sender, EventArgs e)
         {
             txtresultado.Visible = false;
+            lblcorreo.Visible = false;
             conect.abrir();
             conect.CargaDeUsuarios(cmbUsuariorequerido);
+            conect.cerrar();
             
 
 
+        }
+
+        private void cmbUsuariorequerido_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //conseguir Correo del usuario
+            conect.abrir();
+            cmd = new SqlCommand("select correo_electronico from Usuarios where nombre_usuario = @Usuario", conect.conexion);
+            cmd.Parameters.AddWithValue("@Usuario", cmbUsuariorequerido.Text);
+            SqlDataReader correo = cmd.ExecuteReader();
+            if (correo.Read())
+            {
+                lblcorreo.Text = correo["correo_electronico"].ToString();
+                lblcorreo.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Error al buscar el Producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            conect.cerrar();
         }
     }
 }

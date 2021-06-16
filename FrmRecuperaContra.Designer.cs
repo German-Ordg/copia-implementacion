@@ -33,7 +33,7 @@ namespace Pantallas_proyecto
             this.btnIngreso = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbUsuariorequerido = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblcorreo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -76,7 +76,7 @@ namespace Pantallas_proyecto
             // 
             this.groupBox1.Controls.Add(this.txtresultado);
             this.groupBox1.Controls.Add(this.cmbUsuariorequerido);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblcorreo);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -93,17 +93,18 @@ namespace Pantallas_proyecto
             this.cmbUsuariorequerido.Name = "cmbUsuariorequerido";
             this.cmbUsuariorequerido.Size = new System.Drawing.Size(170, 21);
             this.cmbUsuariorequerido.TabIndex = 4;
+            this.cmbUsuariorequerido.SelectedIndexChanged += new System.EventHandler(this.cmbUsuariorequerido_SelectedIndexChanged);
             // 
-            // label1
+            // lblcorreo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(137, 169);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Usuario@correo.com";
+            this.lblcorreo.AutoSize = true;
+            this.lblcorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcorreo.ForeColor = System.Drawing.Color.White;
+            this.lblcorreo.Location = new System.Drawing.Point(137, 169);
+            this.lblcorreo.Name = "lblcorreo";
+            this.lblcorreo.Size = new System.Drawing.Size(124, 15);
+            this.lblcorreo.TabIndex = 3;
+            this.lblcorreo.Text = "Usuario@correo.com";
             // 
             // label6
             // 
@@ -184,7 +185,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Button btnIngreso;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cmbUsuariorequerido;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblcorreo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
