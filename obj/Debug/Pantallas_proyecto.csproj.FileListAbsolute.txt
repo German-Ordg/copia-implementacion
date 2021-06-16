@@ -74,3 +74,30 @@ C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWA
 C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
 C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.exe
 C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.pdb
+E:\Proyectos programacion\Proyecto diseño de software\bin\Debug\Pantallas_proyecto.exe.config
+E:\Proyectos programacion\Proyecto diseño de software\bin\Debug\Pantallas_proyecto.exe
+E:\Proyectos programacion\Proyecto diseño de software\bin\Debug\Pantallas_proyecto.pdb
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmClientes.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmCompras.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmInventario.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.frmInventarioParaEmpleado.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmInventario_Gerente.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmMenuPrincipal.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmMenuPrincipalGerente.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmMetodosdePago.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.frmPantallaFacturacion.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.frmReportes.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.frmProveedores.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.exe
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.pdb
