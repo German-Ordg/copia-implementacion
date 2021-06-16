@@ -23,5 +23,21 @@ namespace Pantallas_proyecto
             gerente.Show();
             this.Close();
         }
+
+        private void frmReportes_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
