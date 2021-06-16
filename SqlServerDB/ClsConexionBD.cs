@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Pantallas_proyecto
 {
@@ -28,6 +29,25 @@ namespace Pantallas_proyecto
         protected SqlConnection GetSqlConnection()
         {
             return new SqlConnection("Data Source = SQL5053.site4now.net; Initial Catalog = db_a75e9e_bderickmoncada; User Id = db_a75e9e_bderickmoncada_admin; Password = grp5admin");
+        }
+
+        public void CargaDeUsuarios(ComboBox cmb)
+        {
+            try
+            {
+                SqlCommand comando = new SqlCommand("select nombre_usuario from Usuarios",conexion);
+                SqlDataReader registro = comando.ExecuteReader();
+                while (registro.Read())
+                {
+                    cmb.Items.Add(registro["nombre_usuario"].ToString());
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos!", "ERROR",
+                                MessageBoxButtons.OK);
+            }
         }
 
     }

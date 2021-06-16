@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace Pantallas_proyecto
 {
@@ -17,6 +19,8 @@ namespace Pantallas_proyecto
             InitializeComponent();
         }
 
+        ClsConexionBD conect = new ClsConexionBD();
+        SqlCommand cmd;
         private void button1_Click(object sender, EventArgs e)
         {
             FrmAcceso acceso = new FrmAcceso();
@@ -35,9 +39,9 @@ namespace Pantallas_proyecto
         private void FrmRecuperaContra_Load(object sender, EventArgs e)
         {
             txtresultado.Visible = false;
-            ClsConexionBD conexionBD = new ClsConexionBD();
-
-            conexionBD.abrir();
+            conect.abrir();
+            conect.CargaDeUsuarios(cmbUsuariorequerido);
+            
 
 
         }
