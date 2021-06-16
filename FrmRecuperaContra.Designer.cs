@@ -32,12 +32,13 @@ namespace Pantallas_proyecto
             this.button1 = new System.Windows.Forms.Button();
             this.btnIngreso = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbUsuariorequerido = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtresultado = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,27 +70,29 @@ namespace Pantallas_proyecto
             this.btnIngreso.TabIndex = 9;
             this.btnIngreso.Text = "Recuperar";
             this.btnIngreso.UseVisualStyleBackColor = false;
+            this.btnIngreso.Click += new System.EventHandler(this.btnIngreso_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtresultado);
+            this.groupBox1.Controls.Add(this.cmbUsuariorequerido);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(22, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(354, 254);
+            this.groupBox1.Size = new System.Drawing.Size(354, 282);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
-            // comboBox1
+            // cmbUsuariorequerido
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(118, 109);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(170, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cmbUsuariorequerido.FormattingEnabled = true;
+            this.cmbUsuariorequerido.Location = new System.Drawing.Point(118, 109);
+            this.cmbUsuariorequerido.Name = "cmbUsuariorequerido";
+            this.cmbUsuariorequerido.Size = new System.Drawing.Size(170, 21);
+            this.cmbUsuariorequerido.TabIndex = 4;
             // 
             // label1
             // 
@@ -146,6 +149,15 @@ namespace Pantallas_proyecto
             this.label2.TabIndex = 7;
             this.label2.Text = "HEAVEN";
             // 
+            // txtresultado
+            // 
+            this.txtresultado.Enabled = false;
+            this.txtresultado.Location = new System.Drawing.Point(37, 201);
+            this.txtresultado.Multiline = true;
+            this.txtresultado.Name = "txtresultado";
+            this.txtresultado.Size = new System.Drawing.Size(279, 75);
+            this.txtresultado.TabIndex = 5;
+            // 
             // FrmRecuperaContra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,6 +170,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label2);
             this.Name = "FrmRecuperaContra";
             this.Text = "FrmRecuperaContra";
+            this.Load += new System.EventHandler(this.FrmRecuperaContra_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -170,11 +183,12 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnIngreso;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbUsuariorequerido;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtresultado;
     }
 }

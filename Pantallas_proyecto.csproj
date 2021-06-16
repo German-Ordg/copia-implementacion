@@ -46,8 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsConexionBD.cs" />
-    <Compile Include="ClsLogin.cs" />
+    <Compile Include="Dominio\UserModel.cs" />
+    <Compile Include="EmailServices\MasterEmailServer.cs" />
+    <Compile Include="EmailServices\SystemSupportMai.cs" />
+    <Compile Include="SqlServerDB\ClsConexionBD.cs" />
+    <Compile Include="SqlServerDB\ClsLogin.cs" />
     <Compile Include="FrmAcceso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +161,7 @@
     <Compile Include="frmProveedores.Designer.cs">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerDB\UserDao.cs" />
     <EmbeddedResource Include="FrmAcceso.resx">
       <DependentUpon>FrmAcceso.cs</DependentUpon>
     </EmbeddedResource>

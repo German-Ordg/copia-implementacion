@@ -23,5 +23,23 @@ namespace Pantallas_proyecto
             acceso.Show();
             this.Hide();
         }
+
+        private void btnIngreso_Click(object sender, EventArgs e)
+        {
+            txtresultado.Visible = true;
+            var user = new Dominio.UserModel();
+            var result = user.recoverPassword(cmbUsuariorequerido.Text);
+            txtresultado.Text = result;
+        }
+
+        private void FrmRecuperaContra_Load(object sender, EventArgs e)
+        {
+            txtresultado.Visible = false;
+            ClsConexionBD conexionBD = new ClsConexionBD();
+
+            conexionBD.abrir();
+
+
+        }
     }
 }
