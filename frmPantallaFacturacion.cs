@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace Pantallas_proyecto
 {
@@ -16,6 +18,9 @@ namespace Pantallas_proyecto
         {
             InitializeComponent();
         }
+
+        SqlCommand sql;
+        ClsConexionBD con = new ClsConexionBD();
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -42,6 +47,12 @@ namespace Pantallas_proyecto
             FrmMenuPrincipal menu = new FrmMenuPrincipal();
             menu.Show();
             this.Hide();
+        }
+
+        private void frmPantallaFacturacion_Load(object sender, EventArgs e)
+        {
+            con.abrir();
+            
         }
     }
 }

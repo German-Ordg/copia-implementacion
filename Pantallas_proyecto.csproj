@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="ClsConexionBD.cs" />
     <Compile Include="ClsLogin.cs" />
+    <Compile Include="ClsPantallaFacturacion.cs" />
     <Compile Include="FrmAcceso.cs">
       <SubType>Form</SubType>
     </Compile>
