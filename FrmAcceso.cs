@@ -46,8 +46,9 @@ namespace Pantallas_proyecto
                     ClsLogin usuario = new ClsLogin();
                     var validar = usuario.Login(txtUsuario.Text, txtContrasena.Text);
                     if (validar == true)
-                    {                     
-                        FrmMenuPrincipal menu = new FrmMenuPrincipal();                      
+                    {
+                        //FrmMenuPrincipal menu = new FrmMenuPrincipal(); COLOCAR ESTE EN LUGAR DEL OTRO
+                        FrmMenuCRUD menu = new FrmMenuCRUD();
                         menu.Show();
                         menu.FormClosed += cerrarSesion;
                         this.Hide();
