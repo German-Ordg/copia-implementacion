@@ -29,8 +29,8 @@ namespace Pantallas_proyecto
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgvPuesto = new System.Windows.Forms.DataGridView();
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
@@ -39,32 +39,34 @@ namespace Pantallas_proyecto
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnModificar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPuesto)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvPuesto
             // 
             this.DgvPuesto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvPuesto.DefaultCellStyle = dataGridViewCellStyle1;
-            this.DgvPuesto.Location = new System.Drawing.Point(21, 173);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvPuesto.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DgvPuesto.Location = new System.Drawing.Point(21, 192);
             this.DgvPuesto.Name = "DgvPuesto";
             this.DgvPuesto.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvPuesto.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DgvPuesto.Size = new System.Drawing.Size(369, 210);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvPuesto.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.DgvPuesto.Size = new System.Drawing.Size(369, 191);
             this.DgvPuesto.TabIndex = 0;
             this.DgvPuesto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPuesto_CellContentClick);
             // 
@@ -90,7 +92,7 @@ namespace Pantallas_proyecto
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.BtnEliminar.Location = new System.Drawing.Point(284, 126);
+            this.BtnEliminar.Location = new System.Drawing.Point(283, 145);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(89, 28);
             this.BtnEliminar.TabIndex = 19;
@@ -104,13 +106,13 @@ namespace Pantallas_proyecto
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(53, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 18);
+            this.label1.Size = new System.Drawing.Size(60, 18);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Posición:";
+            this.label1.Text = "Código:";
             // 
             // txtPosicion
             // 
-            this.txtPosicion.Location = new System.Drawing.Point(129, 69);
+            this.txtPosicion.Location = new System.Drawing.Point(129, 106);
             this.txtPosicion.Name = "txtPosicion";
             this.txtPosicion.Size = new System.Drawing.Size(180, 20);
             this.txtPosicion.TabIndex = 21;
@@ -122,7 +124,7 @@ namespace Pantallas_proyecto
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.BtnAgregar.Location = new System.Drawing.Point(56, 126);
+            this.BtnAgregar.Location = new System.Drawing.Point(56, 145);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(89, 28);
             this.BtnAgregar.TabIndex = 22;
@@ -148,12 +150,32 @@ namespace Pantallas_proyecto
             this.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnModificar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.BtnModificar.Location = new System.Drawing.Point(172, 126);
+            this.BtnModificar.Location = new System.Drawing.Point(172, 145);
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(89, 28);
             this.BtnModificar.TabIndex = 24;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = false;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(53, 105);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 18);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Posición:";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Location = new System.Drawing.Point(129, 71);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(180, 20);
+            this.txtCodigo.TabIndex = 26;
             // 
             // frmPuestosTrabajo
             // 
@@ -161,6 +183,8 @@ namespace Pantallas_proyecto
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(411, 399);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnModificar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnAgregar);
@@ -189,5 +213,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnModificar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCodigo;
     }
 }
