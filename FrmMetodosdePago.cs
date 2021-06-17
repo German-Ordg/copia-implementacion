@@ -38,7 +38,7 @@ namespace Pantallas_proyecto
         {
             try
             {
-                if(txtDescripcion.Text == " ")
+                if(txtDescripcion.Text == "")
                 {
                     MessageBox.Show("No se pueden Insertar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -93,6 +93,23 @@ namespace Pantallas_proyecto
         private void button3_Click(object sender, EventArgs e)
         {
 
+            poc = dgvMetodosPago.CurrentRow.Index;
+
+            try
+            {
+                if(txtDescripcion.Text=="")
+                {
+                    MessageBox.Show("Seleccione la descripción del método de Pago que desea modificar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                       
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se pudo modificar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void dgvMetodosPago_CellContentClick(object sender, DataGridViewCellEventArgs e)
