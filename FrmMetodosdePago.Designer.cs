@@ -75,6 +75,7 @@ namespace Pantallas_proyecto
             this.dgvMetodosPago.Name = "dgvMetodosPago";
             this.dgvMetodosPago.Size = new System.Drawing.Size(258, 164);
             this.dgvMetodosPago.TabIndex = 5;
+            this.dgvMetodosPago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMetodosPago_CellContentClick);
             // 
             // label8
             // 

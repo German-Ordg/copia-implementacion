@@ -60,12 +60,14 @@ namespace Pantallas_proyecto
         }
 
         int poc;
+        string codigo;
 
         private void button2_Click(object sender, EventArgs e)
         {
-           /* try
+            try
             {
                 poc = dgvMetodosPago.CurrentRow.Index;
+                codigo = dgvMetodosPago[0, poc].Value.ToString();
 
                 if (poc == -1)
                 {
@@ -73,21 +75,31 @@ namespace Pantallas_proyecto
                 }
                 else
                 {
-                    cmd = new SqlCommand("DELETE FROM Metodo_Pago Where codigo_pago = " + (poc+1), conect.conexion);
+                    cmd = new SqlCommand("DELETE FROM Metodo_Pago Where codigo_pago = " + codigo , conect.conexion);
                     cmd.ExecuteNonQuery();
+                    MessageBox.Show("Se han eliminado los datos correctamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conect.cargarMetodosPago(dgvMetodosPago);
+                    txtDescripcion.Clear();
+
                     poc = -1;
                 }
             }
             catch(Exception ex)
             {
                 MessageBox.Show("No se pudo eliminar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } */
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvMetodosPago_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            poc = dgvMetodosPago.CurrentRow.Index;
+            codigo = dgvMetodosPago[0, poc].Value.ToString();
+            txtDescripcion.Text = dgvMetodosPago[1, poc].Value.ToString();
         }
     }
 }
