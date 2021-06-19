@@ -34,12 +34,12 @@ namespace Pantallas_proyecto.SqlServerDB
                           subject: "SISTEMA: Peticion de recuperacion de contraseña",
                           body: "Hola, " + userName + "\nSolicitaste recuperar tu contraseña.\n" +
                           "Tu contraseña es: " + accountPassword +
-                          "\nComo motivo de seguridad, te pedimos que cambies tu contraseña inmediatamente al entrar al sistema.",
+                          "\n Recuerdalo",
                           recipientMail: new List<string> { userMail }
                           );
                         return "Hola, " + userName + "\n Solicitaste recuperar tu contraseña.\n" +
                           "Porfavor Revisa tu Correo: " + userMail +
-                          "\n Como motivo de seguridad, te pedimos que cambies tu contraseña inmediatamente al entrar al sistema.";
+                          "\n Recuerdalo";
                     }
                     else
                         return "Lo sentimos, tu no tienes una cuenta con ese correo o usuario";
