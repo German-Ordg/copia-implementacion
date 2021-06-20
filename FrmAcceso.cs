@@ -164,5 +164,13 @@ namespace Pantallas_proyecto
             recuperacion.FormClosed += cerrarSesion;
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPantallaFacturacion fact = new frmPantallaFacturacion();
+
+            fact.Show();
+            this.Hide();
+        }
     }
 }

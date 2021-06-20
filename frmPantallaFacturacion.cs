@@ -19,8 +19,12 @@ namespace Pantallas_proyecto
             InitializeComponent();
         }
 
-        SqlCommand sql;
+        SqlCommand cmd;
+        SqlDataReader dr;
+
         ClsConexionBD con = new ClsConexionBD();
+        ClsPantallaFacturacion fac = new ClsPantallaFacturacion();
+
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -52,7 +56,44 @@ namespace Pantallas_proyecto
         private void frmPantallaFacturacion_Load(object sender, EventArgs e)
         {
             con.abrir();
+            fac.cargarComboboxPago(cmbTipoPago);
+            fac.cargarComboboxVendedor(cmbVendedor);
             
+        }
+
+        private void frmPantallaFacturacion_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
+
+        private void txtCodProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void btnBuscarProducto_Click(object sender, EventArgs e)
+        {
+           /* if(txtCodProducto.TextLength!=0)
+            {
+                int codigoProducto = 
+
+                String buscarProducto = "SELECT descripcion_producto, precio_actual, descuento_producto  " +
+                    "FROM[dbo].[Productos] WHERE codigo_producto =" +;
+
+                con.abrir();
+                try
+                {
+                    
+                }
+                catch
+                {
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor ingrese un código de producto");
+            }*/
         }
     }
 }
