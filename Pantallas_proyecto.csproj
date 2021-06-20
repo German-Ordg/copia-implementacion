@@ -73,10 +73,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet11.xsd</DependentUpon>
     </Compile>
+    <Compile Include="db_a75e9e_bderickmoncadaDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet21.xsd</DependentUpon>
+    </Compile>
     <Compile Include="db_a75e9e_bderickmoncadaDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_a75e9e_bderickmoncadaDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet31.xsd</DependentUpon>
     </Compile>
     <Compile Include="FrmAcceso.cs">
       <SubType>Form</SubType>
@@ -268,6 +278,17 @@
     <None Include="db_a75e9e_bderickmoncadaDataSet11.xss">
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet11.xsd</DependentUpon>
     </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet21.xsc">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a75e9e_bderickmoncadaDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet21.xss">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet21.xsd</DependentUpon>
+    </None>
     <None Include="db_a75e9e_bderickmoncadaDataSet3.xsc">
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet3.xsd</DependentUpon>
     </None>
@@ -278,6 +299,17 @@
     </None>
     <None Include="db_a75e9e_bderickmoncadaDataSet3.xss">
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet31.xsc">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a75e9e_bderickmoncadaDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet31.xss">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet31.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

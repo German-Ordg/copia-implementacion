@@ -26,6 +26,8 @@ namespace Pantallas_proyecto
 
         private void frmReportes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSet2.Productos' Puede moverla o quitarla según sea necesario.
+            this.ProductosTableAdapter.Fill(this.db_a75e9e_bderickmoncadaDataSet2.Productos);
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSet.Categoria_Producto' Puede moverla o quitarla según sea necesario.
             this.categoria_ProductoTableAdapter.Fill(this.db_a75e9e_bderickmoncadaDataSet.Categoria_Producto);
 
@@ -35,7 +37,7 @@ namespace Pantallas_proyecto
             this.reportViewer3.RefreshReport();
             this.reportViewer4.RefreshReport();
             this.reportViewer5.RefreshReport();
-            this.reportViewer6.RefreshReport();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
