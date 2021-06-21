@@ -10,8 +10,9 @@ namespace Pantallas_proyecto.EmailServices
     {
         public SystemSupportMail()
         {
-            senderMail = "heavenstoreadmi@gmail.com";
-            password = "grp5admin";
+            ClsConexionBD conex = new ClsConexionBD();
+            senderMail = conex.correo();
+            password = conex.contra();
             host = "smtp.gmail.com";
             port = 587;
             ssl = true;

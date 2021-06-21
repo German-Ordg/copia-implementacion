@@ -50,6 +50,45 @@ namespace Pantallas_proyecto
             }
         }
 
+        public string correo()
+        {
+            //Recuperar correo desde sql
+            string cont = "g";
+            conexion.Close();
+            conexion.Open();
+            SqlCommand comando = new SqlCommand("select correo from Administrativa", conexion);
+
+            SqlDataReader registro = comando.ExecuteReader();
+            while (registro.Read())
+            {
+                cont = registro["correo"].ToString();
+            }
+            conexion.Close();
+            return cont;
+
+
+        }
+        public string contra()
+        {
+            //Recuperar contrasena del correo desde sql
+
+            string cont = "g";
+            conexion.Close();
+            conexion.Open();
+            SqlCommand comando = new SqlCommand("select contrasena from Administrativa", conexion);
+
+            SqlDataReader registro = comando.ExecuteReader();
+            while (registro.Read())
+            {
+                cont = registro["contrasena"].ToString();
+            }
+            conexion.Close();
+            return cont;
+
+
+        }
+
     }
-    
+
+
 }
