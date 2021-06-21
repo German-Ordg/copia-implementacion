@@ -58,6 +58,14 @@ namespace Pantallas_proyecto
             con.abrir();
             fac.cargarComboboxPago(cmbTipoPago);
             fac.cargarComboboxVendedor(cmbVendedor);
+            rbSinNombre.Checked = true;
+            btnBorrarProducto.Enabled = false;
+            btnCalcularFactura.Enabled = false;
+            btnImprimirFactura.Enabled = false;
+            btnAgregar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnEliminarTodo.Enabled = false;
+            
             
         }
 
@@ -73,27 +81,73 @@ namespace Pantallas_proyecto
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
-           /* if(txtCodProducto.TextLength!=0)
+           if(txtCodProducto.TextLength!=0)
             {
-                int codigoProducto = 
+                int codigoProducto = Int32.Parse(txtCodProducto.Text);
+                MessageBox.Show(codigoProducto.ToString());
 
-                String buscarProducto = "SELECT descripcion_producto, precio_actual, descuento_producto  " +
-                    "FROM[dbo].[Productos] WHERE codigo_producto =" +;
+                String buscarProducto = "SELECT [descripcion_producto] descripcion, " +
+                    "[cantidad_existente] cantidad, [precio_actual] precio, " +
+                    "[descuento_producto] descuento FROM [dbo].[Productos] " +
+                    "WHERE [codigo_producto]="+codigoProducto ;
 
                 con.abrir();
                 try
                 {
-                    
+                    cmd = new SqlCommand(buscarProducto, con.conexion);
+                    dr = cmd.ExecuteReader();
+                    while(dr.Read())
+                    {
+                        txtDescripcion.Text = dr["descripcion"].ToString();
+                        txtDescuento.Text = dr["descuento"].ToString();
+                        txtPrecioUnitario.Text = dr["precio"].ToString();
+                    }
+                    dr.Close();
+                    btnBorrarProducto.Enabled = false;
+                    btnCalcularFactura.Enabled = false;
+                    btnImprimirFactura.Enabled = false;
+                    btnAgregar.Enabled = false;
+                    btnEditar.Enabled = false;
+                    btnEliminarTodo.Enabled = false;
                 }
-                catch
+                catch(Exception ex)
                 {
-
+                    MessageBox.Show("No se pudo cargar el producto" + ex.ToString());
                 }
             }
             else
             {
                 MessageBox.Show("Por favor ingrese un código de producto");
-            }*/
+            }
+        }
+
+        private void btnAgregarCliente_Click(object sender, EventArgs e)
+        {
+            FrmClientes cli = new FrmClientes();
+
+            cli.Show();
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void rbConNombre_CheckedChanged(object sender, EventArgs e)
+        {
+            lblRTN.Show();
+            btnAgregarCliente.Show();
+            btnBuscarCliente.Show();
+            txtRTN.Show();
+        }
+
+        private void rbSinNombre_CheckedChanged(object sender, EventArgs e)
+        {
+            lblRTN.Hide();
+            btnAgregarCliente.Hide();
+            btnBuscarCliente.Hide();
+            txtRTN.Hide();
         }
     }
 }

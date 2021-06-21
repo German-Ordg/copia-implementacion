@@ -63,15 +63,8 @@ namespace Pantallas_proyecto
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.txtRTN = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtNombreCliente = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblRTN = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.numeroFactura = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -82,6 +75,7 @@ namespace Pantallas_proyecto
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.btnEliminarTodo = new System.Windows.Forms.Button();
             this.txtDescuento = new System.Windows.Forms.TextBox();
@@ -96,13 +90,18 @@ namespace Pantallas_proyecto
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnImprimirFactura = new System.Windows.Forms.Button();
-            this.btnBuscarProducto = new System.Windows.Forms.Button();
+            this.rbConNombre = new System.Windows.Forms.RadioButton();
+            this.rbSinNombre = new System.Windows.Forms.RadioButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnAgregarCliente = new System.Windows.Forms.Button();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaCompra)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // brnRegresar
@@ -470,15 +469,11 @@ namespace Pantallas_proyecto
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.txtDireccion);
-            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.btnBuscarCliente);
+            this.groupBox3.Controls.Add(this.btnAgregarCliente);
+            this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.txtRTN);
-            this.groupBox3.Controls.Add(this.txtApellido);
-            this.groupBox3.Controls.Add(this.txtNombreCliente);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.lblRTN);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(16, 167);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
@@ -489,88 +484,23 @@ namespace Pantallas_proyecto
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cliente";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(300, 68);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 17);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "(Opcional)";
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(387, 48);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDireccion.Multiline = true;
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(232, 63);
-            this.txtDireccion.TabIndex = 7;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(300, 52);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(71, 17);
-            this.label18.TabIndex = 6;
-            this.label18.Text = "Dirección:";
-            // 
             // txtRTN
             // 
-            this.txtRTN.Location = new System.Drawing.Point(81, 59);
+            this.txtRTN.Location = new System.Drawing.Point(319, 33);
             this.txtRTN.Margin = new System.Windows.Forms.Padding(4);
             this.txtRTN.Name = "txtRTN";
-            this.txtRTN.Size = new System.Drawing.Size(209, 22);
+            this.txtRTN.Size = new System.Drawing.Size(243, 22);
             this.txtRTN.TabIndex = 5;
             // 
-            // txtApellido
+            // lblRTN
             // 
-            this.txtApellido.Location = new System.Drawing.Point(387, 16);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(232, 22);
-            this.txtApellido.TabIndex = 4;
-            // 
-            // txtNombreCliente
-            // 
-            this.txtNombreCliente.Location = new System.Drawing.Point(81, 20);
-            this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(209, 22);
-            this.txtNombreCliente.TabIndex = 3;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(15, 63);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 17);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "R.T.N.:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(300, 25);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 17);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Apellido(s):";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(11, 25);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 17);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Nombre:";
+            this.lblRTN.AutoSize = true;
+            this.lblRTN.Location = new System.Drawing.Point(253, 37);
+            this.lblRTN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRTN.Name = "lblRTN";
+            this.lblRTN.Size = new System.Drawing.Size(53, 17);
+            this.lblRTN.TabIndex = 2;
+            this.lblRTN.Text = "R.T.N.:";
             // 
             // groupBox2
             // 
@@ -696,6 +626,19 @@ namespace Pantallas_proyecto
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Producto";
+            // 
+            // btnBuscarProducto
+            // 
+            this.btnBuscarProducto.BackColor = System.Drawing.Color.Maroon;
+            this.btnBuscarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnBuscarProducto.Location = new System.Drawing.Point(303, 22);
+            this.btnBuscarProducto.Name = "btnBuscarProducto";
+            this.btnBuscarProducto.Size = new System.Drawing.Size(95, 29);
+            this.btnBuscarProducto.TabIndex = 20;
+            this.btnBuscarProducto.Text = "Buscar";
+            this.btnBuscarProducto.UseVisualStyleBackColor = false;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
             // nudCantidad
             // 
@@ -845,18 +788,70 @@ namespace Pantallas_proyecto
             this.btnImprimirFactura.Text = "Imprimir Factura";
             this.btnImprimirFactura.UseVisualStyleBackColor = false;
             // 
-            // btnBuscarProducto
+            // rbConNombre
             // 
-            this.btnBuscarProducto.BackColor = System.Drawing.Color.Maroon;
-            this.btnBuscarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnBuscarProducto.Location = new System.Drawing.Point(303, 22);
-            this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(95, 29);
-            this.btnBuscarProducto.TabIndex = 20;
-            this.btnBuscarProducto.Text = "Buscar";
-            this.btnBuscarProducto.UseVisualStyleBackColor = false;
-            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
+            this.rbConNombre.AutoSize = true;
+            this.rbConNombre.Location = new System.Drawing.Point(18, 21);
+            this.rbConNombre.Name = "rbConNombre";
+            this.rbConNombre.Size = new System.Drawing.Size(160, 21);
+            this.rbConNombre.TabIndex = 6;
+            this.rbConNombre.TabStop = true;
+            this.rbConNombre.Text = "Factura Con Nombre";
+            this.rbConNombre.UseVisualStyleBackColor = true;
+            this.rbConNombre.CheckedChanged += new System.EventHandler(this.rbConNombre_CheckedChanged);
+            // 
+            // rbSinNombre
+            // 
+            this.rbSinNombre.AutoSize = true;
+            this.rbSinNombre.Location = new System.Drawing.Point(18, 53);
+            this.rbSinNombre.Name = "rbSinNombre";
+            this.rbSinNombre.Size = new System.Drawing.Size(155, 21);
+            this.rbSinNombre.TabIndex = 7;
+            this.rbSinNombre.TabStop = true;
+            this.rbSinNombre.Text = "Factura Sin Nombre";
+            this.rbSinNombre.UseVisualStyleBackColor = true;
+            this.rbSinNombre.CheckedChanged += new System.EventHandler(this.rbSinNombre_CheckedChanged);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.rbConNombre);
+            this.groupBox4.Controls.Add(this.rbSinNombre);
+            this.groupBox4.Location = new System.Drawing.Point(7, 17);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 100);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "groupBox4";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            // 
+            // btnAgregarCliente
+            // 
+            this.btnAgregarCliente.BackColor = System.Drawing.Color.Maroon;
+            this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarCliente.Location = new System.Drawing.Point(418, 70);
+            this.btnAgregarCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarCliente.Name = "btnAgregarCliente";
+            this.btnAgregarCliente.Size = new System.Drawing.Size(144, 28);
+            this.btnAgregarCliente.TabIndex = 21;
+            this.btnAgregarCliente.Text = "Agregar Cliente";
+            this.btnAgregarCliente.UseVisualStyleBackColor = false;
+            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
+            // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.BackColor = System.Drawing.Color.Maroon;
+            this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(256, 70);
+            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(129, 28);
+            this.btnBuscarCliente.TabIndex = 21;
+            this.btnBuscarCliente.Text = "Buscar Cliente";
+            this.btnBuscarCliente.UseVisualStyleBackColor = false;
             // 
             // frmPantallaFacturacion
             // 
@@ -890,6 +885,8 @@ namespace Pantallas_proyecto
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -931,14 +928,8 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtRTN;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtNombreCliente;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblRTN;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox numeroFactura;
         private System.Windows.Forms.Label label17;
@@ -962,8 +953,12 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.TextBox txtDescuento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnImprimirFactura;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown nudCantidad;
         private System.Windows.Forms.Button btnBuscarProducto;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.RadioButton rbConNombre;
+        private System.Windows.Forms.RadioButton rbSinNombre;
+        private System.Windows.Forms.Button btnBuscarCliente;
+        private System.Windows.Forms.Button btnAgregarCliente;
     }
 }
