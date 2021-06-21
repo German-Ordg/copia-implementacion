@@ -96,7 +96,7 @@ namespace Pantallas_proyecto
                 {
                     cmd = new SqlCommand(buscarProducto, con.conexion);
                     dr = cmd.ExecuteReader();
-                    while(dr.Read())
+                    while (dr.Read())
                     {
                         txtDescripcion.Text = dr["descripcion"].ToString();
                         txtDescuento.Text = dr["descuento"].ToString();
@@ -104,12 +104,12 @@ namespace Pantallas_proyecto
                     }
                     dr.Close();
 
-                    btnBorrarProducto.Enabled = false;
-                    btnCalcularFactura.Enabled = false;
-                    btnImprimirFactura.Enabled = false;
-                    btnAgregar.Enabled = false;
-                    btnEditar.Enabled = false;
-                    btnEliminarTodo.Enabled = false;
+                    btnBorrarProducto.Enabled = true;
+                    btnCalcularFactura.Enabled = true;
+                    btnImprimirFactura.Enabled = true;
+                    btnAgregar.Enabled = true;
+                    btnEditar.Enabled = true;
+                    btnEliminarTodo.Enabled = true;
                 }
                 catch(Exception ex)
                 {
