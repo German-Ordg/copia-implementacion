@@ -103,6 +103,7 @@ namespace Pantallas_proyecto
                         txtPrecioUnitario.Text = dr["precio"].ToString();
                     }
                     dr.Close();
+
                     btnBorrarProducto.Enabled = false;
                     btnCalcularFactura.Enabled = false;
                     btnImprimirFactura.Enabled = false;
