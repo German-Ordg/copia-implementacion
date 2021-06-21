@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,8 +35,10 @@ namespace Pantallas_proyecto
 
         SqlDataAdapter da;
         DataTable dt;
+        //------------------------------------------------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------
 
-        public void cargarDatosProductos(DataGridView dgv, string nombreTabla)//homonimia-este metodo solo muestra los habilitados
+        public void cargarDatosProductos(DataGridView dgv, string nombreTabla)//Metodo cargar dato productos
         {
             try
             {
@@ -51,17 +54,35 @@ namespace Pantallas_proyecto
             }
         }
 
+        //------------------------------------------------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------
+        public void cargarDatosCompras(DataGridView dgv, string nombreTabla)//Metodo cargar dato compras
+        {
+            try
+            {
+                da = new SqlDataAdapter("Select  Compras.codigo_compra Codigo, Proveedores.codigo_Proveedor Proveedor , fecha_compra Fecha , codigo_pago Pago From " + nombreTabla +
+                    ", Detalle_Compra, Proveedores Where (Compras.codigo_compra= Detalle_Compra.codigo_compra )and Detalle_Compra.codigo_proveedor=Proveedores.codigo_proveedor ;", conect.conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-
-
+        //------------------------------------------------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------
         private void FrmCompras_Load(object sender, EventArgs e)
         {
 
             conect.abrir();
             cargarDatosProductos(dataGridView1, "Productos");
-           
+            cargarDatosCompras(dataGridView2, "Compras");
 
 
+            //Llenar Combobox Categoria Productos
 
             try
             {
@@ -80,9 +101,16 @@ namespace Pantallas_proyecto
                 MessageBox.Show("Error al cargar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+
+
+
+
+
+
         }
 
-
+        //------------------------------------------------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -91,7 +119,7 @@ namespace Pantallas_proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmMenuPrincipalGerente      acceso = new FrmMenuPrincipalGerente();
+            FrmMenuPrincipalGerente acceso = new FrmMenuPrincipalGerente();
             acceso.Show();
             this.Hide();
         }
@@ -110,25 +138,7 @@ namespace Pantallas_proyecto
         {
 
         }
-
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
+
+
