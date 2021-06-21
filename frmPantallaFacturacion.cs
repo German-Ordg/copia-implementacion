@@ -25,7 +25,6 @@ namespace Pantallas_proyecto
         ClsConexionBD con = new ClsConexionBD();
         ClsPantallaFacturacion fac = new ClsPantallaFacturacion();
 
-
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -83,30 +82,34 @@ namespace Pantallas_proyecto
         {
            if(txtCodProducto.TextLength!=0)
             {
-                int codigoProducto = Int32.Parse(txtCodProducto.Text);
-                MessageBox.Show(codigoProducto.ToString());
+                fac.CodigoProducto = Int32.Parse(txtCodProducto.Text);
+                
 
                 String buscarProducto = "SELECT [descripcion_producto] descripcion, " +
                     "[cantidad_existente] cantidad, [precio_actual] precio, " +
                     "[descuento_producto] descuento FROM [dbo].[Productos] " +
-                    "WHERE [codigo_producto]="+codigoProducto ;
+                    "WHERE [codigo_producto]="+fac.CodigoProducto ;
 
                 con.abrir();
                 try
                 {
+                    
                     cmd = new SqlCommand(buscarProducto, con.conexion);
                     dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
-                        txtDescripcion.Text = dr["descripcion"].ToString();
-                        txtDescuento.Text = dr["descuento"].ToString();
-                        txtPrecioUnitario.Text = dr["precio"].ToString();
+                        fac.DescripcionProducto = dr["descripcion"].ToString();
+                        fac.CantidadInventario = Int32.Parse(dr["cantidad"].ToString());
+                        fac.PrecioProducto = Double.Parse(dr["precio"].ToString());
+                        fac.DescuentoProducto = Double.Parse(dr["descuento"].ToString());
                     }
                     dr.Close();
 
+                    
+                    txtDescuento.Text = fac.DescuentoProducto.ToString();
+                    txtPrecioUnitario.Text = fac.PrecioProducto.ToString();
+                    txtDescripcion.Text = fac.DescripcionProducto;
                     btnBorrarProducto.Enabled = true;
-                    btnCalcularFactura.Enabled = true;
-                    btnImprimirFactura.Enabled = true;
                     btnAgregar.Enabled = true;
                     btnEditar.Enabled = true;
                     btnEliminarTodo.Enabled = true;
@@ -118,7 +121,7 @@ namespace Pantallas_proyecto
             }
             else
             {
-                MessageBox.Show("Por favor ingrese un código de producto");
+                MessageBox.Show("Por favor ingrese un código de producto","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
 
@@ -149,6 +152,33 @@ namespace Pantallas_proyecto
             btnAgregarCliente.Hide();
             btnBuscarCliente.Hide();
             txtRTN.Hide();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if(nudCantidad.Value<=fac.CantidadInventario)
+            {
+                fac.CantidadProducto = Int32.Parse(nudCantidad.Value.ToString());
+
+                int indiceDataGrid = lstCompras.Rows.Count - 1;
+                lstCompras.Rows.Add(1);
+
+                double total = (fac.PrecioProducto * fac.CantidadProducto) - fac.DescuentoProducto;
+
+                lstCompras.Rows[indiceDataGrid].Cells[0].Value = fac.CodigoProducto.ToString();
+                lstCompras.Rows[indiceDataGrid].Cells[1].Value = fac.CantidadProducto.ToString();
+                lstCompras.Rows[indiceDataGrid].Cells[2].Value = fac.DescripcionProducto.ToString();
+                lstCompras.Rows[indiceDataGrid].Cells[3].Value = fac.PrecioProducto.ToString();
+                lstCompras.Rows[indiceDataGrid].Cells[4].Value = fac.DescuentoProducto.ToString();
+                lstCompras.Rows[indiceDataGrid].Cells[5].Value = total.ToString();
+
+               
+
+            }
+            else
+            {
+                MessageBox.Show("No hay suficiente cantidad en el inventario", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

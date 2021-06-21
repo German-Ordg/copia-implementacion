@@ -53,7 +53,7 @@ namespace Pantallas_proyecto
             this.btnBorrarProducto = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.listaCompra = new System.Windows.Forms.DataGridView();
+            this.lstCompras = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,7 +96,7 @@ namespace Pantallas_proyecto
             this.btnAgregarCliente = new System.Windows.Forms.Button();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaCompra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lstCompras)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -363,6 +363,7 @@ namespace Pantallas_proyecto
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEditar
             // 
@@ -378,23 +379,23 @@ namespace Pantallas_proyecto
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
-            // listaCompra
+            // lstCompras
             // 
-            this.listaCompra.AllowUserToOrderColumns = true;
-            this.listaCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listaCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.lstCompras.AllowUserToOrderColumns = true;
+            this.lstCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lstCompras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
             this.Cantidad,
             this.Descripcion,
             this.Column1,
             this.Column2,
             this.Column3});
-            this.listaCompra.Location = new System.Drawing.Point(16, 299);
-            this.listaCompra.Margin = new System.Windows.Forms.Padding(4);
-            this.listaCompra.Name = "listaCompra";
-            this.listaCompra.RowHeadersWidth = 51;
-            this.listaCompra.Size = new System.Drawing.Size(1269, 234);
-            this.listaCompra.TabIndex = 20;
+            this.lstCompras.Location = new System.Drawing.Point(16, 299);
+            this.lstCompras.Margin = new System.Windows.Forms.Padding(4);
+            this.lstCompras.Name = "lstCompras";
+            this.lstCompras.RowHeadersWidth = 51;
+            this.lstCompras.Size = new System.Drawing.Size(1269, 234);
+            this.lstCompras.TabIndex = 20;
             // 
             // Column4
             // 
@@ -864,7 +865,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.brnRegresar);
             this.Controls.Add(this.btnCalcularFactura);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.listaCompra);
+            this.Controls.Add(this.lstCompras);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox3);
@@ -877,7 +878,7 @@ namespace Pantallas_proyecto
             this.Load += new System.EventHandler(this.frmPantallaFacturacion_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaCompra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lstCompras)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -918,7 +919,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Button btnBorrarProducto;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.DataGridView listaCompra;
+        private System.Windows.Forms.DataGridView lstCompras;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;

@@ -16,6 +16,16 @@ namespace Pantallas_proyecto
         SqlDataReader dr;
 
 
+
+        private static String   descripcionProducto;
+        private static int      codigoProducto;
+        private static int      cantidadProducto;
+        private static int      cantidadInventario;
+        private static double   precioProducto;
+        private static double   descuentoProducto;
+
+        
+
         public void cargarComboboxPago(ComboBox cmb)
         {
 
@@ -66,8 +76,11 @@ namespace Pantallas_proyecto
 
 
 
-
-
-
+        public string DescripcionProducto { get => descripcionProducto; set => descripcionProducto = value; }
+        public int CodigoProducto { get => codigoProducto; set => codigoProducto = value; }
+        public int CantidadProducto { get => cantidadProducto; set => cantidadProducto = value; }
+        public double PrecioProducto { get => precioProducto; set => precioProducto = value; }
+        public double DescuentoProducto { get => descuentoProducto; set => descuentoProducto = value; }
+        public int CantidadInventario { get => cantidadInventario; set => cantidadInventario = value; }
     }
 }
