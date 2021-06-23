@@ -101,10 +101,28 @@ namespace Pantallas_proyecto
                 MessageBox.Show("Error al cargar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            //------------------------------------------------------------------------------------------------------------------------------------------
+            //------------------------------------------------------------------------------------------------------------------------------------------
 
 
+            //metodo para cargar datos en combobox pago 
 
+            try
+            {
+                SqlCommand comando = new SqlCommand("SELECT codigo_pago FROM Metodo_Pago", conect.conexion);
+                conect.abrir();
+                SqlDataReader registro = comando.ExecuteReader();
+                while (registro.Read())
+                {
+                    comboBox2.Items.Add(registro["codigo_pago"].ToString());
+                }
+                conect.cerrar();
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
         }
@@ -135,6 +153,16 @@ namespace Pantallas_proyecto
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }
