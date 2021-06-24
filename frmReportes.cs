@@ -47,11 +47,11 @@ namespace Pantallas_proyecto
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ReportParameter[] parameters = new ReportParameter[1];
-
+            
             switch (CBtipo.Text)
             {
                 case "Categoria":
+                    ReportParameter[] parameters = new ReportParameter[1];
                     this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab1"];
                     string Categoria = CBcategoria.Text.Trim();
                     parameters[0] = new ReportParameter("Categoria", Categoria);
@@ -79,8 +79,24 @@ namespace Pantallas_proyecto
                     this.reportViewer5.RefreshReport();
                     break;
                 case "Inventario":
-                    this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab6"];
-                    this.reportViewer6.RefreshReport();
+                    ReportParameter[] parameters1 = new ReportParameter[1];
+                    if (txtcodigo.Text == "")
+                    {
+                        this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab6"];
+                        string codigo = Convert.ToString(0);
+                        parameters1[0] = new ReportParameter("Pcodigo", codigo);
+                        reportViewer6.LocalReport.SetParameters(parameters1);
+                        this.reportViewer6.RefreshReport();
+                    }
+                    else
+                    {
+                        
+                        this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab6"];
+                        string codigo = txtcodigo.Text;
+                        parameters1[0] = new ReportParameter("Pcodigo", Convert.ToString(codigo));
+                        reportViewer6.LocalReport.SetParameters(parameters1);
+                        this.reportViewer6.RefreshReport();
+                    }
                     break;
             }
         }

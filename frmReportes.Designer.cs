@@ -30,9 +30,9 @@ namespace Pantallas_proyecto
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource22 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource23 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource24 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.ProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.db_a75e9e_bderickmoncadaDataSet2 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet2();
             this.vCategoriasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
@@ -47,7 +47,7 @@ namespace Pantallas_proyecto
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.CBtipo = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -234,13 +234,13 @@ namespace Pantallas_proyecto
             this.label4.TabIndex = 65;
             this.label4.Text = "Tamaño de reporte:";
             // 
-            // textBox1
+            // txtcodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(949, 122);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
-            this.textBox1.TabIndex = 66;
+            this.txtcodigo.Location = new System.Drawing.Point(949, 122);
+            this.txtcodigo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(132, 22);
+            this.txtcodigo.TabIndex = 66;
             // 
             // dateTimePicker1
             // 
@@ -381,9 +381,9 @@ namespace Pantallas_proyecto
             // reportViewer3
             // 
             this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource22.Name = "DataSet1";
-            reportDataSource22.Value = this.ProductosBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource22);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.ProductosBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report3.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
@@ -426,9 +426,9 @@ namespace Pantallas_proyecto
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource23.Name = "DataSet1";
-            reportDataSource23.Value = this.vCategoriasBindingSource3;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource23);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.vCategoriasBindingSource3;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
@@ -464,9 +464,9 @@ namespace Pantallas_proyecto
             // reportViewer6
             // 
             this.reportViewer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource24.Name = "DataSet1";
-            reportDataSource24.Value = this.vCategoriasBindingSource3;
-            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource24);
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.vCategoriasBindingSource3;
+            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer6.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report6.rdlc";
             this.reportViewer6.Location = new System.Drawing.Point(3, 3);
             this.reportViewer6.Name = "reportViewer6";
@@ -539,7 +539,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.CBtipo);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtcodigo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -593,7 +593,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox CBtipo;
         private System.Windows.Forms.ComboBox comboBox2;
