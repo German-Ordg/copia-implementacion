@@ -4,36 +4,52 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>6.72442in</Width>
+  <Width>8.94759in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="ReportName">
+        <Line Name="Line2">
+          <Top>2.36361cm</Top>
+          <Height>0cm</Height>
+          <Width>22.72687cm</Width>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="Reporte_de_lo_mas_vendido">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=Globals!ReportName</Value>
-                  <Style />
+                  <Value>Reporte de lo mas vendido</Value>
+                  <Style>
+                    <FontSize>20pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>ReportName</rd:DefaultName>
-          <Top>1.07103cm</Top>
-          <Left>6.44737cm</Left>
-          <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
+          <Top>0.71191cm</Top>
+          <Left>4.63617cm</Left>
+          <Height>1.11619cm</Height>
+          <Width>9.17886cm</Width>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
             </Border>
+            <VerticalAlign>Middle</VerticalAlign>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
@@ -68,7 +84,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
           <Top>0.97cm</Top>
-          <Left>1.45379cm</Left>
+          <Left>4.27721cm</Left>
           <Height>0.6cm</Height>
           <Width>1.19944cm</Width>
           <Style>
@@ -97,7 +113,7 @@
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
           <Top>0.97cm</Top>
-          <Left>2.68851cm</Left>
+          <Left>5.51193cm</Left>
           <Height>0.6cm</Height>
           <Width>4.92006cm</Width>
           <ZIndex>1</ZIndex>
@@ -127,7 +143,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
           <Top>0.97cm</Top>
-          <Left>11.4953cm</Left>
+          <Left>14.31872cm</Left>
           <Height>0.6cm</Height>
           <Width>1.31467cm</Width>
           <ZIndex>2</ZIndex>
@@ -157,7 +173,7 @@
           </Paragraphs>
           <rd:DefaultName>TotalPages</rd:DefaultName>
           <Top>0.97cm</Top>
-          <Left>14.9254cm</Left>
+          <Left>17.74882cm</Left>
           <Height>0.6cm</Height>
           <Width>0.70083cm</Width>
           <ZIndex>3</ZIndex>
@@ -187,7 +203,7 @@
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
           <Top>0.97cm</Top>
-          <Left>12.80997cm</Left>
+          <Left>15.63339cm</Left>
           <Height>0.6cm</Height>
           <Width>1.16526cm</Width>
           <ZIndex>4</ZIndex>
@@ -217,7 +233,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox12</rd:DefaultName>
           <Top>0.97cm</Top>
-          <Left>14.01051cm</Left>
+          <Left>16.83393cm</Left>
           <Height>0.6cm</Height>
           <Width>0.91489cm</Width>
           <ZIndex>5</ZIndex>
@@ -231,6 +247,17 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Line Name="Line3">
+          <Top>0.17639cm</Top>
+          <Height>0cm</Height>
+          <Width>22.72687cm</Width>
+          <ZIndex>6</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>

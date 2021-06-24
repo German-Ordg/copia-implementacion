@@ -79,24 +79,8 @@ namespace Pantallas_proyecto
                     this.reportViewer5.RefreshReport();
                     break;
                 case "Inventario":
-                    ReportParameter[] parameters1 = new ReportParameter[1];
-                    if (txtcodigo.Text == "")
-                    {
                         this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab6"];
-                        string codigo = Convert.ToString(0);
-                        parameters1[0] = new ReportParameter("Pcodigo", codigo);
-                        reportViewer6.LocalReport.SetParameters(parameters1);
                         this.reportViewer6.RefreshReport();
-                    }
-                    else
-                    {
-                        
-                        this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab6"];
-                        string codigo = txtcodigo.Text;
-                        parameters1[0] = new ReportParameter("Pcodigo", Convert.ToString(codigo));
-                        reportViewer6.LocalReport.SetParameters(parameters1);
-                        this.reportViewer6.RefreshReport();
-                    }
                     break;
             }
         }
@@ -120,6 +104,11 @@ namespace Pantallas_proyecto
         private void CBcategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void CBtipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
