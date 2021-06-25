@@ -19,6 +19,10 @@ namespace Pantallas_proyecto
             InitializeComponent();
         }
 
+        SqlCommand scd;
+        ClsConexionBD conect = new ClsConexionBD();
+
+
         private void button3_Click(object sender, EventArgs e)
         {
              try
@@ -75,6 +79,13 @@ namespace Pantallas_proyecto
                 MessageBox.Show("Error al ingresar datos", "ERROR...", MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
             }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            FrmMenuCURD usuario = new FrmMenuCRUD();
+            usuario.Show();
+            this.Close();
         }
     }
 }

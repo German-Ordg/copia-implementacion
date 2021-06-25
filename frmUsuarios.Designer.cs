@@ -167,6 +167,7 @@ namespace Pantallas_proyecto
             this.button2.TabIndex = 23;
             this.button2.Text = "Crear Usuario";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // comboBox1
             // 
