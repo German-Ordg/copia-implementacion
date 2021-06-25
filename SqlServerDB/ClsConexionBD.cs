@@ -11,6 +11,8 @@ namespace Pantallas_proyecto
 {
     public class ClsConexionBD
     {
+        SqlDataAdapter da;
+        DataTable dt;
         public SqlConnection conexion = new SqlConnection("Data Source = SQL5053.site4now.net; Initial Catalog = db_a75e9e_bderickmoncada; User Id = db_a75e9e_bderickmoncada_admin; Password = grp5admin");
         public void abrir()
         {
@@ -90,8 +92,7 @@ namespace Pantallas_proyecto
         }
 
 
-        SqlDataAdapter da;
-        DataTable dt;
+       
 
         public void CargarDatosUsuario(DataGridView dgv)
         {
@@ -109,6 +110,22 @@ namespace Pantallas_proyecto
                 MessageBox.Show("Error al cargar base de datos!", "ERROR...!"
                                 , MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+        }
+
+        public void cargarDatosEmpleados(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("Select * From Empleados", conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
