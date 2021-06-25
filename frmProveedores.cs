@@ -44,10 +44,11 @@ namespace Pantallas_proyecto
 
                 else
                 {
-                    cmd = new SqlCommand("Insert into Proovedores(codigo_proveedor, nombre_proveedor, numero_contacto, direccion_proveedor ) Values(" + txtNombreProovedor.Text + ",'" + txtTelefono.Text + "', '" + txtDescripcion.Text +  "')", conex.conexion);
+                    conex.abrir();
+                    cmd = new SqlCommand("Insert into Proveedores(nombre_proveedor, numero_contacto, direccion_proveedor) values('"+ txtNombreProovedor +"','"+ txtTelefono +"','" + txtDescripcion +"')", conex.conexion);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conex.cargarDatosEmpleados(dgvProovedores);
+                    conex.cerrar();
                 }
             }
             catch (Exception ex)
