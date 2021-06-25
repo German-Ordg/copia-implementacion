@@ -65,6 +65,7 @@ namespace Pantallas_proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
+            dgvProovedores.ForeColor = Color.Black;
             SqlDataAdapter da;
             DataTable dt;
             DataSet DS;
@@ -72,6 +73,11 @@ namespace Pantallas_proyecto
             dt = new DataTable();
             da.Fill(dt);
             dgvProovedores.DataSource = dt;
+        }
+
+        private void dgvProovedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }
