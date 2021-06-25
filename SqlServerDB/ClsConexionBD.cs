@@ -144,6 +144,21 @@ namespace Pantallas_proyecto
             }
         }
 
+        public void cargarDatosProductos(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("Select * From Productos", conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
     }
 
