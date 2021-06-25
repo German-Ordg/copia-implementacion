@@ -128,5 +128,15 @@ namespace Pantallas_proyecto
             codigo = dgvMetodosPago[0, poc].Value.ToString();
             txtDescripcion.Text = dgvMetodosPago[1, poc].Value.ToString();
         }
+
+        private void FrmMetodosdePago_Click(object sender, EventArgs e)
+        {
+            txtDescripcion.Clear();
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
