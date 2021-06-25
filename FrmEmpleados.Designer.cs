@@ -33,29 +33,24 @@ namespace Pantallas_proyecto
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtIdentidad = new System.Windows.Forms.TextBox();
+            this.txtPuesto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.txtBuscarEmpleado = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Identidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtNumeroTel = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -100,26 +95,26 @@ namespace Pantallas_proyecto
             this.label4.TabIndex = 3;
             this.label4.Text = "Puesto";
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 117);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtNombre.Location = new System.Drawing.Point(120, 117);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(157, 20);
+            this.txtNombre.TabIndex = 4;
             // 
-            // textBox2
+            // txtIdentidad
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 174);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(157, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtIdentidad.Location = new System.Drawing.Point(120, 174);
+            this.txtIdentidad.Name = "txtIdentidad";
+            this.txtIdentidad.Size = new System.Drawing.Size(157, 20);
+            this.txtIdentidad.TabIndex = 5;
             // 
-            // textBox3
+            // txtPuesto
             // 
-            this.textBox3.Location = new System.Drawing.Point(120, 228);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtPuesto.Location = new System.Drawing.Point(120, 228);
+            this.txtPuesto.Name = "txtPuesto";
+            this.txtPuesto.Size = new System.Drawing.Size(157, 20);
+            this.txtPuesto.TabIndex = 6;
             // 
             // label5
             // 
@@ -154,26 +149,30 @@ namespace Pantallas_proyecto
             this.label7.TabIndex = 9;
             this.label7.Text = "Fecha de Ingreso";
             // 
-            // textBox4
+            // txtApellido
             // 
-            this.textBox4.Location = new System.Drawing.Point(499, 116);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(191, 20);
-            this.textBox4.TabIndex = 10;
+            this.txtApellido.Location = new System.Drawing.Point(499, 116);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(147, 20);
+            this.txtApellido.TabIndex = 10;
             // 
-            // dateTimePicker1
+            // dtpFechaNacimiento
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(499, 174);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(191, 20);
-            this.dateTimePicker1.TabIndex = 11;
+            this.dtpFechaNacimiento.CustomFormat = "yyyy-MM-dd";
+            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(499, 174);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(147, 20);
+            this.dtpFechaNacimiento.TabIndex = 11;
             // 
-            // dateTimePicker2
+            // dtpFechaIngreso
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(499, 228);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(191, 20);
-            this.dateTimePicker2.TabIndex = 12;
+            this.dtpFechaIngreso.CustomFormat = "yyyy-MM-dd";
+            this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaIngreso.Location = new System.Drawing.Point(499, 228);
+            this.dtpFechaIngreso.Name = "dtpFechaIngreso";
+            this.dtpFechaIngreso.Size = new System.Drawing.Size(147, 20);
+            this.dtpFechaIngreso.TabIndex = 12;
             // 
             // label8
             // 
@@ -194,7 +193,7 @@ namespace Pantallas_proyecto
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button4.Location = new System.Drawing.Point(598, 36);
+            this.button4.Location = new System.Drawing.Point(620, 34);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(92, 29);
             this.button4.TabIndex = 26;
@@ -202,128 +201,98 @@ namespace Pantallas_proyecto
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // dgvEmpleados
+            // 
+            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleados.Location = new System.Drawing.Point(3, 389);
+            this.dgvEmpleados.Name = "dgvEmpleados";
+            this.dgvEmpleados.Size = new System.Drawing.Size(745, 150);
+            this.dgvEmpleados.TabIndex = 28;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.Maroon;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnAgregar.Location = new System.Drawing.Point(499, 293);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(92, 29);
+            this.btnAgregar.TabIndex = 31;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // txtBuscarEmpleado
+            // 
+            this.txtBuscarEmpleado.Location = new System.Drawing.Point(148, 368);
+            this.txtBuscarEmpleado.Name = "txtBuscarEmpleado";
+            this.txtBuscarEmpleado.Size = new System.Drawing.Size(407, 20);
+            this.txtBuscarEmpleado.TabIndex = 32;
+            this.txtBuscarEmpleado.TextChanged += new System.EventHandler(this.txtBuscarEmpleado_TextChanged);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(28, 296);
+            this.label9.Location = new System.Drawing.Point(12, 368);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 18);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Empleados:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.label9.Size = new System.Drawing.Size(130, 18);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Buscar Empleado:";
             // 
-            // dataGridView1
+            // label10
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Nombre,
-            this.Apellido,
-            this.Identidad,
-            this.Fecha_nacimiento,
-            this.Puesto,
-            this.Ingreso});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 330);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(745, 150);
-            this.dataGridView1.TabIndex = 28;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(12, 277);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(90, 18);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "Numero Tel:";
             // 
-            // Codigo
+            // txtNumeroTel
             // 
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.Name = "Codigo";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Apellido
-            // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            // 
-            // Identidad
-            // 
-            this.Identidad.HeaderText = "Identidad";
-            this.Identidad.Name = "Identidad";
-            // 
-            // Fecha_nacimiento
-            // 
-            this.Fecha_nacimiento.HeaderText = "Fecha nacimiento";
-            this.Fecha_nacimiento.Name = "Fecha_nacimiento";
-            // 
-            // Puesto
-            // 
-            this.Puesto.HeaderText = "Puesto";
-            this.Puesto.Name = "Puesto";
-            // 
-            // Ingreso
-            // 
-            this.Ingreso.HeaderText = "Ingreso";
-            this.Ingreso.Name = "Ingreso";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Maroon;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(614, 285);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 29);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Maroon;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(499, 285);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 29);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Agregar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.txtNumeroTel.Location = new System.Drawing.Point(120, 277);
+            this.txtNumeroTel.Name = "txtNumeroTel";
+            this.txtNumeroTel.Size = new System.Drawing.Size(157, 20);
+            this.txtNumeroTel.TabIndex = 35;
             // 
             // FrmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(764, 492);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(753, 551);
+            this.Controls.Add(this.txtNumeroTel);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtBuscarEmpleado);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.dtpFechaIngreso);
+            this.Controls.Add(this.dtpFechaNacimiento);
+            this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPuesto);
+            this.Controls.Add(this.txtIdentidad);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmEmpleados";
             this.Text = "Empleados";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmEmpleados_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,27 +304,22 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtIdentidad;
+        private System.Windows.Forms.TextBox txtPuesto;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
+        private System.Windows.Forms.DateTimePicker dtpFechaIngreso;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dgvEmpleados;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.TextBox txtBuscarEmpleado;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Identidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_nacimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Puesto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ingreso;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtNumeroTel;
     }
 }

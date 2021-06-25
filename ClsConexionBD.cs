@@ -15,6 +15,7 @@ namespace Pantallas_proyecto
 
         SqlDataAdapter da;
         DataTable dt;
+        DataSet DS;
 
         public void abrir()
         {
@@ -27,6 +28,7 @@ namespace Pantallas_proyecto
                 Console.WriteLine("Error al abrir BD " ,ex.Message);
             }
         }
+
         public void cerrar()
         {
             conexion.Close();
@@ -73,6 +75,27 @@ namespace Pantallas_proyecto
             }
         }
 
+
+        public void cargarDatosEmpleados(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("Select * From Empleados", conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        
+
+
+     
     }
     
 }
