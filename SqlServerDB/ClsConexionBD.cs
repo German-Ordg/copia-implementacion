@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace Pantallas_proyecto
 {
@@ -87,6 +88,45 @@ namespace Pantallas_proyecto
 
 
         }
+
+
+        SqlDataAdapter da;
+        DataTable dt;
+
+        public void CargarDatosUsuario(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("select * from Usuarios", conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Error al cargar base de datos!", "ERROR...!"
+                                , MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        public void cargarMetodosPago(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("SELECT * FROM Metodo_Pago", conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
     }
 
