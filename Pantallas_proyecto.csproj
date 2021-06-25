@@ -66,15 +66,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Dominio\UserModel.cs" />
     <Compile Include="EmailServices\MasterEmailServer.cs" />
     <Compile Include="EmailServices\SystemSupportMai.cs" />
     <Compile Include="SqlServerDB\ClsConexionBD.cs" />
     <Compile Include="SqlServerDB\ClsLogin.cs" />
-=======
-    <Compile Include="ClsConexionBD.cs" />
-    <Compile Include="ClsLogin.cs" />
     <Compile Include="db_a75e9e_bderickmoncadaDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -105,7 +101,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet5.xsd</DependentUpon>
     </Compile>
->>>>>>> Rama_german
     <Compile Include="FrmAcceso.cs">
       <SubType>Form</SubType>
     </Compile>
