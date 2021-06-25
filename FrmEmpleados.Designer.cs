@@ -50,6 +50,7 @@ namespace Pantallas_proyecto
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtNumeroTel = new System.Windows.Forms.TextBox();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -208,6 +209,7 @@ namespace Pantallas_proyecto
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.Size = new System.Drawing.Size(745, 150);
             this.dgvEmpleados.TabIndex = 28;
+            this.dgvEmpleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleados_CellClick);
             // 
             // btnAgregar
             // 
@@ -229,7 +231,7 @@ namespace Pantallas_proyecto
             // 
             this.txtBuscarEmpleado.Location = new System.Drawing.Point(148, 368);
             this.txtBuscarEmpleado.Name = "txtBuscarEmpleado";
-            this.txtBuscarEmpleado.Size = new System.Drawing.Size(407, 20);
+            this.txtBuscarEmpleado.Size = new System.Drawing.Size(593, 20);
             this.txtBuscarEmpleado.TabIndex = 32;
             this.txtBuscarEmpleado.TextChanged += new System.EventHandler(this.txtBuscarEmpleado_TextChanged);
             // 
@@ -262,12 +264,29 @@ namespace Pantallas_proyecto
             this.txtNumeroTel.Size = new System.Drawing.Size(157, 20);
             this.txtNumeroTel.TabIndex = 35;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.Maroon;
+            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnModificar.Location = new System.Drawing.Point(620, 293);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(92, 29);
+            this.btnModificar.TabIndex = 36;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // FrmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(753, 551);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.txtNumeroTel);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -321,5 +340,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtNumeroTel;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

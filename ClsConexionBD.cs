@@ -15,7 +15,7 @@ namespace Pantallas_proyecto
 
         SqlDataAdapter da;
         DataTable dt;
-        DataSet DS;
+        
 
         public void abrir()
         {

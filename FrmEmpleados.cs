@@ -83,5 +83,64 @@ namespace Pantallas_proyecto
             var aux = new MetodoBuscarEmpleado();
             aux.filtrar(dgvEmpleados, this.txtBuscarEmpleado.Text.Trim());
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            int indice;
+            int codigo;
+            indice = dgvEmpleados.CurrentRow.Index;
+
+            try
+            {
+                codigo = Convert.ToInt32(dgvEmpleados[0, indice].Value);
+
+              
+                dgvEmpleados[1, indice].Value = txtPuesto.Text;
+                dgvEmpleados[2, indice].Value = txtNombre.Text;
+                dgvEmpleados[3, indice].Value = txtApellido.Text;
+                dgvEmpleados[4, indice].Value = txtIdentidad.Text;
+                dgvEmpleados[5, indice].Value = dtpFechaNacimiento.Text;
+                dgvEmpleados[6, indice].Value = dtpFechaIngreso.Text;
+                dgvEmpleados[7, indice].Value = txtNumeroTel.Text;
+
+                cmd = new SqlCommand("update Empleados set codigo_puesto = " +txtPuesto.Text+ ", nombre_empleado ='"+txtNombre.Text+"', apellido_empleado = '"+txtApellido.Text+"', numero_identidad_empleado= '"+txtIdentidad.Text+"', fecha_nacimiento = '"+dtpFechaNacimiento.Text+"', fecha_ingreso= '"+dtpFechaIngreso.Text+"', num_telefono = '"+txtNumeroTel.Text+"' where codigo_empelado = "+ codigo, conect.conexion);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("El registro fue actualizado exitosamente");
+                conect.cargarDatosEmpleados(dgvEmpleados);
+
+                txtNombre.Text = " ";
+                txtApellido.Text = " ";
+                txtIdentidad.Text= " ";
+                txtPuesto.Text= " ";
+                txtNumeroTel.Text= " ";
+                dtpFechaNacimiento.Text = DateTime.Now.ToShortDateString();
+                dtpFechaIngreso.Text = DateTime.Now.ToShortDateString();
+                txtNombre.Focus();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El registro no pudo ser actualizado" + ex);
+            }
+        }
+
+        private void dgvEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            int poc;
+
+            poc = dgvEmpleados.CurrentRow.Index;
+
+            txtPuesto.Text = dgvEmpleados[1, poc].Value.ToString();
+            txtNombre.Text = dgvEmpleados[2, poc].Value.ToString();
+            txtApellido.Text = dgvEmpleados[3, poc].Value.ToString();
+            txtIdentidad.Text = dgvEmpleados[4, poc].Value.ToString();
+            dtpFechaNacimiento.Text = dgvEmpleados[5, poc].Value.ToString();
+            dtpFechaIngreso.Text = dgvEmpleados[6, poc].Value.ToString();
+            txtNumeroTel.Text = dgvEmpleados[7, poc].Value.ToString();
+
+
+        }
     }
-}
+    }
+
