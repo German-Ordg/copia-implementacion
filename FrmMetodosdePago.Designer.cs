@@ -183,6 +183,11 @@ namespace Pantallas_proyecto
             this.toolStripLabel2.Size = new System.Drawing.Size(86, 22);
             this.toolStripLabel2.Text = "toolStripLabel2";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmMetodosdePago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
