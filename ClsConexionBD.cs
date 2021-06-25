@@ -12,6 +12,10 @@ namespace Pantallas_proyecto
     public class ClsConexionBD
     {
         public SqlConnection conexion = new SqlConnection("Data Source = SQL5053.site4now.net; Initial Catalog = db_a75e9e_bderickmoncada; User Id = db_a75e9e_bderickmoncada_admin; Password = grp5admin");
+
+        SqlDataAdapter da;
+        DataTable dt;
+
         public void abrir()
         {
             try
@@ -20,7 +24,7 @@ namespace Pantallas_proyecto
             }
             catch (Exception ex)
             {
-                Console.WriteLine("error al abrir BD " ,ex.Message);
+                Console.WriteLine("Error al abrir BD " ,ex.Message);
             }
         }
         public void cerrar()
@@ -51,6 +55,21 @@ namespace Pantallas_proyecto
                 MessageBox.Show("Error al cargar base de datos!", "ERROR...!"
                                 , MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+        }
+
+        public void cargarMetodosPago(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("SELECT * FROM Metodo_Pago", conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
