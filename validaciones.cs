@@ -12,7 +12,7 @@ namespace Pantallas_proyecto
 
         public void ValidarTextbox() {
             bool validar = true;
-            if ( ) { }
+            //if ( ) { }
         }
 
     }

@@ -12,7 +12,7 @@ namespace Pantallas_proyecto
             InitializeComponent();
         }
 
-        SqlConnection conexion = new SqlConnection("Data Source = SQL5053.site4now.net; Initial Catalog = db_a75e9e_bderickmoncada; User Id = db_a75e9e_bderickmoncada_admin; Password = grp5admin");
+        ClsConexionBD conexion = new ClsConexionBD
         int Record_Id;
 
         public void MostrarDatos()
