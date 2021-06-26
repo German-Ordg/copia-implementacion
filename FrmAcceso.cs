@@ -167,7 +167,7 @@ namespace Pantallas_proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmPantallaFacturacion fact = new frmPantallaFacturacion();
+            FrmMetodosdePago fact = new FrmMetodosdePago();
 
             fact.Show();
             this.Hide();

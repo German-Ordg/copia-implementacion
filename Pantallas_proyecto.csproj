@@ -74,6 +74,12 @@
     <Compile Include="Dominio\UserModel.cs" />
     <Compile Include="EmailServices\MasterEmailServer.cs" />
     <Compile Include="EmailServices\SystemSupportMai.cs" />
+    <Compile Include="ErrorTxtBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ErrorTxtBox.Designer.cs">
+      <DependentUpon>ErrorTxtBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerDB\ClsConexionBD.cs" />
     <Compile Include="SqlServerDB\ClsLogin.cs" />
     <Compile Include="db_a75e9e_bderickmoncadaDataSet11.Designer.cs">
@@ -106,8 +112,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet5.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ClsConexionBD.cs" />
-    <Compile Include="ClsLogin.cs" />
     <Compile Include="ClsPantallaFacturacion.cs" />
     <Compile Include="FrmAcceso.cs">
       <SubType>Form</SubType>
@@ -222,7 +226,9 @@
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerDB\UserDao.cs" />
-    <Compile Include="validaciones.cs" />
+    <Compile Include="validaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="FrmAcceso.resx">
       <DependentUpon>FrmAcceso.cs</DependentUpon>
     </EmbeddedResource>

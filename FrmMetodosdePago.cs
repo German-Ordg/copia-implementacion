@@ -34,29 +34,29 @@ namespace Pantallas_proyecto
             conect.cargarMetodosPago(dgvMetodosPago);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
-            try
+            if (validaciones.ValidarFormulario(this, errorProvider1) == false)
             {
-                if(txtDescripcion.Text == "")
+                try
                 {
-                    MessageBox.Show("No se pueden Insertar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    cmd = new SqlCommand("INSERT INTO Metodo_Pago (descripcion_pago) VALUES ('"+txtDescripcion.Text+"')", conect.conexion);
+                    cmd = new SqlCommand("INSERT INTO Metodo_Pago (descripcion_pago) VALUES ('" + txtDescripcion.Text + "')", conect.conexion);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Los Datos han sido insertados con Exitos", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conect.cargarMetodosPago(dgvMetodosPago);
 
                     txtDescripcion.Clear();
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al ingresar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtDescripcion.Clear();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al ingresar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtDescripcion.Clear();
+            else {
+                return ;
             }
+            
         }
 
         int poc;

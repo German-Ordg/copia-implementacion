@@ -32,7 +32,6 @@ namespace Pantallas_proyecto
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.dgvMetodosPago = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -43,8 +42,11 @@ namespace Pantallas_proyecto
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtDescripcion = new Pantallas_proyecto.ErrorTxtBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMetodosPago)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,13 +68,6 @@ namespace Pantallas_proyecto
             this.label2.Size = new System.Drawing.Size(87, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Descripcion";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(155, 105);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(166, 20);
-            this.txtDescripcion.TabIndex = 2;
             // 
             // dgvMetodosPago
             // 
@@ -188,12 +183,25 @@ namespace Pantallas_proyecto
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(147, 106);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(191, 20);
+            this.txtDescripcion.TabIndex = 32;
+            this.txtDescripcion.Validar = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FrmMetodosdePago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(359, 410);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.button2);
@@ -201,7 +209,6 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvMetodosPago);
-            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmMetodosdePago";
@@ -211,6 +218,7 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dgvMetodosPago)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,7 +228,6 @@ namespace Pantallas_proyecto
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.DataGridView dgvMetodosPago;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button4;
@@ -231,5 +238,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.Timer timer1;
+        private ErrorTxtBox txtDescripcion;
+        public System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

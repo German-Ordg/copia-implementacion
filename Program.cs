@@ -16,7 +16,7 @@ namespace Pantallas_proyecto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMetodosdePago());
+            Application.Run(new FrmAcceso());
         }
     }
 }
