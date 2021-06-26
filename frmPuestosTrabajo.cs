@@ -12,13 +12,13 @@ namespace Pantallas_proyecto
             InitializeComponent();
         }
 
-        ClsConexionBD conexion = new ClsConexionBD
+        ClsConexionBD connect = new ClsConexionBD();
         int Record_Id;
 
         public void MostrarDatos()
         {
             string consulta = "SELECT codigo_puesto as Código, descripcion_puesto as Puesto FROM Empleados_Puestos";
-            SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
+            SqlDataAdapter adaptador = new SqlDataAdapter(consulta, connect.conexion);
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
 
@@ -48,11 +48,11 @@ namespace Pantallas_proyecto
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             string query = "INSERT INTO Empleados_Puestos (descripcion_puesto) VALUES (@puesto)";
-            conexion.Open();
-            SqlCommand comando = new SqlCommand(query, conexion);
+            connect.abrir();
+            SqlCommand comando = new SqlCommand(query, connect.conexion);
             comando.Parameters.AddWithValue("@puesto", txtPosicion.Text);
             comando.ExecuteNonQuery();
-            conexion.Close();
+            connect.abrir();
             MessageBox.Show("Nuevo Puesto Insertado");
             txtCodigo.Clear();
             txtPosicion.Clear();
@@ -64,10 +64,10 @@ namespace Pantallas_proyecto
             try
             {
                 string query = "Update Empleados_Puestos set descripcion_puesto= '" + txtPosicion.Text + "' where codigo_puesto='" + Record_Id + "'";
-                conexion.Open();
-                SqlCommand comando = new SqlCommand(query, conexion);
+                connect.abrir();
+                SqlCommand comando = new SqlCommand(query, connect.conexion);
                 comando.ExecuteNonQuery();
-                conexion.Close();
+                connect.abrir();
                 MessageBox.Show("Se Modificó Correctamente");
                 txtCodigo.Clear();
                 txtPosicion.Clear();
@@ -82,11 +82,11 @@ namespace Pantallas_proyecto
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             string query = "Delete from Empleados_Puestos WHERE codigo_puesto=@ID";
-            conexion.Open();
-            SqlCommand comando = new SqlCommand(query, conexion);
+            connect.abrir();
+            SqlCommand comando = new SqlCommand(query, connect.conexion);
             comando.Parameters.AddWithValue("@ID", txtCodigo.Text);
             comando.ExecuteNonQuery();
-            conexion.Close();
+            connect.cerrar();
             MessageBox.Show("Puesto de Trabajo Eliminado");
             txtCodigo.Clear();
             txtPosicion.Clear();
