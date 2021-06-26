@@ -222,6 +222,7 @@
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerDB\UserDao.cs" />
+    <Compile Include="validaciones.cs" />
     <EmbeddedResource Include="FrmAcceso.resx">
       <DependentUpon>FrmAcceso.cs</DependentUpon>
     </EmbeddedResource>
