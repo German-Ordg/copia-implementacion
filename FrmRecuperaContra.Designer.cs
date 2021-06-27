@@ -172,7 +172,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRecuperaContra";
-            this.Text = "FrmRecuperaContra";
+            this.Text = "Recuperar Contraseña";
             this.Load += new System.EventHandler(this.FrmRecuperaContra_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
