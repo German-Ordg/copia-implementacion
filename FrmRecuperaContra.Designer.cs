@@ -29,16 +29,17 @@ namespace Pantallas_proyecto
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRecuperaContra));
             this.button1 = new System.Windows.Forms.Button();
             this.btnIngreso = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtresultado = new System.Windows.Forms.TextBox();
             this.cmbUsuariorequerido = new System.Windows.Forms.ComboBox();
             this.lblcorreo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtresultado = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,6 +86,15 @@ namespace Pantallas_proyecto
             this.groupBox1.Size = new System.Drawing.Size(354, 282);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
+            // 
+            // txtresultado
+            // 
+            this.txtresultado.Enabled = false;
+            this.txtresultado.Location = new System.Drawing.Point(37, 201);
+            this.txtresultado.Multiline = true;
+            this.txtresultado.Name = "txtresultado";
+            this.txtresultado.Size = new System.Drawing.Size(279, 75);
+            this.txtresultado.TabIndex = 5;
             // 
             // cmbUsuariorequerido
             // 
@@ -150,15 +160,6 @@ namespace Pantallas_proyecto
             this.label2.TabIndex = 7;
             this.label2.Text = "HEAVEN";
             // 
-            // txtresultado
-            // 
-            this.txtresultado.Enabled = false;
-            this.txtresultado.Location = new System.Drawing.Point(37, 201);
-            this.txtresultado.Multiline = true;
-            this.txtresultado.Name = "txtresultado";
-            this.txtresultado.Size = new System.Drawing.Size(279, 75);
-            this.txtresultado.TabIndex = 5;
-            // 
             // FrmRecuperaContra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,6 +170,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.btnIngreso);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRecuperaContra";
             this.Text = "FrmRecuperaContra";
             this.Load += new System.EventHandler(this.FrmRecuperaContra_Load);
