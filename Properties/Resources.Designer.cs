@@ -253,6 +253,16 @@ namespace Pantallas_proyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Letras2 {
+            get {
+                object obj = ResourceManager.GetObject("Letras2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap libro_de_contactos {
             get {
                 object obj = ResourceManager.GetObject("libro-de-contactos", resourceCulture);

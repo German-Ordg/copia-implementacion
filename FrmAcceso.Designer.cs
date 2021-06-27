@@ -253,7 +253,7 @@ namespace Pantallas_proyecto
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(650, 219);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 8;
@@ -279,6 +279,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.btnIngreso);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAcceso";
             this.RightToLeftLayout = true;
             this.Text = "Heaven Store";
