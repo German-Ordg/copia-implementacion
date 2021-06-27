@@ -71,11 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cashe\UserCache.cs" />
+    <Compile Include="Dominio\Pocisiones.cs" />
     <Compile Include="Dominio\UserModel.cs" />
     <Compile Include="EmailServices\MasterEmailServer.cs" />
     <Compile Include="EmailServices\SystemSupportMai.cs" />
     <Compile Include="SqlServerDB\ClsConexionBD.cs" />
-    <Compile Include="SqlServerDB\ClsLogin.cs" />
     <Compile Include="db_a75e9e_bderickmoncadaDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

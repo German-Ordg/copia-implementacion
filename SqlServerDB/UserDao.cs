@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Data.Sql;
 using System.Data;
 
+
 namespace Pantallas_proyecto.SqlServerDB
 {
     public class UserDao : ClsConexionBD
@@ -43,6 +44,57 @@ namespace Pantallas_proyecto.SqlServerDB
                     }
                     else
                         return "Lo sentimos, tu no tienes una cuenta con ese correo o usuario";
+                }
+            }
+        }
+
+        public bool existsUser(int id, string loginName, string pass)
+        {
+            using (var connection = GetSqlConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "select * from [dbo].[UsuarioNombre] where codigo_empelado=@id and nombre_usuario=@loginName and contrasena=@pass";
+                    command.Parameters.AddWithValue("@id", id);
+                    command.Parameters.AddWithValue("@loginName", loginName);
+                    command.Parameters.AddWithValue("@pass", pass);
+                    command.CommandType = CommandType.Text;
+                    var reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                        return true;
+                    else
+                        return false;
+                }
+            }
+        }
+        public bool Login(string user, string pass)
+        {
+            using (var connection = GetSqlConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "select* from[dbo].[UsuarioNombre] where  nombre_usuario = @user and contrasena = @pass";
+                    command.Parameters.AddWithValue("@user", user);
+                    command.Parameters.AddWithValue("@pass", pass);
+                    command.CommandType = CommandType.Text;
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Cashe.UserCache.IdUser = reader.GetInt32(0);
+                            Cashe.UserCache.LoginName = reader.GetString(1);
+                            Cashe.UserCache.Password = reader.GetString(2);
+                            Cashe.UserCache.Position = reader.GetString(3);
+                        }
+                        return true;
+                    }
+                    else
+                        return false;
                 }
             }
         }

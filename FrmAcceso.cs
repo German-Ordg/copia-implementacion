@@ -20,8 +20,10 @@ namespace Pantallas_proyecto
         private void Form1_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
+            
         }
 
+        
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -43,10 +45,13 @@ namespace Pantallas_proyecto
             {
                 if (txtContrasena.Text != "Contraseña")
                 {
-                    ClsLogin usuario = new ClsLogin();
-                    var validar = usuario.Login(txtUsuario.Text, txtContrasena.Text);
+                    
+                    Dominio.UserModel model = new Dominio.UserModel();
+                    var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
                     if (validar == true)
                     {
+                        Cashe.UserCache.LoginName = txtUsuario.Text;
+                        Cashe.UserCache.Password = txtContrasena.Text;
                         FrmMenuPrincipal menu = new FrmMenuPrincipal(); 
                         menu.Show();
                         menu.FormClosed += cerrarSesion;

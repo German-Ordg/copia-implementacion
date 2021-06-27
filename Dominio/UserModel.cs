@@ -10,11 +10,27 @@ namespace Pantallas_proyecto.Dominio
     public class UserModel 
     {
         UserDao userDao = new UserDao();
+        
 
         public string recoverPassword(string userRequesting)
         {
             return userDao.recoverPassword(userRequesting);
         }
-
+        public bool LoginUser(string user, string pass)
+        {
+            return userDao.Login(user, pass);
+        }
+        public bool securityLogin()
+        {
+            if (Cashe.UserCache.IdUser >= 1)
+            {
+                if (userDao.existsUser(Cashe.UserCache.IdUser, Cashe.UserCache.LoginName, Cashe.UserCache.Password) == true)
+                    return true;
+                else
+                    return false;
+            }
+            else
+                return false;
+        }
     }
 }
