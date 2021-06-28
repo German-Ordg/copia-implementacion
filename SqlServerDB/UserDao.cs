@@ -90,6 +90,8 @@ namespace Pantallas_proyecto.SqlServerDB
                             Cashe.UserCache.LoginName = reader.GetString(1);
                             Cashe.UserCache.Password = reader.GetString(2);
                             Cashe.UserCache.Position = reader.GetString(3);
+                            Cashe.UserCache.FirstName = reader.GetString(4);
+                            Cashe.UserCache.LastName = reader.GetString(5);
                         }
                         return true;
                     }

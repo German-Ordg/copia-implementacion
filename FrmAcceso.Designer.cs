@@ -35,7 +35,6 @@ namespace Pantallas_proyecto
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.chkMostrarContra = new System.Windows.Forms.CheckBox();
-            this.picError = new System.Windows.Forms.PictureBox();
             this.lblError = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,9 +47,10 @@ namespace Pantallas_proyecto
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picError = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picError)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -111,18 +111,6 @@ namespace Pantallas_proyecto
             this.chkMostrarContra.Text = "Mostrar Contraseña";
             this.chkMostrarContra.UseVisualStyleBackColor = true;
             this.chkMostrarContra.CheckedChanged += new System.EventHandler(this.chkMostrarContra_CheckedChanged);
-            // 
-            // picError
-            // 
-            this.picError.Image = ((System.Drawing.Image)(resources.GetObject("picError.Image")));
-            this.picError.Location = new System.Drawing.Point(24, 236);
-            this.picError.Name = "picError";
-            this.picError.Size = new System.Drawing.Size(20, 20);
-            this.picError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picError.TabIndex = 17;
-            this.picError.TabStop = false;
-            this.picError.Visible = false;
-            this.picError.Click += new System.EventHandler(this.picError_Click);
             // 
             // lblError
             // 
@@ -264,6 +252,18 @@ namespace Pantallas_proyecto
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // picError
+            // 
+            this.picError.Image = ((System.Drawing.Image)(resources.GetObject("picError.Image")));
+            this.picError.Location = new System.Drawing.Point(24, 236);
+            this.picError.Name = "picError";
+            this.picError.Size = new System.Drawing.Size(20, 20);
+            this.picError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picError.TabIndex = 17;
+            this.picError.TabStop = false;
+            this.picError.Visible = false;
+            this.picError.Click += new System.EventHandler(this.picError_Click);
+            // 
             // FrmAcceso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,8 +285,8 @@ namespace Pantallas_proyecto
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

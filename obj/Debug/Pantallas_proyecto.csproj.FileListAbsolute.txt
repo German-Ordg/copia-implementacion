@@ -80,3 +80,7 @@ C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\
 C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.exe
 C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.pdb
 C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\CircularProgressBar.dll
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\WinFormAnimation.dll
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\CircularProgressBar.xml
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FormBienvenido.resources

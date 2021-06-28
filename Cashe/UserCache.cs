@@ -12,6 +12,8 @@ namespace Pantallas_proyecto.Cashe
         public static string LoginName { get; set; }
         public static string Password { get; set; }
         public static string Position { get; set; }
+        public static string FirstName { get; set; }
+        public static string LastName { get; set; }
 
     }
 }

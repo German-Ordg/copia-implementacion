@@ -37,6 +37,9 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -69,6 +72,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cashe\UserCache.cs" />
@@ -76,6 +82,12 @@
     <Compile Include="Dominio\UserModel.cs" />
     <Compile Include="EmailServices\MasterEmailServer.cs" />
     <Compile Include="EmailServices\SystemSupportMai.cs" />
+    <Compile Include="FormBienvenido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBienvenido.Designer.cs">
+      <DependentUpon>FormBienvenido.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerDB\ClsConexionBD.cs" />
     <Compile Include="db_a75e9e_bderickmoncadaDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -285,6 +297,9 @@
     </Compile>
     <EmbeddedResource Include="frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBienvenido.resx">
+      <DependentUpon>FormBienvenido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />

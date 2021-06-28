@@ -50,12 +50,13 @@ namespace Pantallas_proyecto
                     var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
                     if (validar == true)
                     {
-                        Cashe.UserCache.LoginName = txtUsuario.Text;
-                        Cashe.UserCache.Password = txtContrasena.Text;
+                        this.Hide();
+                        FormBienvenido welcome = new FormBienvenido();
+                        welcome.ShowDialog();
                         FrmMenuPrincipal menu = new FrmMenuPrincipal(); 
                         menu.Show();
                         menu.FormClosed += cerrarSesion;
-                        this.Hide();
+                        
                     }
                     else
                     {
@@ -172,7 +173,7 @@ namespace Pantallas_proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmPantallaFacturacion fact = new frmPantallaFacturacion();
+            FormBienvenido fact = new FormBienvenido();
 
             fact.Show();
             this.Hide();
