@@ -32,18 +32,18 @@ namespace Pantallas_proyecto
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.descripcionProducto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.precioActual = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.descuento = new System.Windows.Forms.TextBox();
+            this.cantidad = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.talla = new System.Windows.Forms.TextBox();
+            this.codigoProducto = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,6 +56,8 @@ namespace Pantallas_proyecto
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -63,8 +65,6 @@ namespace Pantallas_proyecto
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -86,18 +86,18 @@ namespace Pantallas_proyecto
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.descripcionProducto);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.textBox4);
             this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.textBox3);
+            this.groupBox4.Controls.Add(this.precioActual);
             this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.textBox7);
-            this.groupBox4.Controls.Add(this.textBox5);
+            this.groupBox4.Controls.Add(this.descuento);
+            this.groupBox4.Controls.Add(this.cantidad);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Controls.Add(this.textBox6);
+            this.groupBox4.Controls.Add(this.talla);
+            this.groupBox4.Controls.Add(this.codigoProducto);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label4);
@@ -108,13 +108,13 @@ namespace Pantallas_proyecto
             this.groupBox4.TabIndex = 164;
             this.groupBox4.TabStop = false;
             // 
-            // textBox1
+            // descripcionProducto
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 65);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 63);
-            this.textBox1.TabIndex = 148;
+            this.descripcionProducto.Location = new System.Drawing.Point(118, 65);
+            this.descripcionProducto.Multiline = true;
+            this.descripcionProducto.Name = "descripcionProducto";
+            this.descripcionProducto.Size = new System.Drawing.Size(159, 63);
+            this.descripcionProducto.TabIndex = 148;
             // 
             // label3
             // 
@@ -145,12 +145,12 @@ namespace Pantallas_proyecto
             this.label1.TabIndex = 139;
             this.label1.Text = "Precio actual (unid)";
             // 
-            // textBox3
+            // precioActual
             // 
-            this.textBox3.Location = new System.Drawing.Point(448, 79);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(159, 20);
-            this.textBox3.TabIndex = 140;
+            this.precioActual.Location = new System.Drawing.Point(448, 79);
+            this.precioActual.Name = "precioActual";
+            this.precioActual.Size = new System.Drawing.Size(159, 20);
+            this.precioActual.TabIndex = 140;
             // 
             // label6
             // 
@@ -163,19 +163,19 @@ namespace Pantallas_proyecto
             this.label6.TabIndex = 141;
             this.label6.Text = "Cantidad";
             // 
-            // textBox7
+            // descuento
             // 
-            this.textBox7.Location = new System.Drawing.Point(448, 196);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(159, 20);
-            this.textBox7.TabIndex = 152;
+            this.descuento.Location = new System.Drawing.Point(448, 196);
+            this.descuento.Name = "descuento";
+            this.descuento.Size = new System.Drawing.Size(159, 20);
+            this.descuento.TabIndex = 152;
             // 
-            // textBox5
+            // cantidad
             // 
-            this.textBox5.Location = new System.Drawing.Point(448, 134);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(159, 20);
-            this.textBox5.TabIndex = 142;
+            this.cantidad.Location = new System.Drawing.Point(448, 134);
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Size = new System.Drawing.Size(159, 20);
+            this.cantidad.TabIndex = 142;
             // 
             // label9
             // 
@@ -199,19 +199,20 @@ namespace Pantallas_proyecto
             this.label7.TabIndex = 143;
             this.label7.Text = "Código producto";
             // 
-            // textBox2
+            // talla
             // 
-            this.textBox2.Location = new System.Drawing.Point(118, 193);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(159, 20);
-            this.textBox2.TabIndex = 150;
+            this.talla.Location = new System.Drawing.Point(118, 193);
+            this.talla.Name = "talla";
+            this.talla.Size = new System.Drawing.Size(159, 20);
+            this.talla.TabIndex = 150;
             // 
-            // textBox6
+            // codigoProducto
             // 
-            this.textBox6.Location = new System.Drawing.Point(143, 27);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(134, 20);
-            this.textBox6.TabIndex = 144;
+            this.codigoProducto.Location = new System.Drawing.Point(143, 27);
+            this.codigoProducto.Name = "codigoProducto";
+            this.codigoProducto.Size = new System.Drawing.Size(134, 20);
+            this.codigoProducto.TabIndex = 144;
+            this.codigoProducto.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label8
             // 
@@ -331,6 +332,7 @@ namespace Pantallas_proyecto
             this.button2.TabIndex = 159;
             this.button2.Text = "Agregar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_2);
             // 
             // groupBox2
             // 
@@ -347,6 +349,25 @@ namespace Pantallas_proyecto
             this.groupBox2.Size = new System.Drawing.Size(310, 169);
             this.groupBox2.TabIndex = 161;
             this.groupBox2.TabStop = false;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(135, 92);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(159, 21);
+            this.comboBox2.TabIndex = 150;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(9, 92);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(113, 18);
+            this.label15.TabIndex = 149;
+            this.label15.Text = "Codigo de pago";
             // 
             // dateTimePicker1
             // 
@@ -413,25 +434,6 @@ namespace Pantallas_proyecto
             this.label2.TabIndex = 160;
             this.label2.Text = "HEAVEN";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(135, 92);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(159, 21);
-            this.comboBox2.TabIndex = 150;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(9, 92);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(113, 18);
-            this.label15.TabIndex = 149;
-            this.label15.Text = "Codigo de pago";
-            // 
             // FrmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,18 +469,18 @@ namespace Pantallas_proyecto
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox descripcionProducto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox precioActual;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox descuento;
+        private System.Windows.Forms.TextBox cantidad;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox talla;
+        private System.Windows.Forms.TextBox codigoProducto;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

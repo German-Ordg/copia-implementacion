@@ -86,12 +86,16 @@ namespace Pantallas_proyecto
 
             try
             {
-                SqlCommand comando = new SqlCommand("SELECT descripcion_categoria FROM Categoria_Producto", conect.conexion);
+                SqlCommand comando = new SqlCommand("SELECT codigo_categoria,descripcion_categoria FROM Categoria_Producto", conect.conexion);
+
                 conect.abrir();
                 SqlDataReader registro = comando.ExecuteReader();
                 while (registro.Read())
+
+
                 {
                     comboBox1.Items.Add(registro["descripcion_categoria"].ToString());
+
                 }
                 conect.cerrar();
 
@@ -163,6 +167,27 @@ namespace Pantallas_proyecto
         }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
+            producto.Descripcion = descripcionProducto.Text;
+            producto.Cantidad = Convert.ToInt32(cantidad.Text);
+            producto.Precio_actual = Convert.ToDouble(precioActual.Text);
+            producto.Descuento = Convert.ToDouble(descuento.Text);
+            producto.Talla = talla.Text;
+            producto.Descripcion_Categoria = comboBox1.SelectedItem.ToString();
+            producto.Categoria = Convert.ToInt32(producto.buscar(producto.Descripcion_Categoria));
+            producto.agregar();
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
         }
