@@ -256,7 +256,7 @@ namespace Pantallas_proyecto
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Pantallas_proyecto.Properties.Resources.Letras2;
+            this.pictureBox1.Image = global::Pantallas_proyecto.Properties.Resources.Letras1;
             this.pictureBox1.Location = new System.Drawing.Point(368, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(338, 79);
