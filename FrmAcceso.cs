@@ -185,5 +185,42 @@ namespace Pantallas_proyecto
             lblFecha.Text = DateTime.Now.ToLongDateString();
 
         }
+
+        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                  if (txtUsuario.Text != "Usuario")
+            {
+                if (txtContrasena.Text != "Contraseña")
+                {
+                    
+                    Dominio.UserModel model = new Dominio.UserModel();
+                    var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
+                    if (validar == true)
+                    {
+                        this.Hide();
+                        FormBienvenido welcome = new FormBienvenido();
+                        welcome.ShowDialog();
+                        FrmMenuPrincipal menu = new FrmMenuPrincipal(); 
+                        menu.Show();
+                        menu.FormClosed += cerrarSesion;
+                        
+                    }
+                    else
+                    {
+                        msjError("Usuario o contraseña incorrecta \n\t Intente de nuevo");
+                        txtUsuario.Clear();
+                        txtContrasena.Clear();
+                    }
+                }
+                else
+                    msjError("Ingrese la contraseña");
+            }
+            else
+                msjError("Ingrese el usuario");
+
+            }
+        }
     }
 }

@@ -35,6 +35,7 @@ namespace Pantallas_proyecto
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.chkMostrarContra = new System.Windows.Forms.CheckBox();
+            this.picError = new System.Windows.Forms.PictureBox();
             this.lblError = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,10 +48,9 @@ namespace Pantallas_proyecto
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picError = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -78,7 +78,7 @@ namespace Pantallas_proyecto
             this.txtUsuario.Location = new System.Drawing.Point(115, 107);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(127, 25);
-            this.txtUsuario.TabIndex = 20;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Text = "Usuario";
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
@@ -93,10 +93,11 @@ namespace Pantallas_proyecto
             this.txtContrasena.Location = new System.Drawing.Point(114, 164);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(127, 25);
-            this.txtContrasena.TabIndex = 19;
+            this.txtContrasena.TabIndex = 2;
             this.txtContrasena.Text = "Contraseña";
             this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
             this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
+            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
             this.txtContrasena.Leave += new System.EventHandler(this.txtContrasena_Leave);
             // 
             // chkMostrarContra
@@ -107,10 +108,22 @@ namespace Pantallas_proyecto
             this.chkMostrarContra.Location = new System.Drawing.Point(115, 203);
             this.chkMostrarContra.Name = "chkMostrarContra";
             this.chkMostrarContra.Size = new System.Drawing.Size(141, 21);
-            this.chkMostrarContra.TabIndex = 18;
+            this.chkMostrarContra.TabIndex = 6;
             this.chkMostrarContra.Text = "Mostrar Contraseña";
             this.chkMostrarContra.UseVisualStyleBackColor = true;
             this.chkMostrarContra.CheckedChanged += new System.EventHandler(this.chkMostrarContra_CheckedChanged);
+            // 
+            // picError
+            // 
+            this.picError.Image = ((System.Drawing.Image)(resources.GetObject("picError.Image")));
+            this.picError.Location = new System.Drawing.Point(24, 236);
+            this.picError.Name = "picError";
+            this.picError.Size = new System.Drawing.Size(20, 20);
+            this.picError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picError.TabIndex = 17;
+            this.picError.TabStop = false;
+            this.picError.Visible = false;
+            this.picError.Click += new System.EventHandler(this.picError_Click);
             // 
             // lblError
             // 
@@ -171,7 +184,7 @@ namespace Pantallas_proyecto
             this.btnIngreso.Location = new System.Drawing.Point(49, 314);
             this.btnIngreso.Name = "btnIngreso";
             this.btnIngreso.Size = new System.Drawing.Size(98, 40);
-            this.btnIngreso.TabIndex = 4;
+            this.btnIngreso.TabIndex = 3;
             this.btnIngreso.Text = "Ingresar";
             this.btnIngreso.UseVisualStyleBackColor = false;
             this.btnIngreso.Click += new System.EventHandler(this.btnIngreso_Click);
@@ -185,7 +198,7 @@ namespace Pantallas_proyecto
             this.btnRecuperar.Location = new System.Drawing.Point(264, 314);
             this.btnRecuperar.Name = "btnRecuperar";
             this.btnRecuperar.Size = new System.Drawing.Size(234, 40);
-            this.btnRecuperar.TabIndex = 5;
+            this.btnRecuperar.TabIndex = 4;
             this.btnRecuperar.Text = "Recuperar Contraseña";
             this.btnRecuperar.UseVisualStyleBackColor = false;
             this.btnRecuperar.Click += new System.EventHandler(this.btnRecuperar_Click);
@@ -199,7 +212,7 @@ namespace Pantallas_proyecto
             this.btnSalir.Location = new System.Drawing.Point(623, 314);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(99, 40);
-            this.btnSalir.TabIndex = 6;
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -252,18 +265,6 @@ namespace Pantallas_proyecto
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // picError
-            // 
-            this.picError.Image = ((System.Drawing.Image)(resources.GetObject("picError.Image")));
-            this.picError.Location = new System.Drawing.Point(24, 236);
-            this.picError.Name = "picError";
-            this.picError.Size = new System.Drawing.Size(20, 20);
-            this.picError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picError.TabIndex = 17;
-            this.picError.TabStop = false;
-            this.picError.Visible = false;
-            this.picError.Click += new System.EventHandler(this.picError_Click);
-            // 
             // FrmAcceso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,8 +286,8 @@ namespace Pantallas_proyecto
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
