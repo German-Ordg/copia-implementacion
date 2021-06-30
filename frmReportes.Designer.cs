@@ -30,9 +30,9 @@ namespace Pantallas_proyecto
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource10 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource11 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource12 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.ProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.db_a75e9e_bderickmoncadaDataSet2 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet2();
             this.vCategoriasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
@@ -81,6 +81,10 @@ namespace Pantallas_proyecto
             this.dba75e9ebderickmoncadaDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vCategoriasTableAdapter1 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet5TableAdapters.VCategoriasTableAdapter();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ProductosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vCategoriasBindingSource3)).BeginInit();
@@ -106,6 +110,7 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet4BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet1BindingSource)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ProductosBindingSource
@@ -353,9 +358,9 @@ namespace Pantallas_proyecto
             // reportViewer3
             // 
             this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.ProductosBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource10.Name = "DataSet1";
+            reportDataSource10.Value = this.ProductosBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource10);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report3.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
@@ -398,9 +403,9 @@ namespace Pantallas_proyecto
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.vCategoriasBindingSource3;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource11.Name = "DataSet1";
+            reportDataSource11.Value = this.vCategoriasBindingSource3;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource11);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
@@ -436,9 +441,9 @@ namespace Pantallas_proyecto
             // reportViewer6
             // 
             this.reportViewer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource3.Name = "DataSet1";
-            reportDataSource3.Value = this.vCategoriasBindingSource3;
-            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource12.Name = "DataSet1";
+            reportDataSource12.Value = this.vCategoriasBindingSource3;
+            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource12);
             this.reportViewer6.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report6.rdlc";
             this.reportViewer6.Location = new System.Drawing.Point(3, 3);
             this.reportViewer6.Name = "reportViewer6";
@@ -507,12 +512,45 @@ namespace Pantallas_proyecto
             this.dateTimePicker2.Size = new System.Drawing.Size(225, 22);
             this.dateTimePicker2.TabIndex = 73;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripLabel2});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 567);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1220, 25);
+            this.toolStrip1.TabIndex = 74;
+            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.Black;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(111, 22);
+            this.toolStripLabel1.Text = "toolStripLabel1";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.ForeColor = System.Drawing.Color.Black;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(111, 22);
+            this.toolStripLabel2.Text = "toolStripLabel2";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1220, 554);
+            this.ClientSize = new System.Drawing.Size(1220, 592);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.tabreporte1);
             this.Controls.Add(this.CBcategoria);
@@ -557,6 +595,8 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet4BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet1BindingSource)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -616,5 +656,9 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.BindingSource vCategoriasBindingSource3;
         private db_a75e9e_bderickmoncadaDataSet5TableAdapters.VCategoriasTableAdapter vCategoriasTableAdapter1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

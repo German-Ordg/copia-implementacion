@@ -28,7 +28,7 @@ namespace Pantallas_proyecto
 
         private void frmReportes_Load(object sender, EventArgs e)
         {
-            
+            timer1.Enabled = true;
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSet5.VCategorias' Puede moverla o quitarla según sea necesario.
             this.vCategoriasTableAdapter1.Fill(this.db_a75e9e_bderickmoncadaDataSet5.VCategorias);
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSet4.VCategorias' Puede moverla o quitarla según sea necesario.
@@ -109,6 +109,17 @@ namespace Pantallas_proyecto
         private void CBtipo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
+            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }
