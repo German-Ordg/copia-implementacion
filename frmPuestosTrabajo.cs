@@ -26,6 +26,13 @@ namespace Pantallas_proyecto
             DgvPuesto.DataSource = tabla;
         }
 
+        public void Limpiar()
+        {
+            txtCodigo.Clear();
+            txtPosicion.Clear();
+            txtPosicion.Select();
+        }
+
         private void frmPuestosTrabajo_Load(object sender, EventArgs e)
         {
             MostrarDatos();
@@ -54,8 +61,7 @@ namespace Pantallas_proyecto
             comando.ExecuteNonQuery();
             connect.abrir();
             MessageBox.Show("Nuevo Puesto Insertado");
-            txtCodigo.Clear();
-            txtPosicion.Clear();
+            Limpiar();
             MostrarDatos();
         }
 
@@ -69,8 +75,7 @@ namespace Pantallas_proyecto
                 comando.ExecuteNonQuery();
                 connect.abrir();
                 MessageBox.Show("Se Modificó Correctamente");
-                txtCodigo.Clear();
-                txtPosicion.Clear();
+                Limpiar();
                 MostrarDatos();
             }
             catch (Exception ex)
@@ -88,8 +93,7 @@ namespace Pantallas_proyecto
             comando.ExecuteNonQuery();
             connect.cerrar();
             MessageBox.Show("Puesto de Trabajo Eliminado");
-            txtCodigo.Clear();
-            txtPosicion.Clear();
+            Limpiar();
             MostrarDatos();
         }
     }
