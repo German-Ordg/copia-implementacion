@@ -57,7 +57,7 @@ namespace Pantallas_proyecto
                 }
                 else
                 {
-                    cmd = new SqlCommand("Insert into Empleados(codigo_puesto, nombre_empleado, apellido_empleado, numero_identidad_empleado, fecha_nacimiento, fecha_ingreso, num_telefono) Values(" + txtPuesto.Text + ",'" + txtNombre.Text + "', '" + txtApellido.Text + "', '" + txtIdentidad.Text + "', '" + dtpFechaNacimiento.Text + "','" + dtpFechaIngreso.Text + "','" + txtNumeroTel.Text + "')", conect.conexion);
+                    cmd = new SqlCommand("Insert into Empleados(codigo_puesto, nombre_empleado, apellido_empleado, numero_identidad_empleado, fecha_nacimiento, fecha_ingreso, num_telefono, Genero) Values(" + txtPuesto.Text + ",'" + txtNombre.Text + "', '" + txtApellido.Text + "', '" + txtIdentidad.Text + "', '" + dtpFechaNacimiento.Text + "','" + dtpFechaIngreso.Text + "','" + txtNumeroTel.Text + "','"+cmbGenero.Text+"')", conect.conexion);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conect.cargarDatosEmpleados(dgvEmpleados);
@@ -68,11 +68,14 @@ namespace Pantallas_proyecto
                 //MessageBox.Show(ex.Message.ToString());
                 MessageBox.Show("ERROR AL INSERTAR LOS DATOS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                txtNombre.Clear();
-                txtApellido.Clear();
-                txtIdentidad.Clear();
-                txtPuesto.Clear();
-                txtNumeroTel.Clear();
+                txtNombre.Text = " ";
+                txtApellido.Text = " ";
+                txtIdentidad.Text = " ";
+                txtPuesto.Text = " ";
+                txtNumeroTel.Text = " ";
+                dtpFechaNacimiento.Text = DateTime.Now.ToShortDateString();
+                dtpFechaIngreso.Text = DateTime.Now.ToShortDateString();
+                cmbGenero.SelectedIndex = -1;
                 txtNombre.Focus();
             }
 
@@ -102,8 +105,9 @@ namespace Pantallas_proyecto
                 dgvEmpleados[5, indice].Value = dtpFechaNacimiento.Text;
                 dgvEmpleados[6, indice].Value = dtpFechaIngreso.Text;
                 dgvEmpleados[7, indice].Value = txtNumeroTel.Text;
+                dgvEmpleados[8, indice].Value = cmbGenero.Text;
 
-                cmd = new SqlCommand("update Empleados set codigo_puesto = " +txtPuesto.Text+ ", nombre_empleado ='"+txtNombre.Text+"', apellido_empleado = '"+txtApellido.Text+"', numero_identidad_empleado= '"+txtIdentidad.Text+"', fecha_nacimiento = '"+dtpFechaNacimiento.Text+"', fecha_ingreso= '"+dtpFechaIngreso.Text+"', num_telefono = '"+txtNumeroTel.Text+"' where codigo_empelado = "+ codigo, conect.conexion);
+                cmd = new SqlCommand("update Empleados set codigo_puesto = " +txtPuesto.Text+ ", nombre_empleado ='"+txtNombre.Text+"', apellido_empleado = '"+txtApellido.Text+"', numero_identidad_empleado= '"+txtIdentidad.Text+"', fecha_nacimiento = '"+dtpFechaNacimiento.Text+"', fecha_ingreso= '"+dtpFechaIngreso.Text+"', num_telefono = '"+txtNumeroTel.Text+ "',Genero='" + cmbGenero.Text+ "'  where codigo_empelado = " + codigo, conect.conexion);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("El registro fue actualizado exitosamente");
                 conect.cargarDatosEmpleados(dgvEmpleados);
@@ -115,6 +119,7 @@ namespace Pantallas_proyecto
                 txtNumeroTel.Text= " ";
                 dtpFechaNacimiento.Text = DateTime.Now.ToShortDateString();
                 dtpFechaIngreso.Text = DateTime.Now.ToShortDateString();
+                cmbGenero.SelectedIndex = -1;
                 txtNombre.Focus();
 
             }
@@ -138,6 +143,7 @@ namespace Pantallas_proyecto
             dtpFechaNacimiento.Text = dgvEmpleados[5, poc].Value.ToString();
             dtpFechaIngreso.Text = dgvEmpleados[6, poc].Value.ToString();
             txtNumeroTel.Text = dgvEmpleados[7, poc].Value.ToString();
+            cmbGenero.Text = dgvEmpleados[8, poc].Value.ToString();
 
 
         }

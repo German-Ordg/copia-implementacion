@@ -51,6 +51,8 @@ namespace Pantallas_proyecto
             this.label10 = new System.Windows.Forms.Label();
             this.txtNumeroTel = new System.Windows.Forms.TextBox();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cmbGenero = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -219,7 +221,7 @@ namespace Pantallas_proyecto
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAgregar.Location = new System.Drawing.Point(499, 293);
+            this.btnAgregar.Location = new System.Drawing.Point(499, 321);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(92, 29);
             this.btnAgregar.TabIndex = 31;
@@ -272,7 +274,7 @@ namespace Pantallas_proyecto
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnModificar.Location = new System.Drawing.Point(620, 293);
+            this.btnModificar.Location = new System.Drawing.Point(620, 321);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(92, 29);
             this.btnModificar.TabIndex = 36;
@@ -280,12 +282,36 @@ namespace Pantallas_proyecto
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(348, 276);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(62, 18);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "Genero:";
+            // 
+            // cmbGenero
+            // 
+            this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
+            this.cmbGenero.Location = new System.Drawing.Point(499, 275);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(121, 21);
+            this.cmbGenero.TabIndex = 38;
+            // 
             // FrmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(753, 551);
+            this.Controls.Add(this.cmbGenero);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.txtNumeroTel);
             this.Controls.Add(this.label10);
@@ -341,5 +367,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtNumeroTel;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cmbGenero;
     }
 }
