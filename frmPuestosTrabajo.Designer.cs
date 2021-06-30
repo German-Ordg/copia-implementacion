@@ -37,11 +37,12 @@ namespace Pantallas_proyecto
             this.label1 = new System.Windows.Forms.Label();
             this.txtPosicion = new System.Windows.Forms.TextBox();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.BtnModificar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPuesto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvPuesto
@@ -66,7 +67,7 @@ namespace Pantallas_proyecto
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DgvPuesto.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DgvPuesto.Size = new System.Drawing.Size(369, 191);
+            this.DgvPuesto.Size = new System.Drawing.Size(369, 175);
             this.DgvPuesto.TabIndex = 0;
             this.DgvPuesto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPuesto_CellContentClick);
             // 
@@ -133,17 +134,6 @@ namespace Pantallas_proyecto
             this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Gold;
-            this.label6.Location = new System.Drawing.Point(83, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(178, 46);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "HEAVEN";
-            // 
             // BtnModificar
             // 
             this.BtnModificar.BackColor = System.Drawing.Color.Maroon;
@@ -178,16 +168,26 @@ namespace Pantallas_proyecto
             this.txtCodigo.Size = new System.Drawing.Size(180, 20);
             this.txtCodigo.TabIndex = 26;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Pantallas_proyecto.Properties.Resources.Letras1;
+            this.pictureBox1.Location = new System.Drawing.Point(12, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(283, 69);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmPuestosTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(411, 399);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnModificar);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.txtPosicion);
             this.Controls.Add(this.label1);
@@ -199,6 +199,7 @@ namespace Pantallas_proyecto
             this.Text = "Heaven Store - Puestos de Trabajo";
             this.Load += new System.EventHandler(this.frmPuestosTrabajo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvPuesto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,9 +213,9 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPosicion;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnModificar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
