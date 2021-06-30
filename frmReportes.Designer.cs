@@ -30,9 +30,9 @@ namespace Pantallas_proyecto
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource19 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource20 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource21 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.ProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.db_a75e9e_bderickmoncadaDataSet2 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet2();
             this.vCategoriasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
@@ -240,10 +240,10 @@ namespace Pantallas_proyecto
             this.CBtipo.FormattingEnabled = true;
             this.CBtipo.Items.AddRange(new object[] {
             "Categoria",
-            "Lo mas vendido",
-            "Productos a punto de acabarse",
-            "Talla que mas se vende",
-            "Rotacion del inventario",
+            "Lo mas Vendido",
+            "Productos a Punto de Acabarse",
+            "Talla que Mas se Vende",
+            "Rotacion del Inventario",
             "Inventario"});
             this.CBtipo.Location = new System.Drawing.Point(949, 256);
             this.CBtipo.Margin = new System.Windows.Forms.Padding(4);
@@ -353,9 +353,9 @@ namespace Pantallas_proyecto
             // reportViewer3
             // 
             this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource19.Name = "DataSet1";
-            reportDataSource19.Value = this.ProductosBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource19);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.ProductosBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report3.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
@@ -398,9 +398,9 @@ namespace Pantallas_proyecto
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource20.Name = "DataSet1";
-            reportDataSource20.Value = this.vCategoriasBindingSource3;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource20);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.vCategoriasBindingSource3;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
@@ -436,9 +436,9 @@ namespace Pantallas_proyecto
             // reportViewer6
             // 
             this.reportViewer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource21.Name = "DataSet1";
-            reportDataSource21.Value = this.vCategoriasBindingSource3;
-            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource21);
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.vCategoriasBindingSource3;
+            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer6.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report6.rdlc";
             this.reportViewer6.Location = new System.Drawing.Point(3, 3);
             this.reportViewer6.Name = "reportViewer6";
