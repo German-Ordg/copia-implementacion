@@ -30,16 +30,16 @@ namespace Pantallas_proyecto
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource10 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource11 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource12 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportes));
             this.ProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.db_a75e9e_bderickmoncadaDataSet2 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet2();
             this.vCategoriasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.db_a75e9e_bderickmoncadaDataSet5 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet5();
             this.vCategoriasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.VCategoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label6 = new System.Windows.Forms.Label();
             this.btnmostrar = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -85,6 +85,7 @@ namespace Pantallas_proyecto
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ProductosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vCategoriasBindingSource3)).BeginInit();
@@ -111,6 +112,7 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet1BindingSource)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ProductosBindingSource
@@ -141,25 +143,13 @@ namespace Pantallas_proyecto
             // 
             this.VCategoriasBindingSource.DataMember = "VCategorias";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Gold;
-            this.label6.Location = new System.Drawing.Point(465, 11);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(265, 68);
-            this.label6.TabIndex = 57;
-            this.label6.Text = "HEAVEN";
-            // 
             // btnmostrar
             // 
             this.btnmostrar.BackColor = System.Drawing.Color.Maroon;
             this.btnmostrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnmostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmostrar.ForeColor = System.Drawing.Color.White;
-            this.btnmostrar.Location = new System.Drawing.Point(949, 429);
+            this.btnmostrar.Location = new System.Drawing.Point(1002, 477);
             this.btnmostrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Size = new System.Drawing.Size(221, 53);
@@ -174,7 +164,7 @@ namespace Pantallas_proyecto
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(1040, 15);
+            this.button7.Location = new System.Drawing.Point(1074, 26);
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(149, 32);
@@ -186,7 +176,7 @@ namespace Pantallas_proyecto
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(884, 130);
+            this.label1.Location = new System.Drawing.Point(937, 178);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 17);
@@ -196,7 +186,7 @@ namespace Pantallas_proyecto
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(846, 167);
+            this.label2.Location = new System.Drawing.Point(899, 215);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 17);
@@ -206,7 +196,7 @@ namespace Pantallas_proyecto
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(828, 263);
+            this.label3.Location = new System.Drawing.Point(881, 311);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 17);
@@ -216,7 +206,7 @@ namespace Pantallas_proyecto
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(850, 215);
+            this.label4.Location = new System.Drawing.Point(903, 263);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 17);
@@ -225,7 +215,7 @@ namespace Pantallas_proyecto
             // 
             // txtcodigo
             // 
-            this.txtcodigo.Location = new System.Drawing.Point(949, 122);
+            this.txtcodigo.Location = new System.Drawing.Point(1002, 170);
             this.txtcodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(132, 22);
@@ -233,7 +223,7 @@ namespace Pantallas_proyecto
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(949, 162);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1002, 210);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(225, 22);
@@ -250,7 +240,7 @@ namespace Pantallas_proyecto
             "Talla que Mas se Vende",
             "Rotacion del Inventario",
             "Inventario"});
-            this.CBtipo.Location = new System.Drawing.Point(949, 256);
+            this.CBtipo.Location = new System.Drawing.Point(1002, 304);
             this.CBtipo.Margin = new System.Windows.Forms.Padding(4);
             this.CBtipo.Name = "CBtipo";
             this.CBtipo.Size = new System.Drawing.Size(225, 24);
@@ -264,7 +254,7 @@ namespace Pantallas_proyecto
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(867, 308);
+            this.label5.Location = new System.Drawing.Point(920, 356);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 17);
             this.label5.TabIndex = 71;
@@ -281,7 +271,7 @@ namespace Pantallas_proyecto
             this.CBcategoria.DisplayMember = "descripcion_categoria";
             this.CBcategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBcategoria.FormattingEnabled = true;
-            this.CBcategoria.Location = new System.Drawing.Point(949, 311);
+            this.CBcategoria.Location = new System.Drawing.Point(1002, 359);
             this.CBcategoria.Name = "CBcategoria";
             this.CBcategoria.Size = new System.Drawing.Size(225, 24);
             this.CBcategoria.TabIndex = 72;
@@ -358,9 +348,9 @@ namespace Pantallas_proyecto
             // reportViewer3
             // 
             this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource10.Name = "DataSet1";
-            reportDataSource10.Value = this.ProductosBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource10);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.ProductosBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report3.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
@@ -395,7 +385,7 @@ namespace Pantallas_proyecto
             this.tab1.Location = new System.Drawing.Point(4, 25);
             this.tab1.Name = "tab1";
             this.tab1.Padding = new System.Windows.Forms.Padding(3);
-            this.tab1.Size = new System.Drawing.Size(766, 428);
+            this.tab1.Size = new System.Drawing.Size(842, 461);
             this.tab1.TabIndex = 0;
             this.tab1.Text = "Reporte1";
             this.tab1.UseVisualStyleBackColor = true;
@@ -403,14 +393,14 @@ namespace Pantallas_proyecto
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource11.Name = "DataSet1";
-            reportDataSource11.Value = this.vCategoriasBindingSource3;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource11);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.vCategoriasBindingSource3;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(760, 422);
+            this.reportViewer1.Size = new System.Drawing.Size(836, 455);
             this.reportViewer1.TabIndex = 0;
             // 
             // tabreporte1
@@ -421,10 +411,10 @@ namespace Pantallas_proyecto
             this.tabreporte1.Controls.Add(this.tab4);
             this.tabreporte1.Controls.Add(this.tab5);
             this.tabreporte1.Controls.Add(this.tab6);
-            this.tabreporte1.Location = new System.Drawing.Point(31, 69);
+            this.tabreporte1.Location = new System.Drawing.Point(12, 96);
             this.tabreporte1.Name = "tabreporte1";
             this.tabreporte1.SelectedIndex = 0;
-            this.tabreporte1.Size = new System.Drawing.Size(774, 457);
+            this.tabreporte1.Size = new System.Drawing.Size(850, 490);
             this.tabreporte1.TabIndex = 70;
             // 
             // tab6
@@ -441,9 +431,9 @@ namespace Pantallas_proyecto
             // reportViewer6
             // 
             this.reportViewer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource12.Name = "DataSet1";
-            reportDataSource12.Value = this.vCategoriasBindingSource3;
-            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource12);
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.vCategoriasBindingSource3;
+            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer6.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report6.rdlc";
             this.reportViewer6.Location = new System.Drawing.Point(3, 3);
             this.reportViewer6.Name = "reportViewer6";
@@ -506,7 +496,7 @@ namespace Pantallas_proyecto
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(949, 210);
+            this.dateTimePicker2.Location = new System.Drawing.Point(1002, 258);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(225, 22);
@@ -519,9 +509,9 @@ namespace Pantallas_proyecto
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.toolStripLabel2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 567);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 604);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1220, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1250, 25);
             this.toolStrip1.TabIndex = 74;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -544,12 +534,24 @@ namespace Pantallas_proyecto
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Pantallas_proyecto.Properties.Resources.Letras1;
+            this.pictureBox1.Location = new System.Drawing.Point(466, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(332, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 75;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1220, 592);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1250, 629);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.tabreporte1);
@@ -564,8 +566,9 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.btnmostrar);
-            this.Controls.Add(this.label6);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmReportes";
             this.Text = "Heaven Store - Reportes";
@@ -597,14 +600,13 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet1BindingSource)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnmostrar;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label1;
@@ -660,5 +662,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
