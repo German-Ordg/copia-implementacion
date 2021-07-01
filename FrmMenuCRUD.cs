@@ -115,5 +115,11 @@ namespace Pantallas_proyecto
         {
             MessageBox.Show("INVERSIONES HEAVEN STORE. TEL.:2772-2047. CORREO: gomezsalgadoevelyn@gmail.com", "Contactos", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
+            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }
