@@ -298,7 +298,7 @@ namespace Pantallas_proyecto
             this.tab5.Location = new System.Drawing.Point(4, 25);
             this.tab5.Name = "tab5";
             this.tab5.Padding = new System.Windows.Forms.Padding(3);
-            this.tab5.Size = new System.Drawing.Size(766, 428);
+            this.tab5.Size = new System.Drawing.Size(842, 461);
             this.tab5.TabIndex = 5;
             this.tab5.Text = "Reporte5";
             this.tab5.UseVisualStyleBackColor = true;
@@ -310,7 +310,7 @@ namespace Pantallas_proyecto
             this.reportViewer5.Location = new System.Drawing.Point(3, 3);
             this.reportViewer5.Name = "reportViewer5";
             this.reportViewer5.ServerReport.BearerToken = null;
-            this.reportViewer5.Size = new System.Drawing.Size(760, 422);
+            this.reportViewer5.Size = new System.Drawing.Size(836, 455);
             this.reportViewer5.TabIndex = 0;
             // 
             // tab4
@@ -319,7 +319,7 @@ namespace Pantallas_proyecto
             this.tab4.Location = new System.Drawing.Point(4, 25);
             this.tab4.Name = "tab4";
             this.tab4.Padding = new System.Windows.Forms.Padding(3);
-            this.tab4.Size = new System.Drawing.Size(766, 428);
+            this.tab4.Size = new System.Drawing.Size(842, 461);
             this.tab4.TabIndex = 4;
             this.tab4.Text = "Reporte4";
             this.tab4.UseVisualStyleBackColor = true;
@@ -331,7 +331,7 @@ namespace Pantallas_proyecto
             this.reportViewer4.Location = new System.Drawing.Point(3, 3);
             this.reportViewer4.Name = "reportViewer4";
             this.reportViewer4.ServerReport.BearerToken = null;
-            this.reportViewer4.Size = new System.Drawing.Size(760, 422);
+            this.reportViewer4.Size = new System.Drawing.Size(836, 455);
             this.reportViewer4.TabIndex = 0;
             // 
             // tab3
@@ -340,7 +340,7 @@ namespace Pantallas_proyecto
             this.tab3.Location = new System.Drawing.Point(4, 25);
             this.tab3.Name = "tab3";
             this.tab3.Padding = new System.Windows.Forms.Padding(3);
-            this.tab3.Size = new System.Drawing.Size(766, 428);
+            this.tab3.Size = new System.Drawing.Size(842, 461);
             this.tab3.TabIndex = 3;
             this.tab3.Text = "Reporte3";
             this.tab3.UseVisualStyleBackColor = true;
@@ -355,7 +355,7 @@ namespace Pantallas_proyecto
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
             this.reportViewer3.ServerReport.BearerToken = null;
-            this.reportViewer3.Size = new System.Drawing.Size(760, 422);
+            this.reportViewer3.Size = new System.Drawing.Size(836, 455);
             this.reportViewer3.TabIndex = 0;
             // 
             // tab2
@@ -364,7 +364,7 @@ namespace Pantallas_proyecto
             this.tab2.Location = new System.Drawing.Point(4, 25);
             this.tab2.Name = "tab2";
             this.tab2.Padding = new System.Windows.Forms.Padding(3);
-            this.tab2.Size = new System.Drawing.Size(766, 428);
+            this.tab2.Size = new System.Drawing.Size(842, 461);
             this.tab2.TabIndex = 1;
             this.tab2.Text = "Reporte2";
             this.tab2.UseVisualStyleBackColor = true;
@@ -376,7 +376,7 @@ namespace Pantallas_proyecto
             this.reportViewer2.Location = new System.Drawing.Point(3, 3);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(760, 422);
+            this.reportViewer2.Size = new System.Drawing.Size(836, 455);
             this.reportViewer2.TabIndex = 0;
             // 
             // tab1
@@ -423,7 +423,7 @@ namespace Pantallas_proyecto
             this.tab6.Location = new System.Drawing.Point(4, 25);
             this.tab6.Name = "tab6";
             this.tab6.Padding = new System.Windows.Forms.Padding(3);
-            this.tab6.Size = new System.Drawing.Size(766, 428);
+            this.tab6.Size = new System.Drawing.Size(842, 461);
             this.tab6.TabIndex = 6;
             this.tab6.Text = "Reporte6";
             this.tab6.UseVisualStyleBackColor = true;
@@ -438,7 +438,7 @@ namespace Pantallas_proyecto
             this.reportViewer6.Location = new System.Drawing.Point(3, 3);
             this.reportViewer6.Name = "reportViewer6";
             this.reportViewer6.ServerReport.BearerToken = null;
-            this.reportViewer6.Size = new System.Drawing.Size(760, 422);
+            this.reportViewer6.Size = new System.Drawing.Size(836, 455);
             this.reportViewer6.TabIndex = 0;
             this.reportViewer6.Load += new System.EventHandler(this.reportViewer6_Load);
             // 
