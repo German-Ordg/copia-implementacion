@@ -7,13 +7,11 @@ namespace Pantallas_proyecto
 {
     public partial class frmPuestosTrabajo : Form
     {
-        private Timer ti;
+
         public frmPuestosTrabajo()
         {
-            ti = new Timer();
-            ti.Tick += new EventHandler(eventoTimer);
             InitializeComponent();
-            ti.Enabled = true;
+            timer1.Enabled = true;
         }
 
         ClsConexionBD connect = new ClsConexionBD();
@@ -35,12 +33,6 @@ namespace Pantallas_proyecto
             txtCodigo.Clear();
             txtPosicion.Clear();
             txtPosicion.Select();
-        }
-
-        private void eventoTimer(object ob, EventArgs e)
-        {
-            DateTime hoy = DateTime.Now;
-            lblReloj.Text = hoy.ToString("hh:mm:ss tt");
         }
 
         private void frmPuestosTrabajo_Load(object sender, EventArgs e)
@@ -105,6 +97,12 @@ namespace Pantallas_proyecto
             MessageBox.Show("Puesto de Trabajo Eliminado");
             Limpiar();
             MostrarDatos();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            tslFecha.Text = DateTime.Now.ToLongDateString();
+            tslHora.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }
