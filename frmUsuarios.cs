@@ -18,6 +18,9 @@ namespace Pantallas_proyecto
         {
             InitializeComponent();
         }
+        SqlCommand scd;
+        ClsConexionBD conect = new ClsConexionBD();
+
 
         private void button3_Click(object sender, EventArgs e)
         {

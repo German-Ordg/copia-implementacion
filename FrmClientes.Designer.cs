@@ -40,14 +40,14 @@ namespace Pantallas_proyecto
             this.label9 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtApellido = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtCorreo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,12 +158,12 @@ namespace Pantallas_proyecto
             this.label8.TabIndex = 43;
             this.label8.Text = "HEAVEN";
             // 
-            // textBox4
+            // TxtID
             // 
-            this.textBox4.Location = new System.Drawing.Point(369, 98);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(159, 20);
-            this.textBox4.TabIndex = 40;
+            this.TxtID.Location = new System.Drawing.Point(369, 98);
+            this.TxtID.Name = "TxtID";
+            this.TxtID.Size = new System.Drawing.Size(159, 20);
+            this.TxtID.TabIndex = 40;
             // 
             // label5
             // 
@@ -176,19 +176,19 @@ namespace Pantallas_proyecto
             this.label5.TabIndex = 37;
             this.label5.Text = "Apellido";
             // 
-            // textBox2
+            // TxtApellido
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 155);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(157, 20);
-            this.textBox2.TabIndex = 35;
+            this.TxtApellido.Location = new System.Drawing.Point(136, 155);
+            this.TxtApellido.Name = "TxtApellido";
+            this.TxtApellido.Size = new System.Drawing.Size(157, 20);
+            this.TxtApellido.TabIndex = 35;
             // 
-            // textBox1
+            // TxtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 20);
-            this.textBox1.TabIndex = 34;
+            this.TxtNombre.Location = new System.Drawing.Point(136, 98);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(157, 20);
+            this.TxtNombre.TabIndex = 34;
             // 
             // label3
             // 
@@ -223,12 +223,12 @@ namespace Pantallas_proyecto
             this.label1.TabIndex = 49;
             this.label1.Text = "Correo";
             // 
-            // textBox3
+            // TxtCorreo
             // 
-            this.textBox3.Location = new System.Drawing.Point(371, 155);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(159, 20);
-            this.textBox3.TabIndex = 50;
+            this.TxtCorreo.Location = new System.Drawing.Point(371, 155);
+            this.TxtCorreo.Name = "TxtCorreo";
+            this.TxtCorreo.Size = new System.Drawing.Size(159, 20);
+            this.TxtCorreo.TabIndex = 50;
             // 
             // FrmClientes
             // 
@@ -236,7 +236,7 @@ namespace Pantallas_proyecto
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(572, 401);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.TxtCorreo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -244,10 +244,10 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.TxtID);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtApellido);
+            this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "FrmClientes";
@@ -267,10 +267,10 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtID;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtApellido;
+        private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
@@ -279,6 +279,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.DataGridViewTextBoxColumn Identidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtCorreo;
     }
 }
