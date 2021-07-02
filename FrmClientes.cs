@@ -40,7 +40,36 @@ namespace Pantallas_proyecto
         private void button2_Click(object sender, EventArgs e)
         {
 
-            
+            if (TxtNombre.TextLength != 0)
+            {
+                if (TxtApellido.TextLength != 0)
+                {
+                    if (txtRTN.TextLength != 0)
+                    {
+                        if (txtID.TextLength != 0)
+                        {
+                           
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ingrese la identidad del cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingrese el RTN del cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese el apellido del cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese el nombre del cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            con.cerrar();
 
         }
     }
