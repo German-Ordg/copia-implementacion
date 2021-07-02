@@ -244,5 +244,28 @@ namespace Pantallas_proyecto
                 lstCompras.Enabled = false;
             }
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            if (nudCantidad.Value <= fac.CantidadInventario)
+            {
+
+                int n = lstCompras.CurrentRow.Index;
+
+                lstCompras.Rows[n].Cells[0].Value = fac.CodigoProducto.ToString();
+                lstCompras.Rows[n].Cells[1].Value = nudCantidad.Value.ToString();
+                lstCompras.Rows[n].Cells[2].Value = fac.DescripcionProducto.ToString();
+                lstCompras.Rows[n].Cells[3].Value = fac.PrecioProducto.ToString();
+                lstCompras.Rows[n].Cells[4].Value = fac.DescuentoProducto.ToString();
+
+                double total = Int32.Parse(nudCantidad.Value.ToString()) * fac.PrecioProducto;
+                lstCompras.Rows[n].Cells[5].Value = total.ToString();
+                lstCompras.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("No hay suficiente cantidad en el inventario", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
