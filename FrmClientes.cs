@@ -48,7 +48,21 @@ namespace Pantallas_proyecto
                     {
                         if (txtID.TextLength != 0)
                         {
-                           
+                            String insertarCliente = "INSERT INTO [dbo].[Clientes] ([nombre_cliente],[apellido_cliente],[correo_electronico],[numero_identidad_cliente],[rtn]) " +
+                                "VALUES('" + TxtNombre.Text + "','" + TxtApellido.Text + "','" + TxtCorreo.Text + "','" + txtID.Text + "','" + txtRTN.Text + "')";
+
+                            try
+                            {
+                                con.abrir();
+                                cmd = new SqlCommand(insertarCliente, con.conexion);
+                                dr = cmd.ExecuteReader();
+                                MessageBox.Show("Registro ingresado con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("No se ha podido ingresar el cliente" + ex.ToString(), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
                         }
                         else
                         {
