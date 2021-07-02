@@ -199,9 +199,7 @@ namespace Pantallas_proyecto
         private void lstCompras_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-           // DgvBtnEliminar
-
-
+           
         }
 
         private void editar(object sender, DataGridViewCellEventArgs e)
@@ -265,6 +263,18 @@ namespace Pantallas_proyecto
             else
             {
                 MessageBox.Show("No hay suficiente cantidad en el inventario", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (lstCompras.SelectedRows.Count != 0)
+            {
+                lstCompras.Rows.RemoveAt(lstCompras.CurrentRow.Index);
+            }
+            else
+            {
+                MessageBox.Show("No ha seleccionado un ítem a borrar", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

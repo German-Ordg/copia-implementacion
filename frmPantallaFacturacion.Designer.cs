@@ -386,6 +386,7 @@ namespace Pantallas_proyecto
             this.Column3});
             this.lstCompras.Location = new System.Drawing.Point(16, 299);
             this.lstCompras.Margin = new System.Windows.Forms.Padding(4);
+            this.lstCompras.MultiSelect = false;
             this.lstCompras.Name = "lstCompras";
             this.lstCompras.RowHeadersWidth = 51;
             this.lstCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -847,6 +848,7 @@ namespace Pantallas_proyecto
             this.btnEliminar.TabIndex = 21;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
