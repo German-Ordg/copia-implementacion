@@ -223,5 +223,26 @@ namespace Pantallas_proyecto
             }
             
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (lstCompras.CurrentRow != null)
+            {
+
+                txtCodProducto.Enabled = false;
+                btnAgregar.Enabled = false;
+                btnBuscarProducto.Enabled = false;
+                btnEditar.Enabled = false;
+                btnActualizar.Enabled = true;
+
+                int a = lstCompras.CurrentRow.Index;
+                txtCodProducto.Text = lstCompras.Rows[a].Cells[0].Value.ToString();
+                nudCantidad.Value = Int32.Parse(lstCompras.Rows[a].Cells[1].Value.ToString());
+                txtDescripcion.Text = lstCompras.Rows[a].Cells[2].Value.ToString();
+                txtPrecioUnitario.Text = lstCompras.Rows[a].Cells[3].Value.ToString();
+                txtDescuento.Text = lstCompras.Rows[a].Cells[4].Value.ToString();
+                lstCompras.Enabled = false;
+            }
+        }
     }
 }
