@@ -48,7 +48,7 @@ namespace Pantallas_proyecto
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar los datos!", "ERROR",
+                MessageBox.Show("Error al cargar los datos!" , "ERROR",
                                 MessageBoxButtons.OK);
             }
         }

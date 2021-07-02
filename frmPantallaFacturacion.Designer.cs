@@ -29,6 +29,7 @@ namespace Pantallas_proyecto
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.brnRegresar = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtTotalPagar = new System.Windows.Forms.TextBox();
@@ -50,19 +51,17 @@ namespace Pantallas_proyecto
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.btnCalcularFactura = new System.Windows.Forms.Button();
-            this.btnBorrarProducto = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.lstCompras = new System.Windows.Forms.DataGridView();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
+            this.btnAgregarCliente = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.rbConNombre = new System.Windows.Forms.RadioButton();
+            this.rbSinNombre = new System.Windows.Forms.RadioButton();
             this.txtRTN = new System.Windows.Forms.TextBox();
             this.lblRTN = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -90,18 +89,26 @@ namespace Pantallas_proyecto
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnImprimirFactura = new System.Windows.Forms.Button();
-            this.rbConNombre = new System.Windows.Forms.RadioButton();
-            this.rbSinNombre = new System.Windows.Forms.RadioButton();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnAgregarCliente = new System.Windows.Forms.Button();
-            this.btnBuscarCliente = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.lstCodProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lstCompras)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
-            this.groupBox4.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // brnRegresar
@@ -336,30 +343,16 @@ namespace Pantallas_proyecto
             this.btnCalcularFactura.UseVisualStyleBackColor = false;
             this.btnCalcularFactura.Click += new System.EventHandler(this.button5_Click);
             // 
-            // btnBorrarProducto
-            // 
-            this.btnBorrarProducto.BackColor = System.Drawing.Color.Maroon;
-            this.btnBorrarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBorrarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrarProducto.ForeColor = System.Drawing.Color.White;
-            this.btnBorrarProducto.Location = new System.Drawing.Point(277, 167);
-            this.btnBorrarProducto.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBorrarProducto.Name = "btnBorrarProducto";
-            this.btnBorrarProducto.Size = new System.Drawing.Size(160, 37);
-            this.btnBorrarProducto.TabIndex = 9;
-            this.btnBorrarProducto.Text = "Borrar Producto";
-            this.btnBorrarProducto.UseVisualStyleBackColor = false;
-            // 
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Maroon;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(13, 167);
+            this.btnAgregar.Location = new System.Drawing.Point(26, 167);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(115, 37);
+            this.btnAgregar.Size = new System.Drawing.Size(90, 37);
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -371,10 +364,10 @@ namespace Pantallas_proyecto
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(144, 167);
+            this.btnEditar.Location = new System.Drawing.Point(123, 167);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(115, 37);
+            this.btnEditar.Size = new System.Drawing.Size(92, 37);
             this.btnEditar.TabIndex = 8;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -384,7 +377,7 @@ namespace Pantallas_proyecto
             this.lstCompras.AllowUserToOrderColumns = true;
             this.lstCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lstCompras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column4,
+            this.lstCodProducto,
             this.Cantidad,
             this.Descripcion,
             this.Column1,
@@ -394,55 +387,10 @@ namespace Pantallas_proyecto
             this.lstCompras.Margin = new System.Windows.Forms.Padding(4);
             this.lstCompras.Name = "lstCompras";
             this.lstCompras.RowHeadersWidth = 51;
+            this.lstCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.lstCompras.Size = new System.Drawing.Size(1269, 234);
             this.lstCompras.TabIndex = 20;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Cod. Producto";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 50;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 93;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.MinimumWidth = 400;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 400;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column1.HeaderText = "Precio Unitario";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 119;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column2.HeaderText = "Descuentos y Rebajas Otorgadas";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 167;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column3.HeaderText = "TOTAL.";
-            this.Column3.MinimumWidth = 102;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 102;
+            this.lstCompras.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.editar);
             // 
             // label10
             // 
@@ -484,6 +432,71 @@ namespace Pantallas_proyecto
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cliente";
+            // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.BackColor = System.Drawing.Color.Maroon;
+            this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(256, 70);
+            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(129, 28);
+            this.btnBuscarCliente.TabIndex = 21;
+            this.btnBuscarCliente.Text = "Buscar Cliente";
+            this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            // 
+            // btnAgregarCliente
+            // 
+            this.btnAgregarCliente.BackColor = System.Drawing.Color.Maroon;
+            this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarCliente.Location = new System.Drawing.Point(418, 70);
+            this.btnAgregarCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarCliente.Name = "btnAgregarCliente";
+            this.btnAgregarCliente.Size = new System.Drawing.Size(144, 28);
+            this.btnAgregarCliente.TabIndex = 21;
+            this.btnAgregarCliente.Text = "Agregar Cliente";
+            this.btnAgregarCliente.UseVisualStyleBackColor = false;
+            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.rbConNombre);
+            this.groupBox4.Controls.Add(this.rbSinNombre);
+            this.groupBox4.Location = new System.Drawing.Point(7, 17);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 100);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "groupBox4";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            // 
+            // rbConNombre
+            // 
+            this.rbConNombre.AutoSize = true;
+            this.rbConNombre.Location = new System.Drawing.Point(18, 21);
+            this.rbConNombre.Name = "rbConNombre";
+            this.rbConNombre.Size = new System.Drawing.Size(160, 21);
+            this.rbConNombre.TabIndex = 6;
+            this.rbConNombre.TabStop = true;
+            this.rbConNombre.Text = "Factura Con Nombre";
+            this.rbConNombre.UseVisualStyleBackColor = true;
+            this.rbConNombre.CheckedChanged += new System.EventHandler(this.rbConNombre_CheckedChanged);
+            // 
+            // rbSinNombre
+            // 
+            this.rbSinNombre.AutoSize = true;
+            this.rbSinNombre.Location = new System.Drawing.Point(18, 53);
+            this.rbSinNombre.Name = "rbSinNombre";
+            this.rbSinNombre.Size = new System.Drawing.Size(155, 21);
+            this.rbSinNombre.TabIndex = 7;
+            this.rbSinNombre.TabStop = true;
+            this.rbSinNombre.Text = "Factura Sin Nombre";
+            this.rbSinNombre.UseVisualStyleBackColor = true;
+            this.rbSinNombre.CheckedChanged += new System.EventHandler(this.rbSinNombre_CheckedChanged);
             // 
             // txtRTN
             // 
@@ -601,11 +614,12 @@ namespace Pantallas_proyecto
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnActualizar);
+            this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnBuscarProducto);
             this.groupBox1.Controls.Add(this.nudCantidad);
             this.groupBox1.Controls.Add(this.btnEliminarTodo);
             this.groupBox1.Controls.Add(this.txtDescuento);
-            this.groupBox1.Controls.Add(this.btnBorrarProducto);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtPrecioUnitario);
             this.groupBox1.Controls.Add(this.label2);
@@ -654,10 +668,10 @@ namespace Pantallas_proyecto
             this.btnEliminarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarTodo.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarTodo.Location = new System.Drawing.Point(455, 167);
+            this.btnEliminarTodo.Location = new System.Drawing.Point(434, 167);
             this.btnEliminarTodo.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarTodo.Name = "btnEliminarTodo";
-            this.btnEliminarTodo.Size = new System.Drawing.Size(160, 37);
+            this.btnEliminarTodo.Size = new System.Drawing.Size(133, 37);
             this.btnEliminarTodo.TabIndex = 18;
             this.btnEliminarTodo.Text = "Eliminar Todo";
             this.btnEliminarTodo.UseVisualStyleBackColor = false;
@@ -789,77 +803,118 @@ namespace Pantallas_proyecto
             this.btnImprimirFactura.Text = "Imprimir Factura";
             this.btnImprimirFactura.UseVisualStyleBackColor = false;
             // 
-            // rbConNombre
+            // toolStrip1
             // 
-            this.rbConNombre.AutoSize = true;
-            this.rbConNombre.Location = new System.Drawing.Point(18, 21);
-            this.rbConNombre.Name = "rbConNombre";
-            this.rbConNombre.Size = new System.Drawing.Size(160, 21);
-            this.rbConNombre.TabIndex = 6;
-            this.rbConNombre.TabStop = true;
-            this.rbConNombre.Text = "Factura Con Nombre";
-            this.rbConNombre.UseVisualStyleBackColor = true;
-            this.rbConNombre.CheckedChanged += new System.EventHandler(this.rbConNombre_CheckedChanged);
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripLabel2});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 685);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1306, 25);
+            this.toolStrip1.TabIndex = 30;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // rbSinNombre
+            // toolStripLabel1
             // 
-            this.rbSinNombre.AutoSize = true;
-            this.rbSinNombre.Location = new System.Drawing.Point(18, 53);
-            this.rbSinNombre.Name = "rbSinNombre";
-            this.rbSinNombre.Size = new System.Drawing.Size(155, 21);
-            this.rbSinNombre.TabIndex = 7;
-            this.rbSinNombre.TabStop = true;
-            this.rbSinNombre.Text = "Factura Sin Nombre";
-            this.rbSinNombre.UseVisualStyleBackColor = true;
-            this.rbSinNombre.CheckedChanged += new System.EventHandler(this.rbSinNombre_CheckedChanged);
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(111, 22);
+            this.toolStripLabel1.Text = "toolStripLabel1";
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
-            // groupBox4
+            // toolStripLabel2
             // 
-            this.groupBox4.Controls.Add(this.rbConNombre);
-            this.groupBox4.Controls.Add(this.rbSinNombre);
-            this.groupBox4.Location = new System.Drawing.Point(7, 17);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(200, 100);
-            this.groupBox4.TabIndex = 8;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(111, 22);
+            this.toolStripLabel2.Text = "toolStripLabel2";
             // 
-            // btnAgregarCliente
+            // timer1
             // 
-            this.btnAgregarCliente.BackColor = System.Drawing.Color.Maroon;
-            this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarCliente.Location = new System.Drawing.Point(418, 70);
-            this.btnAgregarCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAgregarCliente.Name = "btnAgregarCliente";
-            this.btnAgregarCliente.Size = new System.Drawing.Size(144, 28);
-            this.btnAgregarCliente.TabIndex = 21;
-            this.btnAgregarCliente.Text = "Agregar Cliente";
-            this.btnAgregarCliente.UseVisualStyleBackColor = false;
-            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnBuscarCliente
+            // btnEliminar
             // 
-            this.btnBuscarCliente.BackColor = System.Drawing.Color.Maroon;
-            this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(256, 70);
-            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(129, 28);
-            this.btnBuscarCliente.TabIndex = 21;
-            this.btnBuscarCliente.Text = "Buscar Cliente";
-            this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnEliminar.BackColor = System.Drawing.Color.Maroon;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(330, 167);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(96, 37);
+            this.btnEliminar.TabIndex = 21;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.Maroon;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(226, 167);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(96, 37);
+            this.btnActualizar.TabIndex = 22;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            // 
+            // lstCodProducto
+            // 
+            this.lstCodProducto.HeaderText = "Cod. Producto";
+            this.lstCodProducto.MinimumWidth = 100;
+            this.lstCodProducto.Name = "lstCodProducto";
+            this.lstCodProducto.Width = 125;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 50;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 93;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.MinimumWidth = 270;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Width = 270;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column1.HeaderText = "Precio Unitario";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 130;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column2.HeaderText = "Descuentos y Rebajas Otorgadas";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 167;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column3.HeaderText = "Total.";
+            this.Column3.MinimumWidth = 102;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 102;
             // 
             // frmPantallaFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1308, 689);
+            this.ClientSize = new System.Drawing.Size(1306, 710);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnImprimirFactura);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.brnRegresar);
@@ -881,13 +936,15 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.lstCompras)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -916,16 +973,9 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button btnBorrarProducto;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.DataGridView lstCompras;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -961,5 +1011,17 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.RadioButton rbSinNombre;
         private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.Button btnAgregarCliente;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lstCodProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

@@ -46,6 +46,7 @@ namespace Pantallas_proyecto
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picError)).BeginInit();
             this.SuspendLayout();
@@ -74,9 +75,9 @@ namespace Pantallas_proyecto
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(16, 20);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(357, 341);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -88,7 +89,7 @@ namespace Pantallas_proyecto
             this.txtUsuario.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtUsuario.Location = new System.Drawing.Point(153, 132);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(169, 29);
             this.txtUsuario.TabIndex = 20;
@@ -104,7 +105,7 @@ namespace Pantallas_proyecto
             this.txtContrasena.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtContrasena.Location = new System.Drawing.Point(152, 202);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(169, 29);
             this.txtContrasena.TabIndex = 19;
@@ -119,7 +120,7 @@ namespace Pantallas_proyecto
             this.chkMostrarContra.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkMostrarContra.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.chkMostrarContra.Location = new System.Drawing.Point(153, 250);
-            this.chkMostrarContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkMostrarContra.Margin = new System.Windows.Forms.Padding(4);
             this.chkMostrarContra.Name = "chkMostrarContra";
             this.chkMostrarContra.Size = new System.Drawing.Size(163, 24);
             this.chkMostrarContra.TabIndex = 18;
@@ -131,7 +132,7 @@ namespace Pantallas_proyecto
             // 
             this.picError.Image = ((System.Drawing.Image)(resources.GetObject("picError.Image")));
             this.picError.Location = new System.Drawing.Point(32, 290);
-            this.picError.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picError.Margin = new System.Windows.Forms.Padding(4);
             this.picError.Name = "picError";
             this.picError.Size = new System.Drawing.Size(27, 25);
             this.picError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,7 +202,7 @@ namespace Pantallas_proyecto
             this.btnIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngreso.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnIngreso.Location = new System.Drawing.Point(65, 386);
-            this.btnIngreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.btnIngreso.Name = "btnIngreso";
             this.btnIngreso.Size = new System.Drawing.Size(131, 49);
             this.btnIngreso.TabIndex = 4;
@@ -216,7 +217,7 @@ namespace Pantallas_proyecto
             this.btnRecuperar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecuperar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRecuperar.Location = new System.Drawing.Point(352, 386);
-            this.btnRecuperar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRecuperar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRecuperar.Name = "btnRecuperar";
             this.btnRecuperar.Size = new System.Drawing.Size(312, 49);
             this.btnRecuperar.TabIndex = 5;
@@ -231,7 +232,7 @@ namespace Pantallas_proyecto
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSalir.Location = new System.Drawing.Point(831, 386);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(132, 49);
             this.btnSalir.TabIndex = 6;
@@ -266,13 +267,23 @@ namespace Pantallas_proyecto
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(867, 270);
+            this.button1.Location = new System.Drawing.Point(819, 228);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(115, 91);
             this.button1.TabIndex = 8;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(557, 311);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(107, 50);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FrmAcceso
             // 
@@ -280,6 +291,7 @@ namespace Pantallas_proyecto
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1023, 475);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -288,7 +300,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.btnIngreso);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmAcceso";
             this.RightToLeftLayout = true;
             this.Text = "Heaven Store";
@@ -318,6 +330,7 @@ namespace Pantallas_proyecto
         public System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

@@ -54,18 +54,18 @@ namespace Pantallas_proyecto
 
         private void frmPantallaFacturacion_Load(object sender, EventArgs e)
         {
+                                 
             con.abrir();
             fac.cargarComboboxPago(cmbTipoPago);
             fac.cargarComboboxVendedor(cmbVendedor);
             rbSinNombre.Checked = true;
-            btnBorrarProducto.Enabled = false;
             btnCalcularFactura.Enabled = false;
             btnImprimirFactura.Enabled = false;
             btnAgregar.Enabled = false;
             btnEditar.Enabled = false;
             btnEliminarTodo.Enabled = false;
-            
-            
+            timer1.Enabled = true;
+
         }
 
         private void frmPantallaFacturacion_FormClosed(object sender, FormClosedEventArgs e)
@@ -109,7 +109,6 @@ namespace Pantallas_proyecto
                     txtDescuento.Text = fac.DescuentoProducto.ToString();
                     txtPrecioUnitario.Text = fac.PrecioProducto.ToString();
                     txtDescripcion.Text = fac.DescripcionProducto;
-                    btnBorrarProducto.Enabled = true;
                     btnAgregar.Enabled = true;
                     btnEditar.Enabled = true;
                     btnEliminarTodo.Enabled = true;
@@ -179,6 +178,50 @@ namespace Pantallas_proyecto
             {
                 MessageBox.Show("No hay suficiente cantidad en el inventario", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
+            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void btnBorrarProducto_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void lstCompras_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+           // DgvBtnEliminar
+
+
+        }
+
+        private void editar(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if(lstCompras.RowCount>1)
+            {
+                int a = lstCompras.CurrentRow.Index;
+                txtCodProducto.Text = lstCompras.Rows[a].Cells[0].Value.ToString();
+                nudCantidad.Value = Int32.Parse(lstCompras.Rows[a].Cells[1].Value.ToString());
+                txtDescripcion.Text = lstCompras.Rows[a].Cells[2].Value.ToString();
+                txtPrecioUnitario.Text = lstCompras.Rows[a].Cells[3].Value.ToString();
+                txtDescuento.Text = lstCompras.Rows[a].Cells[4].Value.ToString();
+                lstCompras.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("No se puede editar esta fila", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
     }
 }
