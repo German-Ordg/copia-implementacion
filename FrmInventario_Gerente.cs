@@ -68,5 +68,16 @@ namespace Pantallas_proyecto
             textBox1.Text = dataGridView1[0, poc].Value.ToString();
             textBox2.Text = dataGridView1[1, poc].Value.ToString();
         }
+
+        private void FrmInventario_Gerente_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
+            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }
