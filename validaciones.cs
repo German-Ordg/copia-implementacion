@@ -8,15 +8,16 @@ using System.Xml.Schema;
 
 namespace Pantallas_proyecto
 {
-    public partial class validaciones : FrmMetodosdePago
+    public partial class validaciones 
     {
 
         public static Boolean ValidarFormulario(Control Objeto, ErrorProvider ErrorProvider) {
-            Boolean HayErrores = false;
+            
+            Boolean HayErrores = false; //variable booleana 
 
-            foreach  (Control Item in Objeto.Controls)
+            foreach  (Control Item in Objeto.Controls) //creamos un foreach para comprobar los if
             {
-                if (Item is ErrorTxtBox)
+                if (Item is ErrorTxtBox) //errortxtbox  es el item que validamos los textbox
                 {
                     ErrorTxtBox Obj = (ErrorTxtBox)Item;
                     if (Obj.Validar == true)

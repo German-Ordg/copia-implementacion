@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Pantallas_proyecto
 {
@@ -39,15 +40,15 @@ namespace Pantallas_proyecto
 
         private void btnIngreso_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text != "Usuario")
+            if (validaciones.ValidarFormulario(this, errorProvider1) == false)
             {
-                if (txtContrasena.Text != "Contraseña")
+                try
                 {
                     ClsLogin usuario = new ClsLogin();
                     var validar = usuario.Login(txtUsuario.Text, txtContrasena.Text);
                     if (validar == true)
                     {
-                        FrmMenuPrincipal menu = new FrmMenuPrincipal(); 
+                        FrmMenuPrincipal menu = new FrmMenuPrincipal();
                         menu.Show();
                         menu.FormClosed += cerrarSesion;
                         this.Hide();
@@ -59,11 +60,18 @@ namespace Pantallas_proyecto
                         txtContrasena.Clear();
                     }
                 }
-                else
-                    msjError("Ingrese la contraseña");
+                catch (Exception ex)
+                {
+                    msjError("Usuario o contraseña incorrecta \n\t Intente de nuevo");
+                    txtUsuario.Clear();
+                    txtContrasena.Clear();
+                }
             }
-            else
-                msjError("Ingrese el usuario");
+            else 
+            {
+                return ;
+            }
+
         }
         private void msjError(string msj)
         {
