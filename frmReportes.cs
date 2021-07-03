@@ -25,7 +25,7 @@ namespace Pantallas_proyecto
             gerente.Show();
             this.Close();
         }
-
+        //prueba
         private void frmReportes_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
@@ -61,20 +61,20 @@ namespace Pantallas_proyecto
                     
 
                     break;
-                case "Lo mas vendido":
+                case "Lo mas Vendido":
                     this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab2"];
                     this.reportViewer2.RefreshReport();
                     break;
-                case "Productos a punto de acabarse":
+                case "Productos a Punto de Acabarse":
                     this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab3"];
                     this.reportViewer3.RefreshReport();
 
                     break;
-                case "Talla que mas se vende":
+                case "Talla que Mas se Vende":
                     this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab4"];
                     this.reportViewer4.RefreshReport();
                     break;
-                case "Rotacion del inventario":
+                case "Rotacion del Inventario":
                     this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab5"];
                     this.reportViewer5.RefreshReport();
                     break;
