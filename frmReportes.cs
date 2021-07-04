@@ -46,8 +46,7 @@ namespace Pantallas_proyecto
 
 
 
-            this.reportViewer1.RefreshReport();
-            this.reportViewer8.RefreshReport();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -91,8 +90,9 @@ namespace Pantallas_proyecto
                     ReportParameter[] parameters1 = new ReportParameter[1];
                     this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab7"];
                     string codigo = txtcodigo.Text;
-                    //parameters1[0] = new ReportParameter("Codigo", codigo);
-                    //reportViewer7.LocalReport.SetParameters(parameters1);
+                    
+                    parameters1[0] = new ReportParameter("codigo", codigo);
+                    reportViewer8.LocalReport.SetParameters(parameters1);
                     this.reportViewer8.RefreshReport();
 
 
