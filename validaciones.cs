@@ -36,5 +36,11 @@ namespace Pantallas_proyecto
             return HayErrores;
         }
 
+        /*Validaciones Numeros
+         * public static Boolean ValidarNumeros(Control Objeto, ErrorProvider ErrorProvider){
+         *  
+         * }
+         * 
+         */
     }
 }
