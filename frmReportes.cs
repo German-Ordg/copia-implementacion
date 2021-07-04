@@ -28,6 +28,8 @@ namespace Pantallas_proyecto
         //prueba
         private void frmReportes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSet8.ReporteCompras' Puede moverla o quitarla según sea necesario.
+            this.ReporteComprasTableAdapter.Fill(this.db_a75e9e_bderickmoncadaDataSet8.ReporteCompras);
             timer1.Enabled = true;
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSet5.VCategorias' Puede moverla o quitarla según sea necesario.
             this.vCategoriasTableAdapter1.Fill(this.db_a75e9e_bderickmoncadaDataSet5.VCategorias);
@@ -43,6 +45,9 @@ namespace Pantallas_proyecto
 
 
 
+
+            this.reportViewer1.RefreshReport();
+            this.reportViewer8.RefreshReport();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -82,6 +87,17 @@ namespace Pantallas_proyecto
                         this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab6"];
                         this.reportViewer6.RefreshReport();
                     break;
+                case "Compras":
+                    ReportParameter[] parameters1 = new ReportParameter[1];
+                    this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab7"];
+                    string codigo = txtcodigo.Text;
+                    //parameters1[0] = new ReportParameter("Codigo", codigo);
+                    //reportViewer7.LocalReport.SetParameters(parameters1);
+                    this.reportViewer8.RefreshReport();
+
+
+
+                    break;
             }
         }
 
@@ -120,6 +136,16 @@ namespace Pantallas_proyecto
         {
             toolStripLabel1.Text = DateTime.Now.ToLongDateString();
             toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void VCategoriasBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dba75e9ebderickmoncadaDataSet2BindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

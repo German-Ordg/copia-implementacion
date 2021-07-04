@@ -56,7 +56,6 @@ C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debu
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmClientes.resources
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmCompras.resources
@@ -83,3 +82,4 @@ C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debu
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.csproj.CopyComplete
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.exe
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
