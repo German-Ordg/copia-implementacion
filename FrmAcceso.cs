@@ -167,7 +167,7 @@ namespace Pantallas_proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmPuestosTrabajo fact = new frmPuestosTrabajo();//volver a cambiarla a la que estaba
+            frmPantallaFacturacion fact = new frmPantallaFacturacion();
 
             fact.Show();
             this.Hide();
