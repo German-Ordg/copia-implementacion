@@ -23,11 +23,17 @@ namespace Pantallas_proyecto
         SqlDataReader dr;
 
         ClsConexionBD con = new ClsConexionBD();
+        ClsClientes clie = new ClsClientes();
         ClsPantallaFacturacion fac = new ClsPantallaFacturacion();
+
+
+       
+        
+
 
         private void label6_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -42,6 +48,35 @@ namespace Pantallas_proyecto
 
         private void button5_Click(object sender, EventArgs e)
         {
+            double sumaTotales=0;
+            double subTotal;
+            double descuentos=0;
+            double isv;
+            double total;
+
+
+            foreach (DataGridViewRow row in lstCompras.Rows)
+            {
+                if (row.Cells[5].Value != null)
+                    sumaTotales += (Double)double.Parse(row.Cells[5].Value.ToString());
+            }
+
+            foreach (DataGridViewRow row in lstCompras.Rows)
+            {
+                if (row.Cells[4].Value != null)
+                    descuentos += (Double)double.Parse(row.Cells[4].Value.ToString());
+            }
+                  
+            subTotal = sumaTotales - descuentos;
+
+            isv = (subTotal) * 0.15;
+
+            total = subTotal + isv;
+
+            txtDescuentosOtorgados.Text = descuentos.ToString();
+            txtTotalPagar.Text = total.ToString();
+            txtISV15.Text = isv.ToString();
+            txtSubTotal.Text = subTotal.ToString();
 
         }
 
@@ -61,6 +96,8 @@ namespace Pantallas_proyecto
             rbSinNombre.Checked = true;
             btnCalcularFactura.Enabled = false;
             btnImprimirFactura.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnEliminar.Enabled = false;
             btnAgregar.Enabled = false;
             btnEditar.Enabled = false;
             btnEliminarTodo.Enabled = false;
@@ -104,14 +141,12 @@ namespace Pantallas_proyecto
                         fac.DescuentoProducto = Double.Parse(dr["descuento"].ToString());
                     }
                     dr.Close();
-
-                    
+                                        
                     txtDescuento.Text = fac.DescuentoProducto.ToString();
                     txtPrecioUnitario.Text = fac.PrecioProducto.ToString();
                     txtDescripcion.Text = fac.DescripcionProducto;
                     btnAgregar.Enabled = true;
-                    btnEditar.Enabled = true;
-                    btnEliminarTodo.Enabled = true;
+                    
                 }
                 catch(Exception ex)
                 {
@@ -157,21 +192,39 @@ namespace Pantallas_proyecto
         {
             if(nudCantidad.Value<=fac.CantidadInventario)
             {
-                fac.CantidadProducto = Int32.Parse(nudCantidad.Value.ToString());
+                if (nudCantidad.Value > 0)
+                {
+                    btnEliminar.Enabled = true;
+                    btnEditar.Enabled = true;
+                    btnEliminarTodo.Enabled = true;
+                    btnCalcularFactura.Enabled = true;
 
-                int indiceDataGrid = lstCompras.Rows.Count - 1;
-                lstCompras.Rows.Add(1);
+                    fac.CantidadProducto = Int32.Parse(nudCantidad.Value.ToString());
 
-                double total = (fac.PrecioProducto * fac.CantidadProducto) - fac.DescuentoProducto;
+                    int indiceDataGrid = lstCompras.Rows.Count - 1;
+                    lstCompras.Rows.Add(1);
 
-                lstCompras.Rows[indiceDataGrid].Cells[0].Value = fac.CodigoProducto.ToString();
-                lstCompras.Rows[indiceDataGrid].Cells[1].Value = fac.CantidadProducto.ToString();
-                lstCompras.Rows[indiceDataGrid].Cells[2].Value = fac.DescripcionProducto.ToString();
-                lstCompras.Rows[indiceDataGrid].Cells[3].Value = fac.PrecioProducto.ToString();
-                lstCompras.Rows[indiceDataGrid].Cells[4].Value = fac.DescuentoProducto.ToString();
-                lstCompras.Rows[indiceDataGrid].Cells[5].Value = total.ToString();
+                    double total = (fac.PrecioProducto * fac.CantidadProducto) - fac.DescuentoProducto;
 
-               
+                    lstCompras.Rows[indiceDataGrid].Cells[0].Value = fac.CodigoProducto.ToString();
+                    lstCompras.Rows[indiceDataGrid].Cells[1].Value = fac.CantidadProducto.ToString();
+                    lstCompras.Rows[indiceDataGrid].Cells[2].Value = fac.DescripcionProducto.ToString();
+                    lstCompras.Rows[indiceDataGrid].Cells[3].Value = fac.PrecioProducto.ToString();
+                    lstCompras.Rows[indiceDataGrid].Cells[4].Value = fac.DescuentoProducto.ToString();
+                    lstCompras.Rows[indiceDataGrid].Cells[5].Value = total.ToString();
+
+                    txtCodProducto.Clear();
+                    txtDescripcion.Clear();
+                    txtDescuento.Clear();
+                    txtPrecioUnitario.Clear();
+                    nudCantidad.Value = 1;
+                    btnAgregar.Enabled = false;
+
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un número válido en la cantidad", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
             }
             else
@@ -204,21 +257,6 @@ namespace Pantallas_proyecto
 
         private void editar(object sender, DataGridViewCellEventArgs e)
         {
-
-            if(lstCompras.RowCount>1)
-            {
-                int a = lstCompras.CurrentRow.Index;
-                txtCodProducto.Text = lstCompras.Rows[a].Cells[0].Value.ToString();
-                nudCantidad.Value = Int32.Parse(lstCompras.Rows[a].Cells[1].Value.ToString());
-                txtDescripcion.Text = lstCompras.Rows[a].Cells[2].Value.ToString();
-                txtPrecioUnitario.Text = lstCompras.Rows[a].Cells[3].Value.ToString();
-                txtDescuento.Text = lstCompras.Rows[a].Cells[4].Value.ToString();
-                lstCompras.Enabled = false;
-            }
-            else
-            {
-                MessageBox.Show("No se puede editar esta fila", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
             
         }
 
@@ -226,20 +264,27 @@ namespace Pantallas_proyecto
         {
             if (lstCompras.CurrentRow != null)
             {
+                if (lstCompras.CurrentRow.Index != lstCompras.RowCount - 1)
+                {
+                    txtCodProducto.Enabled = false;
+                    btnAgregar.Enabled = false;
+                    btnBuscarProducto.Enabled = false;
+                    btnEditar.Enabled = false;
+                    btnActualizar.Enabled = true;
 
-                txtCodProducto.Enabled = false;
-                btnAgregar.Enabled = false;
-                btnBuscarProducto.Enabled = false;
-                btnEditar.Enabled = false;
-                btnActualizar.Enabled = true;
-
-                int a = lstCompras.CurrentRow.Index;
-                txtCodProducto.Text = lstCompras.Rows[a].Cells[0].Value.ToString();
-                nudCantidad.Value = Int32.Parse(lstCompras.Rows[a].Cells[1].Value.ToString());
-                txtDescripcion.Text = lstCompras.Rows[a].Cells[2].Value.ToString();
-                txtPrecioUnitario.Text = lstCompras.Rows[a].Cells[3].Value.ToString();
-                txtDescuento.Text = lstCompras.Rows[a].Cells[4].Value.ToString();
-                lstCompras.Enabled = false;
+                    int a = lstCompras.CurrentRow.Index;
+                    txtCodProducto.Text = lstCompras.Rows[a].Cells[0].Value.ToString();
+                    nudCantidad.Value = Int32.Parse(lstCompras.Rows[a].Cells[1].Value.ToString());
+                    txtDescripcion.Text = lstCompras.Rows[a].Cells[2].Value.ToString();
+                    txtPrecioUnitario.Text = lstCompras.Rows[a].Cells[3].Value.ToString();
+                    txtDescuento.Text = lstCompras.Rows[a].Cells[4].Value.ToString();
+                    lstCompras.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("No se puede ediar esta fila", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
             }
         }
 
@@ -270,11 +315,59 @@ namespace Pantallas_proyecto
         {
             if (lstCompras.SelectedRows.Count != 0)
             {
-                lstCompras.Rows.RemoveAt(lstCompras.CurrentRow.Index);
+                if(lstCompras.CurrentRow.Index != lstCompras.RowCount - 1)
+                {
+                    lstCompras.Rows.RemoveAt(lstCompras.CurrentRow.Index);
+                }
+                else
+                {
+                    MessageBox.Show("No se puede eliminar esta fila", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
             }
             else
             {
                 MessageBox.Show("No ha seleccionado un ítem a borrar", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+            if(txtRTN.Text.Length!=0)
+            {
+
+                String consultaRTN = "select [nombre_cliente], [apellido_cliente], [rtn] from [dbo].[Clientes] where [rtn] = "+txtRTN.Text;
+
+
+                con.abrir();
+                try
+                {
+                    cmd = new SqlCommand(consultaRTN, con.conexion);
+                    dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        clie.NombreCliente = dr["nombre_cliente"].ToString();
+                        clie.ApellidoCliente = dr["apellido_cliente"].ToString();
+                        clie.Rtn = dr["rtn"].ToString();
+                        
+                    }
+                    dr.Close();
+
+                    MessageBox.Show("Nombre del cliente: "+clie.NombreCliente+" "+clie.ApellidoCliente, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    con.cerrar();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("No ha encontrado el cliente en la base de datos" + ex.ToString(), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un RTN", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

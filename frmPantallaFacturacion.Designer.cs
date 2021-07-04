@@ -54,6 +54,12 @@ namespace Pantallas_proyecto
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.lstCompras = new System.Windows.Forms.DataGridView();
+            this.lstCodProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -65,8 +71,6 @@ namespace Pantallas_proyecto
             this.txtRTN = new System.Windows.Forms.TextBox();
             this.lblRTN = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.numeroFactura = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.cmbVendedor = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.cmbTipoPago = new System.Windows.Forms.ComboBox();
@@ -74,6 +78,8 @@ namespace Pantallas_proyecto
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.btnEliminarTodo = new System.Windows.Forms.Button();
@@ -93,14 +99,6 @@ namespace Pantallas_proyecto
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.lstCodProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lstCompras)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -388,11 +386,59 @@ namespace Pantallas_proyecto
             this.lstCompras.Margin = new System.Windows.Forms.Padding(4);
             this.lstCompras.MultiSelect = false;
             this.lstCompras.Name = "lstCompras";
+            this.lstCompras.ReadOnly = true;
             this.lstCompras.RowHeadersWidth = 51;
             this.lstCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.lstCompras.Size = new System.Drawing.Size(1269, 234);
             this.lstCompras.TabIndex = 20;
             this.lstCompras.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.editar);
+            // 
+            // lstCodProducto
+            // 
+            this.lstCodProducto.HeaderText = "Cod. Producto";
+            this.lstCodProducto.MinimumWidth = 100;
+            this.lstCodProducto.Name = "lstCodProducto";
+            this.lstCodProducto.Width = 125;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 50;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 93;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.MinimumWidth = 270;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Width = 270;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column1.HeaderText = "Precio Unitario";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 119;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column2.HeaderText = "Descuentos y Rebajas Otorgadas";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 167;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column3.HeaderText = "Total.";
+            this.Column3.MinimumWidth = 102;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 102;
             // 
             // label10
             // 
@@ -448,6 +494,7 @@ namespace Pantallas_proyecto
             this.btnBuscarCliente.TabIndex = 21;
             this.btnBuscarCliente.Text = "Buscar Cliente";
             this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // btnAgregarCliente
             // 
@@ -520,8 +567,6 @@ namespace Pantallas_proyecto
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.numeroFactura);
-            this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.cmbVendedor);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.cmbTipoPago);
@@ -537,25 +582,6 @@ namespace Pantallas_proyecto
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Factura";
-            // 
-            // numeroFactura
-            // 
-            this.numeroFactura.Enabled = false;
-            this.numeroFactura.Location = new System.Drawing.Point(115, 55);
-            this.numeroFactura.Margin = new System.Windows.Forms.Padding(4);
-            this.numeroFactura.Name = "numeroFactura";
-            this.numeroFactura.Size = new System.Drawing.Size(201, 22);
-            this.numeroFactura.TabIndex = 7;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(8, 59);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(97, 17);
-            this.label17.TabIndex = 6;
-            this.label17.Text = "Num. Factura:";
             // 
             // cmbVendedor
             // 
@@ -597,17 +623,17 @@ namespace Pantallas_proyecto
             // 
             // dtFecha
             // 
-            this.dtFecha.Location = new System.Drawing.Point(72, 21);
+            this.dtFecha.Location = new System.Drawing.Point(67, 33);
             this.dtFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Size = new System.Drawing.Size(244, 22);
+            this.dtFecha.Size = new System.Drawing.Size(245, 22);
             this.dtFecha.TabIndex = 1;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(11, 25);
+            this.label11.Location = new System.Drawing.Point(8, 35);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(51, 17);
@@ -643,6 +669,36 @@ namespace Pantallas_proyecto
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Producto";
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.Maroon;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(226, 167);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(96, 37);
+            this.btnActualizar.TabIndex = 22;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Maroon;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(330, 167);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(96, 37);
+            this.btnEliminar.TabIndex = 21;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnBuscarProducto
             // 
@@ -835,83 +891,6 @@ namespace Pantallas_proyecto
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Maroon;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(330, 167);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(96, 37);
-            this.btnEliminar.TabIndex = 21;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.BackColor = System.Drawing.Color.Maroon;
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(226, 167);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(96, 37);
-            this.btnActualizar.TabIndex = 22;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // lstCodProducto
-            // 
-            this.lstCodProducto.HeaderText = "Cod. Producto";
-            this.lstCodProducto.MinimumWidth = 100;
-            this.lstCodProducto.Name = "lstCodProducto";
-            this.lstCodProducto.Width = 125;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 50;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 93;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.MinimumWidth = 270;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 270;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column1.HeaderText = "Precio Unitario";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 130;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column2.HeaderText = "Descuentos y Rebajas Otorgadas";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 167;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column3.HeaderText = "Total.";
-            this.Column3.MinimumWidth = 102;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 102;
-            // 
             // frmPantallaFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -932,6 +911,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPantallaFacturacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Facturacción";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPantallaFacturacion_FormClosed);
             this.Load += new System.EventHandler(this.frmPantallaFacturacion_Load);
@@ -986,8 +966,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.TextBox txtRTN;
         private System.Windows.Forms.Label lblRTN;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox numeroFactura;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cmbVendedor;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox cmbTipoPago;
