@@ -2,19 +2,12 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="db_a75e9e_bderickmoncadaDataSet1">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>35cddd2d-e27c-47d4-8f5e-36536cf5094f</rd:DataSourceID>
-    </DataSource>
     <DataSource Name="db_a75e9e_bderickmoncadaDataSet5">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>6d0cf64b-5410-45ce-8e97-c056e44b3c03</rd:DataSourceID>
+      <rd:DataSourceID>9200aad4-a5ef-4c58-8d57-dd324828e230</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -26,10 +19,6 @@
       <Fields>
         <Field Name="codigo_producto">
           <DataField>codigo_producto</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="codigo_categoria">
-          <DataField>codigo_categoria</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="descripcion_categoria">
@@ -58,8 +47,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>db_a75e9e_bderickmoncadaDataSet9</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\db_a75e9e_bderickmoncadaDataSet9.xsd</rd:SchemaPath>
+        <rd:DataSetName>db_a75e9e_bderickmoncadaDataSet5</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\db_a75e9e_bderickmoncadaDataSet5.xsd</rd:SchemaPath>
         <rd:TableName>VCategorias</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
