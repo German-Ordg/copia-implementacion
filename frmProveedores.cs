@@ -20,9 +20,7 @@ namespace Pantallas_proyecto
         }
         ClsConexionBD conex = new ClsConexionBD();
         SqlCommand cmd;
-         SqlDataAdapter da;
-        DataTable dt;
-        DataSet DS;
+        
 
 
         private void button7_Click(object sender, EventArgs e)
@@ -45,7 +43,7 @@ namespace Pantallas_proyecto
                 else
                 {
                     conex.abrir();
-                    cmd = new SqlCommand("Insert into Proveedores(nombre_proveedor, numero_contacto, direccion_proveedor) values('"+ txtNombreProovedor +"','"+ txtTelefono +"','" + txtDescripcion +"')", conex.conexion);
+                    cmd = new SqlCommand("Insert into Proveedores(nombre_proveedor, numero_contacto, direccion_proveedor) values('"+ txtNombreProovedor.Text +"','"+ txtTelefono.Text +"','" + txtDescripcion.Text +"')", conex.conexion);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conex.cerrar();
@@ -78,6 +76,62 @@ namespace Pantallas_proyecto
         private void dgvProovedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
+            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            int indice;
+            int codigo;
+            indice = dgvProovedores.CurrentRow.Index;
+
+            try
+            {
+                codigo = Convert.ToInt32(dgvProovedores[0, indice].Value);
+
+
+                dgvProovedores[1, indice].Value = txtNombreProovedor.Text;
+                dgvProovedores[2, indice].Value = txtTelefono.Text;
+                dgvProovedores[3, indice].Value = txtDescripcion.Text;
+               
+
+                cmd = new SqlCommand("update Proveedores set nombre_proveedor = " + txtNombreProovedor.Text + ",  numero_contacto ='" + txtTelefono.Text + "', direccion_proveedor = '" + txtDescripcion.Text + "'  where  = " + codigo, conex.conexion);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("El registro fue actualizado exitosamente");
+                
+                dgvProovedores.ForeColor = Color.Black;
+                SqlDataAdapter da;
+                DataTable dt;
+                da = new SqlDataAdapter("Select * From Proveedores", conex.conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgvProovedores.DataSource = dt;
+
+                txtNombreProovedor.Clear();
+                txtTelefono.Clear();
+                txtDescripcion.Clear();
+                txtNombreProovedor.Focus();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El registro no pudo ser actualizado" + ex, "INFO", MessageBoxButtons.OK);
+            }
         }
     }
 }
