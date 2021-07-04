@@ -79,3 +79,4 @@ C:\Users\dell_\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_p
 C:\Users\dell_\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.CopyComplete
 C:\Users\dell_\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.exe
 C:\Users\dell_\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\dell_\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache

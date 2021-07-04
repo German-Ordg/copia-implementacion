@@ -34,7 +34,7 @@ namespace Pantallas_proyecto
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.descripcionProducto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.precioCompra = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.precioActual = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,29 +47,29 @@ namespace Pantallas_proyecto
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvProveedores = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboProveedor = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.dateFecha = new System.Windows.Forms.DateTimePicker();
+            this.codigoCompra = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboPago = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,9 +86,10 @@ namespace Pantallas_proyecto
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.comboBox1);
             this.groupBox4.Controls.Add(this.descripcionProducto);
             this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.precioCompra);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.precioActual);
             this.groupBox4.Controls.Add(this.label6);
@@ -101,7 +102,6 @@ namespace Pantallas_proyecto
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.comboBox1);
             this.groupBox4.Location = new System.Drawing.Point(327, 93);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(641, 236);
@@ -127,12 +127,12 @@ namespace Pantallas_proyecto
             this.label3.TabIndex = 137;
             this.label3.Text = "Precio Compra (unid)";
             // 
-            // textBox4
+            // precioCompra
             // 
-            this.textBox4.Location = new System.Drawing.Point(448, 25);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(159, 20);
-            this.textBox4.TabIndex = 138;
+            this.precioCompra.Location = new System.Drawing.Point(448, 25);
+            this.precioCompra.Name = "precioCompra";
+            this.precioCompra.Size = new System.Drawing.Size(159, 20);
+            this.precioCompra.TabIndex = 138;
             // 
             // label1
             // 
@@ -247,18 +247,10 @@ namespace Pantallas_proyecto
             this.label4.TabIndex = 146;
             this.label4.Text = "Categoria";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(118, 147);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(159, 21);
-            this.comboBox1.TabIndex = 147;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Controls.Add(this.dgvProductos);
             this.groupBox3.Location = new System.Drawing.Point(327, 335);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(642, 168);
@@ -276,32 +268,32 @@ namespace Pantallas_proyecto
             this.label14.TabIndex = 158;
             this.label14.Text = "Producto";
             // 
-            // dataGridView1
+            // dgvProductos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(636, 149);
-            this.dataGridView1.TabIndex = 92;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProductos.Location = new System.Drawing.Point(3, 16);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.Size = new System.Drawing.Size(636, 149);
+            this.dgvProductos.TabIndex = 92;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView2);
+            this.groupBox1.Controls.Add(this.dgvProveedores);
             this.groupBox1.Location = new System.Drawing.Point(11, 335);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(310, 168);
             this.groupBox1.TabIndex = 162;
             this.groupBox1.TabStop = false;
             // 
-            // dataGridView2
+            // dgvProveedores
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(304, 149);
-            this.dataGridView2.TabIndex = 109;
+            this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProveedores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProveedores.Location = new System.Drawing.Point(3, 16);
+            this.dgvProveedores.Name = "dgvProveedores";
+            this.dgvProveedores.Size = new System.Drawing.Size(304, 149);
+            this.dgvProveedores.TabIndex = 109;
             // 
             // button1
             // 
@@ -336,11 +328,11 @@ namespace Pantallas_proyecto
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.comboPago);
+            this.groupBox2.Controls.Add(this.comboProveedor);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.textBox10);
-            this.groupBox2.Controls.Add(this.textBox9);
+            this.groupBox2.Controls.Add(this.dateFecha);
+            this.groupBox2.Controls.Add(this.codigoCompra);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label11);
@@ -350,13 +342,14 @@ namespace Pantallas_proyecto
             this.groupBox2.TabIndex = 161;
             this.groupBox2.TabStop = false;
             // 
-            // comboBox2
+            // comboProveedor
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(135, 92);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(159, 21);
-            this.comboBox2.TabIndex = 150;
+            this.comboProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboProveedor.FormattingEnabled = true;
+            this.comboProveedor.Location = new System.Drawing.Point(135, 49);
+            this.comboProveedor.Name = "comboProveedor";
+            this.comboProveedor.Size = new System.Drawing.Size(159, 21);
+            this.comboProveedor.TabIndex = 152;
             // 
             // label15
             // 
@@ -365,30 +358,23 @@ namespace Pantallas_proyecto
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(9, 92);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(113, 18);
+            this.label15.Size = new System.Drawing.Size(96, 18);
             this.label15.TabIndex = 149;
-            this.label15.Text = "Codigo de pago";
+            this.label15.Text = "Metodo pago";
             // 
-            // dateTimePicker1
+            // dateFecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(135, 131);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(159, 20);
-            this.dateTimePicker1.TabIndex = 89;
+            this.dateFecha.Location = new System.Drawing.Point(135, 131);
+            this.dateFecha.Name = "dateFecha";
+            this.dateFecha.Size = new System.Drawing.Size(159, 20);
+            this.dateFecha.TabIndex = 89;
             // 
-            // textBox10
+            // codigoCompra
             // 
-            this.textBox10.Location = new System.Drawing.Point(135, 13);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(159, 20);
-            this.textBox10.TabIndex = 88;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(135, 53);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(159, 20);
-            this.textBox9.TabIndex = 86;
+            this.codigoCompra.Location = new System.Drawing.Point(135, 13);
+            this.codigoCompra.Name = "codigoCompra";
+            this.codigoCompra.Size = new System.Drawing.Size(159, 20);
+            this.codigoCompra.TabIndex = 88;
             // 
             // label12
             // 
@@ -408,9 +394,9 @@ namespace Pantallas_proyecto
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(6, 52);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(127, 18);
+            this.label10.Size = new System.Drawing.Size(77, 18);
             this.label10.TabIndex = 83;
-            this.label10.Text = "Codigo proveedor";
+            this.label10.Text = "Proveedor";
             // 
             // label11
             // 
@@ -434,6 +420,24 @@ namespace Pantallas_proyecto
             this.label2.TabIndex = 160;
             this.label2.Text = "HEAVEN";
             // 
+            // comboPago
+            // 
+            this.comboPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboPago.FormattingEnabled = true;
+            this.comboPago.Location = new System.Drawing.Point(135, 89);
+            this.comboPago.Name = "comboPago";
+            this.comboPago.Size = new System.Drawing.Size(159, 21);
+            this.comboPago.TabIndex = 153;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(118, 147);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(159, 21);
+            this.comboBox1.TabIndex = 153;
+            // 
             // FrmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -455,9 +459,9 @@ namespace Pantallas_proyecto
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -471,7 +475,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox descripcionProducto;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox precioCompra;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox precioActual;
         private System.Windows.Forms.Label label6;
@@ -484,23 +488,23 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvProveedores;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.DateTimePicker dateFecha;
+        private System.Windows.Forms.TextBox codigoCompra;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboProveedor;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboPago;
     }
 }
