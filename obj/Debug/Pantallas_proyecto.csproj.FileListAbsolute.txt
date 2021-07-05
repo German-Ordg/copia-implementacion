@@ -1,3 +1,468 @@
+C:\Users\Sebas\Downloads\Pantallas_proyecto\bin\Debug\Pantallas_proyecto.exe.config
+C:\Users\Sebas\Downloads\Pantallas_proyecto\bin\Debug\Pantallas_proyecto.exe
+C:\Users\Sebas\Downloads\Pantallas_proyecto\bin\Debug\Pantallas_proyecto.pdb
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.csprojAssemblyReference.cache
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.exe
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+C:\Users\Sebas\Downloads\Pantallas_proyecto\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.exe.config
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.exe
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.pdb
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csprojAssemblyReference.cache
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.exe
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmPantallaFacturacion.resources
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmInventarioParaEmpleado.resources
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmReportes.resources
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmProveedores.resources
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
+C:\Users\Familia Ramirez\Desktop\PROYECTO DESARROLLO\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\bin\Debug\Pantallas_proyecto.exe.config
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\bin\Debug\Pantallas_proyecto.exe
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\bin\Debug\Pantallas_proyecto.pdb
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.csprojAssemblyReference.cache
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.frmInventarioParaEmpleado.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.frmPantallaFacturacion.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.frmReportes.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.frmProveedores.resources
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.exe
+C:\Users\david\source\repos\DESARROLLO_DE_SOFTWARE_GRUPO_53\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.exe.config
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.exe
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.pdb
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmClientes.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmCompras.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmInventario.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmInventarioParaEmpleado.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmInventario_Gerente.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMenuPrincipal.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMenuPrincipalGerente.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMetodosdePago.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmPantallaFacturacion.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmReportes.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmProveedores.resources
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.exe
+C:\Users\Administrador\Desktop\Repositorio Git Hub Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.pdb
+<<<<<<< HEAD
+C:\Users\Sebas\Documents\Clases\Git Proyecto\bin\Debug\Pantallas_proyecto.exe.config
+C:\Users\Sebas\Documents\Clases\Git Proyecto\bin\Debug\Pantallas_proyecto.exe
+C:\Users\Sebas\Documents\Clases\Git Proyecto\bin\Debug\Pantallas_proyecto.pdb
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.FrmClientes.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.FrmCompras.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.FrmInventario.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.frmInventarioParaEmpleado.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.FrmInventario_Gerente.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.FrmMenuPrincipal.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.FrmMenuPrincipalGerente.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.FrmMetodosdePago.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.frmPantallaFacturacion.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.frmReportes.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.frmProveedores.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.exe
+C:\Users\Sebas\Documents\Clases\Git Proyecto\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.exe.config
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.exe
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.pdb
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmClientes.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmCompras.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmInventario.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmInventarioParaEmpleado.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmInventario_Gerente.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMenuPrincipal.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMenuPrincipalGerente.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMetodosdePago.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmPantallaFacturacion.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmReportes.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmProveedores.resources
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.exe
+C:\Users\Sebas\Documents\Clases\Git Proyecto\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.pdb
+=======
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Pantallas_proyecto.exe.config
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Pantallas_proyecto.exe
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Pantallas_proyecto.pdb
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\EnvDTE.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\stdole.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Microsoft.MSXML.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmClientes.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmCompras.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmInventario.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.frmInventarioParaEmpleado.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmInventario_Gerente.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmMenuPrincipal.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmMenuPrincipalGerente.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmMetodosdePago.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.frmPantallaFacturacion.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.frmReportes.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.frmProveedores.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\RdlCompile.cache
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\RdlCompile.compiled
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.csproj.CopyComplete
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.exe
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.pdb
+>>>>>>> Rama_german
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.exe.config
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.exe
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.pdb
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csprojAssemblyReference.cache
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmClientes.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmCompras.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmInventario.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmInventarioParaEmpleado.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmInventario_Gerente.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMenuPrincipal.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMenuPrincipalGerente.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMetodosdePago.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmPantallaFacturacion.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmReportes.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmProveedores.resources
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.exe
+C:\Users\Familia Ramirez\Desktop\II AVANCE DE PROGRAMACIÓN\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.pdb
+>>>>>>> Rama_Sofia_MetodosPago
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.exe.config
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.exe
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.pdb
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmClientes.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmCompras.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmInventario.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmInventarioParaEmpleado.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmInventario_Gerente.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMenuPrincipal.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMenuPrincipalGerente.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmMetodosdePago.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmPantallaFacturacion.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmReportes.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmProveedores.resources
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.exe
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.pdb
+>>>>>>> origin/rama_puestosVictor
+E:\Proyectos programacion\Proyecto diseño de software\bin\Debug\Pantallas_proyecto.exe.config
+E:\Proyectos programacion\Proyecto diseño de software\bin\Debug\Pantallas_proyecto.exe
+E:\Proyectos programacion\Proyecto diseño de software\bin\Debug\Pantallas_proyecto.pdb
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmClientes.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmCompras.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmInventario.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.frmInventarioParaEmpleado.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmInventario_Gerente.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmMenuPrincipal.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmMenuPrincipalGerente.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmMetodosdePago.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.frmPantallaFacturacion.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.frmReportes.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.frmProveedores.resources
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.exe
+E:\Proyectos programacion\Proyecto diseño de software\obj\Debug\Pantallas_proyecto.pdb
+>>>>>>> origin/Rama_Alejandro
+C:\Users\dell_\Desktop\Desarrollo de software\bin\Debug\Pantallas_proyecto.exe.config
+C:\Users\dell_\Desktop\Desarrollo de software\bin\Debug\Pantallas_proyecto.exe
+C:\Users\dell_\Desktop\Desarrollo de software\bin\Debug\Pantallas_proyecto.pdb
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.FrmClientes.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.FrmCompras.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.FrmInventario.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.frmInventarioParaEmpleado.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.FrmInventario_Gerente.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.FrmMenuPrincipal.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.FrmMenuPrincipalGerente.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.FrmMetodosdePago.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.frmPantallaFacturacion.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.frmReportes.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.frmProveedores.resources
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.exe
+C:\Users\dell_\Desktop\Desarrollo de software\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\dell_\Desktop\Proyecto  desarrollo\bin\Debug\Pantallas_proyecto.exe.config
+C:\Users\dell_\Desktop\Proyecto  desarrollo\bin\Debug\Pantallas_proyecto.exe
+C:\Users\dell_\Desktop\Proyecto  desarrollo\bin\Debug\Pantallas_proyecto.pdb
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.FrmClientes.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.FrmCompras.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.FrmInventario.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.frmInventarioParaEmpleado.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.FrmInventario_Gerente.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.FrmMenuPrincipal.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.FrmMenuPrincipalGerente.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.FrmMetodosdePago.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.frmPantallaFacturacion.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.frmReportes.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.frmProveedores.resources
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.exe
+C:\Users\dell_\Desktop\Proyecto  desarrollo\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\bin\Debug\Pantallas_proyecto.exe.config
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\bin\Debug\Pantallas_proyecto.exe
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\bin\Debug\Pantallas_proyecto.pdb
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.csprojAssemblyReference.cache
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.FrmClientes.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.FrmCompras.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.FrmInventario.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.frmInventarioParaEmpleado.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.FrmInventario_Gerente.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.FrmMenuPrincipal.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.FrmMenuPrincipalGerente.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.FrmMetodosdePago.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.frmPantallaFacturacion.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.frmReportes.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.frmProveedores.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.exe
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\Pantallas_proyecto.exe.config
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\Pantallas_proyecto.exe
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\Pantallas_proyecto.pdb
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\EnvDTE.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\stdole.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\Microsoft.MSXML.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmClientes.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmCompras.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmInventario.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.frmInventarioParaEmpleado.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmInventario_Gerente.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmMenuCRUD.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmMenuPrincipal.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmMenuPrincipalGerente.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmMetodosdePago.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.frmPantallaFacturacion.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.frmReportes.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.frmProveedores.resources
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.csproj.GenerateResource.cache
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.csproj.CoreCompileInputs.cache
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.csproj.CopyComplete
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.exe
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.pdb
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\bin\Debug\Pantallas_proyecto.exe.config
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\bin\Debug\Pantallas_proyecto.exe
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\bin\Debug\Pantallas_proyecto.pdb

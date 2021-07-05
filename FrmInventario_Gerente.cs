@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace Pantallas_proyecto
 {
@@ -17,7 +18,6 @@ namespace Pantallas_proyecto
         {
             InitializeComponent();
         }
-
         ClsConexionBD conect = new ClsConexionBD();
         SqlCommand cmd;
 
@@ -67,6 +67,18 @@ namespace Pantallas_proyecto
 
             textBox1.Text = dataGridView1[0, poc].Value.ToString();
             textBox2.Text = dataGridView1[1, poc].Value.ToString();
+        }
+
+        private void FrmInventario_Gerente_Load(object sender, EventArgs e)
+        {
+            conect.cargarDatosProductos(dataGridView1);
+            timer1.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
+            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }
