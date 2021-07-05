@@ -29,8 +29,10 @@ namespace Pantallas_proyecto
 
 
 
-        ClsConexionBD conect = new ClsConexionBD();
+        ClsConexionBD conect2 = new ClsConexionBD();
         Productos producto = new Productos();
+
+
 
 
         SqlDataAdapter da;
@@ -42,8 +44,8 @@ namespace Pantallas_proyecto
         {
             try
             {
-                da = new SqlDataAdapter("Select codigo_producto Codigo,Categoria_Producto.descripcion_categoria Categoria, descripcion_producto Descripcion, cantidad_existente Cantidad,precio_actual , descuento_producto Descuento , talla  " +
-                    "From " + nombreTabla + ", Categoria_Producto Where Categoria_Producto.codigo_categoria = Productos.codigo_categoria ", conect.conexion);
+                da = new SqlDataAdapter("Select codigo_producto Codigo,Categoria_Producto.descripcion_categoria Categoria, descripcion_producto Descripcion, cantidad_existente Cantidad,precio_actual Precio , descuento_producto Descuento , talla  " +
+                    "From " + nombreTabla + ", Categoria_Producto Where Categoria_Producto.codigo_categoria = Productos.codigo_categoria ", conect2.conexion);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
@@ -60,8 +62,9 @@ namespace Pantallas_proyecto
         {
             try
             {
-                da = new SqlDataAdapter("Select  Compras.codigo_compra Codigo, Proveedores.codigo_Proveedor Proveedor , fecha_compra Fecha , codigo_pago Pago From " + nombreTabla +
-                    ", Detalle_Compra, Proveedores Where (Compras.codigo_compra= Detalle_Compra.codigo_compra )and Detalle_Compra.codigo_proveedor=Proveedores.codigo_proveedor ;", conect.conexion);
+                da = new SqlDataAdapter("Select  Compras.codigo_compra Codigo, Proveedores.nombre_proveedor Proveedor , fecha_compra Fecha , Metodo_Pago.descripcion_pago Pago From " + nombreTabla +
+                    ", Detalle_Compra, Proveedores, Metodo_Pago Where (Compras.codigo_compra= Detalle_Compra.codigo_compra ) and (Detalle_Compra.codigo_proveedor=Proveedores.codigo_proveedor) and" +
+                    "(Detalle_Compra.codigo_pago= Metodo_pago.codigo_pago );", conect2.conexion);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
@@ -77,23 +80,27 @@ namespace Pantallas_proyecto
         private void FrmCompras_Load(object sender, EventArgs e)
         {
 
-            conect.abrir();
-            cargarDatosProductos(dataGridView1, "Productos");
-            cargarDatosCompras(dataGridView2, "Compras");
+            conect2.abrir();
+            cargarDatosProductos(dgvProductos, "Productos");
+            cargarDatosCompras(dgvProveedores, "Compras");
 
 
             //Llenar Combobox Categoria Productos
 
             try
             {
-                SqlCommand comando = new SqlCommand("SELECT descripcion_categoria FROM Categoria_Producto", conect.conexion);
-                conect.abrir();
+                SqlCommand comando = new SqlCommand("SELECT codigo_categoria,descripcion_categoria FROM Categoria_Producto", conect2.conexion);
+
+                conect2.abrir();
                 SqlDataReader registro = comando.ExecuteReader();
                 while (registro.Read())
+
+
                 {
                     comboBox1.Items.Add(registro["descripcion_categoria"].ToString());
+
                 }
-                conect.cerrar();
+                conect2.cerrar();
 
             }
             catch (Exception ex)
@@ -109,14 +116,14 @@ namespace Pantallas_proyecto
 
             try
             {
-                SqlCommand comando = new SqlCommand("SELECT codigo_pago FROM Metodo_Pago", conect.conexion);
-                conect.abrir();
+                SqlCommand comando = new SqlCommand("SELECT descripcion_pago FROM Metodo_Pago", conect2.conexion);
+                conect2.abrir();
                 SqlDataReader registro = comando.ExecuteReader();
                 while (registro.Read())
                 {
-                    comboBox2.Items.Add(registro["codigo_pago"].ToString());
+                    comboPago.Items.Add(registro["descripcion_pago"].ToString());
                 }
-                conect.cerrar();
+                conect2.cerrar();
 
             }
             catch (Exception ex)
@@ -125,7 +132,26 @@ namespace Pantallas_proyecto
             }
 
 
+            //metodo para cargar datos en combobox proveedores 
+            try
+            {
+                SqlCommand comando = new SqlCommand("SELECT nombre_proveedor FROM Proveedores", conect2.conexion);
+                conect2.abrir();
+                SqlDataReader registro = comando.ExecuteReader();
+                while (registro.Read())
+                {
+                    comboProveedor.Items.Add(registro["nombre_proveedor"].ToString());
+                }
+                conect2.cerrar();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
+
 
         //------------------------------------------------------------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------------------------------------------------------------
@@ -163,6 +189,59 @@ namespace Pantallas_proyecto
         }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+
+  
+                //---------------------------------------------------------------------------------------------------------------------------------
+                //Compras
+                producto.Codigo_compra = Convert.ToInt32(codigoCompra.Text);
+                producto.Descripcion_fecha = dateFecha.Value.ToString("yyyy/MM/dd");
+                producto.agregarCompra();
+                conect2.abrir();
+
+
+                // clientes2.Fecha_nacimiento = dtpFechaNacCliente.Value.ToString("yyyy/MM/dd");
+
+                //---------------------------------------------------------------------------------------------------------------------------------
+                //Productos
+                producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
+                producto.Descripcion = descripcionProducto.Text;
+                producto.Cantidad = Convert.ToInt32(cantidad.Text);
+                producto.Precio_actual = Convert.ToDouble(precioActual.Text);
+                producto.Descuento = Convert.ToDouble(descuento.Text);
+                producto.Talla = talla.Text;
+                producto.Descripcion_Categoria = comboBox1.SelectedItem.ToString();
+                producto.Categoria = Convert.ToInt32(producto.buscarCategoria(producto.Descripcion_Categoria));
+                producto.agregarProducto();
+                cargarDatosProductos(dgvProductos, "Productos");
+
+
+                producto.Descripcion_proveedor = comboProveedor.SelectedItem.ToString();
+                producto.Codigo_proveedor = producto.buscarProveedor(producto.Descripcion_proveedor);
+                producto.Descripcion_pago = comboPago.SelectedItem.ToString();
+                producto.Codigo_pago = producto.buscarPago(producto.Descripcion_pago);
+                producto.Cantidad_compra = Convert.ToInt32(cantidad.Text);
+                producto.Precio_compra = Convert.ToDouble(precioCompra.Text);
+                producto.agregarDetalleCompra();
+                cargarDatosCompras(dgvProveedores, "Compras");
+
+
+
+
+
+            
+
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
         }

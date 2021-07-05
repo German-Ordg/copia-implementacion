@@ -173,7 +173,7 @@ namespace Pantallas_proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormBienvenido fact = new FormBienvenido();
+            FrmCompras fact = new FrmCompras();
 
             fact.Show();
             this.Hide();
