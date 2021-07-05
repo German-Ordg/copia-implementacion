@@ -71,10 +71,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="db_a75e9e_bderickmoncadaDataSet10.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_a75e9e_bderickmoncadaDataSet11VCategorita.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet11VCategorita.xsd</DependentUpon>
     </Compile>
     <Compile Include="db_a75e9e_bderickmoncadaDataSet6.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -310,14 +320,24 @@
     <EmbeddedResource Include="frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Report4.rdlc" />
     <EmbeddedResource Include="Report5.rdlc" />
     <EmbeddedResource Include="Report6.rdlc" />
-    <EmbeddedResource Include="Report7.rdlc" />
     <EmbeddedResource Include="Report8.rdlc" />
+    <EmbeddedResource Include="Report9.rdlc" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="db_a75e9e_bderickmoncadaDataSet10.xsc">
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet10.xsd</DependentUpon>
     </None>
@@ -339,6 +359,17 @@
     </None>
     <None Include="db_a75e9e_bderickmoncadaDataSet11.xss">
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet11VCategorita.xsc">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet11VCategorita.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet11VCategorita.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a75e9e_bderickmoncadaDataSet11VCategorita.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet11VCategorita.xss">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet11VCategorita.xsd</DependentUpon>
     </None>
     <None Include="db_a75e9e_bderickmoncadaDataSet21.xsc">
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet21.xsd</DependentUpon>
