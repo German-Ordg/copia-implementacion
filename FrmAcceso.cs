@@ -53,10 +53,20 @@ namespace Pantallas_proyecto
                         this.Hide();
                         FormBienvenido welcome = new FormBienvenido();
                         welcome.ShowDialog();
-                        FrmMenuPrincipal menu = new FrmMenuPrincipal(); 
-                        menu.Show();
-                        menu.FormClosed += cerrarSesion;
                         
+                        if (Cashe.UserCache.Position == "Vendedor")
+                        {
+                            FrmMenuPrincipal menu = new FrmMenuPrincipal();
+                            menu.Show();
+                            menu.FormClosed += cerrarSesion;
+                        }
+                        if (Cashe.UserCache.Position == "Gerente")
+                        {
+                            FrmMenuPrincipalGerente menu = new FrmMenuPrincipalGerente();
+                            menu.Show();
+                            menu.FormClosed += cerrarSesion;
+                        }
+
                     }
                     else
                     {
@@ -227,6 +237,12 @@ namespace Pantallas_proyecto
         private void button2_Click(object sender, EventArgs e)
         {
             frmPantallaFacturacion fact = new frmPantallaFacturacion();
+            fact.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FrmMenuPrincipal fact = new FrmMenuPrincipal();
             fact.Show();
         }
     }

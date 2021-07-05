@@ -11,5 +11,7 @@ namespace Pantallas_proyecto.Dominio
         public const string Administrador = "Administrador";
         public const string Gerente = "Gerente";
         public const string Vendedor = "Vendedor";
+
+        
     }
 }

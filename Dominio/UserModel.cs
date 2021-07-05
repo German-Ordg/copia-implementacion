@@ -32,5 +32,7 @@ namespace Pantallas_proyecto.Dominio
             else
                 return false;
         }
+
+        
     }
 }
