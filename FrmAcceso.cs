@@ -46,8 +46,8 @@ namespace Pantallas_proyecto
                     ClsLogin usuario = new ClsLogin();
                     var validar = usuario.Login(txtUsuario.Text, txtContrasena.Text);
                     if (validar == true)
-                    {                     
-                        FrmMenuPrincipal menu = new FrmMenuPrincipal();                      
+                    {
+                        FrmMenuPrincipal menu = new FrmMenuPrincipal(); 
                         menu.Show();
                         menu.FormClosed += cerrarSesion;
                         this.Hide();
@@ -163,6 +163,26 @@ namespace Pantallas_proyecto
             recuperacion.Show();
             recuperacion.FormClosed += cerrarSesion;
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmPantallaFacturacion fact = new frmPantallaFacturacion();
+
+            fact.Show();
+            this.Hide();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmPantallaFacturacion fact = new frmPantallaFacturacion();
+            fact.Show();
         }
     }
 }

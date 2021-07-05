@@ -27,5 +27,15 @@ namespace Pantallas_proyecto
             menu.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int poc;
+
+            poc = dataGridView1.CurrentRow.Index;
+
+            textBox1.Text = dataGridView1[0, poc].Value.ToString();
+            comboBox2.Text = dataGridView1[1, poc].Value.ToString();
+        }
     }
 }
