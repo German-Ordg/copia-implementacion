@@ -141,7 +141,12 @@ namespace Pantallas_proyecto
         private void timer1_Tick(object sender, EventArgs e)
         {
             toolStripLabel1.Text = DateTime.Now.ToLongDateString();
-            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
+            toolStripLabel2.Text = DateTime.Now.ToShortTimeString();
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

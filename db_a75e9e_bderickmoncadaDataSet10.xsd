@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="db_a75e9e_bderickmoncadaDataSet5" targetNamespace="http://tempuri.org/db_a75e9e_bderickmoncadaDataSet5.xsd" xmlns:mstns="http://tempuri.org/db_a75e9e_bderickmoncadaDataSet5.xsd" xmlns="http://tempuri.org/db_a75e9e_bderickmoncadaDataSet5.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="db_a75e9e_bderickmoncadaDataSet10" targetNamespace="http://tempuri.org/db_a75e9e_bderickmoncadaDataSet10.xsd" xmlns:mstns="http://tempuri.org/db_a75e9e_bderickmoncadaDataSet10.xsd" xmlns="http://tempuri.org/db_a75e9e_bderickmoncadaDataSet10.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="db_a75e9e_bderickmoncadaConnectionString (Settings)" DbObjectName="db_a75e9e_bderickmoncada.dbo.VCategorias" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT codigo_producto, descripcion_categoria, descripcion_producto, cantidad_existente, precio_actual, descuento_producto, talla FROM dbo.VCategorias</CommandText>
+                    <CommandText>SELECT codigo_producto, codigo_categoria, descripcion_categoria, descripcion_producto, cantidad_existente, precio_actual, descuento_producto, talla FROM dbo.VCategorias</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -20,6 +20,7 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="codigo_producto" DataSetColumn="codigo_producto" />
+              <Mapping SourceColumn="codigo_categoria" DataSetColumn="codigo_categoria" />
               <Mapping SourceColumn="descripcion_categoria" DataSetColumn="descripcion_categoria" />
               <Mapping SourceColumn="descripcion_producto" DataSetColumn="descripcion_producto" />
               <Mapping SourceColumn="cantidad_existente" DataSetColumn="cantidad_existente" />
@@ -34,13 +35,14 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="db_a75e9e_bderickmoncadaDataSet5" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="db_a75e9e_bderickmoncadaDataSet5" msprop:Generator_UserDSName="db_a75e9e_bderickmoncadaDataSet5">
+  <xs:element name="db_a75e9e_bderickmoncadaDataSet10" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="db_a75e9e_bderickmoncadaDataSet10" msprop:Generator_UserDSName="db_a75e9e_bderickmoncadaDataSet10">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="VCategorias" msprop:Generator_TableClassName="VCategoriasDataTable" msprop:Generator_TableVarName="tableVCategorias" msprop:Generator_RowChangedName="VCategoriasRowChanged" msprop:Generator_TablePropName="VCategorias" msprop:Generator_RowDeletingName="VCategoriasRowDeleting" msprop:Generator_RowChangingName="VCategoriasRowChanging" msprop:Generator_RowEvHandlerName="VCategoriasRowChangeEventHandler" msprop:Generator_RowDeletedName="VCategoriasRowDeleted" msprop:Generator_RowClassName="VCategoriasRow" msprop:Generator_UserTableName="VCategorias" msprop:Generator_RowEvArgName="VCategoriasRowChangeEvent">
+        <xs:element name="VCategorias" msprop:Generator_TableClassName="VCategoriasDataTable" msprop:Generator_TableVarName="tableVCategorias" msprop:Generator_TablePropName="VCategorias" msprop:Generator_RowDeletingName="VCategoriasRowDeleting" msprop:Generator_RowChangingName="VCategoriasRowChanging" msprop:Generator_RowEvHandlerName="VCategoriasRowChangeEventHandler" msprop:Generator_RowDeletedName="VCategoriasRowDeleted" msprop:Generator_UserTableName="VCategorias" msprop:Generator_RowChangedName="VCategoriasRowChanged" msprop:Generator_RowEvArgName="VCategoriasRowChangeEvent" msprop:Generator_RowClassName="VCategoriasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="codigo_producto" msprop:Generator_ColumnVarNameInTable="columncodigo_producto" msprop:Generator_ColumnPropNameInRow="codigo_producto" msprop:Generator_ColumnPropNameInTable="codigo_productoColumn" msprop:Generator_UserColumnName="codigo_producto" type="xs:int" />
+              <xs:element name="codigo_categoria" msprop:Generator_ColumnVarNameInTable="columncodigo_categoria" msprop:Generator_ColumnPropNameInRow="codigo_categoria" msprop:Generator_ColumnPropNameInTable="codigo_categoriaColumn" msprop:Generator_UserColumnName="codigo_categoria" type="xs:int" />
               <xs:element name="descripcion_categoria" msprop:Generator_ColumnVarNameInTable="columndescripcion_categoria" msprop:Generator_ColumnPropNameInRow="descripcion_categoria" msprop:Generator_ColumnPropNameInTable="descripcion_categoriaColumn" msprop:Generator_UserColumnName="descripcion_categoria">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
