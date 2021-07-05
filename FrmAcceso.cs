@@ -167,7 +167,7 @@ namespace Pantallas_proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmInventario fact = new FrmInventario ();
+            FrmInventario fact = new FrmInventario();
 
             fact.Show();
             this.Hide();

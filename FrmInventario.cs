@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace Pantallas_proyecto
 {
@@ -16,6 +18,8 @@ namespace Pantallas_proyecto
         {
             InitializeComponent();
         }
+        ClsConexionBD conect = new ClsConexionBD();
+        SqlCommand cmd;
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -42,6 +46,7 @@ namespace Pantallas_proyecto
 
         private void FrmInventario_Load(object sender, EventArgs e)
         {
+            conect.cargarDatosProductos(dataGridView1);
             timer1.Enabled = true;
         }
     }
