@@ -19,9 +19,17 @@ namespace Pantallas_proyecto
 
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
-
+            security();
         }
-
+        private void security()
+        {
+            var userModel = new Dominio.UserModel();
+            if (userModel.securityLogin() == false)
+            {
+                MessageBox.Show("Error Fatal, se detectó que está intentando acceder al sistema sin credenciales, por favor inicie sesión e indentifiquese");
+                Application.Exit();
+            }
+        }
         private void label3_Click(object sender, EventArgs e)
         {
 

@@ -19,9 +19,11 @@ namespace Pantallas_proyecto
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            timer1.Enabled = true;
+            
         }
 
+        
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -43,14 +45,18 @@ namespace Pantallas_proyecto
             {
                 if (txtContrasena.Text != "Contraseña")
                 {
-                    ClsLogin usuario = new ClsLogin();
-                    var validar = usuario.Login(txtUsuario.Text, txtContrasena.Text);
+                    
+                    Dominio.UserModel model = new Dominio.UserModel();
+                    var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
                     if (validar == true)
                     {
-                        FrmMenuPrincipal menu = new FrmMenuPrincipal();
+                        this.Hide();
+                        FormBienvenido welcome = new FormBienvenido();
+                        welcome.ShowDialog();
+                        FrmMenuPrincipal menu = new FrmMenuPrincipal(); 
                         menu.Show();
                         menu.FormClosed += cerrarSesion;
-                        this.Hide();
+                        
                     }
                     else
                     {
@@ -167,15 +173,54 @@ namespace Pantallas_proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            frmPantallaFacturacion fact = new frmPantallaFacturacion();
+            FrmCompras fact = new FrmCompras();
 
             fact.Show();
             this.Hide();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+
+        }
+
+        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                  if (txtUsuario.Text != "Usuario")
+            {
+                if (txtContrasena.Text != "Contraseña")
+                {
+                    
+                    Dominio.UserModel model = new Dominio.UserModel();
+                    var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
+                    if (validar == true)
+                    {
+                        this.Hide();
+                        FormBienvenido welcome = new FormBienvenido();
+                        welcome.ShowDialog();
+                        FrmMenuPrincipal menu = new FrmMenuPrincipal(); 
+                        menu.Show();
+                        menu.FormClosed += cerrarSesion;
+                        
+                    }
+                    else
+                    {
+                        msjError("Usuario o contraseña incorrecta \n\t Intente de nuevo");
+                        txtUsuario.Clear();
+                        txtContrasena.Clear();
+                    }
+                }
+                else
+                    msjError("Ingrese la contraseña");
+            }
+            else
+                msjError("Ingrese el usuario");
+
+            }
 
         }
 

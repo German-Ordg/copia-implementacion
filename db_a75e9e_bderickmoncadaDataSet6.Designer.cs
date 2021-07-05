@@ -456,7 +456,7 @@ namespace Pantallas_proyecto {
             if ((initTable == true)) {
                 if ((this.tablebitácora != null)) {
                     this.tablebitácora.InitVars();
-                }
+        }
             }
             this.tableCategoria_Producto = ((Categoria_ProductoDataTable)(base.Tables["Categoria_Producto"]));
             if ((initTable == true)) {
@@ -1005,7 +1005,7 @@ namespace Pantallas_proyecto {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void RemoveAdministrativaRow(AdministrativaRow row) {
                 this.Rows.Remove(row);
             }
@@ -1773,7 +1773,7 @@ namespace Pantallas_proyecto {
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event ClientesRowChangeEventHandler ClientesRowDeleted;
-            
+        
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void AddClientesRow(ClientesRow row) {
@@ -2422,7 +2422,7 @@ namespace Pantallas_proyecto {
                         sub_total};
                 if ((parentComprasRowByFK_Detalle_Compra_Compras != null)) {
                     columnValuesArray[0] = parentComprasRowByFK_Detalle_Compra_Compras[0];
-                }
+            }
                 if ((parentProductosRowByFK_Detalle_Compra_Productos != null)) {
                     columnValuesArray[1] = parentProductosRowByFK_Detalle_Compra_Productos[0];
                 }
@@ -4967,7 +4967,7 @@ namespace Pantallas_proyecto {
             public global::System.Data.DataColumn codigo_ventaColumn {
                 get {
                     return this.columncodigo_venta;
-                }
+            }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5509,7 +5509,7 @@ namespace Pantallas_proyecto {
             public VentasRow[] GetVentasRows() {
                 if ((this.Table.ChildRelations["FK_Ventas_Clientes"] == null)) {
                     return new VentasRow[0];
-                }
+        }
                 else {
                     return ((VentasRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Ventas_Clientes"])));
                 }
@@ -12192,7 +12192,7 @@ SELECT codigo_venta, codigo_cliente, codigo_empleado, fecha_venta, direccion_env
             }
             set {
                 this._metodo_PagoTableAdapter = value;
-            }
+        }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

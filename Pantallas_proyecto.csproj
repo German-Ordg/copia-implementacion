@@ -37,6 +37,9 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -69,14 +72,49 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="db_a75e9e_bderickmoncadaDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_a75e9e_bderickmoncadaDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_a75e9e_bderickmoncadaDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_a75e9e_bderickmoncadaDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_a75e9e_bderickmoncadaDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cashe\UserCache.cs" />
+    <Compile Include="Dominio\Pocisiones.cs" />
     <Compile Include="ClsClientes.cs" />
     <Compile Include="Dominio\UserModel.cs" />
     <Compile Include="EmailServices\MasterEmailServer.cs" />
     <Compile Include="EmailServices\SystemSupportMai.cs" />
+    <Compile Include="FormBienvenido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBienvenido.Designer.cs">
+      <DependentUpon>FormBienvenido.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerDB\ClsConexionBD.cs" />
-    <Compile Include="SqlServerDB\ClsLogin.cs" />
     <Compile Include="db_a75e9e_bderickmoncadaDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -286,12 +324,28 @@
     <EmbeddedResource Include="frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBienvenido.resx">
+      <DependentUpon>FormBienvenido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Report4.rdlc" />
     <EmbeddedResource Include="Report5.rdlc" />
     <EmbeddedResource Include="Report6.rdlc" />
+    <EmbeddedResource Include="Report7.rdlc" />
+    <EmbeddedResource Include="Report8.rdlc" />
+    <None Include="db_a75e9e_bderickmoncadaDataSet10.xsc">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a75e9e_bderickmoncadaDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet10.xss">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet10.xsd</DependentUpon>
+    </None>
     <None Include="db_a75e9e_bderickmoncadaDataSet11.xsc">
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet11.xsd</DependentUpon>
     </None>
@@ -357,6 +411,50 @@
     </None>
     <None Include="db_a75e9e_bderickmoncadaDataSet5.xss">
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet6.xsc">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a75e9e_bderickmoncadaDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet6.xss">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet7.xsc">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a75e9e_bderickmoncadaDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet7.xss">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet8.xsc">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a75e9e_bderickmoncadaDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet8.xss">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet9.xsc">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a75e9e_bderickmoncadaDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet9.xss">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet9.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -440,6 +538,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Letras2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Letras1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

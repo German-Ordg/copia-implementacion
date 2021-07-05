@@ -29,19 +29,31 @@ namespace Pantallas_proyecto
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPuestosTrabajo));
             this.DgvPuesto = new System.Windows.Forms.DataGridView();
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPosicion = new System.Windows.Forms.TextBox();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.BtnModificar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tslFecha = new System.Windows.Forms.ToolStripLabel();
+            this.tslHora = new System.Windows.Forms.ToolStripLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DgvPuesto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
+            this.toolStripContainer1.ContentPanel.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DgvPuesto
@@ -66,7 +78,7 @@ namespace Pantallas_proyecto
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DgvPuesto.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DgvPuesto.Size = new System.Drawing.Size(369, 191);
+            this.DgvPuesto.Size = new System.Drawing.Size(369, 175);
             this.DgvPuesto.TabIndex = 0;
             this.DgvPuesto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPuesto_CellContentClick);
             // 
@@ -133,17 +145,6 @@ namespace Pantallas_proyecto
             this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Gold;
-            this.label6.Location = new System.Drawing.Point(83, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(178, 46);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "HEAVEN";
-            // 
             // BtnModificar
             // 
             this.BtnModificar.BackColor = System.Drawing.Color.Maroon;
@@ -151,7 +152,7 @@ namespace Pantallas_proyecto
             this.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnModificar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.BtnModificar.Location = new System.Drawing.Point(172, 145);
+            this.BtnModificar.Location = new System.Drawing.Point(167, 145);
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(89, 28);
             this.BtnModificar.TabIndex = 24;
@@ -178,29 +179,97 @@ namespace Pantallas_proyecto
             this.txtCodigo.Size = new System.Drawing.Size(180, 20);
             this.txtCodigo.TabIndex = 26;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Pantallas_proyecto.Properties.Resources.Letras1;
+            this.pictureBox1.Location = new System.Drawing.Point(12, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(283, 69);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.BottomToolStripPanel
+            // 
+            this.toolStripContainer1.BottomToolStripPanel.Controls.Add(this.toolStrip1);
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            this.toolStripContainer1.ContentPanel.AutoScroll = true;
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.pictureBox1);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.txtCodigo);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.label2);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.BtnModificar);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.BtnAgregar);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.txtPosicion);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.label1);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.BtnEliminar);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.BtnRegresar);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.DgvPuesto);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(411, 387);
+            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStripContainer1.LeftToolStripPanelVisible = false;
+            this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.RightToolStripPanelVisible = false;
+            this.toolStripContainer1.Size = new System.Drawing.Size(411, 412);
+            this.toolStripContainer1.TabIndex = 29;
+            this.toolStripContainer1.Text = "toolStripContainer1";
+            this.toolStripContainer1.TopToolStripPanelVisible = false;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tslFecha,
+            this.tslHora});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(184, 25);
+            this.toolStrip1.TabIndex = 0;
+            // 
+            // tslFecha
+            // 
+            this.tslFecha.Name = "tslFecha";
+            this.tslFecha.Size = new System.Drawing.Size(86, 22);
+            this.tslFecha.Text = "toolStripLabel1";
+            // 
+            // tslHora
+            // 
+            this.tslHora.Name = "tslHora";
+            this.tslHora.Size = new System.Drawing.Size(86, 22);
+            this.tslHora.Text = "toolStripLabel2";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmPuestosTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(411, 399);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.BtnModificar);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.BtnAgregar);
-            this.Controls.Add(this.txtPosicion);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.BtnEliminar);
-            this.Controls.Add(this.BtnRegresar);
-            this.Controls.Add(this.DgvPuesto);
+            this.ClientSize = new System.Drawing.Size(411, 412);
+            this.Controls.Add(this.toolStripContainer1);
             this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPuestosTrabajo";
             this.Text = "Heaven Store - Puestos de Trabajo";
             this.Load += new System.EventHandler(this.frmPuestosTrabajo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvPuesto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.toolStripContainer1.BottomToolStripPanel.ResumeLayout(false);
+            this.toolStripContainer1.BottomToolStripPanel.PerformLayout();
+            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer1.ContentPanel.PerformLayout();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -212,9 +281,14 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPosicion;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnModificar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel tslFecha;
+        private System.Windows.Forms.ToolStripLabel tslHora;
+        private System.Windows.Forms.Timer timer1;
     }
 }
