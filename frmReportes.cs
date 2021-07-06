@@ -28,6 +28,10 @@ namespace Pantallas_proyecto
         //prueba
         private void frmReportes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSetINVENTARIO.VCategorias' Puede moverla o quitarla según sea necesario.
+            this.vCategoriasTableAdapter3.Fill(this.db_a75e9e_bderickmoncadaDataSetINVENTARIO.VCategorias);
+            // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSetFecha_Compra.ReporteCompras' Puede moverla o quitarla según sea necesario.
+            this.reporteComprasTableAdapter1.Fill(this.db_a75e9e_bderickmoncadaDataSetFecha_Compra.ReporteCompras);
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSet11VCategorita.VCategorias' Puede moverla o quitarla según sea necesario.
             this.vCategoriasTableAdapter2.Fill(this.db_a75e9e_bderickmoncadaDataSet11VCategorita.VCategorias);
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSet8.ReporteCompras' Puede moverla o quitarla según sea necesario.
@@ -60,8 +64,8 @@ namespace Pantallas_proyecto
                     ReportParameter[] parameters = new ReportParameter[1];
                     this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab1"];
                     string Categoria = CBcategoria.Text.Trim();
-                   // parameters[0] = new ReportParameter("Categoria", Categoria);
-                  //  reportViewer1.LocalReport.SetParameters(parameters);
+                    parameters[0] = new ReportParameter("Categoria", Categoria);
+                    reportViewer1.LocalReport.SetParameters(parameters);
                     this.reportViewer1.RefreshReport();
                     
                     
@@ -92,11 +96,16 @@ namespace Pantallas_proyecto
                     ReportParameter[] parameters1 = new ReportParameter[1];
                     this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab7"];
                     string codigo = txtcodigo.Text;
-                    
-                    parameters1[0] = new ReportParameter("codigo", codigo);
-                    reportViewer8.LocalReport.SetParameters(parameters1);
-                    this.reportViewer8.RefreshReport();
+                    /*if (txtcodigo.Text != " ")
+                    {
 
+                    }
+                    else
+                    {*/
+                        parameters1[0] = new ReportParameter("codigo", codigo);
+                        reportViewer8.LocalReport.SetParameters(parameters1);
+                        this.reportViewer8.RefreshReport();
+                   // }
 
 
                     break;

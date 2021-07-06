@@ -229,5 +229,11 @@ namespace Pantallas_proyecto
             frmPantallaFacturacion fact = new frmPantallaFacturacion();
             fact.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmReportes fact = new frmReportes();
+            fact.Show();
+        }
     }
 }

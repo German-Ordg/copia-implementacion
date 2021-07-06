@@ -82,10 +82,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetinventario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetinventario.xsd</DependentUpon>
+    </Compile>
     <Compile Include="db_a75e9e_bderickmoncadaDataSet10.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_a75e9e_bderickmoncadaDataSet11compras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet11compras.xsd</DependentUpon>
     </Compile>
     <Compile Include="db_a75e9e_bderickmoncadaDataSet11VCategorita.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -113,6 +123,16 @@
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet9.xsd</DependentUpon>
     </Compile>
     <Compile Include="Cashe\UserCache.cs" />
+    <Compile Include="db_a75e9e_bderickmoncadaDataSetFecha_Compra.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSetFecha_Compra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_a75e9e_bderickmoncadaDataSetINVENTARIO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSetINVENTARIO.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dominio\Pocisiones.cs" />
     <Compile Include="ClsClientes.cs" />
     <Compile Include="Dominio\UserModel.cs" />
@@ -337,7 +357,6 @@
     <EmbeddedResource Include="FormBienvenido.resx">
       <DependentUpon>FormBienvenido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Report4.rdlc" />
@@ -345,6 +364,7 @@
     <EmbeddedResource Include="Report6.rdlc" />
     <EmbeddedResource Include="Report8.rdlc" />
     <EmbeddedResource Include="Report9.rdlc" />
+    <EmbeddedResource Include="Reportinventario.rdlc" />
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -355,6 +375,17 @@
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetinventario.xsc">
+      <DependentUpon>DataSetinventario.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetinventario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetinventario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetinventario.xss">
+      <DependentUpon>DataSetinventario.xsd</DependentUpon>
     </None>
     <None Include="db_a75e9e_bderickmoncadaDataSet10.xsc">
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet10.xsd</DependentUpon>
@@ -377,6 +408,17 @@
     </None>
     <None Include="db_a75e9e_bderickmoncadaDataSet11.xss">
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet11compras.xsc">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet11compras.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet11compras.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a75e9e_bderickmoncadaDataSet11compras.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSet11compras.xss">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSet11compras.xsd</DependentUpon>
     </None>
     <None Include="db_a75e9e_bderickmoncadaDataSet11VCategorita.xsc">
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet11VCategorita.xsd</DependentUpon>
@@ -487,6 +529,28 @@
     </None>
     <None Include="db_a75e9e_bderickmoncadaDataSet9.xss">
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSetFecha_Compra.xsc">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSetFecha_Compra.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSetFecha_Compra.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a75e9e_bderickmoncadaDataSetFecha_Compra.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSetFecha_Compra.xss">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSetFecha_Compra.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSetINVENTARIO.xsc">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSetINVENTARIO.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSetINVENTARIO.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a75e9e_bderickmoncadaDataSetINVENTARIO.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSetINVENTARIO.xss">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSetINVENTARIO.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
