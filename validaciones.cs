@@ -46,6 +46,7 @@ namespace Pantallas_proyecto
                 }
 
             }
+            return Only_numbers;
         }
 
        
