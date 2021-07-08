@@ -82,6 +82,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetCompra_Fecha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCompra_Fecha.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetinventario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -364,6 +369,7 @@
     <EmbeddedResource Include="Report6.rdlc" />
     <EmbeddedResource Include="Report8.rdlc" />
     <EmbeddedResource Include="Report9.rdlc" />
+    <EmbeddedResource Include="Reportcompra_fecha.rdlc" />
     <EmbeddedResource Include="Reportinventario.rdlc" />
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
@@ -375,6 +381,17 @@
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetCompra_Fecha.xsc">
+      <DependentUpon>DataSetCompra_Fecha.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetCompra_Fecha.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCompra_Fecha.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetCompra_Fecha.xss">
+      <DependentUpon>DataSetCompra_Fecha.xsd</DependentUpon>
     </None>
     <None Include="DataSetinventario.xsc">
       <DependentUpon>DataSetinventario.xsd</DependentUpon>

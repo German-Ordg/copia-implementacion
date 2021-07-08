@@ -19,6 +19,9 @@ namespace Pantallas_proyecto
             InitializeComponent();
         }
 
+        public DateTime Fecha1 { get; set; }
+        public DateTime Fecha2 { get; set; }
+
         private void button7_Click(object sender, EventArgs e)
         {
             FrmMenuPrincipalGerente gerente = new FrmMenuPrincipalGerente();
@@ -28,6 +31,8 @@ namespace Pantallas_proyecto
         //prueba
         private void frmReportes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'DataSetCompra_Fecha.Compra_Fecha' Puede moverla o quitarla según sea necesario.
+            this.Compra_FechaTableAdapter.Fill(this.DataSetCompra_Fecha.Compra_Fecha,Fecha1,Fecha2);
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSetINVENTARIO.VCategorias' Puede moverla o quitarla según sea necesario.
             this.vCategoriasTableAdapter3.Fill(this.db_a75e9e_bderickmoncadaDataSetINVENTARIO.VCategorias);
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSetFecha_Compra.ReporteCompras' Puede moverla o quitarla según sea necesario.
@@ -53,6 +58,7 @@ namespace Pantallas_proyecto
 
 
 
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -62,7 +68,7 @@ namespace Pantallas_proyecto
             {
                 case "Categoria":
                     ReportParameter[] parameters = new ReportParameter[1];
-                    this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab1"];
+                    this.reportes.SelectedTab = reportes.TabPages["tab1"];
                     string Categoria = CBcategoria.Text.Trim();
                     parameters[0] = new ReportParameter("Categoria", Categoria);
                     reportViewer1.LocalReport.SetParameters(parameters);
@@ -72,29 +78,29 @@ namespace Pantallas_proyecto
 
                     break;
                 case "Lo mas Vendido":
-                    this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab2"];
+                    this.reportes.SelectedTab = reportes.TabPages["tab2"];
                     this.reportViewer2.RefreshReport();
                     break;
                 case "Productos a Punto de Acabarse":
-                    this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab3"];
+                    this.reportes.SelectedTab = reportes.TabPages["tab3"];
                     this.reportViewer3.RefreshReport();
 
                     break;
                 case "Talla que Mas se Vende":
-                    this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab4"];
+                    this.reportes.SelectedTab = reportes.TabPages["tab4"];
                     this.reportViewer4.RefreshReport();
                     break;
                 case "Rotacion del Inventario":
-                    this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab5"];
+                    this.reportes.SelectedTab = reportes.TabPages["tab5"];
                     this.reportViewer5.RefreshReport();
                     break;
                 case "Inventario":
-                        this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab6"];
+                        this.reportes.SelectedTab = reportes.TabPages["tab6"];
                         this.reportViewer6.RefreshReport();
                     break;
                 case "Compras":
                     ReportParameter[] parameters1 = new ReportParameter[1];
-                    this.tabreporte1.SelectedTab = tabreporte1.TabPages["tab7"];
+                    this.reportes.SelectedTab = reportes.TabPages["tab7"];
                     string codigo = txtcodigo.Text;
                     /*if (txtcodigo.Text != " ")
                     {
@@ -108,6 +114,13 @@ namespace Pantallas_proyecto
                    // }
 
 
+                    break;
+                case "Compras_con_Fecha":
+                    DateTime Fecha1 = dateTimePicker1.Value;
+                    DateTime Fecha2 = dateTimePicker2.Value;
+                    this.Compra_FechaTableAdapter.Fill(this.DataSetCompra_Fecha.Compra_Fecha, Fecha1, Fecha2);
+                    this.reportes.SelectedTab = reportes.TabPages["tab8"];
+                    this.reportViewer7.RefreshReport();
                     break;
             }
         }
