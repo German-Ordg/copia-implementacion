@@ -90,6 +90,19 @@ namespace Pantallas_proyecto
 
         }
 
+        //------------------------------------------------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------
+        //metodo para actualizar productos
+
+        public void actualizarProducto()
+        {
+            conect2.abrir();
+            cmd = new SqlCommand("  Update Productos SET " +
+                " cantidad_existente = " + cantidad + ", precio_actual= " + precio_actual + ", descuento_producto = " + descuento + " where codigo_producto= " + codigo_producto, conect2.conexion);
+            cmd.ExecuteNonQuery();
+            conect2.cerrar();
+
+        }
 
 
         //------------------------------------------------------------------------------------------------------------------------------------------
@@ -178,13 +191,14 @@ namespace Pantallas_proyecto
 
         }
 
-        public int buscarProducto(String dgv)
+
+        public int buscarCompra(String dgv)
         {
 
             conect2.abrir();
 
 
-            string query = "Select cantidad_existente from Productos where codigo_producto =" + "'" + codigo_producto + "'";
+            string query = "Select *from Compras where dcodigo_compra =" + codigo_compra ;
             SqlCommand command = new SqlCommand(query, conect2.conexion);
 
             int lastId = Convert.ToInt32(command.ExecuteScalar());
@@ -197,5 +211,41 @@ namespace Pantallas_proyecto
         }
 
 
+        public int buscarProducto(String dgv)
+        {
+
+            conect2.abrir();
+
+
+            string query = "Select * from Productos where codigo_producto =" +  codigo_producto ;
+            SqlCommand command = new SqlCommand(query, conect2.conexion);
+
+            int lastId = Convert.ToInt32(command.ExecuteScalar());
+
+
+            conect2.cerrar();
+            return lastId;
+
+
+        }
+
+
+        public int buscarProducto2(String dgv)
+        {
+
+            conect2.abrir();
+
+
+            string query = "Select cantidad_existente from Productos where codigo_producto ="  + codigo_producto ;
+            SqlCommand command = new SqlCommand(query, conect2.conexion);
+
+            int lastId = Convert.ToInt32(command.ExecuteScalar());
+
+
+            conect2.cerrar();
+            return lastId;
+
+
+        }
     }
 }
