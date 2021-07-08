@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Schema;
 
 namespace Pantallas_proyecto
 {
@@ -11,8 +12,7 @@ namespace Pantallas_proyecto
     {
 
         public void ValidarTextbox() {
-           // bool validar = true;
-            //if ( ) { }
+           
         }
 
     }
