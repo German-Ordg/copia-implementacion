@@ -28,8 +28,26 @@ namespace Pantallas_proyecto
 
             }
             return Espacio_Vacio;
-
         }
+
+        //Validacion que me permita unicamente numeros en los textbox
+        public bool Only_numbers(ErrorProvider ubicacionError, TextBox txt) {
+            bool Only_numbers = true;
+            foreach (char caracter in txt.Text)
+            {
+                if (Char.IsDigit(caracter))
+                {
+                    Only_numbers = false;
+                    ubicacionError.SetError(txt, "");
+                }
+                else {
+                    Only_numbers = true;
+                    break;
+                }
+
+            }
+        }
+
        
 
 
