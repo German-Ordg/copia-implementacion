@@ -37,16 +37,15 @@ namespace Pantallas_proyecto
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +79,7 @@ namespace Pantallas_proyecto
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(159, 20);
             this.textBox1.TabIndex = 37;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -104,24 +104,16 @@ namespace Pantallas_proyecto
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
             this.comboBox2.Location = new System.Drawing.Point(178, 121);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(159, 21);
             this.comboBox2.TabIndex = 42;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Maroon;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(370, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 26);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -135,6 +127,7 @@ namespace Pantallas_proyecto
             this.button2.TabIndex = 44;
             this.button2.Text = "Aceptar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
             // 
@@ -146,14 +139,6 @@ namespace Pantallas_proyecto
             this.label6.Size = new System.Drawing.Size(191, 49);
             this.label6.TabIndex = 57;
             this.label6.Text = "HEAVEN";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(169, 171);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(499, 169);
-            this.dataGridView1.TabIndex = 58;
             // 
             // toolStrip1
             // 
@@ -183,17 +168,38 @@ namespace Pantallas_proyecto
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(178, 171);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(484, 158);
+            this.textBox2.TabIndex = 60;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.Maroon;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(377, 71);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(112, 26);
+            this.btnBuscar.TabIndex = 61;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            // 
             // frmInventarioParaEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(813, 415);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
@@ -205,7 +211,6 @@ namespace Pantallas_proyecto
             this.Name = "frmInventarioParaEmpleado";
             this.Text = "Heaven Store - Inventario";
             this.Load += new System.EventHandler(this.frmInventarioParaEmpleado_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -220,13 +225,13 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

@@ -114,6 +114,8 @@
     <Compile Include="FormBienvenido.Designer.cs">
       <DependentUpon>FormBienvenido.cs</DependentUpon>
     </Compile>
+    <Compile Include="MetodoBucasrProducto.cs" />
+    <Compile Include="MetodoBuscarCodigo.cs" />
     <Compile Include="SqlServerDB\ClsConexionBD.cs" />
     <Compile Include="db_a75e9e_bderickmoncadaDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
