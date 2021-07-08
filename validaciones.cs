@@ -26,13 +26,6 @@ namespace Pantallas_proyecto
                     Espacio_Vacio = true;
                 }
 
-                if (caracter.ToString() = null)
-                {
-
-                }
-                else {
-                    ubicacionError.SetError();
-                }
             }
             return Espacio_Vacio;
 
