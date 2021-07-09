@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetinventario" targetNamespace="http://tempuri.org/DataSetinventario.xsd" xmlns:mstns="http://tempuri.org/DataSetinventario.xsd" xmlns="http://tempuri.org/DataSetinventario.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db_a75e9e_bderickmoncadaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_a75e9e_bderickmoncadaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Pantallas_proyecto.Properties.Settings.GlobalReference.Default.db_a75e9e_bderickmoncadaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VCategoriasTableAdapter" GeneratorDataComponentClassName="VCategoriasTableAdapter" Name="VCategorias" UserDataComponentName="VCategoriasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_a75e9e_bderickmoncadaConnectionString (Settings)" DbObjectName="db_a75e9e_bderickmoncada.dbo.VCategorias" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT codigo_producto, codigo_categoria, descripcion_categoria, descripcion_producto, cantidad_existente, precio_actual, descuento_producto, talla FROM dbo.VCategorias</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="codigo_producto" DataSetColumn="codigo_producto" />
+              <Mapping SourceColumn="codigo_categoria" DataSetColumn="codigo_categoria" />
+              <Mapping SourceColumn="descripcion_categoria" DataSetColumn="descripcion_categoria" />
+              <Mapping SourceColumn="descripcion_producto" DataSetColumn="descripcion_producto" />
+              <Mapping SourceColumn="cantidad_existente" DataSetColumn="cantidad_existente" />
+              <Mapping SourceColumn="precio_actual" DataSetColumn="precio_actual" />
+              <Mapping SourceColumn="descuento_producto" DataSetColumn="descuento_producto" />
+              <Mapping SourceColumn="talla" DataSetColumn="talla" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetinventario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetinventario" msprop:Generator_UserDSName="DataSetinventario">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VCategorias" msprop:Generator_TableClassName="VCategoriasDataTable" msprop:Generator_TableVarName="tableVCategorias" msprop:Generator_TablePropName="VCategorias" msprop:Generator_RowDeletingName="VCategoriasRowDeleting" msprop:Generator_RowChangingName="VCategoriasRowChanging" msprop:Generator_RowEvHandlerName="VCategoriasRowChangeEventHandler" msprop:Generator_RowDeletedName="VCategoriasRowDeleted" msprop:Generator_UserTableName="VCategorias" msprop:Generator_RowChangedName="VCategoriasRowChanged" msprop:Generator_RowEvArgName="VCategoriasRowChangeEvent" msprop:Generator_RowClassName="VCategoriasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigo_producto" msprop:Generator_ColumnVarNameInTable="columncodigo_producto" msprop:Generator_ColumnPropNameInRow="codigo_producto" msprop:Generator_ColumnPropNameInTable="codigo_productoColumn" msprop:Generator_UserColumnName="codigo_producto" type="xs:int" />
+              <xs:element name="codigo_categoria" msprop:Generator_ColumnVarNameInTable="columncodigo_categoria" msprop:Generator_ColumnPropNameInRow="codigo_categoria" msprop:Generator_ColumnPropNameInTable="codigo_categoriaColumn" msprop:Generator_UserColumnName="codigo_categoria" type="xs:int" />
+              <xs:element name="descripcion_categoria" msprop:Generator_ColumnVarNameInTable="columndescripcion_categoria" msprop:Generator_ColumnPropNameInRow="descripcion_categoria" msprop:Generator_ColumnPropNameInTable="descripcion_categoriaColumn" msprop:Generator_UserColumnName="descripcion_categoria">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descripcion_producto" msprop:Generator_ColumnVarNameInTable="columndescripcion_producto" msprop:Generator_ColumnPropNameInRow="descripcion_producto" msprop:Generator_ColumnPropNameInTable="descripcion_productoColumn" msprop:Generator_UserColumnName="descripcion_producto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cantidad_existente" msprop:Generator_ColumnVarNameInTable="columncantidad_existente" msprop:Generator_ColumnPropNameInRow="cantidad_existente" msprop:Generator_ColumnPropNameInTable="cantidad_existenteColumn" msprop:Generator_UserColumnName="cantidad_existente" type="xs:int" />
+              <xs:element name="precio_actual" msprop:Generator_ColumnVarNameInTable="columnprecio_actual" msprop:Generator_ColumnPropNameInRow="precio_actual" msprop:Generator_ColumnPropNameInTable="precio_actualColumn" msprop:Generator_UserColumnName="precio_actual" type="xs:decimal" />
+              <xs:element name="descuento_producto" msprop:Generator_ColumnVarNameInTable="columndescuento_producto" msprop:Generator_ColumnPropNameInRow="descuento_producto" msprop:Generator_ColumnPropNameInTable="descuento_productoColumn" msprop:Generator_UserColumnName="descuento_producto" type="xs:decimal" />
+              <xs:element name="talla" msprop:Generator_ColumnVarNameInTable="columntalla" msprop:Generator_ColumnPropNameInRow="talla" msprop:Generator_ColumnPropNameInTable="tallaColumn" msprop:Generator_UserColumnName="talla" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VCategorias" />
+      <xs:field xpath="mstns:codigo_producto" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

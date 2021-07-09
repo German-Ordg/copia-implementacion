@@ -2,18 +2,18 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="db_a75e9e_bderickmoncadaDataSet11VCategorita">
+    <DataSource Name="DataSet1">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>299e010e-df31-4d06-9615-d644b384cacc</rd:DataSourceID>
+      <rd:DataSourceID>9575aeeb-c12b-4cfd-9b94-777455ced741</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSetVcategoria">
+    <DataSet Name="DataSetVCategorias">
       <Query>
-        <DataSourceName>db_a75e9e_bderickmoncadaDataSet11VCategorita</DataSourceName>
+        <DataSourceName>DataSet1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -51,8 +51,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>db_a75e9e_bderickmoncadaDataSet11VCategorita</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\db_a75e9e_bderickmoncadaDataSet11VCategorita.xsd</rd:SchemaPath>
+        <rd:DataSetName>DataSet1</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\DataSet1.xsd</rd:SchemaPath>
         <rd:TableName>VCategorias</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -68,121 +68,31 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>1.65209cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>2.27926cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>2.27926cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>1.56088cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>2.27926cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>1.79243cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>1.58076cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.6cm</Height>
+                  <Height>1.05508cm</Height>
                   <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>codigo producto</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox3">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>descripcion categoria</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox7">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>descripcion producto</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox7</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox9">
@@ -192,7 +102,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>cantidad existente</Value>
+                                  <Value>codigo producto</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -222,7 +132,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>precio actual</Value>
+                                  <Value>descripcion categoria</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -252,7 +162,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>descuento producto</Value>
+                                  <Value>descripcion producto</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -282,7 +192,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>talla</Value>
+                                  <Value>cantidad existente</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -303,10 +213,100 @@
                         </Textbox>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox18">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>precio actual</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox18</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox20">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>descuento producto</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox20</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox22">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>talla</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox22</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.6cm</Height>
+                  <Height>1.05508cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -543,11 +543,20 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DataSetVcategoria</DataSetName>
-            <Top>3.29467cm</Top>
-            <Left>0.73602cm</Left>
-            <Height>1.2cm</Height>
-            <Width>17.5cm</Width>
+            <DataSetName>DataSetVCategorias</DataSetName>
+            <Filters>
+              <Filter>
+                <FilterExpression>=Fields!descripcion_categoria.Value</FilterExpression>
+                <Operator>Equal</Operator>
+                <FilterValues>
+                  <FilterValue>=Parameters!Categoria.Value</FilterValue>
+                </FilterValues>
+              </Filter>
+            </Filters>
+            <Top>1.04987cm</Top>
+            <Left>1.14621cm</Left>
+            <Height>2.11017cm</Height>
+            <Width>13.42394cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -555,38 +564,88 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>3.92889in</Height>
+        <Height>2in</Height>
         <Style />
       </Body>
-      <Width>9.02888in</Width>
+      <Width>8.44476in</Width>
       <Page>
         <PageHeader>
-          <Height>2.5812cm</Height>
+          <Height>2.54cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
-            <Textbox Name="ReportName">
+            <Textbox Name="Reporte_de_Categorias">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Reporte de invetario</Value>
+                      <Value>Reporte de Categorias</Value>
                       <Style>
                         <FontSize>20pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.45332cm</Top>
+              <Left>3.42547cm</Left>
+              <Height>1.51017cm</Height>
+              <Width>9.158cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <VerticalAlign>Middle</VerticalAlign>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Image Name="Image1">
+              <Source>Embedded</Source>
+              <Value>Sintítulo2</Value>
+              <Sizing>FitProportional</Sizing>
+              <Top>0.33014cm</Top>
+              <Left>0.45519cm</Left>
+              <Height>1.41533cm</Height>
+              <Width>1.98683cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
+            <Textbox Name="Categoria">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Parameters!Categoria.Value</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>ReportName</rd:DefaultName>
-              <Top>0.485cm</Top>
-              <Left>5.68143cm</Left>
-              <Height>1.062cm</Height>
-              <Width>7.25192cm</Width>
+              <rd:DefaultName>Categoria</rd:DefaultName>
+              <Top>1.32503cm</Top>
+              <Left>17.9197cm</Left>
+              <Height>0.6cm</Height>
+              <Width>2.5cm</Width>
+              <ZIndex>2</ZIndex>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -597,32 +656,6 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Line Name="Line1">
-              <Top>2.40481cm</Top>
-              <Height>0cm</Height>
-              <Width>19.50131cm</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>Solid</Style>
-                </Border>
-              </Style>
-            </Line>
-            <Image Name="Image1">
-              <Source>Embedded</Source>
-              <Value>Sintítulo2</Value>
-              <Sizing>FitProportional</Sizing>
-              <Top>0.3281cm</Top>
-              <Left>1.2192cm</Left>
-              <Height>1.5cm</Height>
-              <Width>1.5cm</Width>
-              <ZIndex>2</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Image>
           </ReportItems>
           <Style>
             <Border>
@@ -651,7 +684,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox4</rd:DefaultName>
               <Top>0.97cm</Top>
-              <Left>2.0013cm</Left>
+              <Left>0.46795cm</Left>
               <Height>0.6cm</Height>
               <Width>1.19944cm</Width>
               <Style>
@@ -680,7 +713,7 @@
               </Paragraphs>
               <rd:DefaultName>ExecutionTime</rd:DefaultName>
               <Top>0.97cm</Top>
-              <Left>3.23602cm</Left>
+              <Left>1.70267cm</Left>
               <Height>0.6cm</Height>
               <Width>4.92006cm</Width>
               <ZIndex>1</ZIndex>
@@ -694,7 +727,7 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="Textbox6">
+            <Textbox Name="Textbox5">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
@@ -710,7 +743,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox4</rd:DefaultName>
               <Top>0.97cm</Top>
-              <Left>12.04281cm</Left>
+              <Left>10.50946cm</Left>
               <Height>0.6cm</Height>
               <Width>1.31467cm</Width>
               <ZIndex>2</ZIndex>
@@ -740,7 +773,7 @@
               </Paragraphs>
               <rd:DefaultName>TotalPages</rd:DefaultName>
               <Top>0.97cm</Top>
-              <Left>15.47291cm</Left>
+              <Left>13.93956cm</Left>
               <Height>0.6cm</Height>
               <Width>0.70083cm</Width>
               <ZIndex>3</ZIndex>
@@ -770,7 +803,7 @@
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
               <Top>0.97cm</Top>
-              <Left>13.35748cm</Left>
+              <Left>11.82413cm</Left>
               <Height>0.6cm</Height>
               <Width>1.16526cm</Width>
               <ZIndex>4</ZIndex>
@@ -784,7 +817,7 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="Textbox13">
+            <Textbox Name="Textbox12">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
@@ -800,7 +833,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox12</rd:DefaultName>
               <Top>0.97cm</Top>
-              <Left>14.55802cm</Left>
+              <Left>13.02467cm</Left>
               <Height>0.6cm</Height>
               <Width>0.91489cm</Width>
               <ZIndex>5</ZIndex>
@@ -814,17 +847,6 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Line Name="Line2">
-              <Top>0.17639cm</Top>
-              <Height>0cm</Height>
-              <Width>19.50131cm</Width>
-              <ZIndex>6</ZIndex>
-              <Style>
-                <Border>
-                  <Style>Solid</Style>
-                </Border>
-              </Style>
-            </Line>
           </ReportItems>
           <Style>
             <Border>
@@ -843,10 +865,24 @@
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="Categoria">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>4</NumberOfColumns>
       <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>Categoria</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <EmbeddedImages>
@@ -1930,5 +1966,5 @@ pkMMsznndhh8Pz636nkUTkg5lCnFlHL9I+wxpLockCrjkMI4rDBa79XTumaN4wCj9Xiu3zeq/0Wh+k9c
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>c464314b-27ba-43cc-8919-caa67974c56a</rd:ReportID>
+  <rd:ReportID>ee7afd76-34e6-48d0-9ed4-df0b4cebded4</rd:ReportID>
 </Report>
