@@ -49,5 +49,17 @@ namespace Pantallas_proyecto
             conect.cargarDatosProductos(dataGridView1);
             timer1.Enabled = true;
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var aux = new MetodoBuscarCodigo();
+            aux.filtrar1(dataGridView1, this.textBox1.Text.Trim());
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            var aux = new MetodoBucasrProducto();
+            aux.filtrar(dataGridView1, this.textBox2.Text.Trim());
+        }
     }
 }

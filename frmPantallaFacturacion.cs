@@ -304,6 +304,13 @@ namespace Pantallas_proyecto
                 double total = Int32.Parse(nudCantidad.Value.ToString()) * fac.PrecioProducto;
                 lstCompras.Rows[n].Cells[5].Value = total.ToString();
                 lstCompras.Enabled = true;
+                btnAgregar.Enabled = true;
+
+                txtCodProducto.Clear();
+                txtDescripcion.Clear();
+                txtDescuento.Clear();
+                txtPrecioUnitario.Clear();
+                nudCantidad.Value = 1;
             }
             else
             {
@@ -368,6 +375,15 @@ namespace Pantallas_proyecto
             else
             {
                 MessageBox.Show("Ingrese un RTN", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnEliminarTodo_Click(object sender, EventArgs e)
+        {
+            if (lstCompras.DataSource is DataTable)
+            {
+                lstCompras.Rows.Clear();
+                lstCompras.Refresh();
             }
         }
     }

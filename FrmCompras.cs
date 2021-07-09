@@ -207,10 +207,15 @@ namespace Pantallas_proyecto
                 conect2.abrir();
 
 
-                // clientes2.Fecha_nacimiento = dtpFechaNacCliente.Value.ToString("yyyy/MM/dd");
+            // clientes2.Fecha_nacimiento = dtpFechaNacCliente.Value.ToString("yyyy/MM/dd");
 
-                //---------------------------------------------------------------------------------------------------------------------------------
-                //Productos
+            //---------------------------------------------------------------------------------------------------------------------------------
+            //Productos
+
+            producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
+
+            if (producto.buscarProducto(codigoProducto.Text) != producto.Codigo_producto)
+            {
                 producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
                 producto.Descripcion = descripcionProducto.Text;
                 producto.Cantidad = Convert.ToInt32(cantidad.Text);
@@ -221,7 +226,24 @@ namespace Pantallas_proyecto
                 producto.Categoria = Convert.ToInt32(producto.buscarCategoria(producto.Descripcion_Categoria));
                 producto.agregarProducto();
                 cargarDatosProductos(dgvProductos, "Productos");
+            }
+            else
+                if (producto.buscarProducto(codigoProducto.Text) == producto.Codigo_producto) {
 
+
+                producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
+
+
+                int cant = producto.buscarProducto2(codigoProducto.Text);
+
+                producto.Cantidad = Convert.ToInt32(cantidad.Text) + cant;
+                producto.Precio_actual = Convert.ToDouble(precioActual.Text);
+                producto.Descuento = Convert.ToDouble(descuento.Text);
+     
+                producto.actualizarProducto();
+                cargarDatosProductos(dgvProductos, "Productos");
+
+            }
 
                 producto.Descripcion_proveedor = comboProveedor.SelectedItem.ToString();
                 producto.Codigo_proveedor = producto.buscarProveedor(producto.Descripcion_proveedor);
@@ -245,7 +267,37 @@ namespace Pantallas_proyecto
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+          
+           // codigoProducto.Text= dgvProductos.CurrentRow.Cells[0].Value.ToString();
+
+            const string message =
+               "Are you sure that you would like to close the form?";
+            const string caption = "Form Closing";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            // If the no button was pressed ...
+            if (result == DialogResult.No)
+            {
+                // cancel the closure of the form.
+                codigoProducto.Text = dgvProductos.CurrentRow.Cells[0].Value.ToString();
+            }
+        }
+
+        /* btnCamaroteCamarote.Enabled = true;
+        btnAgregarCamarote.Enabled = false;
+        txtCodigoTipoCamarote.Text = dgvCamarotes.CurrentRow.Cells[1].Value.ToString();
+        txtNumeroCamarote.Text = dgvCamarotes.CurrentRow.Cells[2].Value.ToString();
+        txtNivelCamarote.Text = dgvCamarotes.CurrentRow.Cells[3].Value.ToString();
+        txtBuqueCamarote.Text = dgvCamarotes.CurrentRow.Cells[4].Value.ToString();*/
     }
+
+
+     
 }
 
 
