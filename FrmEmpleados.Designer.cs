@@ -79,9 +79,9 @@ namespace Pantallas_proyecto
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(37, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 18);
+            this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre";
+            this.label2.Text = "Nombre:";
             // 
             // label3
             // 
@@ -90,9 +90,9 @@ namespace Pantallas_proyecto
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(37, 173);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 18);
+            this.label3.Size = new System.Drawing.Size(26, 18);
             this.label3.TabIndex = 2;
-            this.label3.Text = "ID";
+            this.label3.Text = "ID:";
             // 
             // label4
             // 
@@ -101,9 +101,9 @@ namespace Pantallas_proyecto
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(37, 230);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 18);
+            this.label4.Size = new System.Drawing.Size(59, 18);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Puesto";
+            this.label4.Text = "Puesto:";
             // 
             // txtNombre
             // 
@@ -133,9 +133,9 @@ namespace Pantallas_proyecto
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(348, 119);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 18);
+            this.label5.Size = new System.Drawing.Size(63, 18);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Apellido";
+            this.label5.Text = "Apellido:";
             // 
             // label6
             // 
@@ -144,9 +144,9 @@ namespace Pantallas_proyecto
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(348, 173);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 18);
+            this.label6.Size = new System.Drawing.Size(149, 18);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Fecha de nacimiento";
+            this.label6.Text = "Fecha de nacimiento:";
             // 
             // label7
             // 
@@ -155,9 +155,9 @@ namespace Pantallas_proyecto
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(348, 230);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 18);
+            this.label7.Size = new System.Drawing.Size(126, 18);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Fecha de Ingreso";
+            this.label7.Text = "Fecha de Ingreso:";
             // 
             // txtApellido
             // 
@@ -264,7 +264,7 @@ namespace Pantallas_proyecto
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(90, 18);
             this.label10.TabIndex = 34;
-            this.label10.Text = "Numero Tel:";
+            this.label10.Text = "Número Tel:";
             // 
             // txtNumeroTel
             // 
@@ -298,7 +298,7 @@ namespace Pantallas_proyecto
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(62, 18);
             this.label11.TabIndex = 37;
-            this.label11.Text = "Genero:";
+            this.label11.Text = "Género:";
             // 
             // cmbGenero
             // 
@@ -372,7 +372,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmEmpleados";
-            this.Text = "Empleados";
+            this.Text = "Heaven Store - Empleados";
             this.Load += new System.EventHandler(this.FrmEmpleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.toolStrip1.ResumeLayout(false);
