@@ -54,9 +54,9 @@ namespace Pantallas_proyecto
             this.label1.ForeColor = System.Drawing.Color.Cornsilk;
             this.label1.Location = new System.Drawing.Point(26, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 22);
+            this.label1.Size = new System.Drawing.Size(72, 22);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Codigo";
+            this.label1.Text = "Código:";
             // 
             // textBox1
             // 
@@ -81,9 +81,9 @@ namespace Pantallas_proyecto
             this.label3.ForeColor = System.Drawing.Color.Cornsilk;
             this.label3.Location = new System.Drawing.Point(262, 115);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 22);
+            this.label3.Size = new System.Drawing.Size(93, 22);
             this.label3.TabIndex = 22;
-            this.label3.Text = "Categoria";
+            this.label3.Text = "Categoría:";
             // 
             // textBox2
             // 
@@ -139,12 +139,12 @@ namespace Pantallas_proyecto
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Image = global::Pantallas_proyecto.Properties.Resources.Letras1;
+            this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(204, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(302, 42);
+            this.pictureBox1.Size = new System.Drawing.Size(327, 56);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
@@ -165,7 +165,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmInventario";
-            this.Text = "Inventario";
+            this.Text = "Heaven Store - Inventario";
             this.Load += new System.EventHandler(this.FrmInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
