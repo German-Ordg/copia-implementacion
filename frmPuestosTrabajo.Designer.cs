@@ -256,7 +256,11 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.toolStripContainer1);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(427, 451);
+            this.MinimumSize = new System.Drawing.Size(427, 451);
             this.Name = "frmPuestosTrabajo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Puestos de Trabajo";
             this.Load += new System.EventHandler(this.frmPuestosTrabajo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvPuesto)).EndInit();
