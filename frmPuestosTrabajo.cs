@@ -51,7 +51,7 @@ namespace Pantallas_proyecto
         {
             FrmMenuCRUD cRUD = new FrmMenuCRUD();
             cRUD.Show();
-            cRUD.Hide();
+            this.Hide();
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
