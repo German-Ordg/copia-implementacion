@@ -67,7 +67,7 @@ namespace Pantallas_proyecto
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(526, 114);
+            this.textBox2.Location = new System.Drawing.Point(526, 115);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(53, 20);
             this.textBox2.TabIndex = 32;
@@ -76,13 +76,13 @@ namespace Pantallas_proyecto
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label3.Location = new System.Drawing.Point(432, 112);
+            this.label3.Location = new System.Drawing.Point(439, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 22);
+            this.label3.Size = new System.Drawing.Size(86, 20);
             this.label3.TabIndex = 31;
-            this.label3.Text = "Categoria";
+            this.label3.Text = "Categoría:";
             // 
             // dataGridView1
             // 
@@ -104,13 +104,13 @@ namespace Pantallas_proyecto
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label1.Location = new System.Drawing.Point(289, 113);
+            this.label1.Location = new System.Drawing.Point(295, 115);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 22);
+            this.label1.Size = new System.Drawing.Size(66, 20);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Codigo";
+            this.label1.Text = "Código:";
             // 
             // label2
             // 
@@ -172,11 +172,11 @@ namespace Pantallas_proyecto
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(44, 111);
+            this.label4.Location = new System.Drawing.Point(44, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 20);
             this.label4.TabIndex = 37;
-            this.label4.Text = "Busqueda Por:";
+            this.label4.Text = "Búsqueda Por:";
             // 
             // comboBox1
             // 
@@ -209,7 +209,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmInventario_Gerente";
-            this.Text = "FrmInventario_Gerente";
+            this.Text = "Heaven Store - Inventario";
             this.Load += new System.EventHandler(this.FrmInventario_Gerente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
