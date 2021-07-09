@@ -17,6 +17,17 @@ namespace Pantallas_proyecto
             InitializeComponent();
         }
 
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
@@ -200,38 +211,48 @@ namespace Pantallas_proyecto
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                  if (txtUsuario.Text != "Usuario")
-            {
-                if (txtContrasena.Text != "Contraseña")
+                if (txtUsuario.Text != "Usuario")
                 {
-                    
-                    Dominio.UserModel model = new Dominio.UserModel();
-                    var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
-                    if (validar == true)
+                    if (txtContrasena.Text != "Contraseña")
                     {
-                        this.Hide();
-                        FormBienvenido welcome = new FormBienvenido();
-                        welcome.ShowDialog();
-                        FrmMenuPrincipal menu = new FrmMenuPrincipal(); 
-                        menu.Show();
-                        menu.FormClosed += cerrarSesion;
-                        
+
+                        Dominio.UserModel model = new Dominio.UserModel();
+                        var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
+                        if (validar == true)
+                        {
+                            this.Hide();
+                            FormBienvenido welcome = new FormBienvenido();
+                            welcome.ShowDialog();
+
+                            if (Cashe.UserCache.Position == "Vendedor")
+                            {
+                                FrmMenuPrincipal menu = new FrmMenuPrincipal();
+                                menu.Show();
+                                menu.FormClosed += cerrarSesion;
+                            }
+                            if (Cashe.UserCache.Position == "Gerente")
+                            {
+                                FrmMenuPrincipalGerente menu = new FrmMenuPrincipalGerente();
+                                menu.Show();
+                                menu.FormClosed += cerrarSesion;
+                            }
+
+
+                        }
+                        else
+                        {
+                            msjError("Usuario o contraseña incorrecta \n\t Intente de nuevo");
+                            txtUsuario.Clear();
+                            txtContrasena.Clear();
+                        }
                     }
                     else
-                    {
-                        msjError("Usuario o contraseña incorrecta \n\t Intente de nuevo");
-                        txtUsuario.Clear();
-                        txtContrasena.Clear();
-                    }
+                        msjError("Ingrese la contraseña");
                 }
                 else
-                    msjError("Ingrese la contraseña");
-            }
-            else
-                msjError("Ingrese el usuario");
+                    msjError("Ingrese el usuario");
 
             }
-
         }
 
         private void button2_Click(object sender, EventArgs e)

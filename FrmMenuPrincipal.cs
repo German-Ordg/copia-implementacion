@@ -37,7 +37,7 @@ namespace Pantallas_proyecto
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmInventarioParaEmpleado menu = new frmInventarioParaEmpleado();
+            FrmInventario menu = new FrmInventario();
             menu.Show();
             this.Hide();
         }
@@ -46,12 +46,12 @@ namespace Pantallas_proyecto
         {
             FrmAcceso acceso = new FrmAcceso();
             acceso.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void button2_Click(object sender, EventArgs e)

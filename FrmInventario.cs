@@ -25,7 +25,7 @@ namespace Pantallas_proyecto
         {
             FrmMenuPrincipal menu = new FrmMenuPrincipal();
             menu.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

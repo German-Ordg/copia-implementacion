@@ -65,9 +65,9 @@ namespace Pantallas_proyecto
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(21, 25);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox1.Size = new System.Drawing.Size(476, 420);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -78,8 +78,8 @@ namespace Pantallas_proyecto
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsuario.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtUsuario.Location = new System.Drawing.Point(204, 162);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtUsuario.Location = new System.Drawing.Point(203, 126);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(5);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(169, 29);
             this.txtUsuario.TabIndex = 1;
@@ -94,8 +94,8 @@ namespace Pantallas_proyecto
             this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContrasena.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtContrasena.Location = new System.Drawing.Point(203, 249);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtContrasena.Location = new System.Drawing.Point(203, 196);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(5);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(169, 29);
             this.txtContrasena.TabIndex = 2;
@@ -110,8 +110,8 @@ namespace Pantallas_proyecto
             this.chkMostrarContra.AutoSize = true;
             this.chkMostrarContra.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkMostrarContra.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.chkMostrarContra.Location = new System.Drawing.Point(204, 308);
-            this.chkMostrarContra.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.chkMostrarContra.Location = new System.Drawing.Point(203, 247);
+            this.chkMostrarContra.Margin = new System.Windows.Forms.Padding(5);
             this.chkMostrarContra.Name = "chkMostrarContra";
             this.chkMostrarContra.Size = new System.Drawing.Size(163, 24);
             this.chkMostrarContra.TabIndex = 6;
@@ -123,7 +123,7 @@ namespace Pantallas_proyecto
             // 
             this.picError.Image = ((System.Drawing.Image)(resources.GetObject("picError.Image")));
             this.picError.Location = new System.Drawing.Point(43, 357);
-            this.picError.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.picError.Margin = new System.Windows.Forms.Padding(5);
             this.picError.Name = "picError";
             this.picError.Size = new System.Drawing.Size(27, 25);
             this.picError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -138,7 +138,7 @@ namespace Pantallas_proyecto
             this.lblError.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblError.Location = new System.Drawing.Point(76, 290);
+            this.lblError.Location = new System.Drawing.Point(93, 363);
             this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(45, 19);
@@ -193,7 +193,7 @@ namespace Pantallas_proyecto
             this.btnIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngreso.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnIngreso.Location = new System.Drawing.Point(87, 475);
-            this.btnIngreso.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnIngreso.Margin = new System.Windows.Forms.Padding(5);
             this.btnIngreso.Name = "btnIngreso";
             this.btnIngreso.Size = new System.Drawing.Size(131, 49);
             this.btnIngreso.TabIndex = 3;
@@ -208,7 +208,7 @@ namespace Pantallas_proyecto
             this.btnRecuperar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecuperar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRecuperar.Location = new System.Drawing.Point(385, 475);
-            this.btnRecuperar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnRecuperar.Margin = new System.Windows.Forms.Padding(5);
             this.btnRecuperar.Name = "btnRecuperar";
             this.btnRecuperar.Size = new System.Drawing.Size(312, 49);
             this.btnRecuperar.TabIndex = 4;
@@ -223,7 +223,7 @@ namespace Pantallas_proyecto
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSalir.Location = new System.Drawing.Point(899, 475);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(5);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(132, 49);
             this.btnSalir.TabIndex = 5;
@@ -275,7 +275,7 @@ namespace Pantallas_proyecto
             // 
             this.pictureBox1.Image = global::Pantallas_proyecto.Properties.Resources.Letras1;
             this.pictureBox1.Location = new System.Drawing.Point(523, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(451, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -307,9 +307,13 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.btnIngreso);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1107, 614);
+            this.MinimumSize = new System.Drawing.Size(1107, 614);
             this.Name = "FrmAcceso";
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

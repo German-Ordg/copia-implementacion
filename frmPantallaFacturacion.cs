@@ -82,9 +82,19 @@ namespace Pantallas_proyecto
 
         private void button8_Click(object sender, EventArgs e)
         {
-            FrmMenuPrincipal menu = new FrmMenuPrincipal();
-            menu.Show();
-            this.Hide();
+            if (Cashe.UserCache.Position == "Vendedor")
+            {
+                FrmMenuPrincipal menu = new FrmMenuPrincipal();
+                menu.Show();
+                this.Close();
+            }
+            if (Cashe.UserCache.Position == "Gerente")
+            {
+                FrmMenuPrincipalGerente menu = new FrmMenuPrincipalGerente();
+                menu.Show();
+                this.Close();
+            }
+            
         }
 
         private void frmPantallaFacturacion_Load(object sender, EventArgs e)
