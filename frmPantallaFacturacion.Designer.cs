@@ -398,6 +398,7 @@ namespace Pantallas_proyecto
             this.lstCodProducto.HeaderText = "Cod. Producto";
             this.lstCodProducto.MinimumWidth = 100;
             this.lstCodProducto.Name = "lstCodProducto";
+            this.lstCodProducto.ReadOnly = true;
             this.lstCodProducto.Width = 125;
             // 
             // Cantidad
@@ -406,6 +407,7 @@ namespace Pantallas_proyecto
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.MinimumWidth = 50;
             this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
             this.Cantidad.Width = 93;
             // 
             // Descripcion
@@ -414,6 +416,7 @@ namespace Pantallas_proyecto
             this.Descripcion.HeaderText = "Descripción";
             this.Descripcion.MinimumWidth = 270;
             this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
             this.Descripcion.Width = 270;
             // 
             // Column1
@@ -422,6 +425,7 @@ namespace Pantallas_proyecto
             this.Column1.HeaderText = "Precio Unitario";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 119;
             // 
             // Column2
@@ -430,6 +434,7 @@ namespace Pantallas_proyecto
             this.Column2.HeaderText = "Descuentos y Rebajas Otorgadas";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 167;
             // 
             // Column3
@@ -438,6 +443,7 @@ namespace Pantallas_proyecto
             this.Column3.HeaderText = "Total.";
             this.Column3.MinimumWidth = 102;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 102;
             // 
             // label10
@@ -733,6 +739,7 @@ namespace Pantallas_proyecto
             this.btnEliminarTodo.TabIndex = 18;
             this.btnEliminarTodo.Text = "Eliminar Todo";
             this.btnEliminarTodo.UseVisualStyleBackColor = false;
+            this.btnEliminarTodo.Click += new System.EventHandler(this.btnEliminarTodo_Click);
             // 
             // txtDescuento
             // 

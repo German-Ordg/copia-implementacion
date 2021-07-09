@@ -245,5 +245,11 @@ namespace Pantallas_proyecto
             FrmMenuPrincipal fact = new FrmMenuPrincipal();
             fact.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmPantallaFacturacion fact = new frmPantallaFacturacion();
+            fact.Show();
+        }
     }
 }
