@@ -199,7 +199,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label2);
             this.Name = "FrmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmClientes";
+            this.Text = "Heaven Store - Clientes";
             this.Load += new System.EventHandler(this.FrmClientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
