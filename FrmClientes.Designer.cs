@@ -54,7 +54,7 @@ namespace Pantallas_proyecto
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button2.Location = new System.Drawing.Point(323, 348);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 36);
             this.button2.TabIndex = 48;
@@ -71,7 +71,7 @@ namespace Pantallas_proyecto
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button4.Location = new System.Drawing.Point(600, 32);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(123, 36);
             this.button4.TabIndex = 44;
@@ -94,7 +94,7 @@ namespace Pantallas_proyecto
             // txtRTN
             // 
             this.txtRTN.Location = new System.Drawing.Point(512, 150);
-            this.txtRTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRTN.Margin = new System.Windows.Forms.Padding(4);
             this.txtRTN.Name = "txtRTN";
             this.txtRTN.Size = new System.Drawing.Size(211, 22);
             this.txtRTN.TabIndex = 4;
@@ -114,7 +114,7 @@ namespace Pantallas_proyecto
             // TxtApellido
             // 
             this.TxtApellido.Location = new System.Drawing.Point(173, 222);
-            this.TxtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.TxtApellido.Name = "TxtApellido";
             this.TxtApellido.Size = new System.Drawing.Size(208, 22);
             this.TxtApellido.TabIndex = 2;
@@ -122,7 +122,7 @@ namespace Pantallas_proyecto
             // TxtNombre
             // 
             this.TxtNombre.Location = new System.Drawing.Point(173, 153);
-            this.TxtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(208, 22);
             this.TxtNombre.TabIndex = 1;
@@ -166,7 +166,7 @@ namespace Pantallas_proyecto
             // TxtCorreo
             // 
             this.TxtCorreo.Location = new System.Drawing.Point(173, 288);
-            this.TxtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCorreo.Name = "TxtCorreo";
             this.TxtCorreo.Size = new System.Drawing.Size(208, 22);
             this.TxtCorreo.TabIndex = 3;
@@ -211,8 +211,10 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(781, 475);
+            this.MinimumSize = new System.Drawing.Size(781, 475);
             this.Name = "FrmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Clientes";
