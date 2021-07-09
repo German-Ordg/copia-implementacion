@@ -43,8 +43,8 @@ namespace Pantallas_proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmUsuarios usuarios = new frmUsuarios();
-            usuarios.Show();
+            FrmMenuCRUD CRUD = new FrmMenuCRUD();
+            CRUD.Show();
             this.Hide();
         }
         
