@@ -57,7 +57,7 @@ namespace Pantallas_proyecto
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(82, 20);
             label2.TabIndex = 33;
-            label2.Text = "Categoria:";
+            label2.Text = "Categoría:";
             // 
             // button7
             // 

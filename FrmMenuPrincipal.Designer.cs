@@ -187,7 +187,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
             this.Name = "FrmMenuPrincipal";
-            this.Text = "FrmMenuPrincipal";
+            this.Text = "Heaven Store - Menú Princpal";
             this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
