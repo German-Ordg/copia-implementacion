@@ -171,7 +171,11 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(803, 355);
+            this.MinimumSize = new System.Drawing.Size(803, 355);
             this.Name = "FrmRecuperaContra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recuperar Contraseña";
             this.Load += new System.EventHandler(this.FrmRecuperaContra_Load);
             this.groupBox1.ResumeLayout(false);

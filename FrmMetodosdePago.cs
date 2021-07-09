@@ -10,12 +10,23 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace Pantallas_proyecto
-{
+{    
     public partial class FrmMetodosdePago : Form
     {
         public FrmMetodosdePago()
         {
             InitializeComponent();
+        }
+
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
         }
 
         ClsConexionBD conect = new ClsConexionBD();

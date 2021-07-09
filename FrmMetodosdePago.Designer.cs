@@ -30,6 +30,7 @@ namespace Pantallas_proyecto
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMetodosdePago));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -207,6 +208,10 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(375, 449);
+            this.MinimumSize = new System.Drawing.Size(375, 449);
             this.Name = "FrmMetodosdePago";
             this.Text = "Heaven Store - Métodos de Pago";
             this.Load += new System.EventHandler(this.FrmMetodosdePago_Load);

@@ -14,6 +14,17 @@ namespace Pantallas_proyecto
             timer1.Enabled = true;
         }
 
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
+        }
+
         ClsConexionBD connect = new ClsConexionBD();
         int Record_Id;
 
@@ -51,7 +62,7 @@ namespace Pantallas_proyecto
         {
             FrmMenuCRUD cRUD = new FrmMenuCRUD();
             cRUD.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)

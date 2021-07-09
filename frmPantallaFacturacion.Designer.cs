@@ -30,6 +30,7 @@ namespace Pantallas_proyecto
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPantallaFacturacion));
             this.brnRegresar = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtTotalPagar = new System.Windows.Forms.TextBox();
@@ -93,12 +94,12 @@ namespace Pantallas_proyecto
             this.label3 = new System.Windows.Forms.Label();
             this.txtCodProducto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnImprimirFactura = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lstCompras)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -107,6 +108,7 @@ namespace Pantallas_proyecto
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // brnRegresar
@@ -491,9 +493,9 @@ namespace Pantallas_proyecto
             this.groupBox4.Controls.Add(this.rbConNombre);
             this.groupBox4.Controls.Add(this.rbSinNombre);
             this.groupBox4.Location = new System.Drawing.Point(5, 14);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(150, 81);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
@@ -504,7 +506,7 @@ namespace Pantallas_proyecto
             // 
             this.rbConNombre.AutoSize = true;
             this.rbConNombre.Location = new System.Drawing.Point(14, 17);
-            this.rbConNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbConNombre.Margin = new System.Windows.Forms.Padding(2);
             this.rbConNombre.Name = "rbConNombre";
             this.rbConNombre.Size = new System.Drawing.Size(123, 17);
             this.rbConNombre.TabIndex = 6;
@@ -517,7 +519,7 @@ namespace Pantallas_proyecto
             // 
             this.rbSinNombre.AutoSize = true;
             this.rbSinNombre.Location = new System.Drawing.Point(14, 43);
-            this.rbSinNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbSinNombre.Margin = new System.Windows.Forms.Padding(2);
             this.rbSinNombre.Name = "rbSinNombre";
             this.rbSinNombre.Size = new System.Drawing.Size(119, 17);
             this.rbSinNombre.TabIndex = 7;
@@ -671,7 +673,7 @@ namespace Pantallas_proyecto
             this.btnBuscarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnBuscarProducto.Location = new System.Drawing.Point(227, 18);
-            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
             this.btnBuscarProducto.Size = new System.Drawing.Size(71, 24);
             this.btnBuscarProducto.TabIndex = 20;
@@ -682,7 +684,7 @@ namespace Pantallas_proyecto
             // nudCantidad
             // 
             this.nudCantidad.Location = new System.Drawing.Point(362, 21);
-            this.nudCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(90, 21);
             this.nudCantidad.TabIndex = 19;
@@ -792,17 +794,6 @@ namespace Pantallas_proyecto
             this.label1.TabIndex = 0;
             this.label1.Text = "Cód. Producto:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Gold;
-            this.label6.Location = new System.Drawing.Point(19, 10);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 42);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "HEAVEN";
-            // 
             // btnImprimirFactura
             // 
             this.btnImprimirFactura.BackColor = System.Drawing.Color.Maroon;
@@ -846,15 +837,25 @@ namespace Pantallas_proyecto
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Pantallas_proyecto.Properties.Resources.Letras1;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmPantallaFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(980, 577);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnImprimirFactura);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.brnRegresar);
             this.Controls.Add(this.btnCalcularFactura);
             this.Controls.Add(this.groupBox5);
@@ -864,6 +865,10 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(996, 616);
+            this.MinimumSize = new System.Drawing.Size(996, 616);
             this.Name = "frmPantallaFacturacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Facturación";
@@ -883,6 +888,7 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -933,7 +939,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCodProducto;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPrecioUnitario;
         private System.Windows.Forms.Button btnEliminarTodo;
@@ -959,5 +964,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
