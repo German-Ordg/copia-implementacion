@@ -22,6 +22,16 @@ namespace Pantallas_proyecto
         public DateTime Fecha1 { get; set; }
         public DateTime Fecha2 { get; set; }
 
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
+        }
         private void button7_Click(object sender, EventArgs e)
         {
             FrmMenuPrincipalGerente gerente = new FrmMenuPrincipalGerente();

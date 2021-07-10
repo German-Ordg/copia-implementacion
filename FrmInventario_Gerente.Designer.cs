@@ -145,9 +145,9 @@ namespace Pantallas_proyecto
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.toolStripLabel2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 386);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 408);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(736, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(733, 25);
             this.toolStrip1.TabIndex = 36;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -195,7 +195,7 @@ namespace Pantallas_proyecto
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(736, 411);
+            this.ClientSize = new System.Drawing.Size(733, 433);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.toolStrip1);
@@ -208,7 +208,11 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(749, 472);
+            this.MinimumSize = new System.Drawing.Size(749, 472);
             this.Name = "FrmInventario_Gerente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Inventario";
             this.Load += new System.EventHandler(this.FrmInventario_Gerente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

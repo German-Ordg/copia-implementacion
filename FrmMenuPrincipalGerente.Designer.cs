@@ -33,7 +33,7 @@ namespace Pantallas_proyecto
             this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblnombre = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -88,17 +88,17 @@ namespace Pantallas_proyecto
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // label3
+            // lblnombre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(235, 20);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Bienvenido: @Nombre_Gerente";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblnombre.AutoSize = true;
+            this.lblnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombre.ForeColor = System.Drawing.Color.White;
+            this.lblnombre.Location = new System.Drawing.Point(12, 9);
+            this.lblnombre.Name = "lblnombre";
+            this.lblnombre.Size = new System.Drawing.Size(235, 20);
+            this.lblnombre.TabIndex = 30;
+            this.lblnombre.Text = "Bienvenido: @Nombre_Gerente";
+            this.lblnombre.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -221,7 +221,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblnombre);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button1);
@@ -237,6 +237,7 @@ namespace Pantallas_proyecto
             this.Name = "FrmMenuPrincipalGerente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Menú Principal";
+            this.Load += new System.EventHandler(this.FrmMenuPrincipalGerente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -253,7 +254,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -176,7 +176,7 @@ namespace Pantallas_proyecto
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
@@ -271,6 +271,11 @@ namespace Pantallas_proyecto
         {
             frmPantallaFacturacion fact = new frmPantallaFacturacion();
             fact.Show();
+        }
+
+        private void lblHora_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

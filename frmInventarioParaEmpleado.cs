@@ -27,8 +27,8 @@ namespace Pantallas_proyecto
 
         private void button7_Click(object sender, EventArgs e)
         {
-            FrmInventario_Gerente menu = new FrmInventario_Gerente();
-            menu.Show();
+            //FrmInventario_Gerente menu = new FrmInventario_Gerente();
+         //   menu.Show();
             this.Close();
         }
 

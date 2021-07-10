@@ -517,3 +517,4 @@ C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.exe
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.pdb
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmCalculadora.resources
+C:\Users\Sebas\Desktop\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmCalculadora.resources

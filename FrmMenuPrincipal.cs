@@ -31,6 +31,8 @@ namespace Pantallas_proyecto
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
             security();
+            lblnombre.Text = "Bienvenido: " + Cashe.UserCache.FirstName + " " + Cashe.UserCache.LastName;
+            timer1.Enabled = true;
         }
         private void security()
         {
@@ -75,6 +77,11 @@ namespace Pantallas_proyecto
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
         }
     }
 }

@@ -305,6 +305,13 @@ namespace Pantallas_proyecto
             toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
         }
 
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            FrmMenuPrincipalGerente gerente = new FrmMenuPrincipalGerente();
+            gerente.Show();
+            this.Close();
+        }
+
         /* btnCamaroteCamarote.Enabled = true;
         btnAgregarCamarote.Enabled = false;
         txtCodigoTipoCamarote.Text = dgvCamarotes.CurrentRow.Cells[1].Value.ToString();

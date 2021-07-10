@@ -238,6 +238,8 @@ namespace Pantallas_proyecto
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(727, 489);
+            this.MinimumSize = new System.Drawing.Size(727, 489);
             this.Name = "frmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Usuarios";

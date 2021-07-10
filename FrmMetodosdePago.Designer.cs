@@ -213,6 +213,7 @@ namespace Pantallas_proyecto
             this.MaximumSize = new System.Drawing.Size(375, 449);
             this.MinimumSize = new System.Drawing.Size(375, 449);
             this.Name = "FrmMetodosdePago";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Métodos de Pago";
             this.Load += new System.EventHandler(this.FrmMetodosdePago_Load);
             this.Click += new System.EventHandler(this.FrmMetodosdePago_Click);

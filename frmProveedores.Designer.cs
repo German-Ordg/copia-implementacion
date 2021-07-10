@@ -258,6 +258,7 @@ namespace Pantallas_proyecto
             this.MaximumSize = new System.Drawing.Size(796, 541);
             this.MinimumSize = new System.Drawing.Size(796, 541);
             this.Name = "frmProveedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Proveedores";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProovedores)).EndInit();
             this.groupBox1.ResumeLayout(false);

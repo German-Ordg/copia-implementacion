@@ -52,30 +52,27 @@ namespace Pantallas_proyecto
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label1.Location = new System.Drawing.Point(35, 138);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(26, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 26);
+            this.label1.Size = new System.Drawing.Size(72, 22);
             this.label1.TabIndex = 19;
             this.label1.Text = "Código:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(157, 144);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(118, 117);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 22);
+            this.textBox1.Size = new System.Drawing.Size(122, 20);
             this.textBox1.TabIndex = 20;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 194);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 158);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(941, 302);
+            this.dataGridView1.Size = new System.Drawing.Size(706, 245);
             this.dataGridView1.TabIndex = 21;
             // 
             // label3
@@ -83,19 +80,17 @@ namespace Pantallas_proyecto
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label3.Location = new System.Drawing.Point(349, 142);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(262, 115);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 26);
+            this.label3.Size = new System.Drawing.Size(93, 22);
             this.label3.TabIndex = 22;
             this.label3.Text = "Categoría:";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(475, 144);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Location = new System.Drawing.Point(356, 117);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(232, 22);
+            this.textBox2.Size = new System.Drawing.Size(175, 20);
             this.textBox2.TabIndex = 23;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -107,10 +102,9 @@ namespace Pantallas_proyecto
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button4.Location = new System.Drawing.Point(823, 11);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Location = new System.Drawing.Point(617, 9);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 36);
+            this.button4.Size = new System.Drawing.Size(92, 29);
             this.button4.TabIndex = 25;
             this.button4.Text = "Regresar";
             this.button4.UseVisualStyleBackColor = false;
@@ -123,22 +117,22 @@ namespace Pantallas_proyecto
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.toolStripLabel2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 478);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 390);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(968, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(728, 25);
             this.toolStrip1.TabIndex = 27;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(111, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
             this.toolStripLabel1.Text = "toolStripLabel1";
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(111, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(86, 22);
             this.toolStripLabel2.Text = "toolStripLabel2";
             // 
             // timer1
@@ -150,20 +144,19 @@ namespace Pantallas_proyecto
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = global::Pantallas_proyecto.Properties.Resources.Letras1;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(272, 30);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(204, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(436, 69);
+            this.pictureBox1.Size = new System.Drawing.Size(327, 56);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
             // 
             // FrmInventario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(968, 503);
+            this.ClientSize = new System.Drawing.Size(728, 415);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.button4);
@@ -173,9 +166,9 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximumSize = new System.Drawing.Size(986, 550);
-            this.MinimumSize = new System.Drawing.Size(986, 550);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(744, 454);
+            this.MinimumSize = new System.Drawing.Size(744, 454);
             this.Name = "FrmInventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Inventario";

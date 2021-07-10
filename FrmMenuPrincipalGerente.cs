@@ -76,7 +76,12 @@ namespace Pantallas_proyecto
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+        }
+
+        private void FrmMenuPrincipalGerente_Load(object sender, EventArgs e)
+        {
+            lblnombre.Text = "Bienvenido: "+Cashe.UserCache.FirstName +" "+ Cashe.UserCache.LastName;
         }
     }
 }
