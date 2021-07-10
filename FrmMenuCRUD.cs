@@ -14,10 +14,11 @@ namespace Pantallas_proyecto
     {
         public FrmMenuCRUD()
         {
+          
             InitializeComponent();
         }
 
-        private void frmMenuCRUD_Load(object sender, EventArgs e)
+        private void FrmMenuCRUD_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
         }
