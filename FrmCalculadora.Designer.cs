@@ -95,6 +95,7 @@ namespace Pantallas_proyecto
             this.divideBtn.TabIndex = 3;
             this.divideBtn.Text = "÷";
             this.divideBtn.UseVisualStyleBackColor = false;
+            this.divideBtn.Click += new System.EventHandler(this.operator_click);
             // 
             // btn4
             // 
@@ -118,6 +119,7 @@ namespace Pantallas_proyecto
             this.restarbtn.TabIndex = 8;
             this.restarbtn.Text = "-";
             this.restarbtn.UseVisualStyleBackColor = false;
+            this.restarbtn.Click += new System.EventHandler(this.operator_click);
             // 
             // btn3
             // 
@@ -165,6 +167,7 @@ namespace Pantallas_proyecto
             this.sumarbtn.TabIndex = 12;
             this.sumarbtn.Text = "+";
             this.sumarbtn.UseVisualStyleBackColor = false;
+            this.sumarbtn.Click += new System.EventHandler(this.operator_click);
             // 
             // btnigual
             // 
@@ -211,6 +214,7 @@ namespace Pantallas_proyecto
             this.multiplicarbtn.TabIndex = 15;
             this.multiplicarbtn.Text = "x";
             this.multiplicarbtn.UseVisualStyleBackColor = false;
+            this.multiplicarbtn.Click += new System.EventHandler(this.operator_click);
             // 
             // btn6
             // 
@@ -257,6 +261,7 @@ namespace Pantallas_proyecto
             this.BtnClear.TabIndex = 17;
             this.BtnClear.Text = "Clear";
             this.BtnClear.UseVisualStyleBackColor = false;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // TxtResultBox
             // 

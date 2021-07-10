@@ -12,6 +12,9 @@ namespace Pantallas_proyecto
 {
     public partial class TxtResultBox : Form
     {
+        Double resultValue = 0;
+        string OperatorClicked = "";
+
         public TxtResultBox()
         {
             InitializeComponent();
@@ -19,16 +22,30 @@ namespace Pantallas_proyecto
 
         private void click_button(object sender, EventArgs e)
         {
-            if (TxtResulttxt.Text == "0") {
+            if (TxtResulttxt.Text == "0")
+            {
                 TxtResulttxt.Clear();
                 //
                 Button button = (Button)sender;
                 TxtResulttxt.Text = TxtResulttxt.Text + button.Text;
 
             }
-                
 
-            
+
+
+        }
+
+        private void operator_click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            OperatorClicked = button.Text;
+            resultValue = Double.Parse(TxtResulttxt.Text);
+           }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            TxtResulttxt.Text = "0";
+            resultValue = 0;
         }
     }
 }
