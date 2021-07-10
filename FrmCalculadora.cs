@@ -16,5 +16,11 @@ namespace Pantallas_proyecto
         {
             InitializeComponent();
         }
+
+        private void click_button(object sender, EventArgs e)
+        {
+            Button
+            TxtResulttxt.Text = TxtResulttxt.Text + "1";
+        }
     }
 }

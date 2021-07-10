@@ -45,7 +45,7 @@ namespace Pantallas_proyecto
             this.multiplicarbtn = new System.Windows.Forms.Button();
             this.btn6 = new System.Windows.Forms.Button();
             this.btn5 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtResulttxt = new System.Windows.Forms.TextBox();
             this.BtnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -59,6 +59,7 @@ namespace Pantallas_proyecto
             this.btn7.TabIndex = 0;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = false;
+            this.btn7.Click += new System.EventHandler(this.click_button);
             // 
             // btn8
             // 
@@ -70,6 +71,7 @@ namespace Pantallas_proyecto
             this.btn8.TabIndex = 1;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = false;
+            this.btn8.Click += new System.EventHandler(this.click_button);
             // 
             // btn9
             // 
@@ -81,6 +83,7 @@ namespace Pantallas_proyecto
             this.btn9.TabIndex = 2;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = false;
+            this.btn9.Click += new System.EventHandler(this.click_button);
             // 
             // divideBtn
             // 
@@ -103,6 +106,7 @@ namespace Pantallas_proyecto
             this.btn4.TabIndex = 4;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = false;
+            this.btn4.Click += new System.EventHandler(this.click_button);
             // 
             // restarbtn
             // 
@@ -125,6 +129,7 @@ namespace Pantallas_proyecto
             this.btn3.TabIndex = 7;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = false;
+            this.btn3.Click += new System.EventHandler(this.click_button);
             // 
             // btn2
             // 
@@ -136,6 +141,7 @@ namespace Pantallas_proyecto
             this.btn2.TabIndex = 6;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = false;
+            this.btn2.Click += new System.EventHandler(this.click_button);
             // 
             // btn1
             // 
@@ -147,6 +153,7 @@ namespace Pantallas_proyecto
             this.btn1.TabIndex = 5;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = false;
+            this.btn1.Click += new System.EventHandler(this.click_button);
             // 
             // sumarbtn
             // 
@@ -180,6 +187,7 @@ namespace Pantallas_proyecto
             this.btnpunto.TabIndex = 10;
             this.btnpunto.Text = ".";
             this.btnpunto.UseVisualStyleBackColor = false;
+            this.btnpunto.Click += new System.EventHandler(this.click_button);
             // 
             // btn0
             // 
@@ -191,6 +199,7 @@ namespace Pantallas_proyecto
             this.btn0.TabIndex = 9;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = false;
+            this.btn0.Click += new System.EventHandler(this.click_button);
             // 
             // multiplicarbtn
             // 
@@ -213,6 +222,7 @@ namespace Pantallas_proyecto
             this.btn6.TabIndex = 14;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = false;
+            this.btn6.Click += new System.EventHandler(this.click_button);
             // 
             // btn5
             // 
@@ -224,17 +234,18 @@ namespace Pantallas_proyecto
             this.btn5.TabIndex = 13;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = false;
+            this.btn5.Click += new System.EventHandler(this.click_button);
             // 
-            // textBox1
+            // TxtResulttxt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(48, 73);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(358, 43);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.Text = "0";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtResulttxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtResulttxt.Location = new System.Drawing.Point(48, 73);
+            this.TxtResulttxt.Multiline = true;
+            this.TxtResulttxt.Name = "TxtResulttxt";
+            this.TxtResulttxt.Size = new System.Drawing.Size(358, 43);
+            this.TxtResulttxt.TabIndex = 16;
+            this.TxtResulttxt.Text = "0";
+            this.TxtResulttxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BtnClear
             // 
@@ -254,7 +265,7 @@ namespace Pantallas_proyecto
             this.BackColor = System.Drawing.Color.Indigo;
             this.ClientSize = new System.Drawing.Size(460, 416);
             this.Controls.Add(this.BtnClear);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtResulttxt);
             this.Controls.Add(this.multiplicarbtn);
             this.Controls.Add(this.btn6);
             this.Controls.Add(this.btn5);
@@ -299,7 +310,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Button multiplicarbtn;
         private System.Windows.Forms.Button btn6;
         private System.Windows.Forms.Button btn5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtResulttxt;
         private System.Windows.Forms.Button BtnClear;
     }
 }
