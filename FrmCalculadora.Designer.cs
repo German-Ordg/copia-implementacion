@@ -1,7 +1,7 @@
 ﻿
 namespace Pantallas_proyecto
 {
-    partial class FrmCalculadora
+    partial class TxtResultBox
     {
         /// <summary>
         /// Required designer variable.
@@ -46,13 +46,14 @@ namespace Pantallas_proyecto
             this.btn6 = new System.Windows.Forms.Button();
             this.btn5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BtnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn7
             // 
             this.btn7.BackColor = System.Drawing.Color.SkyBlue;
             this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn7.Location = new System.Drawing.Point(12, 108);
+            this.btn7.Location = new System.Drawing.Point(48, 124);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(85, 41);
             this.btn7.TabIndex = 0;
@@ -63,7 +64,7 @@ namespace Pantallas_proyecto
             // 
             this.btn8.BackColor = System.Drawing.Color.SkyBlue;
             this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn8.Location = new System.Drawing.Point(103, 108);
+            this.btn8.Location = new System.Drawing.Point(139, 124);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(85, 41);
             this.btn8.TabIndex = 1;
@@ -74,7 +75,7 @@ namespace Pantallas_proyecto
             // 
             this.btn9.BackColor = System.Drawing.Color.SkyBlue;
             this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn9.Location = new System.Drawing.Point(194, 108);
+            this.btn9.Location = new System.Drawing.Point(230, 124);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(85, 41);
             this.btn9.TabIndex = 2;
@@ -85,7 +86,7 @@ namespace Pantallas_proyecto
             // 
             this.divideBtn.BackColor = System.Drawing.Color.Khaki;
             this.divideBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.divideBtn.Location = new System.Drawing.Point(285, 108);
+            this.divideBtn.Location = new System.Drawing.Point(321, 124);
             this.divideBtn.Name = "divideBtn";
             this.divideBtn.Size = new System.Drawing.Size(85, 41);
             this.divideBtn.TabIndex = 3;
@@ -96,7 +97,7 @@ namespace Pantallas_proyecto
             // 
             this.btn4.BackColor = System.Drawing.Color.SkyBlue;
             this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4.Location = new System.Drawing.Point(12, 155);
+            this.btn4.Location = new System.Drawing.Point(48, 171);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(85, 41);
             this.btn4.TabIndex = 4;
@@ -107,7 +108,7 @@ namespace Pantallas_proyecto
             // 
             this.restarbtn.BackColor = System.Drawing.Color.Khaki;
             this.restarbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.restarbtn.Location = new System.Drawing.Point(285, 200);
+            this.restarbtn.Location = new System.Drawing.Point(321, 216);
             this.restarbtn.Name = "restarbtn";
             this.restarbtn.Size = new System.Drawing.Size(85, 41);
             this.restarbtn.TabIndex = 8;
@@ -118,7 +119,7 @@ namespace Pantallas_proyecto
             // 
             this.btn3.BackColor = System.Drawing.Color.SkyBlue;
             this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn3.Location = new System.Drawing.Point(194, 200);
+            this.btn3.Location = new System.Drawing.Point(230, 216);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(85, 41);
             this.btn3.TabIndex = 7;
@@ -129,7 +130,7 @@ namespace Pantallas_proyecto
             // 
             this.btn2.BackColor = System.Drawing.Color.SkyBlue;
             this.btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2.Location = new System.Drawing.Point(103, 200);
+            this.btn2.Location = new System.Drawing.Point(139, 216);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(85, 41);
             this.btn2.TabIndex = 6;
@@ -140,7 +141,7 @@ namespace Pantallas_proyecto
             // 
             this.btn1.BackColor = System.Drawing.Color.SkyBlue;
             this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.Location = new System.Drawing.Point(12, 200);
+            this.btn1.Location = new System.Drawing.Point(48, 216);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(85, 41);
             this.btn1.TabIndex = 5;
@@ -151,7 +152,7 @@ namespace Pantallas_proyecto
             // 
             this.sumarbtn.BackColor = System.Drawing.Color.Khaki;
             this.sumarbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sumarbtn.Location = new System.Drawing.Point(285, 247);
+            this.sumarbtn.Location = new System.Drawing.Point(321, 263);
             this.sumarbtn.Name = "sumarbtn";
             this.sumarbtn.Size = new System.Drawing.Size(85, 41);
             this.sumarbtn.TabIndex = 12;
@@ -162,7 +163,7 @@ namespace Pantallas_proyecto
             // 
             this.btnigual.BackColor = System.Drawing.Color.SkyBlue;
             this.btnigual.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnigual.Location = new System.Drawing.Point(194, 247);
+            this.btnigual.Location = new System.Drawing.Point(230, 263);
             this.btnigual.Name = "btnigual";
             this.btnigual.Size = new System.Drawing.Size(85, 41);
             this.btnigual.TabIndex = 11;
@@ -173,7 +174,7 @@ namespace Pantallas_proyecto
             // 
             this.btnpunto.BackColor = System.Drawing.Color.SkyBlue;
             this.btnpunto.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnpunto.Location = new System.Drawing.Point(103, 247);
+            this.btnpunto.Location = new System.Drawing.Point(139, 263);
             this.btnpunto.Name = "btnpunto";
             this.btnpunto.Size = new System.Drawing.Size(85, 41);
             this.btnpunto.TabIndex = 10;
@@ -184,7 +185,7 @@ namespace Pantallas_proyecto
             // 
             this.btn0.BackColor = System.Drawing.Color.SkyBlue;
             this.btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn0.Location = new System.Drawing.Point(12, 247);
+            this.btn0.Location = new System.Drawing.Point(48, 263);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(85, 41);
             this.btn0.TabIndex = 9;
@@ -195,7 +196,7 @@ namespace Pantallas_proyecto
             // 
             this.multiplicarbtn.BackColor = System.Drawing.Color.Khaki;
             this.multiplicarbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.multiplicarbtn.Location = new System.Drawing.Point(285, 155);
+            this.multiplicarbtn.Location = new System.Drawing.Point(321, 171);
             this.multiplicarbtn.Name = "multiplicarbtn";
             this.multiplicarbtn.Size = new System.Drawing.Size(85, 41);
             this.multiplicarbtn.TabIndex = 15;
@@ -206,7 +207,7 @@ namespace Pantallas_proyecto
             // 
             this.btn6.BackColor = System.Drawing.Color.SkyBlue;
             this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn6.Location = new System.Drawing.Point(194, 155);
+            this.btn6.Location = new System.Drawing.Point(230, 171);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(85, 41);
             this.btn6.TabIndex = 14;
@@ -217,7 +218,7 @@ namespace Pantallas_proyecto
             // 
             this.btn5.BackColor = System.Drawing.Color.SkyBlue;
             this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5.Location = new System.Drawing.Point(103, 155);
+            this.btn5.Location = new System.Drawing.Point(139, 171);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(85, 41);
             this.btn5.TabIndex = 13;
@@ -226,17 +227,33 @@ namespace Pantallas_proyecto
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 62);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(48, 73);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(358, 20);
+            this.textBox1.Size = new System.Drawing.Size(358, 43);
             this.textBox1.TabIndex = 16;
+            this.textBox1.Text = "0";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // FrmCalculadora
+            // BtnClear
+            // 
+            this.BtnClear.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.BtnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClear.Location = new System.Drawing.Point(139, 310);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(176, 41);
+            this.BtnClear.TabIndex = 17;
+            this.BtnClear.Text = "Clear";
+            this.BtnClear.UseVisualStyleBackColor = false;
+            // 
+            // TxtResultBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
             this.ClientSize = new System.Drawing.Size(460, 416);
+            this.Controls.Add(this.BtnClear);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.multiplicarbtn);
             this.Controls.Add(this.btn6);
@@ -256,7 +273,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.btn7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "FrmCalculadora";
+            this.Name = "TxtResultBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora";
             this.ResumeLayout(false);
@@ -283,5 +300,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Button btn6;
         private System.Windows.Forms.Button btn5;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button BtnClear;
     }
 }

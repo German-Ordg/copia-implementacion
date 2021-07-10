@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Pantallas_proyecto
 {
-    public partial class FrmCalculadora : Form
+    public partial class TxtResultBox : Form
     {
-        public FrmCalculadora()
+        public TxtResultBox()
         {
             InitializeComponent();
         }
