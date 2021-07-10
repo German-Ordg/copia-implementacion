@@ -29,6 +29,7 @@ namespace Pantallas_proyecto
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCompras));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label13 = new System.Windows.Forms.Label();
@@ -66,12 +67,17 @@ namespace Pantallas_proyecto
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label13
@@ -105,9 +111,9 @@ namespace Pantallas_proyecto
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Location = new System.Drawing.Point(436, 114);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(855, 290);
             this.groupBox4.TabIndex = 164;
             this.groupBox4.TabStop = false;
@@ -117,7 +123,7 @@ namespace Pantallas_proyecto
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(157, 181);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(211, 24);
             this.comboBox1.TabIndex = 153;
@@ -125,7 +131,7 @@ namespace Pantallas_proyecto
             // descripcionProducto
             // 
             this.descripcionProducto.Location = new System.Drawing.Point(157, 80);
-            this.descripcionProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descripcionProducto.Margin = new System.Windows.Forms.Padding(4);
             this.descripcionProducto.Multiline = true;
             this.descripcionProducto.Name = "descripcionProducto";
             this.descripcionProducto.Size = new System.Drawing.Size(211, 77);
@@ -146,7 +152,7 @@ namespace Pantallas_proyecto
             // precioCompra
             // 
             this.precioCompra.Location = new System.Drawing.Point(597, 31);
-            this.precioCompra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.precioCompra.Margin = new System.Windows.Forms.Padding(4);
             this.precioCompra.Name = "precioCompra";
             this.precioCompra.Size = new System.Drawing.Size(211, 22);
             this.precioCompra.TabIndex = 138;
@@ -166,7 +172,7 @@ namespace Pantallas_proyecto
             // precioActual
             // 
             this.precioActual.Location = new System.Drawing.Point(597, 97);
-            this.precioActual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.precioActual.Margin = new System.Windows.Forms.Padding(4);
             this.precioActual.Name = "precioActual";
             this.precioActual.Size = new System.Drawing.Size(211, 22);
             this.precioActual.TabIndex = 140;
@@ -186,7 +192,7 @@ namespace Pantallas_proyecto
             // descuento
             // 
             this.descuento.Location = new System.Drawing.Point(597, 241);
-            this.descuento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descuento.Margin = new System.Windows.Forms.Padding(4);
             this.descuento.Name = "descuento";
             this.descuento.Size = new System.Drawing.Size(211, 22);
             this.descuento.TabIndex = 152;
@@ -194,7 +200,7 @@ namespace Pantallas_proyecto
             // cantidad
             // 
             this.cantidad.Location = new System.Drawing.Point(597, 165);
-            this.cantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cantidad.Margin = new System.Windows.Forms.Padding(4);
             this.cantidad.Name = "cantidad";
             this.cantidad.Size = new System.Drawing.Size(211, 22);
             this.cantidad.TabIndex = 142;
@@ -226,7 +232,7 @@ namespace Pantallas_proyecto
             // talla
             // 
             this.talla.Location = new System.Drawing.Point(157, 238);
-            this.talla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.talla.Margin = new System.Windows.Forms.Padding(4);
             this.talla.Name = "talla";
             this.talla.Size = new System.Drawing.Size(211, 22);
             this.talla.TabIndex = 150;
@@ -234,7 +240,7 @@ namespace Pantallas_proyecto
             // codigoProducto
             // 
             this.codigoProducto.Location = new System.Drawing.Point(191, 33);
-            this.codigoProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.codigoProducto.Margin = new System.Windows.Forms.Padding(4);
             this.codigoProducto.Name = "codigoProducto";
             this.codigoProducto.Size = new System.Drawing.Size(177, 22);
             this.codigoProducto.TabIndex = 144;
@@ -281,9 +287,9 @@ namespace Pantallas_proyecto
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.dgvProductos);
             this.groupBox3.Location = new System.Drawing.Point(436, 412);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(856, 207);
             this.groupBox3.TabIndex = 163;
             this.groupBox3.TabStop = false;
@@ -305,7 +311,7 @@ namespace Pantallas_proyecto
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProductos.Location = new System.Drawing.Point(4, 19);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.Size = new System.Drawing.Size(848, 184);
@@ -315,9 +321,9 @@ namespace Pantallas_proyecto
             // 
             this.groupBox1.Controls.Add(this.dgvProveedores);
             this.groupBox1.Location = new System.Drawing.Point(15, 412);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(413, 207);
             this.groupBox1.TabIndex = 162;
             this.groupBox1.TabStop = false;
@@ -327,7 +333,7 @@ namespace Pantallas_proyecto
             this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProveedores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProveedores.Location = new System.Drawing.Point(4, 19);
-            this.dgvProveedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvProveedores.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.RowHeadersWidth = 51;
             this.dgvProveedores.Size = new System.Drawing.Size(405, 184);
@@ -342,7 +348,7 @@ namespace Pantallas_proyecto
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button1.Location = new System.Drawing.Point(253, 119);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 53);
             this.button1.TabIndex = 158;
@@ -358,7 +364,7 @@ namespace Pantallas_proyecto
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button2.Location = new System.Drawing.Point(19, 119);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(188, 53);
             this.button2.TabIndex = 159;
@@ -377,9 +383,9 @@ namespace Pantallas_proyecto
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Location = new System.Drawing.Point(19, 197);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(413, 208);
             this.groupBox2.TabIndex = 161;
             this.groupBox2.TabStop = false;
@@ -389,7 +395,7 @@ namespace Pantallas_proyecto
             this.comboPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPago.FormattingEnabled = true;
             this.comboPago.Location = new System.Drawing.Point(180, 110);
-            this.comboPago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboPago.Margin = new System.Windows.Forms.Padding(4);
             this.comboPago.Name = "comboPago";
             this.comboPago.Size = new System.Drawing.Size(211, 24);
             this.comboPago.TabIndex = 153;
@@ -399,7 +405,7 @@ namespace Pantallas_proyecto
             this.comboProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboProveedor.FormattingEnabled = true;
             this.comboProveedor.Location = new System.Drawing.Point(180, 60);
-            this.comboProveedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboProveedor.Margin = new System.Windows.Forms.Padding(4);
             this.comboProveedor.Name = "comboProveedor";
             this.comboProveedor.Size = new System.Drawing.Size(211, 24);
             this.comboProveedor.TabIndex = 152;
@@ -419,7 +425,7 @@ namespace Pantallas_proyecto
             // dateFecha
             // 
             this.dateFecha.Location = new System.Drawing.Point(180, 161);
-            this.dateFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dateFecha.Name = "dateFecha";
             this.dateFecha.Size = new System.Drawing.Size(211, 22);
             this.dateFecha.TabIndex = 89;
@@ -427,7 +433,7 @@ namespace Pantallas_proyecto
             // codigoCompra
             // 
             this.codigoCompra.Location = new System.Drawing.Point(180, 16);
-            this.codigoCompra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.codigoCompra.Margin = new System.Windows.Forms.Padding(4);
             this.codigoCompra.Name = "codigoCompra";
             this.codigoCompra.Size = new System.Drawing.Size(211, 22);
             this.codigoCompra.TabIndex = 88;
@@ -480,12 +486,44 @@ namespace Pantallas_proyecto
             this.label2.TabIndex = 160;
             this.label2.Text = "HEAVEN";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripLabel2});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 641);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1307, 25);
+            this.toolStrip1.TabIndex = 166;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.Black;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(111, 22);
+            this.toolStripLabel1.Text = "toolStripLabel1";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.ForeColor = System.Drawing.Color.Black;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(111, 22);
+            this.toolStripLabel2.Text = "toolStripLabel2";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1307, 629);
+            this.ClientSize = new System.Drawing.Size(1307, 666);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -495,10 +533,10 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1325, 676);
-            this.MinimumSize = new System.Drawing.Size(1325, 676);
+            this.MaximumSize = new System.Drawing.Size(1325, 713);
+            this.MinimumSize = new System.Drawing.Size(1325, 713);
             this.Name = "FrmCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Compras";
@@ -512,6 +550,8 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -554,5 +594,9 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.ComboBox comboProveedor;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboPago;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

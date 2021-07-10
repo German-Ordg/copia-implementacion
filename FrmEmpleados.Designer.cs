@@ -113,7 +113,7 @@ namespace Pantallas_proyecto
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(160, 144);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(208, 22);
             this.txtNombre.TabIndex = 4;
@@ -121,7 +121,7 @@ namespace Pantallas_proyecto
             // txtIdentidad
             // 
             this.txtIdentidad.Location = new System.Drawing.Point(160, 214);
-            this.txtIdentidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdentidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdentidad.Name = "txtIdentidad";
             this.txtIdentidad.Size = new System.Drawing.Size(208, 22);
             this.txtIdentidad.TabIndex = 5;
@@ -129,7 +129,7 @@ namespace Pantallas_proyecto
             // txtPuesto
             // 
             this.txtPuesto.Location = new System.Drawing.Point(160, 281);
-            this.txtPuesto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPuesto.Margin = new System.Windows.Forms.Padding(4);
             this.txtPuesto.Name = "txtPuesto";
             this.txtPuesto.Size = new System.Drawing.Size(208, 22);
             this.txtPuesto.TabIndex = 6;
@@ -173,7 +173,7 @@ namespace Pantallas_proyecto
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(665, 143);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(195, 22);
             this.txtApellido.TabIndex = 10;
@@ -183,7 +183,7 @@ namespace Pantallas_proyecto
             this.dtpFechaNacimiento.CustomFormat = "yyyy-MM-dd";
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(665, 214);
-            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(195, 22);
             this.dtpFechaNacimiento.TabIndex = 11;
@@ -193,7 +193,7 @@ namespace Pantallas_proyecto
             this.dtpFechaIngreso.CustomFormat = "yyyy-MM-dd";
             this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFechaIngreso.Location = new System.Drawing.Point(665, 281);
-            this.dtpFechaIngreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
             this.dtpFechaIngreso.Size = new System.Drawing.Size(195, 22);
             this.dtpFechaIngreso.TabIndex = 12;
@@ -219,7 +219,7 @@ namespace Pantallas_proyecto
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button4.Location = new System.Drawing.Point(827, 42);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(123, 36);
             this.button4.TabIndex = 26;
@@ -231,7 +231,7 @@ namespace Pantallas_proyecto
             // 
             this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpleados.Location = new System.Drawing.Point(4, 479);
-            this.dgvEmpleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvEmpleados.Margin = new System.Windows.Forms.Padding(4);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.RowHeadersWidth = 51;
             this.dgvEmpleados.Size = new System.Drawing.Size(993, 185);
@@ -247,7 +247,7 @@ namespace Pantallas_proyecto
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnAgregar.Location = new System.Drawing.Point(665, 395);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(123, 36);
             this.btnAgregar.TabIndex = 31;
@@ -258,7 +258,7 @@ namespace Pantallas_proyecto
             // txtBuscarEmpleado
             // 
             this.txtBuscarEmpleado.Location = new System.Drawing.Point(197, 453);
-            this.txtBuscarEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscarEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarEmpleado.Name = "txtBuscarEmpleado";
             this.txtBuscarEmpleado.Size = new System.Drawing.Size(789, 22);
             this.txtBuscarEmpleado.TabIndex = 32;
@@ -291,7 +291,7 @@ namespace Pantallas_proyecto
             // txtNumeroTel
             // 
             this.txtNumeroTel.Location = new System.Drawing.Point(160, 341);
-            this.txtNumeroTel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumeroTel.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumeroTel.Name = "txtNumeroTel";
             this.txtNumeroTel.Size = new System.Drawing.Size(208, 22);
             this.txtNumeroTel.TabIndex = 35;
@@ -305,7 +305,7 @@ namespace Pantallas_proyecto
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnModificar.Location = new System.Drawing.Point(827, 395);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(123, 36);
             this.btnModificar.TabIndex = 36;
@@ -332,7 +332,7 @@ namespace Pantallas_proyecto
             "Masculino",
             "Femenino"});
             this.cmbGenero.Location = new System.Drawing.Point(665, 338);
-            this.cmbGenero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbGenero.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(160, 24);
             this.cmbGenero.TabIndex = 38;
@@ -351,7 +351,7 @@ namespace Pantallas_proyecto
             this.toolStripLabel2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 664);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1307, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1026, 25);
             this.toolStrip1.TabIndex = 39;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -372,7 +372,7 @@ namespace Pantallas_proyecto
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1307, 689);
+            this.ClientSize = new System.Drawing.Size(1026, 689);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.cmbGenero);
             this.Controls.Add(this.label11);
@@ -399,10 +399,10 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1325, 736);
-            this.MinimumSize = new System.Drawing.Size(1325, 736);
+            this.MaximumSize = new System.Drawing.Size(1044, 736);
+            this.MinimumSize = new System.Drawing.Size(1044, 736);
             this.Name = "FrmEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Empleados";

@@ -16,6 +16,11 @@ namespace Pantallas_proyecto
         {
             InitializeComponent();
         }
+
+        private void FrmImpresionFactura_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+        }
         private const int CP_NOCLOSE_BUTTON = 0x200;
         protected override CreateParams CreateParams
         {
@@ -32,6 +37,12 @@ namespace Pantallas_proyecto
             frmPantallaFacturacion facturacion = new frmPantallaFacturacion();
             facturacion.Show();
             this.Hide();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
+            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

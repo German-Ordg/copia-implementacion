@@ -90,7 +90,7 @@ namespace Pantallas_proyecto
         //------------------------------------------------------------------------------------------------------------------------------------------
         private void FrmCompras_Load(object sender, EventArgs e)
         {
-
+            timer1.Enabled = true;
             conect2.abrir();
             cargarDatosProductos(dgvProductos, "Productos");
             cargarDatosCompras(dgvProveedores, "Compras");
@@ -297,6 +297,12 @@ namespace Pantallas_proyecto
                 // cancel the closure of the form.
                 codigoProducto.Text = dgvProductos.CurrentRow.Cells[0].Value.ToString();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
+            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
         }
 
         /* btnCamaroteCamarote.Enabled = true;

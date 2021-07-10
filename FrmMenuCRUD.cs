@@ -17,6 +17,10 @@ namespace Pantallas_proyecto
             InitializeComponent();
         }
 
+        private void frmMenuCRUD_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+        }
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -114,6 +118,13 @@ namespace Pantallas_proyecto
         private void contactosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("INVERSIONES HEAVEN STORE. TEL.:2772-2047. CORREO: gomezsalgadoevelyn@gmail.com", "Contactos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
+            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

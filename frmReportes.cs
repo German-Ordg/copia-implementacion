@@ -73,9 +73,6 @@ namespace Pantallas_proyecto
                     parameters[0] = new ReportParameter("Categoria", Categoria);
                     reportViewer1.LocalReport.SetParameters(parameters);
                     this.reportViewer1.RefreshReport();
-                    
-                    
-
                     break;
                 case "Lo mas Vendido":
                     this.reportes.SelectedTab = reportes.TabPages["tab2"];

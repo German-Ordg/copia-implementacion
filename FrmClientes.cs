@@ -38,7 +38,7 @@ namespace Pantallas_proyecto
 
         private void FrmClientes_Load(object sender, EventArgs e)
         {
-
+            timer1.Enabled = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -96,6 +96,17 @@ namespace Pantallas_proyecto
             }
             con.cerrar();
 
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
+            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

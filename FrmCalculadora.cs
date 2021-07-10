@@ -26,6 +26,20 @@ namespace Pantallas_proyecto
                 return myCp;
             }
         }
+        private void FrmCalculadora_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+        }
 
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
+            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }
