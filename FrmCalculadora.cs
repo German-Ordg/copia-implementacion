@@ -19,8 +19,16 @@ namespace Pantallas_proyecto
 
         private void click_button(object sender, EventArgs e)
         {
-            Button
-            TxtResulttxt.Text = TxtResulttxt.Text + "1";
+            if (TxtResulttxt.Text == "0") {
+                TxtResulttxt.Clear();
+                //
+                Button button = (Button)sender;
+                TxtResulttxt.Text = TxtResulttxt.Text + button.Text;
+
+            }
+                
+
+            
         }
     }
 }
