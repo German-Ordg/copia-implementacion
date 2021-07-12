@@ -128,10 +128,10 @@
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet9.xsd</DependentUpon>
     </Compile>
     <Compile Include="Cashe\UserCache.cs" />
-    <Compile Include="db_a75e9e_bderickmoncadaDataSetFecha_Compra.Designer.cs">
+    <Compile Include="db_a75e9e_bderickmoncadaDataSetfechacompra.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>db_a75e9e_bderickmoncadaDataSetFecha_Compra.xsd</DependentUpon>
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSetfechacompra.xsd</DependentUpon>
     </Compile>
     <Compile Include="db_a75e9e_bderickmoncadaDataSetINVENTARIO.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -558,16 +558,16 @@
     <None Include="db_a75e9e_bderickmoncadaDataSet9.xss">
       <DependentUpon>db_a75e9e_bderickmoncadaDataSet9.xsd</DependentUpon>
     </None>
-    <None Include="db_a75e9e_bderickmoncadaDataSetFecha_Compra.xsc">
-      <DependentUpon>db_a75e9e_bderickmoncadaDataSetFecha_Compra.xsd</DependentUpon>
+    <None Include="db_a75e9e_bderickmoncadaDataSetfechacompra.xsc">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSetfechacompra.xsd</DependentUpon>
     </None>
-    <None Include="db_a75e9e_bderickmoncadaDataSetFecha_Compra.xsd">
+    <None Include="db_a75e9e_bderickmoncadaDataSetfechacompra.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>db_a75e9e_bderickmoncadaDataSetFecha_Compra.Designer.cs</LastGenOutput>
+      <LastGenOutput>db_a75e9e_bderickmoncadaDataSetfechacompra.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="db_a75e9e_bderickmoncadaDataSetFecha_Compra.xss">
-      <DependentUpon>db_a75e9e_bderickmoncadaDataSetFecha_Compra.xsd</DependentUpon>
+    <None Include="db_a75e9e_bderickmoncadaDataSetfechacompra.xss">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSetfechacompra.xsd</DependentUpon>
     </None>
     <None Include="db_a75e9e_bderickmoncadaDataSetINVENTARIO.xsc">
       <DependentUpon>db_a75e9e_bderickmoncadaDataSetINVENTARIO.xsd</DependentUpon>

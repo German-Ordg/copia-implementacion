@@ -35,22 +35,7 @@ namespace Pantallas_proyecto
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportes));
-            this.reporteComprasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.db_a75e9e_bderickmoncadaDataSetFecha_Compra = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSetFecha_Compra();
-            this.ProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.db_a75e9e_bderickmoncadaDataSet2 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet2();
-            this.vCategoriasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.db_a75e9e_bderickmoncadaDataSet11VCategorita = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet11VCategorita();
-            this.vCategoriasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.db_a75e9e_bderickmoncadaDataSetINVENTARIO = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSetINVENTARIO();
-            this.ReporteComprasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.db_a75e9e_bderickmoncadaDataSet8 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet8();
-            this.Compra_FechaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataSetCompra_Fecha = new Pantallas_proyecto.DataSetCompra_Fecha();
-            this.db_a75e9e_bderickmoncadaDataSet5 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet5();
-            this.VCategoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnmostrar = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,11 +46,7 @@ namespace Pantallas_proyecto
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.CBtipo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.categoriaProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CBcategoria = new System.Windows.Forms.ComboBox();
-            this.categoriaProductoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.db_a75e9e_bderickmoncadaDataSet = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet();
-            this.categoria_ProductoTableAdapter = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSetTableAdapters.Categoria_ProductoTableAdapter();
             this.tab5 = new System.Windows.Forms.TabPage();
             this.reportViewer5 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tab4 = new System.Windows.Forms.TabPage();
@@ -83,58 +64,19 @@ namespace Pantallas_proyecto
             this.reportViewer8 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tab8 = new System.Windows.Forms.TabPage();
             this.reportViewer7 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dba75e9ebderickmoncadaDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.db_a75e9e_bderickmoncadaDataSet3 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet3();
-            this.dba75e9ebderickmoncadaDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dba75e9ebderickmoncadaDataSet2BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.ProductosTableAdapter = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet2TableAdapters.ProductosTableAdapter();
-            this.db_a75e9e_bderickmoncadaDataSet4 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet4();
-            this.VCategoriasTableAdapter = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet4TableAdapters.VCategoriasTableAdapter();
-            this.dba75e9ebderickmoncadaDataSet4BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.db_a75e9e_bderickmoncadaDataSet1 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet1();
-            this.dba75e9ebderickmoncadaDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vCategoriasTableAdapter1 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet5TableAdapters.VCategoriasTableAdapter();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.db_a75e9e_bderickmoncadaDataSet71 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet7();
-            this.db_a75e9e_bderickmoncadaDataSet72 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet7();
-            this.dba75e9ebderickmoncadaDataSet8BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ReporteComprasTableAdapter = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet8TableAdapters.ReporteComprasTableAdapter();
-            this.vCategoriasBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.db_a75e9e_bderickmoncadaDataSet101 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet10();
-            this.tableAdapterManager1 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet10TableAdapters.TableAdapterManager();
-            this.DataSet1 = new Pantallas_proyecto.DataSet1();
-            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vCategoriasTableAdapter2 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet11VCategoritaTableAdapters.VCategoriasTableAdapter();
-            this.db_a75e9e_bderickmoncadaDataSet11compras = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet11compras();
-            this.dba75e9ebderickmoncadaDataSet11comprasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.reporteComprasTableAdapter1 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSetFecha_CompraTableAdapters.ReporteComprasTableAdapter();
+            this.db_a75e9e_bderickmoncadaDataSet2 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet2();
+            this.ProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ProductosTableAdapter = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet2TableAdapters.ProductosTableAdapter();
             this.DataSetinventario = new Pantallas_proyecto.DataSetinventario();
-            this.dataSetinventario1 = new Pantallas_proyecto.DataSetinventario();
-            this.dataSetinventario1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vCategoriasTableAdapter3 = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSetINVENTARIOTableAdapters.VCategoriasTableAdapter();
-            this.Compra_FechaTableAdapter = new Pantallas_proyecto.DataSetCompra_FechaTableAdapters.Compra_FechaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.reporteComprasBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSetFecha_Compra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vCategoriasBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet11VCategorita)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vCategoriasBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSetINVENTARIO)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReporteComprasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Compra_FechaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetCompra_Fecha)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VCategoriasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaProductoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaProductoBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet)).BeginInit();
+            this.db_a75e9e_bderickmoncadaDataSetfechacompra = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSetfechacompra();
+            this.compraFechaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.compra_FechaTableAdapter = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSetfechacompraTableAdapters.Compra_FechaTableAdapter();
             this.tab5.SuspendLayout();
             this.tab4.SuspendLayout();
             this.tab3.SuspendLayout();
@@ -144,99 +86,14 @@ namespace Pantallas_proyecto
             this.tab6.SuspendLayout();
             this.tab7.SuspendLayout();
             this.tab8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet3BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet2BindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet4BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet1BindingSource)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet71)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet72)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet8BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vCategoriasBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet101)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet11compras)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet11comprasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSetinventario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetinventario1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetinventario1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSetfechacompra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.compraFechaBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reporteComprasBindingSource1
-            // 
-            this.reporteComprasBindingSource1.DataMember = "ReporteCompras";
-            this.reporteComprasBindingSource1.DataSource = this.db_a75e9e_bderickmoncadaDataSetFecha_Compra;
-            // 
-            // db_a75e9e_bderickmoncadaDataSetFecha_Compra
-            // 
-            this.db_a75e9e_bderickmoncadaDataSetFecha_Compra.DataSetName = "db_a75e9e_bderickmoncadaDataSetFecha_Compra";
-            this.db_a75e9e_bderickmoncadaDataSetFecha_Compra.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ProductosBindingSource
-            // 
-            this.ProductosBindingSource.DataMember = "Productos";
-            this.ProductosBindingSource.DataSource = this.db_a75e9e_bderickmoncadaDataSet2;
-            // 
-            // db_a75e9e_bderickmoncadaDataSet2
-            // 
-            this.db_a75e9e_bderickmoncadaDataSet2.DataSetName = "db_a75e9e_bderickmoncadaDataSet2";
-            this.db_a75e9e_bderickmoncadaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vCategoriasBindingSource1
-            // 
-            this.vCategoriasBindingSource1.DataMember = "VCategorias";
-            this.vCategoriasBindingSource1.DataSource = this.db_a75e9e_bderickmoncadaDataSet11VCategorita;
-            // 
-            // db_a75e9e_bderickmoncadaDataSet11VCategorita
-            // 
-            this.db_a75e9e_bderickmoncadaDataSet11VCategorita.DataSetName = "db_a75e9e_bderickmoncadaDataSet11VCategorita";
-            this.db_a75e9e_bderickmoncadaDataSet11VCategorita.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vCategoriasBindingSource2
-            // 
-            this.vCategoriasBindingSource2.DataMember = "VCategorias";
-            this.vCategoriasBindingSource2.DataSource = this.db_a75e9e_bderickmoncadaDataSetINVENTARIO;
-            // 
-            // db_a75e9e_bderickmoncadaDataSetINVENTARIO
-            // 
-            this.db_a75e9e_bderickmoncadaDataSetINVENTARIO.DataSetName = "db_a75e9e_bderickmoncadaDataSetINVENTARIO";
-            this.db_a75e9e_bderickmoncadaDataSetINVENTARIO.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ReporteComprasBindingSource
-            // 
-            this.ReporteComprasBindingSource.DataMember = "ReporteCompras";
-            this.ReporteComprasBindingSource.DataSource = this.db_a75e9e_bderickmoncadaDataSet8;
-            // 
-            // db_a75e9e_bderickmoncadaDataSet8
-            // 
-            this.db_a75e9e_bderickmoncadaDataSet8.DataSetName = "db_a75e9e_bderickmoncadaDataSet8";
-            this.db_a75e9e_bderickmoncadaDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Compra_FechaBindingSource
-            // 
-            this.Compra_FechaBindingSource.DataMember = "Compra_Fecha";
-            this.Compra_FechaBindingSource.DataSource = this.DataSetCompra_Fecha;
-            // 
-            // DataSetCompra_Fecha
-            // 
-            this.DataSetCompra_Fecha.DataSetName = "DataSetCompra_Fecha";
-            this.DataSetCompra_Fecha.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // db_a75e9e_bderickmoncadaDataSet5
-            // 
-            this.db_a75e9e_bderickmoncadaDataSet5.DataSetName = "db_a75e9e_bderickmoncadaDataSet5";
-            this.db_a75e9e_bderickmoncadaDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // VCategoriasBindingSource
-            // 
-            this.VCategoriasBindingSource.DataMember = "VCategorias";
-            this.VCategoriasBindingSource.CurrentChanged += new System.EventHandler(this.VCategoriasBindingSource_CurrentChanged);
             // 
             // btnmostrar
             // 
@@ -354,14 +211,8 @@ namespace Pantallas_proyecto
             this.label5.Text = "Categoria:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // categoriaProductoBindingSource
-            // 
-            this.categoriaProductoBindingSource.DataMember = "Categoria_Producto";
-            // 
             // CBcategoria
             // 
-            this.CBcategoria.DataSource = this.categoriaProductoBindingSource1;
-            this.CBcategoria.DisplayMember = "descripcion_categoria";
             this.CBcategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBcategoria.FormattingEnabled = true;
             this.CBcategoria.Location = new System.Drawing.Point(1002, 359);
@@ -370,20 +221,6 @@ namespace Pantallas_proyecto
             this.CBcategoria.TabIndex = 72;
             this.CBcategoria.ValueMember = "descripcion_categoria";
             this.CBcategoria.SelectedIndexChanged += new System.EventHandler(this.CBcategoria_SelectedIndexChanged);
-            // 
-            // categoriaProductoBindingSource1
-            // 
-            this.categoriaProductoBindingSource1.DataMember = "Categoria_Producto";
-            this.categoriaProductoBindingSource1.DataSource = this.db_a75e9e_bderickmoncadaDataSet;
-            // 
-            // db_a75e9e_bderickmoncadaDataSet
-            // 
-            this.db_a75e9e_bderickmoncadaDataSet.DataSetName = "db_a75e9e_bderickmoncadaDataSet";
-            this.db_a75e9e_bderickmoncadaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // categoria_ProductoTableAdapter
-            // 
-            this.categoria_ProductoTableAdapter.ClearBeforeFill = true;
             // 
             // tab5
             // 
@@ -399,9 +236,6 @@ namespace Pantallas_proyecto
             // reportViewer5
             // 
             this.reportViewer5.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.reporteComprasBindingSource1;
-            this.reportViewer5.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer5.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report5.rdlc";
             this.reportViewer5.Location = new System.Drawing.Point(3, 3);
             this.reportViewer5.Name = "reportViewer5";
@@ -444,15 +278,16 @@ namespace Pantallas_proyecto
             // reportViewer3
             // 
             this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.ProductosBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.ProductosBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report3.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
             this.reportViewer3.ServerReport.BearerToken = null;
             this.reportViewer3.Size = new System.Drawing.Size(836, 455);
             this.reportViewer3.TabIndex = 0;
+            this.reportViewer3.Load += new System.EventHandler(this.reportViewer3_Load);
             // 
             // tab2
             // 
@@ -505,9 +340,8 @@ namespace Pantallas_proyecto
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource3.Name = "DataSetVCategorias";
-            reportDataSource3.Value = this.vCategoriasBindingSource1;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource2.Name = "DataSetVCategorias";
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report9.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
@@ -528,9 +362,8 @@ namespace Pantallas_proyecto
             // 
             // reportViewer6
             // 
-            reportDataSource4.Name = "DataSetVCategorias";
-            reportDataSource4.Value = this.vCategoriasBindingSource2;
-            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource3.Name = "DataSetVCategorias";
+            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer6.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Reportinventario.rdlc";
             this.reportViewer6.Location = new System.Drawing.Point(3, 3);
             this.reportViewer6.Name = "reportViewer6";
@@ -553,9 +386,8 @@ namespace Pantallas_proyecto
             // reportViewer8
             // 
             this.reportViewer8.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource5.Name = "DataSet1";
-            reportDataSource5.Value = this.ReporteComprasBindingSource;
-            this.reportViewer8.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource4.Name = "DataSet1";
+            this.reportViewer8.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer8.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report8.rdlc";
             this.reportViewer8.Location = new System.Drawing.Point(3, 3);
             this.reportViewer8.Name = "reportViewer8";
@@ -577,68 +409,15 @@ namespace Pantallas_proyecto
             // reportViewer7
             // 
             this.reportViewer7.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource6.Name = "DataSet1";
-            reportDataSource6.Value = this.Compra_FechaBindingSource;
-            this.reportViewer7.LocalReport.DataSources.Add(reportDataSource6);
+            reportDataSource5.Name = "DataSet1";
+            reportDataSource5.Value = this.compraFechaBindingSource;
+            this.reportViewer7.LocalReport.DataSources.Add(reportDataSource5);
             this.reportViewer7.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Reportcompra_fecha.rdlc";
             this.reportViewer7.Location = new System.Drawing.Point(3, 3);
             this.reportViewer7.Name = "reportViewer7";
             this.reportViewer7.ServerReport.BearerToken = null;
             this.reportViewer7.Size = new System.Drawing.Size(836, 455);
             this.reportViewer7.TabIndex = 0;
-            // 
-            // dba75e9ebderickmoncadaDataSet2BindingSource
-            // 
-            this.dba75e9ebderickmoncadaDataSet2BindingSource.DataSource = this.db_a75e9e_bderickmoncadaDataSet2;
-            this.dba75e9ebderickmoncadaDataSet2BindingSource.Position = 0;
-            // 
-            // db_a75e9e_bderickmoncadaDataSet3
-            // 
-            this.db_a75e9e_bderickmoncadaDataSet3.DataSetName = "db_a75e9e_bderickmoncadaDataSet3";
-            this.db_a75e9e_bderickmoncadaDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dba75e9ebderickmoncadaDataSet3BindingSource
-            // 
-            this.dba75e9ebderickmoncadaDataSet3BindingSource.DataSource = this.db_a75e9e_bderickmoncadaDataSet3;
-            this.dba75e9ebderickmoncadaDataSet3BindingSource.Position = 0;
-            // 
-            // dba75e9ebderickmoncadaDataSet2BindingSource1
-            // 
-            this.dba75e9ebderickmoncadaDataSet2BindingSource1.DataSource = this.db_a75e9e_bderickmoncadaDataSet2;
-            this.dba75e9ebderickmoncadaDataSet2BindingSource1.Position = 0;
-            this.dba75e9ebderickmoncadaDataSet2BindingSource1.CurrentChanged += new System.EventHandler(this.dba75e9ebderickmoncadaDataSet2BindingSource1_CurrentChanged);
-            // 
-            // ProductosTableAdapter
-            // 
-            this.ProductosTableAdapter.ClearBeforeFill = true;
-            // 
-            // db_a75e9e_bderickmoncadaDataSet4
-            // 
-            this.db_a75e9e_bderickmoncadaDataSet4.DataSetName = "db_a75e9e_bderickmoncadaDataSet4";
-            this.db_a75e9e_bderickmoncadaDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // VCategoriasTableAdapter
-            // 
-            this.VCategoriasTableAdapter.ClearBeforeFill = true;
-            // 
-            // dba75e9ebderickmoncadaDataSet4BindingSource
-            // 
-            this.dba75e9ebderickmoncadaDataSet4BindingSource.DataSource = this.db_a75e9e_bderickmoncadaDataSet4;
-            this.dba75e9ebderickmoncadaDataSet4BindingSource.Position = 0;
-            // 
-            // db_a75e9e_bderickmoncadaDataSet1
-            // 
-            this.db_a75e9e_bderickmoncadaDataSet1.DataSetName = "db_a75e9e_bderickmoncadaDataSet1";
-            this.db_a75e9e_bderickmoncadaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dba75e9ebderickmoncadaDataSet1BindingSource
-            // 
-            this.dba75e9ebderickmoncadaDataSet1BindingSource.DataSource = this.db_a75e9e_bderickmoncadaDataSet1;
-            this.dba75e9ebderickmoncadaDataSet1BindingSource.Position = 0;
-            // 
-            // vCategoriasTableAdapter1
-            // 
-            this.vCategoriasTableAdapter1.ClearBeforeFill = true;
             // 
             // dateTimePicker2
             // 
@@ -690,92 +469,38 @@ namespace Pantallas_proyecto
             this.pictureBox1.TabIndex = 75;
             this.pictureBox1.TabStop = false;
             // 
-            // db_a75e9e_bderickmoncadaDataSet71
+            // db_a75e9e_bderickmoncadaDataSet2
             // 
-            this.db_a75e9e_bderickmoncadaDataSet71.DataSetName = "db_a75e9e_bderickmoncadaDataSet7";
-            this.db_a75e9e_bderickmoncadaDataSet71.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.db_a75e9e_bderickmoncadaDataSet2.DataSetName = "db_a75e9e_bderickmoncadaDataSet2";
+            this.db_a75e9e_bderickmoncadaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // db_a75e9e_bderickmoncadaDataSet72
+            // ProductosBindingSource
             // 
-            this.db_a75e9e_bderickmoncadaDataSet72.CaseSensitive = true;
-            this.db_a75e9e_bderickmoncadaDataSet72.DataSetName = "db_a75e9e_bderickmoncadaDataSet7";
-            this.db_a75e9e_bderickmoncadaDataSet72.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.ProductosBindingSource.DataMember = "Productos";
+            this.ProductosBindingSource.DataSource = this.db_a75e9e_bderickmoncadaDataSet2;
             // 
-            // dba75e9ebderickmoncadaDataSet8BindingSource
+            // ProductosTableAdapter
             // 
-            this.dba75e9ebderickmoncadaDataSet8BindingSource.DataSource = this.db_a75e9e_bderickmoncadaDataSet8;
-            this.dba75e9ebderickmoncadaDataSet8BindingSource.Position = 0;
-            // 
-            // ReporteComprasTableAdapter
-            // 
-            this.ReporteComprasTableAdapter.ClearBeforeFill = true;
-            // 
-            // vCategoriasBindingSource4
-            // 
-            this.vCategoriasBindingSource4.DataMember = "VCategorias";
-            this.vCategoriasBindingSource4.DataSource = this.db_a75e9e_bderickmoncadaDataSet5;
-            // 
-            // db_a75e9e_bderickmoncadaDataSet101
-            // 
-            this.db_a75e9e_bderickmoncadaDataSet101.DataSetName = "db_a75e9e_bderickmoncadaDataSet10";
-            this.db_a75e9e_bderickmoncadaDataSet101.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tableAdapterManager1
-            // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.Connection = null;
-            this.tableAdapterManager1.UpdateOrder = Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSet10TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // DataSet1
-            // 
-            this.DataSet1.DataSetName = "DataSet1";
-            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataSet1BindingSource
-            // 
-            this.dataSet1BindingSource.DataSource = this.DataSet1;
-            this.dataSet1BindingSource.Position = 0;
-            // 
-            // vCategoriasTableAdapter2
-            // 
-            this.vCategoriasTableAdapter2.ClearBeforeFill = true;
-            // 
-            // db_a75e9e_bderickmoncadaDataSet11compras
-            // 
-            this.db_a75e9e_bderickmoncadaDataSet11compras.DataSetName = "db_a75e9e_bderickmoncadaDataSet11compras";
-            this.db_a75e9e_bderickmoncadaDataSet11compras.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dba75e9ebderickmoncadaDataSet11comprasBindingSource
-            // 
-            this.dba75e9ebderickmoncadaDataSet11comprasBindingSource.DataSource = this.db_a75e9e_bderickmoncadaDataSet11compras;
-            this.dba75e9ebderickmoncadaDataSet11comprasBindingSource.Position = 0;
-            // 
-            // reporteComprasTableAdapter1
-            // 
-            this.reporteComprasTableAdapter1.ClearBeforeFill = true;
+            this.ProductosTableAdapter.ClearBeforeFill = true;
             // 
             // DataSetinventario
             // 
             this.DataSetinventario.DataSetName = "DataSetinventario";
             this.DataSetinventario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataSetinventario1
+            // db_a75e9e_bderickmoncadaDataSetfechacompra
             // 
-            this.dataSetinventario1.DataSetName = "DataSetinventario";
-            this.dataSetinventario1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.db_a75e9e_bderickmoncadaDataSetfechacompra.DataSetName = "db_a75e9e_bderickmoncadaDataSetfechacompra";
+            this.db_a75e9e_bderickmoncadaDataSetfechacompra.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataSetinventario1BindingSource
+            // compraFechaBindingSource
             // 
-            this.dataSetinventario1BindingSource.DataSource = this.dataSetinventario1;
-            this.dataSetinventario1BindingSource.Position = 0;
+            this.compraFechaBindingSource.DataMember = "Compra_Fecha";
+            this.compraFechaBindingSource.DataSource = this.db_a75e9e_bderickmoncadaDataSetfechacompra;
             // 
-            // vCategoriasTableAdapter3
+            // compra_FechaTableAdapter
             // 
-            this.vCategoriasTableAdapter3.ClearBeforeFill = true;
-            // 
-            // Compra_FechaTableAdapter
-            // 
-            this.Compra_FechaTableAdapter.ClearBeforeFill = true;
+            this.compra_FechaTableAdapter.ClearBeforeFill = true;
             // 
             // frmReportes
             // 
@@ -810,23 +535,6 @@ namespace Pantallas_proyecto
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Reportes";
             this.Load += new System.EventHandler(this.frmReportes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.reporteComprasBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSetFecha_Compra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vCategoriasBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet11VCategorita)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vCategoriasBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSetINVENTARIO)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReporteComprasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Compra_FechaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetCompra_Fecha)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VCategoriasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaProductoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaProductoBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet)).EndInit();
             this.tab5.ResumeLayout(false);
             this.tab4.ResumeLayout(false);
             this.tab3.ResumeLayout(false);
@@ -836,29 +544,14 @@ namespace Pantallas_proyecto
             this.tab6.ResumeLayout(false);
             this.tab7.ResumeLayout(false);
             this.tab8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet3BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet2BindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet4BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet1BindingSource)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet71)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet72)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet8BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vCategoriasBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet101)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet11compras)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dba75e9ebderickmoncadaDataSet11comprasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSetinventario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetinventario1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetinventario1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_a75e9e_bderickmoncadaDataSetfechacompra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.compraFechaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -874,15 +567,9 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox CBtipo;
-        private System.Windows.Forms.BindingSource VCategoriasBindingSource;
         
         private System.Windows.Forms.Label label5;
-        
-        private System.Windows.Forms.BindingSource categoriaProductoBindingSource;
         private System.Windows.Forms.ComboBox CBcategoria;
-        private db_a75e9e_bderickmoncadaDataSet db_a75e9e_bderickmoncadaDataSet;
-        private System.Windows.Forms.BindingSource categoriaProductoBindingSource1;
-        private db_a75e9e_bderickmoncadaDataSetTableAdapters.Categoria_ProductoTableAdapter categoria_ProductoTableAdapter;
         private System.Windows.Forms.TabPage tab5;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer5;
         private System.Windows.Forms.TabPage tab4;
@@ -892,61 +579,26 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.TabPage tab2;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
         private System.Windows.Forms.TabControl reportes;
-        private System.Windows.Forms.BindingSource dba75e9ebderickmoncadaDataSet2BindingSource;
-        private db_a75e9e_bderickmoncadaDataSet2 db_a75e9e_bderickmoncadaDataSet2;
-        private System.Windows.Forms.BindingSource dba75e9ebderickmoncadaDataSet3BindingSource;
-        private db_a75e9e_bderickmoncadaDataSet3 db_a75e9e_bderickmoncadaDataSet3;
-        private System.Windows.Forms.BindingSource dba75e9ebderickmoncadaDataSet2BindingSource1;
-        private System.Windows.Forms.BindingSource ProductosBindingSource;
-        private db_a75e9e_bderickmoncadaDataSet2TableAdapters.ProductosTableAdapter ProductosTableAdapter;
         private System.Windows.Forms.TabPage tab6;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer6;
-        private db_a75e9e_bderickmoncadaDataSet4 db_a75e9e_bderickmoncadaDataSet4;
-        private db_a75e9e_bderickmoncadaDataSet4TableAdapters.VCategoriasTableAdapter VCategoriasTableAdapter;
-        private System.Windows.Forms.BindingSource dba75e9ebderickmoncadaDataSet4BindingSource;
-        private System.Windows.Forms.BindingSource dba75e9ebderickmoncadaDataSet1BindingSource;
-        private db_a75e9e_bderickmoncadaDataSet1 db_a75e9e_bderickmoncadaDataSet1;
-        private db_a75e9e_bderickmoncadaDataSet5 db_a75e9e_bderickmoncadaDataSet5;
-        private db_a75e9e_bderickmoncadaDataSet5TableAdapters.VCategoriasTableAdapter vCategoriasTableAdapter1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private db_a75e9e_bderickmoncadaDataSet7 db_a75e9e_bderickmoncadaDataSet71;
         private System.Windows.Forms.TabPage tab1;
         private System.Windows.Forms.TabPage tab7;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer8;
-        private db_a75e9e_bderickmoncadaDataSet7 db_a75e9e_bderickmoncadaDataSet72;
-        private System.Windows.Forms.BindingSource dba75e9ebderickmoncadaDataSet8BindingSource;
-        private db_a75e9e_bderickmoncadaDataSet8 db_a75e9e_bderickmoncadaDataSet8;
-        private System.Windows.Forms.BindingSource ReporteComprasBindingSource;
-        private db_a75e9e_bderickmoncadaDataSet8TableAdapters.ReporteComprasTableAdapter ReporteComprasTableAdapter;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource vCategoriasBindingSource4;
-        private db_a75e9e_bderickmoncadaDataSet10 db_a75e9e_bderickmoncadaDataSet101;
-        private db_a75e9e_bderickmoncadaDataSet10TableAdapters.TableAdapterManager tableAdapterManager1;
-        private DataSet1 DataSet1;
-        private System.Windows.Forms.BindingSource dataSet1BindingSource;
-        private db_a75e9e_bderickmoncadaDataSet11VCategorita db_a75e9e_bderickmoncadaDataSet11VCategorita;
-        private System.Windows.Forms.BindingSource vCategoriasBindingSource1;
-        private db_a75e9e_bderickmoncadaDataSet11VCategoritaTableAdapters.VCategoriasTableAdapter vCategoriasTableAdapter2;
-        private System.Windows.Forms.BindingSource dba75e9ebderickmoncadaDataSet11comprasBindingSource;
-        private db_a75e9e_bderickmoncadaDataSet11compras db_a75e9e_bderickmoncadaDataSet11compras;
-        private db_a75e9e_bderickmoncadaDataSetFecha_Compra db_a75e9e_bderickmoncadaDataSetFecha_Compra;
-        private System.Windows.Forms.BindingSource reporteComprasBindingSource1;
-        private db_a75e9e_bderickmoncadaDataSetFecha_CompraTableAdapters.ReporteComprasTableAdapter reporteComprasTableAdapter1;
-        private DataSetinventario DataSetinventario;
-        private System.Windows.Forms.BindingSource dataSetinventario1BindingSource;
-        private DataSetinventario dataSetinventario1;
-        private db_a75e9e_bderickmoncadaDataSetINVENTARIO db_a75e9e_bderickmoncadaDataSetINVENTARIO;
-        private System.Windows.Forms.BindingSource vCategoriasBindingSource2;
-        private db_a75e9e_bderickmoncadaDataSetINVENTARIOTableAdapters.VCategoriasTableAdapter vCategoriasTableAdapter3;
         private System.Windows.Forms.TabPage tab8;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer7;
-        private System.Windows.Forms.BindingSource Compra_FechaBindingSource;
-        private DataSetCompra_Fecha DataSetCompra_Fecha;
-        private DataSetCompra_FechaTableAdapters.Compra_FechaTableAdapter Compra_FechaTableAdapter;
+        private System.Windows.Forms.BindingSource ProductosBindingSource;
+        private db_a75e9e_bderickmoncadaDataSet2 db_a75e9e_bderickmoncadaDataSet2;
+        private db_a75e9e_bderickmoncadaDataSet2TableAdapters.ProductosTableAdapter ProductosTableAdapter;
+        private DataSetinventario DataSetinventario;
+        private System.Windows.Forms.BindingSource compraFechaBindingSource;
+        private db_a75e9e_bderickmoncadaDataSetfechacompra db_a75e9e_bderickmoncadaDataSetfechacompra;
+        private db_a75e9e_bderickmoncadaDataSetfechacompraTableAdapters.Compra_FechaTableAdapter compra_FechaTableAdapter;
     }
 }
