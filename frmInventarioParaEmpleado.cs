@@ -19,7 +19,8 @@ namespace Pantallas_proyecto
         {
             InitializeComponent();
         }
-
+        ClsConexionBD conect = new ClsConexionBD();
+        SqlCommand cmd;
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -44,9 +45,10 @@ namespace Pantallas_proyecto
 
         private void frmInventarioParaEmpleado_Load(object sender, EventArgs e)
         {
-           /* ClsConexionBD conect = new ClsConexionBD();
-            SqlCommand cmd;
-            //conect.cargarDatosProductos(textBox2.Text);*/
+            comboBox2.Enabled = false;
+            textBox2.Enabled = false;
+           
+           
             timer1.Enabled = true;
         }
 
@@ -67,36 +69,29 @@ namespace Pantallas_proyecto
         private void button2_Click(object sender, EventArgs e)
         {
 
-         /*   int indice;
-           // indice = textBox2.Text;
-            fact.Show();
-            int codigo;
-
-            try
+        }
+        
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            conect.abrir();
+            cmd = new SqlCommand("select * from Productos where codigo_producto = @codigo_producto ", conect.conexion);
+            cmd.Parameters.AddWithValue("@codigo_producto", textBox1.Text);
+            SqlDataReader Productos = cmd.ExecuteReader();
+            if (Productos.Read()) 
             {
-                MetodoBucasrProducto datos = new MetodoBucasrProducto();
-
-                if (textBox1.Text == "" || comboBox2.Text == "")
-                {
-                    MessageBox.Show("Muestre los datos a modificar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                  /*  codigo = Convert.ToInt32(textBox2.Text[0, indice].Value);
-                    textBox2.Text[0, indice].Value = textBox1.Text;
-                    dataGridView1[1, indice].Value = textBox2.Text;
-
-                    cmd = new SqlCommand("UPDATE  Productos set codigo_categoria = " + textBox2.Text + " WHERE codigo_producto = " + textBox1.Text, conect.conexion);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("El registro fue actualizado", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conect.cargarDatosProductos(dataGridView1);
-                }
+                textBox1.Enabled = false;
+                textBox2.Enabled = true;
+                comboBox2.Enabled = true;
+                comboBox2.Text = Productos["codigo_categoria"].ToString();
+                textBox2.Text = Productos["descripcion_producto"].ToString();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("El registro no pudo ser actualizado" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al buscar producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }*/
+            }
+            conect.cerrar();
+
         }
     }
 }
