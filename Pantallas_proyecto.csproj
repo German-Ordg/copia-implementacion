@@ -381,6 +381,7 @@
     <EmbeddedResource Include="Report8.rdlc" />
     <EmbeddedResource Include="Report9.rdlc" />
     <EmbeddedResource Include="Reportcompra_fecha.rdlc" />
+    <EmbeddedResource Include="Reporte_factura.rdlc" />
     <EmbeddedResource Include="Reportinventario.rdlc" />
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
@@ -581,6 +582,7 @@
       <DependentUpon>db_a75e9e_bderickmoncadaDataSetINVENTARIO.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ClsPantallaFacturacion.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

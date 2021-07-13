@@ -44,7 +44,7 @@ namespace Pantallas_proyecto
             // TODO: esta línea de código carga datos en la tabla 'DataSetCompra_Fecha.Compra_Fecha' Puede moverla o quitarla según sea necesario.
             //this.Compra_FechaTableAdapter.Fill(this.DataSetCompra_Fecha.Compra_Fecha);
             // TODO: esta línea de código carga datos en la tabla 'DataSetinventario.VCategorias' Puede moverla o quitarla según sea necesario.
-            this.VCategoriasTableAdapter.Fill(this.DataSetinventario.VCategorias, Fecha1, Fecha2);
+            //this.VCategoriasTableAdapter.Fill(this.DataSetinventario.VCategorias, Fecha1, Fecha2);
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSet11compras.ReporteCompras' Puede moverla o quitarla según sea necesario.
             //this.ReporteComprasTableAdapter.Fill(this.db_a75e9e_bderickmoncadaDataSet11compras.ReporteCompras);
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSet2.Productos' Puede moverla o quitarla según sea necesario.

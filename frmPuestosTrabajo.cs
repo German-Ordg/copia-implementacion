@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -49,6 +50,7 @@ namespace Pantallas_proyecto
         private void frmPuestosTrabajo_Load(object sender, EventArgs e)
         {
             MostrarDatos();
+            this.reportViewer1.RefreshReport();
         }
 
         private void DgvPuesto_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -115,5 +117,11 @@ namespace Pantallas_proyecto
             tslFecha.Text = DateTime.Now.ToLongDateString();
             tslHora.Text = DateTime.Now.ToLongTimeString();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+            
     }
+    
 }

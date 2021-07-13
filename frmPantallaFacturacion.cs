@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using Microsoft.Reporting.WinForms;
 
 namespace Pantallas_proyecto
 {
@@ -57,39 +58,7 @@ namespace Pantallas_proyecto
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            double sumaTotales=0;
-            double subTotal;
-            double descuentos=0;
-            double isv;
-            double total;
-
-
-            foreach (DataGridViewRow row in lstCompras.Rows)
-            {
-                if (row.Cells[5].Value != null)
-                    sumaTotales += (Double)double.Parse(row.Cells[5].Value.ToString());
-            }
-
-            foreach (DataGridViewRow row in lstCompras.Rows)
-            {
-                if (row.Cells[4].Value != null)
-                    descuentos += (Double)double.Parse(row.Cells[4].Value.ToString());
-            }
-                  
-            subTotal = sumaTotales - descuentos;
-
-            isv = (subTotal) * 0.15;
-
-            total = subTotal + isv;
-
-            txtDescuentosOtorgados.Text = descuentos.ToString();
-            txtTotalPagar.Text = total.ToString();
-            txtISV15.Text = isv.ToString();
-            txtSubTotal.Text = subTotal.ToString();
-
-        }
+        
 
         private void button8_Click(object sender, EventArgs e)
         {
@@ -123,6 +92,41 @@ namespace Pantallas_proyecto
             btnEditar.Enabled = false;
             btnEliminarTodo.Enabled = false;
             timer1.Enabled = true;
+
+            this.reportViewer1.RefreshReport();
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            double sumaTotales=0;
+            double subTotal;
+            double descuentos=0;
+            double isv;
+            double total;
+            btnImprimirFactura.Enabled = true;
+
+            foreach (DataGridViewRow row in lstCompras.Rows)
+            {
+                if (row.Cells[5].Value != null)
+                    sumaTotales += (Double)double.Parse(row.Cells[5].Value.ToString());
+            }
+
+            foreach (DataGridViewRow row in lstCompras.Rows)
+            {
+                if (row.Cells[4].Value != null)
+                    descuentos += (Double)double.Parse(row.Cells[4].Value.ToString());
+            }
+                  
+            subTotal = sumaTotales - descuentos;
+
+            isv = (subTotal) * 0.15;
+
+            total = subTotal + isv;
+
+            txtDescuentosOtorgados.Text = descuentos.ToString();
+            txtTotalPagar.Text = total.ToString();
+            txtISV15.Text = isv.ToString();
+            txtSubTotal.Text = subTotal.ToString();
+            
 
         }
 
@@ -407,5 +411,40 @@ namespace Pantallas_proyecto
                 lstCompras.Refresh();
             }
         }
+        ReportDataSource rs = new ReportDataSource();
+        private void btnImprimirFactura_Click(object sender, EventArgs e)
+        {
+            List<impresion> lista = new List<impresion>();
+
+            for (int i = 0; i < lstCompras.Rows.Count - 1; i++)
+            {
+                lista.Add(new impresion
+                {
+                    cod_producto = lstCompras.Rows[i].Cells[0].Value.ToString(),
+                    cantidad = lstCompras.Rows[i].Cells[0].Value.ToString(),
+                    descripcion = lstCompras.Rows[i].Cells[0].Value.ToString(),
+                    precio = lstCompras.Rows[i].Cells[0].Value.ToString(),
+                    descuento = lstCompras.Rows[i].Cells[0].Value.ToString(),
+                    total = lstCompras.Rows[i].Cells[0].Value.ToString()
+                });
+                rs.Name = "DataSet1";
+                rs.Value = lista;
+                reportViewer1.LocalReport.DataSources.Clear();
+                reportViewer1.LocalReport.DataSources.Add(rs);
+                reportViewer1.RefreshReport();
+                reportViewer1.LocalReport.ReportEmbeddedResource = "ReporteImpresion.rdlc";
+
+            }
+        }
+    
+    }
+    public class impresion
+    {
+        public string cod_producto { get; set; }
+        public string cantidad { get; set; }
+        public string descripcion { get; set; }
+        public string precio { get; set; }
+        public string descuento { get; set; }
+        public string total { get; set; }
     }
 }
