@@ -59,6 +59,8 @@ namespace Pantallas_proyecto
 
         private void button5_Click(object sender, EventArgs e)
         {
+
+
             double sumaTotales=0;
             double subTotal;
             double descuentos=0;
@@ -124,6 +126,7 @@ namespace Pantallas_proyecto
             btnEliminarTodo.Enabled = false;
             timer1.Enabled = true;
 
+            this.reportViewer1.RefreshReport();
         }
 
         private void frmPantallaFacturacion_FormClosed(object sender, FormClosedEventArgs e)
@@ -196,17 +199,17 @@ namespace Pantallas_proyecto
         private void rbConNombre_CheckedChanged(object sender, EventArgs e)
         {
             lblRTN.Show();
-            btnAgregarCliente.Show();
-            btnBuscarCliente.Show();
             txtRTN.Show();
+            txtNombreCliente.Show();
+            lblNombre.Show();
         }
 
         private void rbSinNombre_CheckedChanged(object sender, EventArgs e)
         {
             lblRTN.Hide();
-            btnAgregarCliente.Hide();
-            btnBuscarCliente.Hide();
             txtRTN.Hide();
+            txtNombreCliente.Hide();
+            lblNombre.Hide();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -326,12 +329,15 @@ namespace Pantallas_proyecto
                 lstCompras.Rows[n].Cells[5].Value = total.ToString();
                 lstCompras.Enabled = true;
                 btnAgregar.Enabled = true;
+                txtCodProducto.Enabled=true;
 
                 txtCodProducto.Clear();
                 txtDescripcion.Clear();
                 txtDescuento.Clear();
                 txtPrecioUnitario.Clear();
                 nudCantidad.Value = 1;
+                btnActualizar.Enabled = false;
+                btnBuscarProducto.Enabled = true;
             }
             else
             {
@@ -406,6 +412,11 @@ namespace Pantallas_proyecto
                 lstCompras.Rows.Clear();
                 lstCompras.Refresh();
             }
+        }
+
+        private void btnImprimirFactura_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
