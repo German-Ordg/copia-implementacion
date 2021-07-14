@@ -50,7 +50,7 @@ namespace Pantallas_proyecto
         private void frmPuestosTrabajo_Load(object sender, EventArgs e)
         {
             MostrarDatos();
-            this.reportViewer1.RefreshReport();
+            
         }
 
         private void DgvPuesto_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -30,7 +30,9 @@ namespace Pantallas_proyecto
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPantallaFacturacion));
+            this.impresionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.brnRegresar = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtTotalPagar = new System.Windows.Forms.TextBox();
@@ -101,6 +103,8 @@ namespace Pantallas_proyecto
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.impresionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.impresionBindingSource)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lstCompras)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -110,6 +114,7 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.impresionBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // brnRegresar
@@ -898,7 +903,6 @@ namespace Pantallas_proyecto
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Pantallas_proyecto.Properties.Resources.Letras1;
             this.pictureBox1.Location = new System.Drawing.Point(16, 15);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
@@ -909,11 +913,14 @@ namespace Pantallas_proyecto
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(1406, 415);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.impresionBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Reporte_factura.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(1265, 242);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote;
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer1.Size = new System.Drawing.Size(543, 325);
             this.reportViewer1.TabIndex = 32;
             // 
             // frmPantallaFacturacion
@@ -945,6 +952,7 @@ namespace Pantallas_proyecto
             this.Text = "Heaven Store - Facturación";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPantallaFacturacion_FormClosed);
             this.Load += new System.EventHandler(this.frmPantallaFacturacion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.impresionBindingSource)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lstCompras)).EndInit();
@@ -960,6 +968,7 @@ namespace Pantallas_proyecto
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.impresionBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1037,5 +1046,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource impresionBindingSource;
+        private System.Windows.Forms.BindingSource impresionBindingSource1;
     }
 }
