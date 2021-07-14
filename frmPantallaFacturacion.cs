@@ -416,7 +416,59 @@ namespace Pantallas_proyecto
 
         private void btnImprimirFactura_Click(object sender, EventArgs e)
         {
-            
+            if (cmbTipoPago.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un tipo de pago", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (cmbVendedor.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Seleccione un vendedor", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    if (lstCodProducto.Index == -1)
+                    {
+                        MessageBox.Show("Ingrese un producto a comprar", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        if (rbConNombre.Checked == false && rbSinNombre.Checked == false)
+                        {
+                            MessageBox.Show("Seleccione si la factura es con nombre o sin nombre", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            if (rbConNombre.Checked)
+                            {
+                                if (txtRTN.TextLength == 0)
+                                {
+                                    MessageBox.Show("Ingrese el RTN del cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else
+                                {
+                                    if (txtNombreCliente.TextLength == 0)
+                                    {
+                                        MessageBox.Show("Ingrese el nombre del cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    }
+                                    else
+                                    {
+
+                                    }
+                                }
+                            }
+
+                            if (rbSinNombre.Checked)
+                            {
+
+                            }
+
+                        }
+                    }
+                }
+            }
+
         }
     }
 }
