@@ -29,7 +29,7 @@ namespace Pantallas_proyecto
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnEndCompra = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.label14 = new System.Windows.Forms.Label();
@@ -49,12 +49,12 @@ namespace Pantallas_proyecto
             this.precioCompra = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.descripcionProducto = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProductosCompra = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -75,29 +75,37 @@ namespace Pantallas_proyecto
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.CodProductodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripciondgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoriadgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.talladgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioCompradgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioVentadgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidaddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descuentodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosCompra)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnRegresar
+            // btnEndCompra
             // 
-            this.btnRegresar.BackColor = System.Drawing.Color.Maroon;
-            this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRegresar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnRegresar.Location = new System.Drawing.Point(515, 622);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(153, 43);
-            this.btnRegresar.TabIndex = 166;
-            this.btnRegresar.Text = "Terminar compra ";
-            this.btnRegresar.UseVisualStyleBackColor = false;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            this.btnEndCompra.BackColor = System.Drawing.Color.Maroon;
+            this.btnEndCompra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEndCompra.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnEndCompra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEndCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEndCompra.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnEndCompra.Location = new System.Drawing.Point(515, 622);
+            this.btnEndCompra.Name = "btnEndCompra";
+            this.btnEndCompra.Size = new System.Drawing.Size(153, 43);
+            this.btnEndCompra.TabIndex = 166;
+            this.btnEndCompra.Text = "Terminar compra ";
+            this.btnEndCompra.UseVisualStyleBackColor = false;
+            this.btnEndCompra.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // button2
             // 
@@ -124,6 +132,7 @@ namespace Pantallas_proyecto
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.Size = new System.Drawing.Size(623, 149);
             this.dgvProductos.TabIndex = 92;
+            this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             // 
             // label14
             // 
@@ -284,18 +293,18 @@ namespace Pantallas_proyecto
             this.descripcionProducto.Size = new System.Drawing.Size(159, 63);
             this.descripcionProducto.TabIndex = 148;
             // 
-            // comboBox1
+            // cmbCategoria
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(118, 147);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(159, 21);
-            this.comboBox1.TabIndex = 153;
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(118, 147);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(159, 21);
+            this.cmbCategoria.TabIndex = 153;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.comboBox1);
+            this.groupBox4.Controls.Add(this.cmbCategoria);
             this.groupBox4.Controls.Add(this.descripcionProducto);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.precioCompra);
@@ -333,10 +342,10 @@ namespace Pantallas_proyecto
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvProductosCompra);
             this.groupBox1.Location = new System.Drawing.Point(690, 150);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(556, 168);
+            this.groupBox1.Size = new System.Drawing.Size(721, 168);
             this.groupBox1.TabIndex = 173;
             this.groupBox1.TabStop = false;
             // 
@@ -351,15 +360,26 @@ namespace Pantallas_proyecto
             this.label10.TabIndex = 158;
             this.label10.Text = "Productos de la compra";
             // 
-            // dataGridView1
+            // dgvProductosCompra
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(550, 149);
-            this.dataGridView1.TabIndex = 92;
+            this.dgvProductosCompra.AllowUserToDeleteRows = false;
+            this.dgvProductosCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductosCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CodProductodgv,
+            this.descripciondgv,
+            this.categoriadgv,
+            this.talladgv,
+            this.PrecioCompradgv,
+            this.PrecioVentadgv,
+            this.Cantidaddgv,
+            this.descuentodgv});
+            this.dgvProductosCompra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProductosCompra.Location = new System.Drawing.Point(3, 16);
+            this.dgvProductosCompra.Name = "dgvProductosCompra";
+            this.dgvProductosCompra.ReadOnly = true;
+            this.dgvProductosCompra.RowHeadersWidth = 51;
+            this.dgvProductosCompra.Size = new System.Drawing.Size(715, 149);
+            this.dgvProductosCompra.TabIndex = 92;
             // 
             // button1
             // 
@@ -588,12 +608,52 @@ namespace Pantallas_proyecto
             this.label20.TabIndex = 85;
             this.label20.Text = "Fecha compra:";
             // 
+            // CodProductodgv
+            // 
+            this.CodProductodgv.HeaderText = "Cod. Producto";
+            this.CodProductodgv.Name = "CodProductodgv";
+            // 
+            // descripciondgv
+            // 
+            this.descripciondgv.HeaderText = "Descripcion";
+            this.descripciondgv.Name = "descripciondgv";
+            // 
+            // categoriadgv
+            // 
+            this.categoriadgv.HeaderText = "Categoria";
+            this.categoriadgv.Name = "categoriadgv";
+            // 
+            // talladgv
+            // 
+            this.talladgv.HeaderText = "Talla";
+            this.talladgv.Name = "talladgv";
+            // 
+            // PrecioCompradgv
+            // 
+            this.PrecioCompradgv.HeaderText = "Precio Compra";
+            this.PrecioCompradgv.Name = "PrecioCompradgv";
+            // 
+            // PrecioVentadgv
+            // 
+            this.PrecioVentadgv.HeaderText = "Precio Venta";
+            this.PrecioVentadgv.Name = "PrecioVentadgv";
+            // 
+            // Cantidaddgv
+            // 
+            this.Cantidaddgv.HeaderText = "Cantidad";
+            this.Cantidaddgv.Name = "Cantidaddgv";
+            // 
+            // descuentodgv
+            // 
+            this.descuentodgv.HeaderText = "Descuento";
+            this.descuentodgv.Name = "descuentodgv";
+            // 
             // FrmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1291, 677);
+            this.ClientSize = new System.Drawing.Size(1422, 677);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button3);
@@ -608,7 +668,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.btnRegresar);
+            this.Controls.Add(this.btnEndCompra);
             this.Controls.Add(this.label2);
             this.Name = "FrmProductos";
             this.Text = "FrmProductos";
@@ -620,7 +680,7 @@ namespace Pantallas_proyecto
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosCompra)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -629,7 +689,7 @@ namespace Pantallas_proyecto
         }
 
         #endregion
-        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.Button btnEndCompra;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.Label label14;
@@ -649,12 +709,12 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.TextBox precioCompra;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox descripcionProducto;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProductosCompra;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -675,5 +735,13 @@ namespace Pantallas_proyecto
         public System.Windows.Forms.Label pago;
         public System.Windows.Forms.Label proveedor;
         public System.Windows.Forms.Label compra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodProductodgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripciondgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoriadgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn talladgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompradgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVentadgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidaddgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descuentodgv;
     }
 }

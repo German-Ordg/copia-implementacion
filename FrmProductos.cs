@@ -21,7 +21,9 @@ namespace Pantallas_proyecto
         Productos producto = new Productos();
         FrmCompras compras = new FrmCompras();
 
+        string[,] productosArrays = new string[20, 8];
 
+        int contador=0;
 
         SqlDataAdapter da;
         DataTable dt;
@@ -64,27 +66,54 @@ namespace Pantallas_proyecto
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
 
             try
             {
-                if (codigoProducto.Text == string.Empty || descripcionProducto.Text == string.Empty || comboBox1.Text == string.Empty || precioCompra.Text == string.Empty || precioActual.Text == string.Empty || cantidad.Text == string.Empty || descuento.Text == string.Empty)
+                if (codigoProducto.Text == string.Empty || descripcionProducto.Text == string.Empty || cmbCategoria.Text == string.Empty || precioCompra.Text == string.Empty || precioActual.Text == string.Empty || cantidad.Text == string.Empty || descuento.Text == string.Empty)
                     MessageBox.Show("Porfavor llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
+                    
+                        productosArrays[contador, 0] = codigoProducto.Text;
+                        productosArrays[contador, 1] = descripcionProducto.Text;
+                        productosArrays[contador, 2] = cmbCategoria.Text;
+                        productosArrays[contador, 3] = talla.Text;
+                        productosArrays[contador, 4] = precioCompra.Text;
+                        productosArrays[contador, 5] = precioActual.Text;
+                        productosArrays[contador, 6] = cantidad.Text;
+                        productosArrays[contador, 7] = descuento.Text;
+                        contador++;
+                    
 
+                    producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
+                    int RowsEscribir = dgvProductosCompra.Rows.Count - 1;
                     if (producto.buscarProducto(codigoProducto.Text) != producto.Codigo_producto)
                     {
-                        producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
-                        producto.Descripcion = descripcionProducto.Text;
-                        producto.Cantidad = Convert.ToInt32(cantidad.Text);
-                        producto.Precio_actual = Convert.ToDouble(precioActual.Text);
-                        producto.Descuento = Convert.ToDouble(descuento.Text);
-                        producto.Talla = talla.Text;
-                        producto.Descripcion_Categoria = comboBox1.SelectedItem.ToString();
-                        producto.Categoria = Convert.ToInt32(producto.buscarCategoria(producto.Descripcion_Categoria));
-                        producto.agregarProducto();
-                        cargarDatosProductos(dgvProductos, "Productos");
+                        /* producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
+                         producto.Descripcion = descripcionProducto.Text;
+                         producto.Cantidad = Convert.ToInt32(cantidad.Text);
+                         producto.Precio_actual = Convert.ToDouble(precioActual.Text);
+                         producto.Descuento = Convert.ToDouble(descuento.Text);
+                         producto.Talla = talla.Text;
+                         producto.Descripcion_Categoria = comboBox1.SelectedItem.ToString();
+                         producto.Categoria = Convert.ToInt32(producto.buscarCategoria(producto.Descripcion_Categoria));
+                         producto.agregarProducto();
+                        cargarDatosProductos(dgvProductos, "Productos");*/
+
+
+                        //int RowsEscribir = dgvProductosCompra.Rows.Count - 1;
+                        dgvProductosCompra.Rows.Add(1);
+
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[0].Value = codigoProducto.Text;
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[1].Value = descripcionProducto.Text;
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[2].Value = cmbCategoria.Text;
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[3].Value = talla.Text;
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[4].Value = precioCompra.Text;
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[5].Value = precioActual.Text;
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[6].Value = cantidad.Text;
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[7].Value = descuento.Text;
+
 
 
 
@@ -96,7 +125,7 @@ namespace Pantallas_proyecto
                         if (producto.buscarProducto(codigoProducto.Text) == producto.Codigo_producto)
                     {
 
-
+        /*
                         producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
 
 
@@ -107,7 +136,20 @@ namespace Pantallas_proyecto
                         producto.Descuento = Convert.ToDouble(descuento.Text);
 
                         producto.actualizarProducto();
-                        cargarDatosProductos(dgvProductos, "Productos");
+                        cargarDatosProductos(dgvProductos, "Productos"); */
+
+                       // int RowsEscribir = dgvProductosCompra.Rows.Count - 1;
+                        dgvProductosCompra.Rows.Add(1);
+
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[0].Value = codigoProducto.Text;
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[1].Value = descripcionProducto.Text;
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[2].Value = cmbCategoria.Text;
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[3].Value = talla.Text;
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[4].Value = precioCompra.Text;
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[5].Value = precioActual.Text;
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[6].Value = cantidad.Text;
+                        dgvProductosCompra.Rows[RowsEscribir].Cells[7].Value = descuento.Text;
+
 
 
                     }
@@ -116,10 +158,12 @@ namespace Pantallas_proyecto
                     //   producto.Codigo_proveedor = producto.buscarProveedor(producto.Descripcion_proveedor);
                     //  producto.Descripcion_pago = comboPago.SelectedItem.ToString();
                     // producto.Codigo_pago = producto.buscarPago(producto.Descripcion_pago);
+
+                    /*
                     producto.Cantidad_compra = Convert.ToInt32(cantidad.Text);
                     producto.Precio_compra = Convert.ToDouble(precioCompra.Text);
 
-                    //
+                    
                     producto.Codigo_compra = Convert.ToInt32(compra.Text);
                     producto.Descripcion_fecha = fecha.Text;
                     producto.Descripcion_proveedor = proveedor.Text;
@@ -129,7 +173,8 @@ namespace Pantallas_proyecto
 
 
                     producto.agregarCompra();
-                    producto.agregarDetalleCompra();
+                    producto.agregarDetalleCompra(); */
+                    
                 }
 
             }
@@ -146,19 +191,19 @@ namespace Pantallas_proyecto
             precioActual.Clear();
             descuento.Clear();
             talla.Clear();
-            comboBox1.Items.Clear();
+            cmbCategoria.Items.Clear();
             descripcionProducto.Clear();
             precioCompra.Clear();
+            cmbCategoria.Enabled = true;
+            descripcionProducto.Enabled = true;
+            codigoProducto.Enabled = true;
+            talla.Enabled = true;
+            categorias();
 
-            
+
         }
 
-        private void FrmProductos_Load(object sender, EventArgs e)
-        {
-            textBox1.Enabled = false;
-            textBox2.Enabled = false;
-
-            cargarDatosProductos(dgvProductos, "Productos");
+        private void categorias() {
             try
             {
                 SqlCommand comando = new SqlCommand("SELECT codigo_categoria,descripcion_categoria FROM Categoria_Producto", conect2.conexion);
@@ -169,7 +214,7 @@ namespace Pantallas_proyecto
 
 
                 {
-                    comboBox1.Items.Add(registro["descripcion_categoria"].ToString());
+                    cmbCategoria.Items.Add(registro["descripcion_categoria"].ToString());
 
                 }
                 conect2.cerrar();
@@ -179,6 +224,17 @@ namespace Pantallas_proyecto
             {
                 MessageBox.Show("Error al cargar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+        }
+
+        private void FrmProductos_Load(object sender, EventArgs e)
+        {
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
+
+            cargarDatosProductos(dgvProductos, "Productos");
+            categorias();
+            
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -188,22 +244,96 @@ namespace Pantallas_proyecto
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
+
+            try
+            {
+                producto.Codigo_compra = Convert.ToInt32(compra.Text);
+                producto.Descripcion_fecha = fecha.Text;
+                producto.Descripcion_proveedor = proveedor.Text;
+                producto.Codigo_proveedor = producto.buscarProveedor(producto.Descripcion_proveedor);
+                producto.Descripcion_pago = pago.Text;
+                producto.Codigo_pago = producto.buscarPago(producto.Descripcion_pago);
+                producto.agregarCompra();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error al ingresar los datos" , "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+            }
+
+            
+            for (int u=0;u<contador;u++) { 
+            try
+            {           
+                    producto.Codigo_producto = Convert.ToInt32(productosArrays[u, 0]);
+
+                    if (producto.buscarProducto(productosArrays[u, 0]) != producto.Codigo_producto)
+                    {
+                        producto.Codigo_producto =Convert.ToInt32(productosArrays[u,0]);
+                        producto.Descripcion = productosArrays[u, 1];
+                        producto.Cantidad = Convert.ToInt32(productosArrays[u, 6]);
+                        producto.Precio_actual = Convert.ToDouble(productosArrays[u, 5]);
+                        producto.Descuento = Convert.ToDouble(productosArrays[u, 7]);
+                        producto.Talla = productosArrays[u, 3];
+                        producto.Descripcion_Categoria = productosArrays[u, 2];
+                        producto.Categoria = Convert.ToInt32(producto.buscarCategoria(producto.Descripcion_Categoria));
+                        producto.agregarProducto();
+                        cargarDatosProductos(dgvProductos, "Productos");
+
+                    }
+                    
+                    else
+                        if (producto.buscarProducto(productosArrays[u, 0]) == producto.Codigo_producto)
+                    {
+
+
+                        producto.Codigo_producto = Convert.ToInt32(productosArrays[u, 0]);
+
+
+                        int cant = producto.buscarProducto2(productosArrays[u, 0]);
+
+                        producto.Cantidad = Convert.ToInt32(productosArrays[u, 6]) + cant;
+                        producto.Precio_actual = Convert.ToDouble(productosArrays[u, 5]);
+                        producto.Descuento = Convert.ToDouble(productosArrays[u, 7]);
+
+                        producto.actualizarProducto();
+                        cargarDatosProductos(dgvProductos, "Productos");
+
+
+
+                    }
+
+                    producto.Cantidad_compra = Convert.ToInt32(productosArrays[u, 6]);
+                    producto.Precio_compra = Convert.ToDouble(productosArrays[u, 4]);
+
+
+                    
+
+
+                    
+                    producto.agregarDetalleCompra();
+
+                }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ingresar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            }
             this.Close();
             FrmCompras fact = new FrmCompras();
             fact.Show();
-
-
-
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
 
-            comboBox1.Enabled = false;
+            cmbCategoria.Enabled = false;
             descripcionProducto.Enabled = false;
             codigoProducto.Enabled = false;
             talla.Enabled = false;
-            comboBox1.Text = dgvProductos.CurrentRow.Cells[1].Value.ToString();
+            cmbCategoria.Text = dgvProductos.CurrentRow.Cells[1].Value.ToString();
             codigoProducto.Text = dgvProductos.CurrentRow.Cells[0].Value.ToString();
             descripcionProducto.Text = dgvProductos.CurrentRow.Cells[2].Value.ToString();
             precioActual.Text = dgvProductos.CurrentRow.Cells[4].Value.ToString();
@@ -260,6 +390,11 @@ namespace Pantallas_proyecto
         {
             var aux = new MetodoBuscarDescripcion();
             aux.filtrar(dgvProductos, this.textBox1.Text.Trim());
+        }
+
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

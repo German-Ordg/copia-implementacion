@@ -606,3 +606,4 @@ C:\Users\dell_\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO\bin\Debug\ru\Microsoft.
 C:\Users\dell_\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\dell_\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\dell_\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO\obj\Debug\Pantallas_proyecto.csproj.CopyComplete
+C:\Users\Sebas\Desktop\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmProductos.resources
