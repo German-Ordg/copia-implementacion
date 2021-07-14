@@ -29,6 +29,7 @@ namespace Pantallas_proyecto
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductos));
             this.btnEndCompra = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
@@ -55,8 +56,6 @@ namespace Pantallas_proyecto
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dgvProductosCompra = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -83,6 +82,7 @@ namespace Pantallas_proyecto
             this.PrecioVentadgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidaddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descuentodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -99,7 +99,7 @@ namespace Pantallas_proyecto
             this.btnEndCompra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEndCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEndCompra.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEndCompra.Location = new System.Drawing.Point(515, 622);
+            this.btnEndCompra.Location = new System.Drawing.Point(607, 622);
             this.btnEndCompra.Name = "btnEndCompra";
             this.btnEndCompra.Size = new System.Drawing.Size(153, 43);
             this.btnEndCompra.TabIndex = 166;
@@ -130,7 +130,7 @@ namespace Pantallas_proyecto
             this.dgvProductos.Location = new System.Drawing.Point(3, 16);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersWidth = 51;
-            this.dgvProductos.Size = new System.Drawing.Size(623, 149);
+            this.dgvProductos.Size = new System.Drawing.Size(623, 171);
             this.dgvProductos.TabIndex = 92;
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             // 
@@ -141,9 +141,9 @@ namespace Pantallas_proyecto
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(21, -4);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(69, 18);
+            this.label14.Size = new System.Drawing.Size(77, 18);
             this.label14.TabIndex = 158;
-            this.label14.Text = "Producto";
+            this.label14.Text = "Productos";
             // 
             // groupBox3
             // 
@@ -151,7 +151,7 @@ namespace Pantallas_proyecto
             this.groupBox3.Controls.Add(this.dgvProductos);
             this.groupBox3.Location = new System.Drawing.Point(39, 150);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(629, 168);
+            this.groupBox3.Size = new System.Drawing.Size(629, 190);
             this.groupBox3.TabIndex = 171;
             this.groupBox3.TabStop = false;
             // 
@@ -345,7 +345,7 @@ namespace Pantallas_proyecto
             this.groupBox1.Controls.Add(this.dgvProductosCompra);
             this.groupBox1.Location = new System.Drawing.Point(690, 150);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(721, 168);
+            this.groupBox1.Size = new System.Drawing.Size(721, 243);
             this.groupBox1.TabIndex = 173;
             this.groupBox1.TabStop = false;
             // 
@@ -378,34 +378,8 @@ namespace Pantallas_proyecto
             this.dgvProductosCompra.Name = "dgvProductosCompra";
             this.dgvProductosCompra.ReadOnly = true;
             this.dgvProductosCompra.RowHeadersWidth = 51;
-            this.dgvProductosCompra.Size = new System.Drawing.Size(715, 149);
+            this.dgvProductosCompra.Size = new System.Drawing.Size(715, 224);
             this.dgvProductosCompra.TabIndex = 92;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Maroon;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(693, 368);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 43);
-            this.button1.TabIndex = 174;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(690, 343);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(253, 18);
-            this.label11.TabIndex = 175;
-            this.label11.Text = "Agregar producto a la misma compra";
             // 
             // label12
             // 
@@ -612,41 +586,65 @@ namespace Pantallas_proyecto
             // 
             this.CodProductodgv.HeaderText = "Cod. Producto";
             this.CodProductodgv.Name = "CodProductodgv";
+            this.CodProductodgv.ReadOnly = true;
             // 
             // descripciondgv
             // 
             this.descripciondgv.HeaderText = "Descripcion";
             this.descripciondgv.Name = "descripciondgv";
+            this.descripciondgv.ReadOnly = true;
             // 
             // categoriadgv
             // 
             this.categoriadgv.HeaderText = "Categoria";
             this.categoriadgv.Name = "categoriadgv";
+            this.categoriadgv.ReadOnly = true;
             // 
             // talladgv
             // 
             this.talladgv.HeaderText = "Talla";
             this.talladgv.Name = "talladgv";
+            this.talladgv.ReadOnly = true;
             // 
             // PrecioCompradgv
             // 
             this.PrecioCompradgv.HeaderText = "Precio Compra";
             this.PrecioCompradgv.Name = "PrecioCompradgv";
+            this.PrecioCompradgv.ReadOnly = true;
             // 
             // PrecioVentadgv
             // 
             this.PrecioVentadgv.HeaderText = "Precio Venta";
             this.PrecioVentadgv.Name = "PrecioVentadgv";
+            this.PrecioVentadgv.ReadOnly = true;
             // 
             // Cantidaddgv
             // 
             this.Cantidaddgv.HeaderText = "Cantidad";
             this.Cantidaddgv.Name = "Cantidaddgv";
+            this.Cantidaddgv.ReadOnly = true;
             // 
             // descuentodgv
             // 
             this.descuentodgv.HeaderText = "Descuento";
             this.descuentodgv.Name = "descuentodgv";
+            this.descuentodgv.ReadOnly = true;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Maroon;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button4.Location = new System.Drawing.Point(1317, 609);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(94, 56);
+            this.button4.TabIndex = 185;
+            this.button4.Text = "Cancelar Compra";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // FrmProductos
             // 
@@ -654,6 +652,7 @@ namespace Pantallas_proyecto
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1422, 677);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button3);
@@ -663,14 +662,17 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label13);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnEndCompra);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1438, 716);
+            this.MinimumSize = new System.Drawing.Size(1438, 716);
             this.Name = "FrmProductos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmProductos";
             this.Load += new System.EventHandler(this.FrmProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
@@ -715,8 +717,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dgvProductosCompra;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label13;
@@ -743,5 +743,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVentadgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidaddgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn descuentodgv;
+        private System.Windows.Forms.Button button4;
     }
 }
