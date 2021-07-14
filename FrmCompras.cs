@@ -1,14 +1,8 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 
 
@@ -51,24 +45,7 @@ namespace Pantallas_proyecto
         //------------------------------------------------------------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------------------------------------------------------------
 
-        public void cargarDatosProductos(DataGridView dgv, string nombreTabla)//Metodo cargar dato productos
-        {
-            try
-            {
-                da = new SqlDataAdapter("Select codigo_producto Codigo,Categoria_Producto.descripcion_categoria Categoria, descripcion_producto Descripcion, cantidad_existente Cantidad,precio_actual Precio , descuento_producto Descuento , talla  " +
-                    "From " + nombreTabla + ", Categoria_Producto Where Categoria_Producto.codigo_categoria = Productos.codigo_categoria ", conect2.conexion);
-                dt = new DataTable();
-                da.Fill(dt);
-                dgv.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        //------------------------------------------------------------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------------------------------------------------------------
+    
         public void cargarDatosCompras(DataGridView dgv, string nombreTabla)//Metodo cargar dato compras
         {
             try
@@ -92,32 +69,32 @@ namespace Pantallas_proyecto
         {
             timer1.Enabled = true;
             conect2.abrir();
-            cargarDatosProductos(dgvProductos, "Productos");
+            // cargarDatosProductos(dgvProductos, "Productos");
             cargarDatosCompras(dgvProveedores, "Compras");
 
 
             //Llenar Combobox Categoria Productos
 
-            try
-            {
-                SqlCommand comando = new SqlCommand("SELECT codigo_categoria,descripcion_categoria FROM Categoria_Producto", conect2.conexion);
+            //try
+            //{
+            //    SqlCommand comando = new SqlCommand("SELECT codigo_categoria,descripcion_categoria FROM Categoria_Producto", conect2.conexion);
 
-                conect2.abrir();
-                SqlDataReader registro = comando.ExecuteReader();
-                while (registro.Read())
+            //    conect2.abrir();
+            //    SqlDataReader registro = comando.ExecuteReader();
+            //    while (registro.Read())
 
 
-                {
-                    comboBox1.Items.Add(registro["descripcion_categoria"].ToString());
+            //    {
+            //        comboBox1.Items.Add(registro["descripcion_categoria"].ToString());
 
-                }
-                conect2.cerrar();
+            //    }
+            //    conect2.cerrar();
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error al cargar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
             //------------------------------------------------------------------------------------------------------------------------------------------
             //------------------------------------------------------------------------------------------------------------------------------------------
@@ -204,72 +181,55 @@ namespace Pantallas_proyecto
 
         }
 
-       
 
+       
         private void button2_Click_2(object sender, EventArgs e)
         {
 
-  
-                //---------------------------------------------------------------------------------------------------------------------------------
-                //Compras
-                producto.Codigo_compra = Convert.ToInt32(codigoCompra.Text);
-                producto.Descripcion_fecha = dateFecha.Value.ToString("yyyy/MM/dd");
-                producto.agregarCompra();
-                conect2.abrir();
 
-
-            // clientes2.Fecha_nacimiento = dtpFechaNacCliente.Value.ToString("yyyy/MM/dd");
 
             //---------------------------------------------------------------------------------------------------------------------------------
-            //Productos
-
-            producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
-
-            if (producto.buscarProducto(codigoProducto.Text) != producto.Codigo_producto)
+            //Compras
+            try
             {
-                producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
-                producto.Descripcion = descripcionProducto.Text;
-                producto.Cantidad = Convert.ToInt32(cantidad.Text);
-                producto.Precio_actual = Convert.ToDouble(precioActual.Text);
-                producto.Descuento = Convert.ToDouble(descuento.Text);
-                producto.Talla = talla.Text;
-                producto.Descripcion_Categoria = comboBox1.SelectedItem.ToString();
-                producto.Categoria = Convert.ToInt32(producto.buscarCategoria(producto.Descripcion_Categoria));
-                producto.agregarProducto();
-                cargarDatosProductos(dgvProductos, "Productos");
+                if (codigoCompra.Text == string.Empty || comboProveedor.Text == string.Empty || comboPago.Text == string.Empty || dateFecha.Text == string.Empty)
+                    MessageBox.Show("Porfavor llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+
+
+                    producto.Codigo_compra = Convert.ToInt32(codigoCompra.Text);
+                    if (producto.Codigo_compra == producto.buscarCompra(codigoCompra.Text))
+                    {
+                        MessageBox.Show("Error el codigo de compra ya existe", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    else
+                    {
+
+                        FrmProductos produc = new FrmProductos();
+                        produc.compra.Text = codigoCompra.Text;
+                        produc.fecha.Text = dateFecha.Value.ToString("yyyy/MM/dd");
+                        produc.proveedor.Text = comboProveedor.SelectedItem.ToString();
+                        produc.pago.Text = comboPago.SelectedItem.ToString();
+
+
+
+
+
+                        produc.Show();
+                        this.Close();
+
+
+                    }
+
+                }
             }
-            else
-                if (producto.buscarProducto(codigoProducto.Text) == producto.Codigo_producto) {
-
-
-                producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
-
-
-                int cant = producto.buscarProducto2(codigoProducto.Text);
-
-                producto.Cantidad = Convert.ToInt32(cantidad.Text) + cant;
-                producto.Precio_actual = Convert.ToDouble(precioActual.Text);
-                producto.Descuento = Convert.ToDouble(descuento.Text);
-     
-                producto.actualizarProducto();
-                cargarDatosProductos(dgvProductos, "Productos");
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ingresar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
-                producto.Descripcion_proveedor = comboProveedor.SelectedItem.ToString();
-                producto.Codigo_proveedor = producto.buscarProveedor(producto.Descripcion_proveedor);
-                producto.Descripcion_pago = comboPago.SelectedItem.ToString();
-                producto.Codigo_pago = producto.buscarPago(producto.Descripcion_pago);
-                producto.Cantidad_compra = Convert.ToInt32(cantidad.Text);
-                producto.Precio_compra = Convert.ToDouble(precioCompra.Text);
-                producto.agregarDetalleCompra();
-                cargarDatosCompras(dgvProveedores, "Compras");
-
-
-
-
-
-            
 
 
         }
@@ -279,25 +239,6 @@ namespace Pantallas_proyecto
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-          
-           // codigoProducto.Text= dgvProductos.CurrentRow.Cells[0].Value.ToString();
-
-            const string message =
-               "Are you sure that you would like to close the form?";
-            const string caption = "Form Closing";
-            var result = MessageBox.Show(message, caption,
-                                         MessageBoxButtons.YesNo,
-                                         MessageBoxIcon.Question);
-
-            // If the no button was pressed ...
-            if (result == DialogResult.No)
-            {
-                // cancel the closure of the form.
-                codigoProducto.Text = dgvProductos.CurrentRow.Cells[0].Value.ToString();
-            }
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -312,16 +253,11 @@ namespace Pantallas_proyecto
             this.Close();
         }
 
-        /* btnCamaroteCamarote.Enabled = true;
-        btnAgregarCamarote.Enabled = false;
-        txtCodigoTipoCamarote.Text = dgvCamarotes.CurrentRow.Cells[1].Value.ToString();
-        txtNumeroCamarote.Text = dgvCamarotes.CurrentRow.Cells[2].Value.ToString();
-        txtNivelCamarote.Text = dgvCamarotes.CurrentRow.Cells[3].Value.ToString();
-        txtBuqueCamarote.Text = dgvCamarotes.CurrentRow.Cells[4].Value.ToString();*/
+
     }
 
 
-     
+
 }
 
 

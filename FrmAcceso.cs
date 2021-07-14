@@ -263,7 +263,7 @@ namespace Pantallas_proyecto
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            FrmInventario_Gerente fact = new FrmInventario_Gerente();
+            FrmCompras fact = new FrmCompras();
             fact.Show();
         }
 

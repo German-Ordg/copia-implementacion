@@ -25,6 +25,7 @@ namespace Pantallas_proyecto
                 SqlCommand sql = new SqlCommand("BusquedaProducto1", conect.conexion);
                 sql.CommandType = CommandType.StoredProcedure;
                 sql.Parameters.Add("@filtro", SqlDbType.VarChar, 200).Value = buscarcategoria;
+               
 
                 sql.ExecuteNonQuery();
                 DataTable dt = new DataTable();

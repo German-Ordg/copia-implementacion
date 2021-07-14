@@ -77,6 +77,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buscar_CodigoFrmProductos.cs" />
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -155,8 +156,15 @@
     <Compile Include="FrmCalculadora.Designer.cs">
       <DependentUpon>FrmCalculadora.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductos.Designer.cs">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="MetodoBucasrProducto.cs" />
     <Compile Include="MetodoBuscarCodigo.cs" />
+    <Compile Include="MetodoBuscarDescripcion.cs" />
     <Compile Include="SqlServerDB\ClsConexionBD.cs" />
     <Compile Include="db_a75e9e_bderickmoncadaDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -344,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPantallaFacturacion.resx">
       <DependentUpon>frmPantallaFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductos.resx">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPuestosTrabajo.resx">
       <DependentUpon>frmPuestosTrabajo.cs</DependentUpon>
