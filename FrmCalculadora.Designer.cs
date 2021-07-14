@@ -179,6 +179,7 @@ namespace Pantallas_proyecto
             this.btnigual.TabIndex = 11;
             this.btnigual.Text = "=";
             this.btnigual.UseVisualStyleBackColor = false;
+            this.btnigual.Click += new System.EventHandler(this.btnigual_Click);
             // 
             // btnpunto
             // 

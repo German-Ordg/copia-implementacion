@@ -47,5 +47,29 @@ namespace Pantallas_proyecto
             TxtResulttxt.Text = "0";
             resultValue = 0;
         }
+
+        private void btnigual_Click(object sender, EventArgs e)
+        {
+            switch (OperatorClicked) {
+                case "+":
+                    TxtResulttxt.Text = (resultValue + Double.Parse(TxtResulttxt.Text)).ToString();
+                    break;
+
+                case "-":
+                    TxtResulttxt.Text = (resultValue - Double.Parse(TxtResulttxt.Text)).ToString();
+                    break;
+
+                case "x":
+                    TxtResulttxt.Text = (resultValue * double.Parse(TxtResulttxt.Text)).ToString();
+                    break;
+
+                case "÷":
+                    TxtResulttxt.Text = (resultValue / double.Parse(TxtResulttxt.Text)).ToString();
+                    break;
+                default:
+                    break;
+
+            }
+        }
     }
 }
