@@ -69,6 +69,28 @@ namespace Pantallas_proyecto
         private void button2_Click(object sender, EventArgs e)
         {
 
+            try
+            {
+                conect.cerrar();
+                conect.abrir();
+                cmd = new SqlCommand("Update Productos set codigo_categoria = '"+comboBox2.Text+"', descripcion_producto = '" + textBox2.Text + "'Where codigo_producto = "+ textBox1.Text, conect.conexion);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Se Ha actualizado Correctamente");
+                conect.cerrar();
+
+                FrmInventario_Gerente fact = new FrmInventario_Gerente();
+                fact.Show();
+                this.Hide();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
         
         private void btnBuscar_Click(object sender, EventArgs e)
