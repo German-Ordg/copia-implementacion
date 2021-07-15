@@ -45,7 +45,7 @@ namespace Pantallas_proyecto
         //------------------------------------------------------------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------------------------------------------------------------
 
-    
+
         public void cargarDatosCompras(DataGridView dgv, string nombreTabla)//Metodo cargar dato compras
         {
             try
@@ -182,10 +182,18 @@ namespace Pantallas_proyecto
         }
 
 
-       
+
         private void button2_Click_2(object sender, EventArgs e)
         {
 
+
+            //if (producto.Codigo_compra == 0 || Convert.ToInt32(codigoProducto.Text) <= 0)
+            //{
+            //    MessageBox.Show("Ingrese un valor mayor a cero", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    codigoProducto.Clear();
+            //    codigoProducto.Focus();
+
+            //}
 
 
             //---------------------------------------------------------------------------------------------------------------------------------
@@ -194,6 +202,8 @@ namespace Pantallas_proyecto
             {
                 if (codigoCompra.Text == string.Empty || comboProveedor.Text == string.Empty || comboPago.Text == string.Empty || dateFecha.Text == string.Empty)
                     MessageBox.Show("Porfavor llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
                 else
                 {
 
@@ -204,22 +214,27 @@ namespace Pantallas_proyecto
                         MessageBox.Show("Error el codigo de compra ya existe", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
-                    else
-                    {
 
+
+                    else if (producto.Codigo_compra == 0 || Convert.ToInt32(codigoCompra.Text) <= 0)
+                    {
+                        MessageBox.Show("Ingrese un valor mayor a cero", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        codigoCompra.Clear();
+                        codigoCompra.Focus();
+
+                    }
+                    else 
+                    {
                         FrmProductos produc = new FrmProductos();
                         produc.compra.Text = codigoCompra.Text;
                         produc.fecha.Text = dateFecha.Value.ToString("yyyy/MM/dd");
                         produc.proveedor.Text = comboProveedor.SelectedItem.ToString();
                         produc.pago.Text = comboPago.SelectedItem.ToString();
 
-
-
-
-
                         produc.Show();
                         this.Close();
 
+                       codigoCompra.Clear();
 
                     }
 
@@ -231,7 +246,7 @@ namespace Pantallas_proyecto
 
             }
 
-
+            
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)

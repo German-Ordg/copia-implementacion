@@ -56,6 +56,14 @@ namespace Pantallas_proyecto
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dgvProductosCompra = new System.Windows.Forms.DataGridView();
+            this.CodProductodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripciondgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoriadgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.talladgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioCompradgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioVentadgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidaddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descuentodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -74,14 +82,6 @@ namespace Pantallas_proyecto
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.CodProductodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripciondgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoriadgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.talladgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioCompradgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioVentadgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidaddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descuentodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -230,6 +230,7 @@ namespace Pantallas_proyecto
             this.cantidad.Name = "cantidad";
             this.cantidad.Size = new System.Drawing.Size(159, 20);
             this.cantidad.TabIndex = 142;
+            this.cantidad.TextChanged += new System.EventHandler(this.cantidad_TextChanged);
             // 
             // descuento
             // 
@@ -380,6 +381,54 @@ namespace Pantallas_proyecto
             this.dgvProductosCompra.RowHeadersWidth = 51;
             this.dgvProductosCompra.Size = new System.Drawing.Size(715, 224);
             this.dgvProductosCompra.TabIndex = 92;
+            // 
+            // CodProductodgv
+            // 
+            this.CodProductodgv.HeaderText = "Cod. Producto";
+            this.CodProductodgv.Name = "CodProductodgv";
+            this.CodProductodgv.ReadOnly = true;
+            // 
+            // descripciondgv
+            // 
+            this.descripciondgv.HeaderText = "Descripcion";
+            this.descripciondgv.Name = "descripciondgv";
+            this.descripciondgv.ReadOnly = true;
+            // 
+            // categoriadgv
+            // 
+            this.categoriadgv.HeaderText = "Categoria";
+            this.categoriadgv.Name = "categoriadgv";
+            this.categoriadgv.ReadOnly = true;
+            // 
+            // talladgv
+            // 
+            this.talladgv.HeaderText = "Talla";
+            this.talladgv.Name = "talladgv";
+            this.talladgv.ReadOnly = true;
+            // 
+            // PrecioCompradgv
+            // 
+            this.PrecioCompradgv.HeaderText = "Precio Compra";
+            this.PrecioCompradgv.Name = "PrecioCompradgv";
+            this.PrecioCompradgv.ReadOnly = true;
+            // 
+            // PrecioVentadgv
+            // 
+            this.PrecioVentadgv.HeaderText = "Precio Venta";
+            this.PrecioVentadgv.Name = "PrecioVentadgv";
+            this.PrecioVentadgv.ReadOnly = true;
+            // 
+            // Cantidaddgv
+            // 
+            this.Cantidaddgv.HeaderText = "Cantidad";
+            this.Cantidaddgv.Name = "Cantidaddgv";
+            this.Cantidaddgv.ReadOnly = true;
+            // 
+            // descuentodgv
+            // 
+            this.descuentodgv.HeaderText = "Descuento";
+            this.descuentodgv.Name = "descuentodgv";
+            this.descuentodgv.ReadOnly = true;
             // 
             // label12
             // 
@@ -582,54 +631,6 @@ namespace Pantallas_proyecto
             this.label20.TabIndex = 85;
             this.label20.Text = "Fecha compra:";
             // 
-            // CodProductodgv
-            // 
-            this.CodProductodgv.HeaderText = "Cod. Producto";
-            this.CodProductodgv.Name = "CodProductodgv";
-            this.CodProductodgv.ReadOnly = true;
-            // 
-            // descripciondgv
-            // 
-            this.descripciondgv.HeaderText = "Descripcion";
-            this.descripciondgv.Name = "descripciondgv";
-            this.descripciondgv.ReadOnly = true;
-            // 
-            // categoriadgv
-            // 
-            this.categoriadgv.HeaderText = "Categoria";
-            this.categoriadgv.Name = "categoriadgv";
-            this.categoriadgv.ReadOnly = true;
-            // 
-            // talladgv
-            // 
-            this.talladgv.HeaderText = "Talla";
-            this.talladgv.Name = "talladgv";
-            this.talladgv.ReadOnly = true;
-            // 
-            // PrecioCompradgv
-            // 
-            this.PrecioCompradgv.HeaderText = "Precio Compra";
-            this.PrecioCompradgv.Name = "PrecioCompradgv";
-            this.PrecioCompradgv.ReadOnly = true;
-            // 
-            // PrecioVentadgv
-            // 
-            this.PrecioVentadgv.HeaderText = "Precio Venta";
-            this.PrecioVentadgv.Name = "PrecioVentadgv";
-            this.PrecioVentadgv.ReadOnly = true;
-            // 
-            // Cantidaddgv
-            // 
-            this.Cantidaddgv.HeaderText = "Cantidad";
-            this.Cantidaddgv.Name = "Cantidaddgv";
-            this.Cantidaddgv.ReadOnly = true;
-            // 
-            // descuentodgv
-            // 
-            this.descuentodgv.HeaderText = "Descuento";
-            this.descuentodgv.Name = "descuentodgv";
-            this.descuentodgv.ReadOnly = true;
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Maroon;
@@ -651,7 +652,7 @@ namespace Pantallas_proyecto
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1422, 677);
+            this.ClientSize = new System.Drawing.Size(1370, 677);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.groupBox2);
@@ -670,7 +671,7 @@ namespace Pantallas_proyecto
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1438, 716);
-            this.MinimumSize = new System.Drawing.Size(1438, 716);
+            this.MinimumSize = new System.Drawing.Size(1364, 716);
             this.Name = "FrmProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmProductos";
