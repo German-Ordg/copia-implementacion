@@ -55,12 +55,6 @@ namespace Pantallas_proyecto
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.lstCompras = new System.Windows.Forms.DataGridView();
-            this.lstCodProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -108,6 +102,12 @@ namespace Pantallas_proyecto
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label6 = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.lstCodProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lstCompras)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -411,59 +411,6 @@ namespace Pantallas_proyecto
             this.lstCompras.Size = new System.Drawing.Size(1269, 234);
             this.lstCompras.TabIndex = 20;
             this.lstCompras.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.editar);
-            // 
-            // lstCodProducto
-            // 
-            this.lstCodProducto.HeaderText = "Cod. Producto";
-            this.lstCodProducto.MinimumWidth = 100;
-            this.lstCodProducto.Name = "lstCodProducto";
-            this.lstCodProducto.ReadOnly = true;
-            this.lstCodProducto.Width = 125;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 50;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 93;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.MinimumWidth = 270;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 270;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column1.HeaderText = "Precio Unitario";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 119;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column2.HeaderText = "Descuentos y Rebajas Otorgadas";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 167;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column3.HeaderText = "Total.";
-            this.Column3.MinimumWidth = 102;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 102;
             // 
             // label10
             // 
@@ -1011,6 +958,59 @@ namespace Pantallas_proyecto
             this.txtDireccion.Size = new System.Drawing.Size(186, 69);
             this.txtDireccion.TabIndex = 12;
             // 
+            // lstCodProducto
+            // 
+            this.lstCodProducto.HeaderText = "Cod. Producto";
+            this.lstCodProducto.MinimumWidth = 100;
+            this.lstCodProducto.Name = "lstCodProducto";
+            this.lstCodProducto.ReadOnly = true;
+            this.lstCodProducto.Width = 125;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 50;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 93;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.MinimumWidth = 270;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 270;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column1.HeaderText = "Precio Unitario";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 130;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column2.HeaderText = "Descuentos y Rebajas Otorgadas";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 167;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column3.HeaderText = "Total";
+            this.Column3.MinimumWidth = 102;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 102;
+            // 
             // frmPantallaFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1118,12 +1118,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lstCodProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -1137,5 +1131,11 @@ namespace Pantallas_proyecto
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lstCodProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

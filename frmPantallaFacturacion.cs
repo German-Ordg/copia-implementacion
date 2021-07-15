@@ -506,7 +506,7 @@ namespace Pantallas_proyecto
             }
             catch(Exception ex)
             {
-                MessageBox.Show(""+ex.ToString());
+                MessageBox.Show(" codigo empleado    "+ex.ToString());
             }
 
             try
@@ -520,18 +520,50 @@ namespace Pantallas_proyecto
             }
             catch (Exception ex)
             {
-                MessageBox.Show("" + ex.ToString());
+                MessageBox.Show("codigo de pago    " + ex.ToString());
             }
 
-            String ingresoVenta = "insert into [dbo].[Ventas] " +
-                "([codigo_empleado], [codigo_pago], [nombre_cliente], [rtn_cliente], [fecha_venta], [direccion_envio], [impuesto], [total]) " +
-                "values ('"+codigoEmpleado+"', '"+codigoPago+"', '"+txtNombreCliente.Text+"', '"+txtRTN.Text+"', '"+ dtFecha.Value.ToString() +"', 'barrio la cumbre', '250', '2500')";
+
             try
             {
                 con.abrir();
 
+                String ingresoVenta = "insert into [dbo].[Ventas] " +
+                "([codigo_empleado], [codigo_pago], [nombre_cliente], [rtn_cliente], [fecha_venta], [direccion_envio], [impuesto], [total]) " +
+                "values ('" + codigoEmpleado + "', '" + codigoPago + "', '" + txtNombreCliente.Text + "', '" + txtRTN.Text + "', " +
+                "'" + dtFecha.Value.ToString() + "', '" + txtDireccion.Text + "', '" + txtISV15.Text + "', '" + txtTotalPagar.Text + "')";
+                SqlCommand cmd = new SqlCommand(ingresoVenta, con.conexion);
+                cmd.ExecuteNonQuery();
+
+                try
+                {
+                    con.abrir();
+
+                    String ingresoDetalleVenta = "insert into[dbo].[Detalle_Venta] " +
+                    "([codigo_venta], [codigo_producto], [cantidad], [precio_venta], [sub_total]) " +
+                    "values ((select top 1 Ventas.codigo_venta from Ventas order by Ventas.codigo_venta desc), @codigoProducto , @cantidad, @precioVenta, @subTotal)";
+                    cmd = new SqlCommand(ingresoDetalleVenta, con.conexion);
 
 
+                    foreach (DataGridViewRow row in lstCompras.Rows)
+                    {
+                        cmd.Parameters.Clear();
+
+                        cmd.Parameters.AddWithValue("@codigoProducto", Convert.ToString(row.Cells["Cod. Producto"].Value));
+                        cmd.Parameters.AddWithValue("@cantidad", Convert.ToInt32(row.Cells["Cantidad"].Value));
+                        cmd.Parameters.AddWithValue("@precioVenta", Convert.ToInt32(row.Cells["Precio Unitario"].Value));
+                        cmd.Parameters.AddWithValue("@subTotal", Convert.ToInt32(row.Cells["Total"].Value));
+
+                        cmd.ExecuteNonQuery();
+                    }
+
+
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(" ingreso de venta     " + ex.ToString());
+                }
+          
 
             }
             catch (Exception ex)
