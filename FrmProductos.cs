@@ -187,20 +187,7 @@ namespace Pantallas_proyecto
 
             }
 
-            //codigoProducto.Clear();
-            //descripcionProducto.Clear();
-            //cantidad.Clear();
-            //precioActual.Clear();
-            //descuento.Clear();
-            //talla.Clear();
-            //cmbCategoria.Items.Clear();
-            //descripcionProducto.Clear();
-            //precioCompra.Clear();
-            //cmbCategoria.Enabled = true;
-            //descripcionProducto.Enabled = true;
-            //codigoProducto.Enabled = true;
-            //talla.Enabled = true;
-            //categorias();
+          
 
 
         }
@@ -254,14 +241,9 @@ namespace Pantallas_proyecto
                 try
                 {
 
-                    if (descripcionProducto.Text == "  " || talla.Text == "  " || cmbCategoria.Text == "  " || codigoProducto.Text ==string.Empty || cantidad.Text == string.Empty || precioActual.Text == string.Empty || precioCompra.Text == string.Empty || descuento.Text == string.Empty)
-                    {
-                        MessageBox.Show("No ingreso ninguna compra", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-
-                    else
-                    {
-                        producto.Codigo_compra = Convert.ToInt32(compra.Text);
+         
+                   
+                    producto.Codigo_compra = Convert.ToInt32(compra.Text);
                     producto.Descripcion_fecha = fecha.Text;
                     producto.Descripcion_proveedor = proveedor.Text;
                     producto.Codigo_proveedor = producto.buscarProveedor(producto.Descripcion_proveedor);
@@ -271,7 +253,7 @@ namespace Pantallas_proyecto
 
 
 
-                    }
+                    
                 }
 
 
