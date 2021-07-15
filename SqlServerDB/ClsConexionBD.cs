@@ -159,6 +159,21 @@ namespace Pantallas_proyecto
             }
         }
 
+        public void cargarProveedores(DataGridView dgv)
+        {
+            try
+            {
+
+                da = new SqlDataAdapter("SELECT * FROM Proveedores", conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
     }
 

@@ -41,7 +41,6 @@ namespace Pantallas_proyecto
             this.button7 = new System.Windows.Forms.Button();
             this.dgvProovedores = new System.Windows.Forms.DataGridView();
             this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -154,28 +153,13 @@ namespace Pantallas_proyecto
             this.txtTelefono.Size = new System.Drawing.Size(289, 20);
             this.txtTelefono.TabIndex = 55;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Maroon;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(17, 104);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 26);
-            this.button1.TabIndex = 52;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Location = new System.Drawing.Point(568, 105);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(140, 144);
+            this.groupBox1.Size = new System.Drawing.Size(140, 102);
             this.groupBox1.TabIndex = 56;
             this.groupBox1.TabStop = false;
             // 
@@ -224,16 +208,16 @@ namespace Pantallas_proyecto
             // 
             this.toolStripLabel1.ForeColor = System.Drawing.Color.Black;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
-            this.toolStripLabel1.Text = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(38, 22);
+            this.toolStripLabel1.Text = "Fecha";
             this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.ForeColor = System.Drawing.Color.Black;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(86, 22);
-            this.toolStripLabel2.Text = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(33, 22);
+            this.toolStripLabel2.Text = "Hora";
             // 
             // frmProveedores
             // 
@@ -260,6 +244,7 @@ namespace Pantallas_proyecto
             this.Name = "frmProveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Proveedores";
+            this.Load += new System.EventHandler(this.frmProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProovedores)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -280,7 +265,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridView dgvProovedores;
         private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;

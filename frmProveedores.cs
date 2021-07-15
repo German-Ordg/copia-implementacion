@@ -30,9 +30,9 @@ namespace Pantallas_proyecto
             }
         }
 
-        ClsConexionBD conex = new ClsConexionBD();
+        ClsConexionBD conect = new ClsConexionBD();
         SqlCommand cmd;
-        
+
 
 
         private void button7_Click(object sender, EventArgs e)
@@ -44,6 +44,7 @@ namespace Pantallas_proyecto
 
         private void button2_Click(object sender, EventArgs e)
         {
+             dgvProovedores.ForeColor = Color.Black;
             try
             {
                 if (txtNombreProovedor.Text == "  " || txtTelefono.Text == "  " || txtDescripcion.Text == "  ")
@@ -54,11 +55,11 @@ namespace Pantallas_proyecto
 
                 else
                 {
-                    conex.abrir();
-                    cmd = new SqlCommand("Insert into Proveedores(nombre_proveedor, numero_contacto, direccion_proveedor) values('"+ txtNombreProovedor.Text +"','"+ txtTelefono.Text +"','" + txtDescripcion.Text +"')", conex.conexion);
+                    cmd = new SqlCommand("Insert into Proveedores(nombre_proveedor, numero_contacto, direccion_proveedor) values('"+ txtNombreProovedor.Text +"','"+ txtTelefono.Text +"','" + txtDescripcion.Text +"')", conect.conexion);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conex.cerrar();
+                    conect.cargarProveedores(dgvProovedores);
+                    dgvProovedores.ForeColor = Color.Black;
                 }
             }
             catch (Exception ex)
@@ -79,7 +80,7 @@ namespace Pantallas_proyecto
             SqlDataAdapter da;
             DataTable dt;
             DataSet DS;
-            da = new SqlDataAdapter("Select * From Proveedores", conex.conexion);
+            da = new SqlDataAdapter("Select * From Proveedores", conect.conexion);
             dt = new DataTable();
             da.Fill(dt);
             dgvProovedores.DataSource = dt;
@@ -122,18 +123,12 @@ namespace Pantallas_proyecto
                 dgvProovedores[3, indice].Value = txtDescripcion.Text;
                
 
-                cmd = new SqlCommand("update Proveedores set nombre_proveedor = " + txtNombreProovedor.Text + ",  numero_contacto ='" + txtTelefono.Text + "', direccion_proveedor = '" + txtDescripcion.Text + "'  where  = " + codigo, conex.conexion);
+                cmd = new SqlCommand("UPDATE Proveedores SET nombre_proveedor = '" + txtNombreProovedor.Text + "',  numero_contacto = '" + txtTelefono.Text + "', direccion_proveedor = '" + txtDescripcion.Text + "'  where codigo_proveedor = " + codigo, conect.conexion);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("El registro fue actualizado exitosamente");
-                
-                dgvProovedores.ForeColor = Color.Black;
-                SqlDataAdapter da;
-                DataTable dt;
-                da = new SqlDataAdapter("Select * From Proveedores", conex.conexion);
-                dt = new DataTable();
-                da.Fill(dt);
-                dgvProovedores.DataSource = dt;
-
+                conect.cargarProveedores(dgvProovedores);
+               
+               
                 txtNombreProovedor.Clear();
                 txtTelefono.Clear();
                 txtDescripcion.Clear();
@@ -144,6 +139,13 @@ namespace Pantallas_proyecto
             {
                 MessageBox.Show("El registro no pudo ser actualizado" + ex, "INFO", MessageBoxButtons.OK);
             }
+        }
+
+        private void frmProveedores_Load(object sender, EventArgs e)
+        {
+            conect.abrir();
+            conect.cargarProveedores(dgvProovedores);
+            dgvProovedores.ForeColor = Color.Black;
         }
     }
 }
