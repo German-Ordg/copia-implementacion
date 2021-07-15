@@ -218,6 +218,7 @@ namespace Pantallas_proyecto
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            btnImprimirFactura.Enabled = false;
             if(nudCantidad.Value<=fac.CantidadInventario)
             {
                 if (nudCantidad.Value > 0)
@@ -460,6 +461,7 @@ namespace Pantallas_proyecto
                                     }
                                     else
                                     {
+             
                                         reporte();
                                     }
                                 }
@@ -467,6 +469,9 @@ namespace Pantallas_proyecto
 
                             if (rbSinNombre.Checked)
                             {
+
+
+
                                 reporte();
                             }
 
@@ -477,6 +482,63 @@ namespace Pantallas_proyecto
 
         }
 
+
+        public void ingresar()
+        {
+            String codigoEmpleado="";
+            String codigoPago="";
+
+            con.abrir();
+
+            String consultaEmpleado = "select a.codigo_empleado from [dbo].[Usuarios] a where a.nombre_usuario=" + cmbVendedor.SelectedItem.ToString();
+            String consultaPago = "select a.codigo_pago from [dbo].[Metodo_Pago] a where a.descripcion_pago=" + cmbTipoPago.SelectedItem.ToString();
+
+            try
+            {
+
+                cmd = new SqlCommand(consultaEmpleado, con.conexion);
+                dr = cmd.ExecuteReader();
+                while(dr.Read())
+                {
+                    codigoEmpleado = dr["codigo_empleado"].ToString();
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(""+ex.ToString());
+            }
+
+            try
+            {
+                cmd = new SqlCommand(consultaPago, con.conexion);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    codigoPago = dr["codigo_pago"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex.ToString());
+            }
+
+            String ingresoVenta = "insert into [dbo].[Ventas] " +
+                "([codigo_empleado], [codigo_pago], [nombre_cliente], [rtn_cliente], [fecha_venta], [direccion_envio], [impuesto], [total]) " +
+                "values ('"+codigoEmpleado+"', '"+codigoPago+"', '"+txtNombreCliente.Text+"', '"+txtRTN.Text+"', '"+ dtFecha.Value.ToString() +"', 'barrio la cumbre', '250', '2500')";
+            try
+            {
+                con.abrir();
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
 
         public void reporte()
         {

@@ -106,6 +106,8 @@ namespace Pantallas_proyecto
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lstCompras)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -489,6 +491,8 @@ namespace Pantallas_proyecto
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtDireccion);
+            this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.txtNombreCliente);
             this.groupBox3.Controls.Add(this.lblNombre);
             this.groupBox3.Controls.Add(this.groupBox4);
@@ -506,16 +510,16 @@ namespace Pantallas_proyecto
             // 
             // txtNombreCliente
             // 
-            this.txtNombreCliente.Location = new System.Drawing.Point(349, 71);
+            this.txtNombreCliente.Location = new System.Drawing.Point(230, 79);
             this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(243, 22);
+            this.txtNombreCliente.Size = new System.Drawing.Size(186, 22);
             this.txtNombreCliente.TabIndex = 10;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(227, 72);
+            this.lblNombre.Location = new System.Drawing.Point(227, 58);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(109, 17);
@@ -566,16 +570,16 @@ namespace Pantallas_proyecto
             // 
             // txtRTN
             // 
-            this.txtRTN.Location = new System.Drawing.Point(349, 33);
+            this.txtRTN.Location = new System.Drawing.Point(230, 32);
             this.txtRTN.Margin = new System.Windows.Forms.Padding(4);
             this.txtRTN.Name = "txtRTN";
-            this.txtRTN.Size = new System.Drawing.Size(243, 22);
+            this.txtRTN.Size = new System.Drawing.Size(186, 22);
             this.txtRTN.TabIndex = 5;
             // 
             // lblRTN
             // 
             this.lblRTN.AutoSize = true;
-            this.lblRTN.Location = new System.Drawing.Point(283, 33);
+            this.lblRTN.Location = new System.Drawing.Point(227, 11);
             this.lblRTN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRTN.Name = "lblRTN";
             this.lblRTN.Size = new System.Drawing.Size(53, 17);
@@ -988,6 +992,25 @@ namespace Pantallas_proyecto
             this.reportViewer1.Size = new System.Drawing.Size(1295, 650);
             this.reportViewer1.TabIndex = 0;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(431, 11);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 17);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Dirección:";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(434, 32);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDireccion.Multiline = true;
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(186, 69);
+            this.txtDireccion.TabIndex = 12;
+            // 
             // frmPantallaFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1112,5 +1135,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.Label label6;
     }
 }
