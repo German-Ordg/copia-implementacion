@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using Microsoft.Reporting.WinForms;
+
 
 namespace Pantallas_proyecto
 {
@@ -60,6 +62,8 @@ namespace Pantallas_proyecto
         private void button5_Click(object sender, EventArgs e)
         {
 
+            btnImprimirFactura.Enabled = true;
+            txtImporteAgrabado15.Text = "0.00";
 
             double sumaTotales=0;
             double subTotal;
@@ -414,6 +418,8 @@ namespace Pantallas_proyecto
             }
         }
 
+
+
         private void btnImprimirFactura_Click(object sender, EventArgs e)
         {
             if (cmbTipoPago.SelectedIndex == -1)
@@ -454,14 +460,14 @@ namespace Pantallas_proyecto
                                     }
                                     else
                                     {
-
+                                        reporte();
                                     }
                                 }
                             }
 
                             if (rbSinNombre.Checked)
                             {
-
+                                reporte();
                             }
 
                         }
@@ -470,5 +476,69 @@ namespace Pantallas_proyecto
             }
 
         }
+
+
+        public void reporte()
+        {
+            List<impresion> impresion = new List<impresion>();
+            ReportParameter[] parameters = new ReportParameter[7];
+
+            string impuesto = "100";//txtISV15.Text.Trim();
+            string importe = "100";
+            string subtotal = txtSubTotal.Text;
+            string total = txtTotalPagar.Text;
+            string fecha = dtFecha.Text;
+            string rtn = txtRTN.Text;
+            string cliente = cmbVendedor.Text;
+            parameters[0] = new ReportParameter("impuesto", impuesto);
+            parameters[1] = new ReportParameter("importe", importe);
+            parameters[2] = new ReportParameter("subtotal", subtotal);
+            parameters[3] = new ReportParameter("total", total);
+            parameters[4] = new ReportParameter("cliente", cliente);
+            parameters[5] = new ReportParameter("rtn", rtn);
+            parameters[6] = new ReportParameter("fecha", fecha);
+            reportViewer1.LocalReport.SetParameters(parameters);
+
+            impresion.Clear();
+
+            for (int i = 0; i < lstCompras.Rows.Count - 1; i++)
+            {
+                impresion imp = new impresion();
+                imp.cod_producto = (string)this.lstCompras.Rows[i].Cells[0].Value;
+                imp.cantidad = (string)this.lstCompras.Rows[i].Cells[1].Value;
+                imp.descripcion = (string)this.lstCompras.Rows[i].Cells[2].Value;
+                imp.precio = (string)this.lstCompras.Rows[i].Cells[3].Value;
+                imp.descuento = (string)this.lstCompras.Rows[i].Cells[4].Value;
+                imp.total = (string)this.lstCompras.Rows[i].Cells[5].Value;
+                // });
+                impresion.Add(imp);
+
+            }
+
+            this.reportes.SelectedTab = reportes.TabPages["tabPage2"];
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion));
+            this.reportViewer1.RefreshReport();
+        }
+
+
     }
+
+    public class impresion
+    {
+        public string cod_producto { get; set; }
+        public string cantidad { get; set; }
+        public string descripcion { get; set; }
+        public string precio { get; set; }
+        public string descuento { get; set; }
+        public string total { get; set; }
+
+
+
+
+
+    }
+
+
+
 }
