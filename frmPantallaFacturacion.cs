@@ -16,6 +16,9 @@ namespace Pantallas_proyecto
 {
     public partial class frmPantallaFacturacion : Form
     {
+
+        validaciones val = new validaciones();
+
         public frmPantallaFacturacion()
         {
             InitializeComponent();
@@ -688,7 +691,10 @@ namespace Pantallas_proyecto
             this.reportViewer1.RefreshReport();
         }
 
-
+        private void txtRTN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //val.Only_numbers();
+        }
     }
 
     public class impresion

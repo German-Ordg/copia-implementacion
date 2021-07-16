@@ -594,6 +594,7 @@ namespace Pantallas_proyecto
             this.txtRTN.Name = "txtRTN";
             this.txtRTN.Size = new System.Drawing.Size(186, 22);
             this.txtRTN.TabIndex = 5;
+            this.txtRTN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRTN_KeyPress);
             // 
             // lblRTN
             // 
