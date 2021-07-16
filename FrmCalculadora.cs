@@ -10,36 +10,82 @@ using System.Windows.Forms;
 
 namespace Pantallas_proyecto
 {
-    public partial class FrmCalculadora : Form
+    public partial class TxtResultBox : Form
     {
-        public FrmCalculadora()
+        Double resultValue = 0;
+        string OperatorClicked = "";
+        bool isOperatorClicked = false;
+
+        public TxtResultBox()
         {
             InitializeComponent();
         }
-        private const int CP_NOCLOSE_BUTTON = 0x200;
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams myCp = base.CreateParams;
-                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
-                return myCp;
-            }
-        }
-        private void FrmCalculadora_Load(object sender, EventArgs e)
-        {
-            timer1.Enabled = true;
-        }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void click_button(object sender, EventArgs e)
         {
+            if (TxtResulttxt.Text == "0" || (isOperatorClicked))
             
+                TxtResulttxt.Clear();
+                isOperatorClicked = false;
+                Button button = (Button)sender;
+            if(button.Text == "."){
+                if (!TxtResulttxt.Text.Contains("."))
+                    TxtResulttxt.Text = TxtResulttxt.Text + button.Text;
+                
+            }
+            else {
+                TxtResulttxt.Text = TxtResulttxt.Text + button.Text;
+            }
+
+        }
+        private void operator_click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+
+            if (resultValue != 0)
+            {
+                btnigual.PerformClick();
+                OperatorClicked = button.Text;
+                isOperatorClicked = true;
+            }
+            else {
+                OperatorClicked = button.Text;
+                resultValue = Double.Parse(TxtResulttxt.Text);
+                isOperatorClicked = true;
+            }
+            OperatorClicked = button.Text;
+            resultValue = Double.Parse(TxtResulttxt.Text);
+
+           }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            TxtResulttxt.Text = "0";
+            resultValue = 0;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void btnigual_Click(object sender, EventArgs e)
         {
-            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
-            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
+            switch (OperatorClicked) {
+                case "+":
+                    TxtResulttxt.Text = (resultValue + Double.Parse(TxtResulttxt.Text)).ToString();
+                    break;
+
+                case "-":
+                    TxtResulttxt.Text = (resultValue - Double.Parse(TxtResulttxt.Text)).ToString();
+                    break;
+
+                case "x":
+                    TxtResulttxt.Text = (resultValue * double.Parse(TxtResulttxt.Text)).ToString();
+                    break;
+
+                case "÷":
+                    TxtResulttxt.Text = (resultValue / double.Parse(TxtResulttxt.Text)).ToString();
+                    break;
+                default:
+                    break;
+
+            }
         }
     }
 }

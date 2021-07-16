@@ -162,6 +162,12 @@
     </Compile>
     <Compile Include="MetodoBucasrProducto.cs" />
     <Compile Include="MetodoBuscarCodigo.cs" />
+    <Compile Include="FrmValidar-Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmValidar-Prueba.Designer.cs">
+      <DependentUpon>FrmValidar-Prueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerDB\ClsConexionBD.cs" />
     <Compile Include="db_a75e9e_bderickmoncadaDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -361,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmValidar-Prueba.resx">
+      <DependentUpon>FrmValidar-Prueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
