@@ -30,6 +30,7 @@ namespace Pantallas_proyecto
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMetodosdePago));
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.dgvMetodosPago = new System.Windows.Forms.DataGridView();
@@ -197,6 +198,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.dgvMetodosPago);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMetodosdePago";
             this.Text = "Metodos de Pago";
             this.Load += new System.EventHandler(this.FrmMetodosdePago_Load);
