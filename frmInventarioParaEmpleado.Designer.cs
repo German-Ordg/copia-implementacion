@@ -65,7 +65,7 @@ namespace Pantallas_proyecto
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(652, 12);
+            this.button7.Location = new System.Drawing.Point(550, 33);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(112, 26);
             this.button7.TabIndex = 31;
@@ -188,6 +188,7 @@ namespace Pantallas_proyecto
             this.btnBuscar.TabIndex = 61;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // frmInventarioParaEmpleado
             // 

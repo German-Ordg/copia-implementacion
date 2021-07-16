@@ -783,3 +783,4 @@ C:\Users\Sebas\Documents\Clases\Desarrollo de software\Trabajo\obj\Debug\Pantall
 C:\Users\Sebas\Documents\Clases\Desarrollo de software\Trabajo\obj\Debug\Pantallas_proyecto.csproj.CopyComplete
 C:\Users\Sebas\Documents\Clases\Desarrollo de software\Trabajo\obj\Debug\Pantallas_proyecto.exe
 C:\Users\Sebas\Documents\Clases\Desarrollo de software\Trabajo\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmCalculadora.resources
