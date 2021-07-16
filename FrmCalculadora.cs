@@ -14,6 +14,7 @@ namespace Pantallas_proyecto
     {
         Double resultValue = 0;
         string OperatorClicked = "";
+        bool isOperatorClicked = false;
 
         public TxtResultBox()
         {
@@ -22,24 +23,39 @@ namespace Pantallas_proyecto
 
         private void click_button(object sender, EventArgs e)
         {
-            if (TxtResulttxt.Text == "0")
-            {
+            if (TxtResulttxt.Text == "0" || (isOperatorClicked))
+            
                 TxtResulttxt.Clear();
-                //
+                isOperatorClicked = false;
                 Button button = (Button)sender;
+            if(button.Text == "."){
+                if (!TxtResulttxt.Text.Contains("."))
+                    TxtResulttxt.Text = TxtResulttxt.Text + button.Text;
+                
+            }
+            else {
                 TxtResulttxt.Text = TxtResulttxt.Text + button.Text;
-
             }
 
-
-
         }
-
         private void operator_click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
+
+            if (resultValue != 0)
+            {
+                btnigual.PerformClick();
+                OperatorClicked = button.Text;
+                isOperatorClicked = true;
+            }
+            else {
+                OperatorClicked = button.Text;
+                resultValue = Double.Parse(TxtResulttxt.Text);
+                isOperatorClicked = true;
+            }
             OperatorClicked = button.Text;
             resultValue = Double.Parse(TxtResulttxt.Text);
+
            }
 
         private void BtnClear_Click(object sender, EventArgs e)

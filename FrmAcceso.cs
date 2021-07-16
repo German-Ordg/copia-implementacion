@@ -242,7 +242,8 @@ namespace Pantallas_proyecto
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            FrmMenuPrincipal fact = new FrmMenuPrincipal();
+
+            TxtResultBox fact = new TxtResultBox();
             fact.Show();
         }
     }
