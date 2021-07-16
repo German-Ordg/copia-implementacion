@@ -9,11 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using Microsoft.Reporting.WinForms;
+
 
 namespace Pantallas_proyecto
 {
     public partial class frmPantallaFacturacion : Form
     {
+
+        validaciones val = new validaciones();
+
         public frmPantallaFacturacion()
         {
             InitializeComponent();
@@ -59,6 +64,10 @@ namespace Pantallas_proyecto
 
         private void button5_Click(object sender, EventArgs e)
         {
+
+            btnImprimirFactura.Enabled = true;
+            txtImporteAgrabado15.Text = "0.00";
+
             double sumaTotales=0;
             double subTotal;
             double descuentos=0;
@@ -110,6 +119,8 @@ namespace Pantallas_proyecto
 
         private void frmPantallaFacturacion_Load(object sender, EventArgs e)
         {
+
+
                                  
             con.abrir();
             fac.cargarComboboxPago(cmbTipoPago);
@@ -124,6 +135,7 @@ namespace Pantallas_proyecto
             btnEliminarTodo.Enabled = false;
             timer1.Enabled = true;
 
+            this.reportViewer1.RefreshReport();
         }
 
         private void frmPantallaFacturacion_FormClosed(object sender, FormClosedEventArgs e)
@@ -196,62 +208,81 @@ namespace Pantallas_proyecto
         private void rbConNombre_CheckedChanged(object sender, EventArgs e)
         {
             lblRTN.Show();
-            btnAgregarCliente.Show();
-            btnBuscarCliente.Show();
             txtRTN.Show();
+            txtNombreCliente.Show();
+            lblNombre.Show();
         }
 
         private void rbSinNombre_CheckedChanged(object sender, EventArgs e)
         {
             lblRTN.Hide();
-            btnAgregarCliente.Hide();
-            btnBuscarCliente.Hide();
             txtRTN.Hide();
+            txtNombreCliente.Hide();
+            lblNombre.Hide();
+
+            txtRTN.Clear();
+            txtNombreCliente.Clear();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if(nudCantidad.Value<=fac.CantidadInventario)
+
+            btnImprimirFactura.Enabled = false;
+
+
+            bool validar = lstCompras.Rows.Cast<DataGridViewRow>().Any(row => Convert.ToString(row.Cells["CodProducto"].Value) == txtCodProducto.Text);
+
+            if (!validar)
             {
-                if (nudCantidad.Value > 0)
+
+                if (nudCantidad.Value <= fac.CantidadInventario)
                 {
-                    btnEliminar.Enabled = true;
-                    btnEditar.Enabled = true;
-                    btnEliminarTodo.Enabled = true;
-                    btnCalcularFactura.Enabled = true;
+                    if (nudCantidad.Value > 0)
+                    {
+                        btnEliminar.Enabled = true;
+                        btnEditar.Enabled = true;
+                        btnEliminarTodo.Enabled = true;
+                        btnCalcularFactura.Enabled = true;
 
-                    fac.CantidadProducto = Int32.Parse(nudCantidad.Value.ToString());
+                        fac.CantidadProducto = Int32.Parse(nudCantidad.Value.ToString());
 
-                    int indiceDataGrid = lstCompras.Rows.Count - 1;
-                    lstCompras.Rows.Add(1);
+                        int indiceDataGrid = lstCompras.Rows.Count - 1;
+                        lstCompras.Rows.Add(1);
 
-                    double total = (fac.PrecioProducto * fac.CantidadProducto) - fac.DescuentoProducto;
+                        double total = (fac.PrecioProducto * fac.CantidadProducto) - fac.DescuentoProducto;
 
-                    lstCompras.Rows[indiceDataGrid].Cells[0].Value = fac.CodigoProducto.ToString();
-                    lstCompras.Rows[indiceDataGrid].Cells[1].Value = fac.CantidadProducto.ToString();
-                    lstCompras.Rows[indiceDataGrid].Cells[2].Value = fac.DescripcionProducto.ToString();
-                    lstCompras.Rows[indiceDataGrid].Cells[3].Value = fac.PrecioProducto.ToString();
-                    lstCompras.Rows[indiceDataGrid].Cells[4].Value = fac.DescuentoProducto.ToString();
-                    lstCompras.Rows[indiceDataGrid].Cells[5].Value = total.ToString();
+                        lstCompras.Rows[indiceDataGrid].Cells[0].Value = fac.CodigoProducto.ToString();
+                        lstCompras.Rows[indiceDataGrid].Cells[1].Value = fac.CantidadProducto.ToString();
+                        lstCompras.Rows[indiceDataGrid].Cells[2].Value = fac.DescripcionProducto.ToString();
+                        lstCompras.Rows[indiceDataGrid].Cells[3].Value = fac.PrecioProducto.ToString();
+                        lstCompras.Rows[indiceDataGrid].Cells[4].Value = fac.DescuentoProducto.ToString();
+                        lstCompras.Rows[indiceDataGrid].Cells[5].Value = total.ToString();
 
-                    txtCodProducto.Clear();
-                    txtDescripcion.Clear();
-                    txtDescuento.Clear();
-                    txtPrecioUnitario.Clear();
-                    nudCantidad.Value = 1;
-                    btnAgregar.Enabled = false;
+                        txtCodProducto.Clear();
+                        txtDescripcion.Clear();
+                        txtDescuento.Clear();
+                        txtPrecioUnitario.Clear();
+                        nudCantidad.Value = 1;
+                        btnAgregar.Enabled = false;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingrese un número válido en la cantidad", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
 
                 }
                 else
                 {
-                    MessageBox.Show("Ingrese un número válido en la cantidad", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No hay suficiente cantidad en el inventario", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
             else
             {
-                MessageBox.Show("No hay suficiente cantidad en el inventario", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No se puede duplicar el producto en la tabla", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
@@ -326,12 +357,16 @@ namespace Pantallas_proyecto
                 lstCompras.Rows[n].Cells[5].Value = total.ToString();
                 lstCompras.Enabled = true;
                 btnAgregar.Enabled = true;
+                txtCodProducto.Enabled=true;
 
                 txtCodProducto.Clear();
                 txtDescripcion.Clear();
                 txtDescuento.Clear();
                 txtPrecioUnitario.Clear();
                 nudCantidad.Value = 1;
+                btnActualizar.Enabled = false;
+                btnBuscarProducto.Enabled = true;
+                btnEditar.Enabled = true;
             }
             else
             {
@@ -407,5 +442,276 @@ namespace Pantallas_proyecto
                 lstCompras.Refresh();
             }
         }
+
+
+
+        private void btnImprimirFactura_Click(object sender, EventArgs e)
+        {
+            if (cmbTipoPago.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un tipo de pago", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (cmbVendedor.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Seleccione un vendedor", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    if (lstCompras.RowCount == -1)
+                    {
+                        MessageBox.Show("Ingrese un producto a comprar", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        if (rbConNombre.Checked == false && rbSinNombre.Checked == false)
+                        {
+                            MessageBox.Show("Seleccione si la factura es con nombre o sin nombre", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            if (rbConNombre.Checked)
+                            {
+                                if (txtRTN.TextLength == 0)
+                                {
+                                    MessageBox.Show("Ingrese el RTN del cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else
+                                {
+                                    if (txtNombreCliente.TextLength == 0)
+                                    {
+                                        MessageBox.Show("Ingrese el nombre del cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    }
+                                    else
+                                    {
+
+
+                                        ingresar();
+                                        reporte();
+                                    }
+                                }
+                            }
+
+                            if (rbSinNombre.Checked)
+                            {
+
+                                
+                                ingresar();
+
+                                reporte();
+                            }
+
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+        public void ingresar()
+        {
+            String codigoEmpleado="";
+            String codigoPago="";
+
+            con.abrir();
+
+            String tipoPago = cmbTipoPago.SelectedItem.ToString().Trim();
+            String vendedor = cmbVendedor.SelectedItem.ToString().Trim();
+
+            String consultaEmpleado = "select a.codigo_empleado from [dbo].[Usuarios] a join [dbo].[Empleados] b " +
+                "on a.codigo_empleado = b.codigo_empelado where b.[nombre_empleado]+' '+b.[apellido_empleado]= @vendedor";
+
+            String consultaPago = "select [dbo].[Metodo_Pago].codigo_pago from [dbo].[Metodo_Pago]  " +
+                "where [dbo].[Metodo_Pago].descripcion_pago = @pago";
+
+            try
+            {
+
+                cmd = new SqlCommand(consultaEmpleado, con.conexion);
+                cmd.Parameters.Add("@vendedor", SqlDbType.NVarChar).Value = vendedor;
+                dr = cmd.ExecuteReader();
+                
+                while(dr.Read())
+                {
+                    codigoEmpleado = dr["codigo_empleado"].ToString();
+                }
+                
+
+                dr.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(" codigo empleado    "+ex.ToString());
+            }
+
+            try
+            {
+                cmd = new SqlCommand(consultaPago, con.conexion);
+                cmd.Parameters.Add("@pago", SqlDbType.NVarChar).Value = tipoPago;
+                dr = cmd.ExecuteReader();
+                while(dr.Read())
+                {
+                    codigoPago = dr["codigo_pago"].ToString();
+                }
+               
+                dr.Close();
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("codigo de pago    " + ex.ToString());
+            }
+
+            
+            try
+            {
+                con.abrir();
+
+                String ingresoVenta = "insert into [dbo].[Ventas] " +
+                "([codigo_empleado], [codigo_pago], [nombre_cliente], [rtn_cliente], [fecha_venta], [direccion_envio], [impuesto], [total]) " +
+                "values (@codigoEmpleado, @codigoPago, @nombreCliente, @rtn, " +
+                "@fecha, @direccionEnvio, @isv15, @totalPagar)";
+
+                SqlCommand cmd = new SqlCommand(ingresoVenta, con.conexion);
+                cmd.Parameters.Add("@codigoEmpleado", SqlDbType.Int).Value = Int32.Parse(codigoEmpleado) ;
+                cmd.Parameters.Add("@codigoPago", SqlDbType.Int).Value = Int32.Parse(codigoPago);
+                cmd.Parameters.Add("@nombreCliente", SqlDbType.NVarChar).Value = txtNombreCliente.Text;
+                cmd.Parameters.Add("@rtn", SqlDbType.NVarChar).Value = txtRTN.Text;
+                cmd.Parameters.Add("@fecha", SqlDbType.Date).Value = dtFecha.Value.ToString();
+                cmd.Parameters.Add("@direccionEnvio", SqlDbType.NVarChar).Value = txtDireccion.Text;
+                cmd.Parameters.Add("@isv15", SqlDbType.Money).Value = txtISV15.Text;
+                cmd.Parameters.Add("@totalPagar", SqlDbType.Money).Value = txtTotalPagar.Text;
+
+                cmd.ExecuteNonQuery();
+
+                con.cerrar();
+
+                con.abrir();
+
+                String reducirCantidad = "update [dbo].[Productos] set [cantidad_existente] = [cantidad_existente] - @cantidadVendida where [codigo_producto] = @codigoProducto";
+
+                cmd = new SqlCommand(reducirCantidad, con.conexion);
+
+                foreach (DataGridViewRow row in lstCompras.Rows)
+                {
+                    cmd.Parameters.Clear();
+
+                    cmd.Parameters.AddWithValue("@cantidadVendida", Convert.ToInt32(row.Cells["Cantidad"].Value));
+                    cmd.Parameters.AddWithValue("@codigoProducto", Convert.ToInt32(row.Cells["CodProducto"].Value));
+
+                    cmd.ExecuteNonQuery();
+                }
+                con.cerrar();
+
+                con.abrir();
+
+                String ingresoDetalleVenta = "insert into [dbo].[Detalle_Venta] " +
+                "([codigo_venta], [codigo_producto], [cantidad], [precio_venta], [sub_total]) " +
+                "values ((select top 1 Ventas.codigo_venta from Ventas order by Ventas.codigo_venta desc), @codigoProducto , @cantidad, @precioVenta, @subTotal)";
+                cmd = new SqlCommand(ingresoDetalleVenta, con.conexion);
+
+
+                foreach (DataGridViewRow row in lstCompras.Rows)
+                {
+
+                    cmd.Parameters.Clear();
+                                     
+                    cmd.Parameters.AddWithValue("@codigoProducto", Convert.ToInt32(row.Cells["CodProducto"].Value));
+                    cmd.Parameters.AddWithValue("@cantidad", Convert.ToInt32(row.Cells["Cantidad"].Value));
+                    cmd.Parameters.AddWithValue("@precioVenta", Convert.ToDouble(row.Cells["PrecioUnitario"].Value));
+                    cmd.Parameters.AddWithValue("@subTotal", Convert.ToDouble(row.Cells["Total"].Value));
+
+                    cmd.ExecuteNonQuery();
+
+                }
+
+                con.cerrar();
+
+                
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        public void reporte()
+        {
+            List<impresion> impresion = new List<impresion>();
+            ReportParameter[] parameters = new ReportParameter[10];
+
+
+            string impuesto = txtISV15.Text.Trim();
+            string importe = txtImporteAgrabado15.Text.Trim();
+            string subtotal = txtSubTotal.Text;
+            string total = txtTotalPagar.Text;
+            string fecha = dtFecha.Text;
+            string rtn = txtRTN.Text;
+            string cliente = cmbVendedor.Text;
+            string vendedor = cmbVendedor.SelectedItem.ToString();
+            string direccion = txtDireccion.Text;
+            string tipoPago = cmbTipoPago.SelectedItem.ToString();
+            parameters[0] = new ReportParameter("impuesto", impuesto);
+            parameters[1] = new ReportParameter("importe", importe);
+            parameters[2] = new ReportParameter("subtotal", subtotal);
+            parameters[3] = new ReportParameter("total", total);
+            parameters[4] = new ReportParameter("cliente", cliente);
+            parameters[5] = new ReportParameter("rtn", rtn);
+            parameters[6] = new ReportParameter("fecha", fecha);
+            parameters[7] = new ReportParameter("vendedor", vendedor);
+            parameters[8] = new ReportParameter("direccion", direccion);
+            parameters[9] = new ReportParameter("tipoPago", tipoPago);
+
+
+            reportViewer1.LocalReport.SetParameters(parameters);
+
+            impresion.Clear();
+
+            for (int i = 0; i < lstCompras.Rows.Count - 1; i++)
+            {
+                impresion imp = new impresion();
+                imp.cod_producto = (string)this.lstCompras.Rows[i].Cells[0].Value;
+                imp.cantidad = (string)this.lstCompras.Rows[i].Cells[1].Value;
+                imp.descripcion = (string)this.lstCompras.Rows[i].Cells[2].Value;
+                imp.precio = (string)this.lstCompras.Rows[i].Cells[3].Value;
+                imp.descuento = (string)this.lstCompras.Rows[i].Cells[4].Value;
+                imp.total = (string)this.lstCompras.Rows[i].Cells[5].Value;
+                // });
+                impresion.Add(imp);
+
+            }
+
+            this.reportes.SelectedTab = reportes.TabPages["tabPage2"];
+            reportViewer1.LocalReport.DataSources.Clear();
+            reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion));
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void txtRTN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //val.Only_numbers();
+        }
     }
+
+    public class impresion
+    {
+        public string cod_producto { get; set; }
+        public string cantidad { get; set; }
+        public string descripcion { get; set; }
+        public string precio { get; set; }
+        public string descuento { get; set; }
+        public string total { get; set; }
+
+
+
+
+
+    }
+
+
+
 }
