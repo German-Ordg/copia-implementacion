@@ -93,6 +93,8 @@ namespace Pantallas_proyecto
             this.txtNombreProovedor.Name = "txtNombreProovedor";
             this.txtNombreProovedor.Size = new System.Drawing.Size(289, 20);
             this.txtNombreProovedor.TabIndex = 49;
+            this.txtNombreProovedor.TextChanged += new System.EventHandler(this.txtNombreProovedor_TextChanged);
+            this.txtNombreProovedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreProovedor_KeyPress);
             // 
             // label3
             // 
@@ -152,6 +154,8 @@ namespace Pantallas_proyecto
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(289, 20);
             this.txtTelefono.TabIndex = 55;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // groupBox1
             // 

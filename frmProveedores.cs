@@ -147,5 +147,64 @@ namespace Pantallas_proyecto
             conect.cargarProveedores(dgvProovedores);
             dgvProovedores.ForeColor = Color.Black;
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int indice = dgvProovedores.CurrentRow.Index;
+                int codigo = Convert.ToInt32(dgvProovedores[0, indice].Value);
+
+                if (indice == -1)
+                {
+                    MessageBox.Show("Seleccione los datos que desea eliminar");
+                }
+                else
+                {
+                    cmd = new SqlCommand("DELETE FROM Proveedores Where codigo_proveedor = " + codigo, conect.conexion);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Se han eliminado los datos correctamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conect.cargarMetodosPago(dgvProovedores);
+                    txtDescripcion.Clear();
+
+                    indice = -1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo eliminar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtNombreProovedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreProovedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo Letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
     }
-}
+    }
+
