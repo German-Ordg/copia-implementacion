@@ -147,5 +147,39 @@ namespace Pantallas_proyecto
             conect.cargarProveedores(dgvProovedores);
             dgvProovedores.ForeColor = Color.Black;
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int indice = dgvProovedores.CurrentRow.Index;
+                int codigo = Convert.ToInt32(dgvProovedores[0, indice].Value);
+
+                if (indice == -1)
+                {
+                    MessageBox.Show("Seleccione los datos que desea eliminar");
+                }
+                else
+                {
+                    cmd = new SqlCommand("DELETE FROM Proveedores Where codigo_proveedor = " + codigo, conect.conexion);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Se han eliminado los datos correctamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conect.cargarMetodosPago(dgvProovedores);
+                    txtDescripcion.Clear();
+
+                    indice = -1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo eliminar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
-}
+    }
+
