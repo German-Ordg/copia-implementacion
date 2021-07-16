@@ -649,9 +649,9 @@ namespace Pantallas_proyecto
             string fecha = dtFecha.Text;
             string rtn = txtRTN.Text;
             string cliente = cmbVendedor.Text;
-            String vendedor = cmbVendedor.SelectedItem.ToString();
-            String direccion = txtDireccion.Text;
-            String tipoPago = cmbTipoPago.SelectedItem.ToString();
+            string vendedor = cmbVendedor.SelectedItem.ToString();
+            string direccion = txtDireccion.Text;
+            string tipoPago = cmbTipoPago.SelectedItem.ToString();
             parameters[0] = new ReportParameter("impuesto", impuesto);
             parameters[1] = new ReportParameter("importe", importe);
             parameters[2] = new ReportParameter("subtotal", subtotal);
