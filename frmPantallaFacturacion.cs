@@ -216,53 +216,70 @@ namespace Pantallas_proyecto
             txtRTN.Hide();
             txtNombreCliente.Hide();
             lblNombre.Hide();
+
+            txtRTN.Clear();
+            txtNombreCliente.Clear();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
 
             btnImprimirFactura.Enabled = false;
-            if(nudCantidad.Value<=fac.CantidadInventario)
+
+
+            bool validar = lstCompras.Rows.Cast<DataGridViewRow>().Any(row => Convert.ToString(row.Cells["CodProducto"].Value) == txtCodProducto.Text);
+
+            if (!validar)
             {
-                if (nudCantidad.Value > 0)
+
+                if (nudCantidad.Value <= fac.CantidadInventario)
                 {
-                    btnEliminar.Enabled = true;
-                    btnEditar.Enabled = true;
-                    btnEliminarTodo.Enabled = true;
-                    btnCalcularFactura.Enabled = true;
+                    if (nudCantidad.Value > 0)
+                    {
+                        btnEliminar.Enabled = true;
+                        btnEditar.Enabled = true;
+                        btnEliminarTodo.Enabled = true;
+                        btnCalcularFactura.Enabled = true;
 
-                    fac.CantidadProducto = Int32.Parse(nudCantidad.Value.ToString());
+                        fac.CantidadProducto = Int32.Parse(nudCantidad.Value.ToString());
 
-                    int indiceDataGrid = lstCompras.Rows.Count - 1;
-                    lstCompras.Rows.Add(1);
+                        int indiceDataGrid = lstCompras.Rows.Count - 1;
+                        lstCompras.Rows.Add(1);
 
-                    double total = (fac.PrecioProducto * fac.CantidadProducto) - fac.DescuentoProducto;
+                        double total = (fac.PrecioProducto * fac.CantidadProducto) - fac.DescuentoProducto;
 
-                    lstCompras.Rows[indiceDataGrid].Cells[0].Value = fac.CodigoProducto.ToString();
-                    lstCompras.Rows[indiceDataGrid].Cells[1].Value = fac.CantidadProducto.ToString();
-                    lstCompras.Rows[indiceDataGrid].Cells[2].Value = fac.DescripcionProducto.ToString();
-                    lstCompras.Rows[indiceDataGrid].Cells[3].Value = fac.PrecioProducto.ToString();
-                    lstCompras.Rows[indiceDataGrid].Cells[4].Value = fac.DescuentoProducto.ToString();
-                    lstCompras.Rows[indiceDataGrid].Cells[5].Value = total.ToString();
+                        lstCompras.Rows[indiceDataGrid].Cells[0].Value = fac.CodigoProducto.ToString();
+                        lstCompras.Rows[indiceDataGrid].Cells[1].Value = fac.CantidadProducto.ToString();
+                        lstCompras.Rows[indiceDataGrid].Cells[2].Value = fac.DescripcionProducto.ToString();
+                        lstCompras.Rows[indiceDataGrid].Cells[3].Value = fac.PrecioProducto.ToString();
+                        lstCompras.Rows[indiceDataGrid].Cells[4].Value = fac.DescuentoProducto.ToString();
+                        lstCompras.Rows[indiceDataGrid].Cells[5].Value = total.ToString();
 
-                    txtCodProducto.Clear();
-                    txtDescripcion.Clear();
-                    txtDescuento.Clear();
-                    txtPrecioUnitario.Clear();
-                    nudCantidad.Value = 1;
-                    btnAgregar.Enabled = false;
+                        txtCodProducto.Clear();
+                        txtDescripcion.Clear();
+                        txtDescuento.Clear();
+                        txtPrecioUnitario.Clear();
+                        nudCantidad.Value = 1;
+                        btnAgregar.Enabled = false;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingrese un número válido en la cantidad", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
 
                 }
                 else
                 {
-                    MessageBox.Show("Ingrese un número válido en la cantidad", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No hay suficiente cantidad en el inventario", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
             else
             {
-                MessageBox.Show("No hay suficiente cantidad en el inventario", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No se puede duplicar el producto en la tabla", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
@@ -346,6 +363,7 @@ namespace Pantallas_proyecto
                 nudCantidad.Value = 1;
                 btnActualizar.Enabled = false;
                 btnBuscarProducto.Enabled = true;
+                btnEditar.Enabled = true;
             }
             else
             {
@@ -621,7 +639,7 @@ namespace Pantallas_proyecto
         public void reporte()
         {
             List<impresion> impresion = new List<impresion>();
-            ReportParameter[] parameters = new ReportParameter[7];
+            ReportParameter[] parameters = new ReportParameter[10];
 
 
             string impuesto = txtISV15.Text.Trim();
@@ -631,9 +649,9 @@ namespace Pantallas_proyecto
             string fecha = dtFecha.Text;
             string rtn = txtRTN.Text;
             string cliente = cmbVendedor.Text;
-          /*  String vendedor = cmbVendedor.SelectedItem.ToString();
+            String vendedor = cmbVendedor.SelectedItem.ToString();
             String direccion = txtDireccion.Text;
-            String tipoPago = cmbTipoPago.SelectedItem.ToString();*/
+            String tipoPago = cmbTipoPago.SelectedItem.ToString();
             parameters[0] = new ReportParameter("impuesto", impuesto);
             parameters[1] = new ReportParameter("importe", importe);
             parameters[2] = new ReportParameter("subtotal", subtotal);
@@ -641,6 +659,11 @@ namespace Pantallas_proyecto
             parameters[4] = new ReportParameter("cliente", cliente);
             parameters[5] = new ReportParameter("rtn", rtn);
             parameters[6] = new ReportParameter("fecha", fecha);
+            parameters[7] = new ReportParameter("vendedor", vendedor);
+            parameters[8] = new ReportParameter("direccion", direccion);
+            parameters[9] = new ReportParameter("tipoPago", tipoPago);
+
+
             reportViewer1.LocalReport.SetParameters(parameters);
 
             impresion.Clear();
