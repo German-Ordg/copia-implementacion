@@ -30,13 +30,20 @@ namespace Pantallas_proyecto
 
         public void MostrarDatos()
         {
-            string consulta = "SELECT codigo_puesto as Código, descripcion_puesto as Puesto FROM Empleados_Puestos";
-            SqlDataAdapter adaptador = new SqlDataAdapter(consulta, connect.conexion);
-            DataTable tabla = new DataTable();
-            adaptador.Fill(tabla);
+            try
+            {
+                string consulta = "SELECT codigo_puesto as Código, descripcion_puesto as Puesto FROM Empleados_Puestos";
+                SqlDataAdapter adaptador = new SqlDataAdapter(consulta, connect.conexion);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
 
-            DgvPuesto.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            DgvPuesto.DataSource = tabla;
+                DgvPuesto.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                DgvPuesto.DataSource = tabla;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public void Limpiar()
@@ -67,15 +74,30 @@ namespace Pantallas_proyecto
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO Empleados_Puestos (descripcion_puesto) VALUES (@puesto)";
-            connect.abrir();
-            SqlCommand comando = new SqlCommand(query, connect.conexion);
-            comando.Parameters.AddWithValue("@puesto", txtPosicion.Text);
-            comando.ExecuteNonQuery();
-            connect.abrir();
-            MessageBox.Show("Nuevo Puesto Insertado");
-            Limpiar();
-            MostrarDatos();
+            try
+            {
+                if (txtPosicion.Text == "")
+                {
+                    MessageBox.Show("No puede ingresar datos en blanco", "Información", MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                }
+                else
+                {
+                    string query = "INSERT INTO Empleados_Puestos (descripcion_puesto) VALUES (@puesto)";
+                    connect.abrir();
+                    SqlCommand comando = new SqlCommand(query, connect.conexion);
+                    comando.Parameters.AddWithValue("@puesto", txtPosicion.Text);
+                    comando.ExecuteNonQuery();
+                    connect.abrir();
+                    MessageBox.Show("Nuevo Puesto Insertado");
+                    Limpiar();
+                    MostrarDatos();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
@@ -99,15 +121,22 @@ namespace Pantallas_proyecto
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            string query = "Delete from Empleados_Puestos WHERE codigo_puesto=@ID";
-            connect.abrir();
-            SqlCommand comando = new SqlCommand(query, connect.conexion);
-            comando.Parameters.AddWithValue("@ID", txtCodigo.Text);
-            comando.ExecuteNonQuery();
-            connect.cerrar();
-            MessageBox.Show("Puesto de Trabajo Eliminado");
-            Limpiar();
-            MostrarDatos();
+            try
+            {
+                string query = "Delete from Empleados_Puestos WHERE codigo_puesto=@ID";
+                connect.abrir();
+                SqlCommand comando = new SqlCommand(query, connect.conexion);
+                comando.Parameters.AddWithValue("@ID", txtCodigo.Text);
+                comando.ExecuteNonQuery();
+                connect.cerrar();
+                MessageBox.Show("Puesto de Trabajo Eliminado");
+                Limpiar();
+                MostrarDatos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)

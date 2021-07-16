@@ -198,7 +198,7 @@ namespace Pantallas_proyecto
             conect2.abrir();
 
 
-            string query = "Select *from Compras where dcodigo_compra =" + codigo_compra ;
+            string query = "Select *from Compras where codigo_compra =" + codigo_compra ;
             SqlCommand command = new SqlCommand(query, conect2.conexion);
 
             int lastId = Convert.ToInt32(command.ExecuteScalar());
@@ -228,6 +228,8 @@ namespace Pantallas_proyecto
 
 
         }
+
+
 
 
         public int buscarProducto2(String dgv)
