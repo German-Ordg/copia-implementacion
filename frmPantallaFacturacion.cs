@@ -116,6 +116,8 @@ namespace Pantallas_proyecto
 
         private void frmPantallaFacturacion_Load(object sender, EventArgs e)
         {
+
+
                                  
             con.abrir();
             fac.cargarComboboxPago(cmbTipoPago);
@@ -218,6 +220,7 @@ namespace Pantallas_proyecto
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+
             btnImprimirFactura.Enabled = false;
             if(nudCantidad.Value<=fac.CantidadInventario)
             {
@@ -435,7 +438,7 @@ namespace Pantallas_proyecto
                 }
                 else
                 {
-                    if (lstCodProducto.Index == -1)
+                    if (lstCompras.RowCount == -1)
                     {
                         MessageBox.Show("Ingrese un producto a comprar", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -461,7 +464,9 @@ namespace Pantallas_proyecto
                                     }
                                     else
                                     {
-             
+
+
+                                        ingresar();
                                         reporte();
                                     }
                                 }
@@ -470,7 +475,8 @@ namespace Pantallas_proyecto
                             if (rbSinNombre.Checked)
                             {
 
-
+                                
+                                ingresar();
 
                                 reporte();
                             }
@@ -490,19 +496,29 @@ namespace Pantallas_proyecto
 
             con.abrir();
 
-            String consultaEmpleado = "select a.codigo_empleado from [dbo].[Usuarios] a where a.nombre_usuario=" + cmbVendedor.SelectedItem.ToString();
-            String consultaPago = "select a.codigo_pago from [dbo].[Metodo_Pago] a where a.descripcion_pago=" + cmbTipoPago.SelectedItem.ToString();
+            String tipoPago = cmbTipoPago.SelectedItem.ToString().Trim();
+            String vendedor = cmbVendedor.SelectedItem.ToString().Trim();
+
+            String consultaEmpleado = "select a.codigo_empleado from [dbo].[Usuarios] a join [dbo].[Empleados] b " +
+                "on a.codigo_empleado = b.codigo_empelado where b.[nombre_empleado]+' '+b.[apellido_empleado]= @vendedor";
+
+            String consultaPago = "select [dbo].[Metodo_Pago].codigo_pago from [dbo].[Metodo_Pago]  " +
+                "where [dbo].[Metodo_Pago].descripcion_pago = @pago";
 
             try
             {
 
                 cmd = new SqlCommand(consultaEmpleado, con.conexion);
+                cmd.Parameters.Add("@vendedor", SqlDbType.NVarChar).Value = vendedor;
                 dr = cmd.ExecuteReader();
+                
                 while(dr.Read())
                 {
                     codigoEmpleado = dr["codigo_empleado"].ToString();
                 }
                 
+
+                dr.Close();
             }
             catch(Exception ex)
             {
@@ -512,58 +528,88 @@ namespace Pantallas_proyecto
             try
             {
                 cmd = new SqlCommand(consultaPago, con.conexion);
+                cmd.Parameters.Add("@pago", SqlDbType.NVarChar).Value = tipoPago;
                 dr = cmd.ExecuteReader();
-                while (dr.Read())
+                while(dr.Read())
                 {
                     codigoPago = dr["codigo_pago"].ToString();
                 }
+               
+                dr.Close();
+
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show("codigo de pago    " + ex.ToString());
             }
 
-
+            
             try
             {
                 con.abrir();
 
                 String ingresoVenta = "insert into [dbo].[Ventas] " +
                 "([codigo_empleado], [codigo_pago], [nombre_cliente], [rtn_cliente], [fecha_venta], [direccion_envio], [impuesto], [total]) " +
-                "values ('" + codigoEmpleado + "', '" + codigoPago + "', '" + txtNombreCliente.Text + "', '" + txtRTN.Text + "', " +
-                "'" + dtFecha.Value.ToString() + "', '" + txtDireccion.Text + "', '" + txtISV15.Text + "', '" + txtTotalPagar.Text + "')";
+                "values (@codigoEmpleado, @codigoPago, @nombreCliente, @rtn, " +
+                "@fecha, @direccionEnvio, @isv15, @totalPagar)";
+
                 SqlCommand cmd = new SqlCommand(ingresoVenta, con.conexion);
+                cmd.Parameters.Add("@codigoEmpleado", SqlDbType.Int).Value = Int32.Parse(codigoEmpleado) ;
+                cmd.Parameters.Add("@codigoPago", SqlDbType.Int).Value = Int32.Parse(codigoPago);
+                cmd.Parameters.Add("@nombreCliente", SqlDbType.NVarChar).Value = txtNombreCliente.Text;
+                cmd.Parameters.Add("@rtn", SqlDbType.NVarChar).Value = txtRTN.Text;
+                cmd.Parameters.Add("@fecha", SqlDbType.Date).Value = dtFecha.Value.ToString();
+                cmd.Parameters.Add("@direccionEnvio", SqlDbType.NVarChar).Value = txtDireccion.Text;
+                cmd.Parameters.Add("@isv15", SqlDbType.Money).Value = txtISV15.Text;
+                cmd.Parameters.Add("@totalPagar", SqlDbType.Money).Value = txtTotalPagar.Text;
+
                 cmd.ExecuteNonQuery();
 
-                try
+                con.cerrar();
+
+                con.abrir();
+
+                String reducirCantidad = "update [dbo].[Productos] set [cantidad_existente] = [cantidad_existente] - @cantidadVendida where [codigo_producto] = @codigoProducto";
+
+                cmd = new SqlCommand(reducirCantidad, con.conexion);
+
+                foreach (DataGridViewRow row in lstCompras.Rows)
                 {
-                    con.abrir();
+                    cmd.Parameters.Clear();
 
-                    String ingresoDetalleVenta = "insert into[dbo].[Detalle_Venta] " +
-                    "([codigo_venta], [codigo_producto], [cantidad], [precio_venta], [sub_total]) " +
-                    "values ((select top 1 Ventas.codigo_venta from Ventas order by Ventas.codigo_venta desc), @codigoProducto , @cantidad, @precioVenta, @subTotal)";
-                    cmd = new SqlCommand(ingresoDetalleVenta, con.conexion);
+                    cmd.Parameters.AddWithValue("@cantidadVendida", Convert.ToInt32(row.Cells["Cantidad"].Value));
+                    cmd.Parameters.AddWithValue("@codigoProducto", Convert.ToInt32(row.Cells["CodProducto"].Value));
+
+                    cmd.ExecuteNonQuery();
+                }
+                con.cerrar();
+
+                con.abrir();
+
+                String ingresoDetalleVenta = "insert into [dbo].[Detalle_Venta] " +
+                "([codigo_venta], [codigo_producto], [cantidad], [precio_venta], [sub_total]) " +
+                "values ((select top 1 Ventas.codigo_venta from Ventas order by Ventas.codigo_venta desc), @codigoProducto , @cantidad, @precioVenta, @subTotal)";
+                cmd = new SqlCommand(ingresoDetalleVenta, con.conexion);
 
 
-                    foreach (DataGridViewRow row in lstCompras.Rows)
-                    {
-                        cmd.Parameters.Clear();
+                foreach (DataGridViewRow row in lstCompras.Rows)
+                {
 
-                        cmd.Parameters.AddWithValue("@codigoProducto", Convert.ToString(row.Cells["Cod. Producto"].Value));
-                        cmd.Parameters.AddWithValue("@cantidad", Convert.ToInt32(row.Cells["Cantidad"].Value));
-                        cmd.Parameters.AddWithValue("@precioVenta", Convert.ToInt32(row.Cells["Precio Unitario"].Value));
-                        cmd.Parameters.AddWithValue("@subTotal", Convert.ToInt32(row.Cells["Total"].Value));
+                    cmd.Parameters.Clear();
+                                     
+                    cmd.Parameters.AddWithValue("@codigoProducto", Convert.ToInt32(row.Cells["CodProducto"].Value));
+                    cmd.Parameters.AddWithValue("@cantidad", Convert.ToInt32(row.Cells["Cantidad"].Value));
+                    cmd.Parameters.AddWithValue("@precioVenta", Convert.ToDouble(row.Cells["PrecioUnitario"].Value));
+                    cmd.Parameters.AddWithValue("@subTotal", Convert.ToDouble(row.Cells["Total"].Value));
 
-                        cmd.ExecuteNonQuery();
-                    }
-
+                    cmd.ExecuteNonQuery();
 
                 }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(" ingreso de venta     " + ex.ToString());
-                }
-          
+
+                con.cerrar();
+
+                
 
             }
             catch (Exception ex)
@@ -577,13 +623,17 @@ namespace Pantallas_proyecto
             List<impresion> impresion = new List<impresion>();
             ReportParameter[] parameters = new ReportParameter[7];
 
-            string impuesto = "100";//txtISV15.Text.Trim();
-            string importe = "100";
+
+            string impuesto = txtISV15.Text.Trim();
+            string importe = txtImporteAgrabado15.Text.Trim();
             string subtotal = txtSubTotal.Text;
             string total = txtTotalPagar.Text;
             string fecha = dtFecha.Text;
             string rtn = txtRTN.Text;
             string cliente = cmbVendedor.Text;
+          /*  String vendedor = cmbVendedor.SelectedItem.ToString();
+            String direccion = txtDireccion.Text;
+            String tipoPago = cmbTipoPago.SelectedItem.ToString();*/
             parameters[0] = new ReportParameter("impuesto", impuesto);
             parameters[1] = new ReportParameter("importe", importe);
             parameters[2] = new ReportParameter("subtotal", subtotal);
