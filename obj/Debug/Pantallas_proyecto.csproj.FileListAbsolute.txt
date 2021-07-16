@@ -516,7 +516,6 @@ C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.csproj.CopyComplete
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.exe
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.pdb
-C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmCalculadora.resources
 C:\Users\Sebas\Desktop\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmCalculadora.resources
 C:\Users\Administrador\Desktop\Repositorio Desarrollo\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.exe.config
 C:\Users\Administrador\Desktop\Repositorio Desarrollo\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.exe
@@ -692,3 +691,5 @@ C:\Users\Usuario\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas
 C:\Users\Usuario\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.CopyComplete
 C:\Users\Usuario\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.exe
 C:\Users\Usuario\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.TxtResultBox.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmValidar_Prueba.resources

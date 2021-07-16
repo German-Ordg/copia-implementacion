@@ -180,5 +180,12 @@ namespace Pantallas_proyecto
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            TxtResultBox gerente = new TxtResultBox();
+            gerente.Show();
+            
+        }
     }
 }
