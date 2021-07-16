@@ -29,6 +29,7 @@ namespace Pantallas_proyecto
         /// </summary>
         private void InitializeComponent()
         {
+            this.Load += new System.EventHandler(this.FrmMenuCRUD_Load);
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuCRUD));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();

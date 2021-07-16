@@ -138,6 +138,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_a75e9e_bderickmoncadaDataSetINVENTARIO.xsd</DependentUpon>
     </Compile>
+    <Compile Include="db_a75e9e_bderickmoncadaDataSetrotacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSetrotacion.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dominio\Pocisiones.cs" />
     <Compile Include="ClsClientes.cs" />
     <Compile Include="Dominio\UserModel.cs" />
@@ -579,6 +584,17 @@
     </None>
     <None Include="db_a75e9e_bderickmoncadaDataSetINVENTARIO.xss">
       <DependentUpon>db_a75e9e_bderickmoncadaDataSetINVENTARIO.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSetrotacion.xsc">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSetrotacion.xsd</DependentUpon>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSetrotacion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a75e9e_bderickmoncadaDataSetrotacion.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a75e9e_bderickmoncadaDataSetrotacion.xss">
+      <DependentUpon>db_a75e9e_bderickmoncadaDataSetrotacion.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

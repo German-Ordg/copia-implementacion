@@ -303,13 +303,12 @@
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="fecha_compra">
-                      <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=CDate(Fields!fecha_compra.Value).ToString("dd/MM/yyyy")</Value>
+                              <Value>=Fields!fecha_compra.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
