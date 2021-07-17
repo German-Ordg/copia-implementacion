@@ -87,5 +87,10 @@ namespace Pantallas_proyecto
 
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
