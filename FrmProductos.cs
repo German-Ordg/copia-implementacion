@@ -83,10 +83,10 @@ namespace Pantallas_proyecto
                 {
 
                     producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
-                    producto.Precio_actual = Convert.ToInt32(precioActual.Text);
-                    producto.Precio_compra = Convert.ToInt32(precioCompra.Text);
+                    producto.Precio_actual = Convert.ToDouble(precioActual.Text);
+                    producto.Precio_compra = Convert.ToDouble(precioCompra.Text);
                     producto.Cantidad = Convert.ToInt32(cantidad.Text);
-                    producto.Descuento = Convert.ToInt32(descuento.Text);
+                    producto.Descuento = Convert.ToDouble(descuento.Text);
 
 
                     if (producto.Codigo_producto == 0 || producto.Codigo_producto <= 0)
