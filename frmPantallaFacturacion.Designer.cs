@@ -627,6 +627,7 @@ namespace Pantallas_proyecto
             // cmbVendedor
             // 
             this.cmbVendedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbVendedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVendedor.FormattingEnabled = true;
             this.cmbVendedor.Location = new System.Drawing.Point(400, 54);
             this.cmbVendedor.Margin = new System.Windows.Forms.Padding(4);
@@ -647,6 +648,7 @@ namespace Pantallas_proyecto
             // cmbTipoPago
             // 
             this.cmbTipoPago.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbTipoPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoPago.FormattingEnabled = true;
             this.cmbTipoPago.Location = new System.Drawing.Point(400, 21);
             this.cmbTipoPago.Margin = new System.Windows.Forms.Padding(4);
@@ -1027,8 +1029,8 @@ namespace Pantallas_proyecto
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(15220, 8470);
-            this.MinimumSize = new System.Drawing.Size(1322, 747);
+            this.MaximumSize = new System.Drawing.Size(1359, 847);
+            this.MinimumSize = new System.Drawing.Size(1359, 847);
             this.Name = "frmPantallaFacturacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Facturación";

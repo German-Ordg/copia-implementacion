@@ -21,6 +21,17 @@ namespace Pantallas_proyecto
             InitializeComponent();
         }
 
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
+        }
+
         private void click_button(object sender, EventArgs e)
         {
             if (TxtResulttxt.Text == "0" || (isOperatorClicked))
@@ -90,7 +101,7 @@ namespace Pantallas_proyecto
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

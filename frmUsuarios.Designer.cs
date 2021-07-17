@@ -75,7 +75,7 @@ namespace Pantallas_proyecto
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button1.Location = new System.Drawing.Point(660, 65);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 46);
             this.button1.TabIndex = 11;
@@ -131,7 +131,7 @@ namespace Pantallas_proyecto
             // txtusuario
             // 
             this.txtusuario.Location = new System.Drawing.Point(287, 186);
-            this.txtusuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtusuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(211, 22);
             this.txtusuario.TabIndex = 18;
@@ -139,7 +139,7 @@ namespace Pantallas_proyecto
             // txtcorreo
             // 
             this.txtcorreo.Location = new System.Drawing.Point(287, 244);
-            this.txtcorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(211, 22);
             this.txtcorreo.TabIndex = 19;
@@ -147,7 +147,7 @@ namespace Pantallas_proyecto
             // txtcontra
             // 
             this.txtcontra.Location = new System.Drawing.Point(287, 304);
-            this.txtcontra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcontra.Margin = new System.Windows.Forms.Padding(4);
             this.txtcontra.Name = "txtcontra";
             this.txtcontra.Size = new System.Drawing.Size(211, 22);
             this.txtcontra.TabIndex = 20;
@@ -160,7 +160,7 @@ namespace Pantallas_proyecto
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button2.Location = new System.Drawing.Point(39, 532);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(165, 50);
             this.button2.TabIndex = 23;
@@ -170,12 +170,13 @@ namespace Pantallas_proyecto
             // 
             // cmbtipousr
             // 
+            this.cmbtipousr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbtipousr.FormattingEnabled = true;
             this.cmbtipousr.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
+            "ACTIVO",
+            "INACTIVO"});
             this.cmbtipousr.Location = new System.Drawing.Point(287, 437);
-            this.cmbtipousr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbtipousr.Margin = new System.Windows.Forms.Padding(4);
             this.cmbtipousr.Name = "cmbtipousr";
             this.cmbtipousr.Size = new System.Drawing.Size(211, 24);
             this.cmbtipousr.TabIndex = 24;
@@ -183,11 +184,11 @@ namespace Pantallas_proyecto
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(541, 155);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(560, 157);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(391, 279);
+            this.dataGridView1.Size = new System.Drawing.Size(755, 279);
             this.dataGridView1.TabIndex = 25;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_2);
@@ -200,7 +201,7 @@ namespace Pantallas_proyecto
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button3.Location = new System.Drawing.Point(729, 532);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(203, 50);
             this.button3.TabIndex = 26;
@@ -252,7 +253,7 @@ namespace Pantallas_proyecto
             this.toolStripLabel2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 706);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1122, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1369, 25);
             this.toolStrip1.TabIndex = 30;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -277,7 +278,7 @@ namespace Pantallas_proyecto
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1122, 731);
+            this.ClientSize = new System.Drawing.Size(1369, 731);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.txtcodemp);
             this.Controls.Add(this.label7);
@@ -297,10 +298,10 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(96366, 59166);
-            this.MinimumSize = new System.Drawing.Size(963, 591);
+            this.MaximumSize = new System.Drawing.Size(1387, 778);
+            this.MinimumSize = new System.Drawing.Size(1387, 778);
             this.Name = "frmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Usuarios";

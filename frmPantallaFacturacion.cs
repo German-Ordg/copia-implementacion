@@ -651,7 +651,7 @@ namespace Pantallas_proyecto
             string total = txtTotalPagar.Text;
             string fecha = dtFecha.Text;
             string rtn = txtRTN.Text;
-            string cliente = cmbVendedor.Text;
+            string cliente = txtNombreCliente.Text;
             string vendedor = cmbVendedor.SelectedItem.ToString();
             string direccion = txtDireccion.Text;
             string tipoPago = cmbTipoPago.SelectedItem.ToString();
