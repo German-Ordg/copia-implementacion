@@ -35,7 +35,6 @@ namespace Pantallas_proyecto
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportes));
             this.reporteComprasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.db_a75e9e_bderickmoncadaDataSetrotacion = new Pantallas_proyecto.db_a75e9e_bderickmoncadaDataSetrotacion();
@@ -362,7 +361,8 @@ namespace Pantallas_proyecto
             "Rotacion del Inventario",
             "Inventario",
             "Compras",
-            "Compras_con_Fecha"});
+            "Compras por Codigo",
+            "Compras con Fecha"});
             this.CBtipo.Location = new System.Drawing.Point(1002, 304);
             this.CBtipo.Margin = new System.Windows.Forms.Padding(4);
             this.CBtipo.Name = "CBtipo";
@@ -614,10 +614,7 @@ namespace Pantallas_proyecto
             // reportViewer7
             // 
             this.reportViewer7.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource6.Name = "DataSet1";
-            reportDataSource6.Value = this.Compra_FechaBindingSource;
-            this.reportViewer7.LocalReport.DataSources.Add(reportDataSource6);
-            this.reportViewer7.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Reportcompra_fecha.rdlc";
+            this.reportViewer7.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report8.rdlc";
             this.reportViewer7.Location = new System.Drawing.Point(3, 3);
             this.reportViewer7.Name = "reportViewer7";
             this.reportViewer7.ServerReport.BearerToken = null;

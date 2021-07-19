@@ -549,7 +549,7 @@
         <Top>1.32503cm</Top>
         <Left>0.54881cm</Left>
         <Height>1.2cm</Height>
-        <Width>15.47033cm</Width>
+        <Width>15.47032cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -574,7 +574,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reporte de Compras por fecha</Value>
+                  <Value>Reporte de Compras </Value>
                   <Style>
                     <FontSize>20pt</FontSize>
                     <FontWeight>Bold</FontWeight>

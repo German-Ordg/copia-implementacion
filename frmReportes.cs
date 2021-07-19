@@ -138,7 +138,7 @@ namespace Pantallas_proyecto
                         for (int i = 0; i < dgvcompra.Rows.Count - 1; i++)
                         {
                             impresion1 imp = new impresion1();
-                            imp.dato1 = (int)this.dgvcompra.Rows[i].Cells[0].Value;
+                            imp.dato1 = this.dgvcompra.Rows[i].Cells[0].Value.ToString();
                             imp.dato2 = (string)this.dgvcompra.Rows[i].Cells[1].Value;
                             imp.dato3 = this.dgvcompra.Rows[i].Cells[2].Value.ToString();
                             imp.dato4 = this.dgvcompra.Rows[i].Cells[3].Value.ToString();
@@ -146,30 +146,39 @@ namespace Pantallas_proyecto
                             imp.dato6 = this.dgvcompra.Rows[i].Cells[5].Value.ToString();
                             imp.dato7 = this.dgvcompra.Rows[i].Cells[6].Value.ToString();
                             imp.dato8 = this.dgvcompra.Rows[i].Cells[7].Value.ToString();
-                            // });
                             impresion.Add(imp);
-
                         }
-
                         this.reportes.SelectedTab = reportes.TabPages["tab7"];
                         reportViewer8.LocalReport.DataSources.Clear();
                         reportViewer8.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion));
                         this.reportViewer8.RefreshReport();
-                        /*ReportParameter[] parameters1 = new ReportParameter[1];
-                        this.reportes.SelectedTab = reportes.TabPages["tab7"];
-                        string codigo = txtcodigo.Text;
-                        /*if (txtcodigo.Text != " ")
-                        {
+                        break;
+                    case "Compras por Codigo":
+                        List<impresion1> impresion2 = new List<impresion1>();
 
+                        impresion2.Clear();
+
+                        for (int i = 0; i < dgvcompra.Rows.Count - 1; i++)
+                        {
+                            impresion1 imp = new impresion1();
+                            imp.dato1 = this.dgvcompra.Rows[i].Cells[0].Value.ToString();
+                            imp.dato2 = (string)this.dgvcompra.Rows[i].Cells[1].Value;
+                            imp.dato3 = this.dgvcompra.Rows[i].Cells[2].Value.ToString();
+                            imp.dato4 = this.dgvcompra.Rows[i].Cells[3].Value.ToString();
+                            imp.dato5 = (string)this.dgvcompra.Rows[i].Cells[4].Value;
+                            imp.dato6 = this.dgvcompra.Rows[i].Cells[5].Value.ToString();
+                            imp.dato7 = this.dgvcompra.Rows[i].Cells[6].Value.ToString();
+                            imp.dato8 = this.dgvcompra.Rows[i].Cells[7].Value.ToString();
+                            impresion2.Add(imp);
                         }
-                        else
-                        {
-                        parameters1[0] = new ReportParameter("codigo", codigo); 
-                         reportViewer8.LocalReport.SetParameters(parameters1);*/
-                        this.reportViewer8.RefreshReport();
-                        // }
-
-
+                        ReportParameter[] parameters1 = new ReportParameter[1];
+                        this.reportes.SelectedTab = reportes.TabPages["tab8"];
+                        string Codigo = txtcodigo.Text;
+                        parameters1[0] = new ReportParameter("codigo", Codigo);
+                        reportViewer7.LocalReport.SetParameters(parameters1);
+                        reportViewer7.LocalReport.DataSources.Clear();
+                        reportViewer7.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion2));
+                        this.reportViewer7.RefreshReport();
                         break;
                     case "Compras_con_Fecha":
                         DateTime Fecha1 = dateTimePicker1.Value;
@@ -237,7 +246,7 @@ namespace Pantallas_proyecto
     }
     public class impresion1
     {
-        public int dato1 { get; set; }
+        public string dato1 { get; set; }
         public string dato2 { get; set; }
         public string dato3 { get; set; }
         public string dato4 { get; set; }
