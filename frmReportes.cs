@@ -22,6 +22,11 @@ namespace Pantallas_proyecto
         public DateTime Fecha1 { get; set; }
         public DateTime Fecha2 { get; set; }
 
+        ClsConexionBD conect = new ClsConexionBD();
+        validaciones validacion = new validaciones();
+        private bool letra2 = true;
+        private bool letra = true;
+
         private const int CP_NOCLOSE_BUTTON = 0x200;
         protected override CreateParams CreateParams
         {
@@ -41,8 +46,11 @@ namespace Pantallas_proyecto
         //prueba
         private void frmReportes_Load(object sender, EventArgs e)
         {
+            conect.abrir();
+            conect.cargarDatosreporte1(dgvcompra);
+            dgvcompra.ForeColor = Color.Black;
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSetrotacion.ReporteCompras' Puede moverla o quitarla según sea necesario.
-           // this.reporteComprasTableAdapter2.Fill(this.db_a75e9e_bderickmoncadaDataSetrotacion.ReporteCompras);
+            // this.reporteComprasTableAdapter2.Fill(this.db_a75e9e_bderickmoncadaDataSetrotacion.ReporteCompras);
             // TODO: esta línea de código carga datos en la tabla 'DataSetCompra_Fecha.Compra_Fecha' Puede moverla o quitarla según sea necesario.
             //this.Compra_FechaTableAdapter.Fill(this.DataSetCompra_Fecha.Compra_Fecha,Fecha1,Fecha2);
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSetINVENTARIO.VCategorias' Puede moverla o quitarla según sea necesario.
@@ -70,70 +78,109 @@ namespace Pantallas_proyecto
 
 
 
-            
+
+            this.reportViewer8.RefreshReport();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            switch (CBtipo.Text)
+            if (validacion.Espacio_Blanco_CB(ErrorProvider, CBtipo))
             {
-                case "Categoria":
-                    ReportParameter[] parameters = new ReportParameter[1];
-                    this.reportes.SelectedTab = reportes.TabPages["tab1"];
-                    string Categoria = CBcategoria.Text.Trim();
-                    parameters[0] = new ReportParameter("Categoria", Categoria);
-                    reportViewer1.LocalReport.SetParameters(parameters);
-                    this.reportViewer1.RefreshReport();
-                    break;
-                case "Lo mas Vendido":
-                    this.reportes.SelectedTab = reportes.TabPages["tab2"];
-                    this.reportViewer2.RefreshReport();
-                    break;
-                case "Productos a Punto de Acabarse":
-                    this.reportes.SelectedTab = reportes.TabPages["tab3"];
-                    this.reportViewer3.RefreshReport();
+                if (validacion.Espacio_Blanco_CB(ErrorProvider, CBtipo))
+                    ErrorProvider.SetError(CBtipo, "no se puede dejar en blanco");
+            }
+            else
+            {
+                letra2 = true;
+            }
 
-                    break;
-                case "Talla que Mas se Vende":
-                    this.reportes.SelectedTab = reportes.TabPages["tab4"];
-                    this.reportViewer4.RefreshReport();
-                    break;
-                case "Rotacion del Inventario":
-                    this.reportes.SelectedTab = reportes.TabPages["tab5"];
-                    this.reportViewer5.RefreshReport();
-                    break;
-                case "Inventario":
+            if (letra2)
+            {
+                switch (CBtipo.Text)
+                {
+                    case "Categoria":
+                        if (letra)
+                        {
+                            ReportParameter[] parameters = new ReportParameter[1];
+                            this.reportes.SelectedTab = reportes.TabPages["tab1"];
+                            string Categoria = CBcategoria.Text.Trim();
+                            parameters[0] = new ReportParameter("Categoria", Categoria);
+                            reportViewer1.LocalReport.SetParameters(parameters);
+                            this.reportViewer1.RefreshReport();
+                        }
+                        break;
+                    case "Lo mas Vendido":
+                        this.reportes.SelectedTab = reportes.TabPages["tab2"];
+                        this.reportViewer2.RefreshReport();
+                        break;
+                    case "Productos a Punto de Acabarse":
+                        this.reportes.SelectedTab = reportes.TabPages["tab3"];
+                        this.reportViewer3.RefreshReport();
+
+                        break;
+                    case "Talla que Mas se Vende":
+                        this.reportes.SelectedTab = reportes.TabPages["tab4"];
+                        this.reportViewer4.RefreshReport();
+                        break;
+                    case "Rotacion del Inventario":
+                        this.reportes.SelectedTab = reportes.TabPages["tab5"];
+                        this.reportViewer5.RefreshReport();
+                        break;
+                    case "Inventario":
                         this.reportes.SelectedTab = reportes.TabPages["tab6"];
                         this.reportViewer6.RefreshReport();
-                    break;
-                case "Compras":
-                    ReportParameter[] parameters1 = new ReportParameter[1];
-                    this.reportes.SelectedTab = reportes.TabPages["tab7"];
-                    string codigo = txtcodigo.Text;
-                    /*if (txtcodigo.Text != " ")
-                    {
+                        break;
+                    case "Compras":
+                        List<impresion1> impresion = new List<impresion1>();
 
-                    }
-                    else
-                    {*/
-                        parameters1[0] = new ReportParameter("codigo", codigo);
-                        reportViewer8.LocalReport.SetParameters(parameters1);
+                        impresion.Clear();
+
+                        for (int i = 0; i < dgvcompra.Rows.Count - 1; i++)
+                        {
+                            impresion1 imp = new impresion1();
+                            imp.dato1 = (int)this.dgvcompra.Rows[i].Cells[0].Value;
+                            imp.dato2 = (string)this.dgvcompra.Rows[i].Cells[1].Value;
+                            imp.dato3 = this.dgvcompra.Rows[i].Cells[2].Value.ToString();
+                            imp.dato4 = this.dgvcompra.Rows[i].Cells[3].Value.ToString();
+                            imp.dato5 = (string)this.dgvcompra.Rows[i].Cells[4].Value;
+                            imp.dato6 = this.dgvcompra.Rows[i].Cells[5].Value.ToString();
+                            imp.dato7 = this.dgvcompra.Rows[i].Cells[6].Value.ToString();
+                            imp.dato8 = this.dgvcompra.Rows[i].Cells[7].Value.ToString();
+                            // });
+                            impresion.Add(imp);
+
+                        }
+
+                        this.reportes.SelectedTab = reportes.TabPages["tab7"];
+                        reportViewer8.LocalReport.DataSources.Clear();
+                        reportViewer8.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion));
                         this.reportViewer8.RefreshReport();
-                   // }
+                        /*ReportParameter[] parameters1 = new ReportParameter[1];
+                        this.reportes.SelectedTab = reportes.TabPages["tab7"];
+                        string codigo = txtcodigo.Text;
+                        /*if (txtcodigo.Text != " ")
+                        {
+
+                        }
+                        else
+                        {
+                        parameters1[0] = new ReportParameter("codigo", codigo); 
+                         reportViewer8.LocalReport.SetParameters(parameters1);*/
+                        this.reportViewer8.RefreshReport();
+                        // }
 
 
-                    break;
-                case "Compras_con_Fecha":
-                    DateTime Fecha1 = dateTimePicker1.Value;
-                    DateTime Fecha2 = dateTimePicker2.Value;
-                    this.Compra_FechaTableAdapter.Fill(this.DataSetCompra_Fecha.Compra_Fecha, Fecha1, Fecha2);
-                    this.reportes.SelectedTab = reportes.TabPages["tab8"];
-                    this.reportViewer7.RefreshReport();
-                    break;
+                        break;
+                    case "Compras_con_Fecha":
+                        DateTime Fecha1 = dateTimePicker1.Value;
+                        DateTime Fecha2 = dateTimePicker2.Value;
+                        // this.Compra_FechaTableAdapter.Fill(this.DataSetCompra_Fecha.Compra_Fecha, Fecha1, Fecha2);
+                        this.reportes.SelectedTab = reportes.TabPages["tab8"];
+                        this.reportViewer7.RefreshReport();
+                        break;
+                }
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -187,5 +234,23 @@ namespace Pantallas_proyecto
             gerente.Show();
             
         }
+    }
+    public class impresion1
+    {
+        public int dato1 { get; set; }
+        public string dato2 { get; set; }
+        public string dato3 { get; set; }
+        public string dato4 { get; set; }
+        public string dato5 { get; set; }
+        public string dato6 { get; set; }
+
+        public string dato7 { get; set; }
+
+        public string dato8 { get; set; }
+
+
+
+
+
     }
 }

@@ -619,6 +619,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\impresion.datasource" />
+    <None Include="Properties\DataSources\impresion1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
