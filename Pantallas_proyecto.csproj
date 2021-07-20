@@ -407,6 +407,7 @@
     <EmbeddedResource Include="Report9.rdlc" />
     <EmbeddedResource Include="Reportcompra_fecha.rdlc" />
     <EmbeddedResource Include="Reportinventario.rdlc" />
+    <EmbeddedResource Include="Report_ventas.rdlc" />
     <EmbeddedResource Include="Repote_factura.rdlc" />
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
@@ -621,6 +622,7 @@
     <None Include="Properties\DataSources\impresion.datasource" />
     <None Include="Properties\DataSources\impresion1.datasource" />
     <None Include="Properties\DataSources\impresion2.datasource" />
+    <None Include="Properties\DataSources\impresion_ventas.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

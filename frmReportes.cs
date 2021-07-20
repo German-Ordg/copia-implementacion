@@ -50,8 +50,14 @@ namespace Pantallas_proyecto
             conect.cargarDatosreporte1(dgvcompra);
             conect.abrir();
             conect.cargarDatosreporte2(dgvrotacion);
+            conect.abrir();
+            conect.cargarDatosreporte3(dgvventas);
+            conect.abrir();
+            conect.cargarDatosreporte3(dgvmasvendido);
             dgvcompra.ForeColor = Color.Black;
             dgvrotacion.ForeColor = Color.Black;
+            dgvventas.ForeColor = Color.Black;
+            dgvmasvendido.ForeColor = Color.Black;
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSetrotacion.ReporteCompras' Puede moverla o quitarla según sea necesario.
             // this.reporteComprasTableAdapter2.Fill(this.db_a75e9e_bderickmoncadaDataSetrotacion.ReporteCompras);
             // TODO: esta línea de código carga datos en la tabla 'DataSetCompra_Fecha.Compra_Fecha' Puede moverla o quitarla según sea necesario.
@@ -73,6 +79,7 @@ namespace Pantallas_proyecto
             this.ProductosTableAdapter.Fill(this.db_a75e9e_bderickmoncadaDataSet2.Productos);
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSet.Categoria_Producto' Puede moverla o quitarla según sea necesario.
             this.categoria_ProductoTableAdapter.Fill(this.db_a75e9e_bderickmoncadaDataSet.Categoria_Producto);
+
 
 
         }
@@ -104,8 +111,29 @@ namespace Pantallas_proyecto
                             this.reportViewer1.RefreshReport();
                         }
                         break;
-                    case "Lo mas Vendido":
+                    case "Ventas":
+                        List<impresion_ventas> impresion5 = new List<impresion_ventas>();
+
+                        impresion5.Clear();
+
+                        for (int i = 0; i < dgvventas.Rows.Count - 1; i++)
+                        {
+                            impresion_ventas imp = new impresion_ventas();
+                            imp.dato1 = this.dgvventas.Rows[i].Cells[0].Value.ToString();
+                            imp.dato2 = this.dgvventas.Rows[i].Cells[1].Value.ToString();
+                            imp.dato3 = this.dgvventas.Rows[i].Cells[2].Value.ToString();
+                            imp.dato4 = this.dgvventas.Rows[i].Cells[3].Value.ToString();
+                            imp.dato5 = this.dgvventas.Rows[i].Cells[4].Value.ToString();
+                            imp.dato6 = this.dgvventas.Rows[i].Cells[5].Value.ToString();
+                            imp.dato7 = this.dgvventas.Rows[i].Cells[6].Value.ToString();
+                            imp.dato8 = this.dgvventas.Rows[i].Cells[7].Value.ToString();
+                            imp.dato9 = this.dgvventas.Rows[i].Cells[8].Value.ToString();
+                            imp.dato10 = this.dgvventas.Rows[i].Cells[9].Value.ToString();
+                            impresion5.Add(imp);
+                        }
                         this.reportes.SelectedTab = reportes.TabPages["tab2"];
+                        reportViewer2.LocalReport.DataSources.Clear();
+                        reportViewer2.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion5));
                         this.reportViewer2.RefreshReport();
                         break;
                     case "Productos a Punto de Acabarse":
@@ -223,6 +251,31 @@ namespace Pantallas_proyecto
                         reportViewer9.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion3));
                         this.reportViewer9.RefreshReport();
                         break;
+                    case "Lo mas Vendido":
+                        List<impresion_ventas> impresion6 = new List<impresion_ventas>();
+
+                        impresion6.Clear();
+
+                        for (int i = 0; i < dgvmasvendido.Rows.Count - 1; i++)
+                        {
+                            impresion_ventas imp = new impresion_ventas();
+                            imp.dato1 = this.dgvmasvendido.Rows[i].Cells[0].Value.ToString();
+                            imp.dato2 = this.dgvmasvendido.Rows[i].Cells[1].Value.ToString();
+                            imp.dato3 = this.dgvmasvendido.Rows[i].Cells[2].Value.ToString();
+                            imp.dato4 = this.dgvmasvendido.Rows[i].Cells[3].Value.ToString();
+                            imp.dato5 = this.dgvmasvendido.Rows[i].Cells[4].Value.ToString();
+                            imp.dato6 = this.dgvmasvendido.Rows[i].Cells[5].Value.ToString();
+                            imp.dato7 = this.dgvmasvendido.Rows[i].Cells[6].Value.ToString();
+                            imp.dato8 = this.dgvmasvendido.Rows[i].Cells[7].Value.ToString();
+                            imp.dato9 = this.dgvmasvendido.Rows[i].Cells[8].Value.ToString();
+                            imp.dato10 = this.dgvmasvendido.Rows[i].Cells[9].Value.ToString();
+                            impresion6.Add(imp);
+                        }
+                        this.reportes.SelectedTab = reportes.TabPages["tab4"];
+                        reportViewer4.LocalReport.DataSources.Clear();
+                        reportViewer4.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion6));
+                        this.reportViewer4.RefreshReport();
+                        break;
                 }
             }
         }
@@ -288,11 +341,22 @@ namespace Pantallas_proyecto
         public string dato4 { get; set; }
         public string dato5 { get; set; }
         public string dato6 { get; set; }
-
         public string dato7 { get; set; }
-
         public string dato8 { get; set; }
+    }
 
+    public class impresion_ventas
+    {
+        public string dato1 { get; set; }
+        public string dato2 { get; set; }
+        public string dato3 { get; set; }
+        public string dato4 { get; set; }
+        public string dato5 { get; set; }
+        public string dato6 { get; set; }
+        public string dato7 { get; set; }
+        public string dato8 { get; set; }
+        public string dato9 { get; set; }
+        public string dato10 { get; set; }
     }
 
 
