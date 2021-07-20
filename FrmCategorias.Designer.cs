@@ -234,6 +234,7 @@ namespace Pantallas_proyecto
             this.ClientSize = new System.Drawing.Size(411, 412);
             this.Controls.Add(this.toolStripContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(427, 451);
             this.MinimumSize = new System.Drawing.Size(427, 451);
             this.Name = "FrmCategorias";
