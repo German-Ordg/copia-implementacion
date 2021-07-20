@@ -15,6 +15,13 @@ namespace Pantallas_proyecto
         public FrmCategorias()
         {
             InitializeComponent();
+            timer1.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            tslFecha.Text = DateTime.Now.ToLongDateString();
+            tslHora.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }
