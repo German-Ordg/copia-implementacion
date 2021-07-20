@@ -48,7 +48,10 @@ namespace Pantallas_proyecto
         {
             conect.abrir();
             conect.cargarDatosreporte1(dgvcompra);
+            conect.abrir();
+            conect.cargarDatosreporte2(dgvrotacion);
             dgvcompra.ForeColor = Color.Black;
+            dgvrotacion.ForeColor = Color.Black;
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSetrotacion.ReporteCompras' Puede moverla o quitarla según sea necesario.
             // this.reporteComprasTableAdapter2.Fill(this.db_a75e9e_bderickmoncadaDataSetrotacion.ReporteCompras);
             // TODO: esta línea de código carga datos en la tabla 'DataSetCompra_Fecha.Compra_Fecha' Puede moverla o quitarla según sea necesario.
@@ -72,14 +75,6 @@ namespace Pantallas_proyecto
             this.categoria_ProductoTableAdapter.Fill(this.db_a75e9e_bderickmoncadaDataSet.Categoria_Producto);
 
 
-
-
-
-
-
-
-
-            this.reportViewer8.RefreshReport();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -123,7 +118,26 @@ namespace Pantallas_proyecto
                         this.reportViewer4.RefreshReport();
                         break;
                     case "Rotacion del Inventario":
+                        List<impresion1> impresion4 = new List<impresion1>();
+
+                        impresion4.Clear();
+
+                        for (int i = 0; i < dgvrotacion.Rows.Count - 1; i++)
+                        {
+                            impresion1 imp = new impresion1();
+                            imp.dato1 = this.dgvrotacion.Rows[i].Cells[0].Value.ToString();
+                            imp.dato2 = (string)this.dgvrotacion.Rows[i].Cells[1].Value;
+                            imp.dato3 = this.dgvrotacion.Rows[i].Cells[2].Value.ToString();
+                            imp.dato4 = this.dgvrotacion.Rows[i].Cells[3].Value.ToString();
+                            imp.dato5 = this.dgvrotacion.Rows[i].Cells[4].Value.ToString();
+                            imp.dato6 = this.dgvrotacion.Rows[i].Cells[5].Value.ToString();
+                            imp.dato7 = this.dgvrotacion.Rows[i].Cells[6].Value.ToString();
+                            imp.dato8 = this.dgvrotacion.Rows[i].Cells[7].Value.ToString();
+                            impresion4.Add(imp);
+                        }
                         this.reportes.SelectedTab = reportes.TabPages["tab5"];
+                        reportViewer5.LocalReport.DataSources.Clear();
+                        reportViewer5.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion4));
                         this.reportViewer5.RefreshReport();
                         break;
                     case "Inventario":
@@ -180,12 +194,34 @@ namespace Pantallas_proyecto
                         reportViewer7.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion2));
                         this.reportViewer7.RefreshReport();
                         break;
-                    case "Compras_con_Fecha":
-                        DateTime Fecha1 = dateTimePicker1.Value;
-                        DateTime Fecha2 = dateTimePicker2.Value;
-                        // this.Compra_FechaTableAdapter.Fill(this.DataSetCompra_Fecha.Compra_Fecha, Fecha1, Fecha2);
-                        this.reportes.SelectedTab = reportes.TabPages["tab8"];
-                        this.reportViewer7.RefreshReport();
+                    case "Compras con Fecha":
+                        List<impresion1> impresion3 = new List<impresion1>();
+
+                        impresion3.Clear();
+
+                        for (int i = 0; i < dgvcompra.Rows.Count - 1; i++)
+                        {
+                            impresion1 imp = new impresion1();
+                            imp.dato1 = this.dgvcompra.Rows[i].Cells[0].Value.ToString();
+                            imp.dato2 = (string)this.dgvcompra.Rows[i].Cells[1].Value;
+                            imp.dato3 = this.dgvcompra.Rows[i].Cells[2].Value.ToString();
+                            imp.dato4 = this.dgvcompra.Rows[i].Cells[3].Value.ToString();
+                            imp.dato5 = (string)this.dgvcompra.Rows[i].Cells[4].Value;
+                            imp.dato6 = this.dgvcompra.Rows[i].Cells[5].Value.ToString();
+                            imp.dato7 = this.dgvcompra.Rows[i].Cells[6].Value.ToString();
+                            imp.dato8 = this.dgvcompra.Rows[i].Cells[7].Value.ToString();
+                            impresion3.Add(imp);
+                        }
+                        ReportParameter[] parameters2 = new ReportParameter[2];
+                        this.reportes.SelectedTab = reportes.TabPages["tab9"];
+                        string Fecha1 = dateTimePicker1.Value.ToString();
+                        string Fecha2 = dateTimePicker2.Value.ToString();
+                        parameters2[0] = new ReportParameter("fecha1", Fecha1);
+                        parameters2[1] = new ReportParameter("fecha2", Fecha2);
+                        reportViewer9.LocalReport.SetParameters(parameters2);
+                        reportViewer9.LocalReport.DataSources.Clear();
+                        reportViewer9.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion3));
+                        this.reportViewer9.RefreshReport();
                         break;
                 }
             }
@@ -257,9 +293,8 @@ namespace Pantallas_proyecto
 
         public string dato8 { get; set; }
 
-
-
-
-
     }
+
+
+
 }
