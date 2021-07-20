@@ -78,6 +78,7 @@ namespace Pantallas_proyecto
             this.BtnRegresar.TabIndex = 29;
             this.BtnRegresar.Text = "Regresar";
             this.BtnRegresar.UseVisualStyleBackColor = false;
+            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
             // 
             // txtCodigo
             // 

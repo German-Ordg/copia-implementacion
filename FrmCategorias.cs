@@ -34,5 +34,12 @@ namespace Pantallas_proyecto
             tslFecha.Text = DateTime.Now.ToLongDateString();
             tslHora.Text = DateTime.Now.ToLongTimeString();
         }
+
+        private void BtnRegresar_Click(object sender, EventArgs e)
+        {
+            FrmMenuCRUD menuCRUD = new FrmMenuCRUD();
+            menuCRUD.Show();
+            this.Close();
+        }
     }
 }
