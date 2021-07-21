@@ -235,11 +235,6 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <SortExpressions>
-          <SortExpression>
-            <Value>=Fields!dato3.Value</Value>
-          </SortExpression>
-        </SortExpressions>
         <Top>1.63267cm</Top>
         <Left>0.46526cm</Left>
         <Height>1.2cm</Height>

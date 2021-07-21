@@ -55,7 +55,7 @@ namespace Pantallas_proyecto
             conect.abrir();
             conect.cargarDatosreporte3(dgvventas);
             conect.abrir();
-            conect.cargarDatosreporte3(dgvmasvendido);
+            //conect.cargarDatosreporte3(dgvmasvendido);
             conect.abrir();
             conect.cargarDatosreporte5(dgvcategorias);
             dgvcompra.ForeColor = Color.Black;
