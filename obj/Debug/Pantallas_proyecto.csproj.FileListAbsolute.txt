@@ -1022,7 +1022,6 @@ E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\zh-CHS\Microsoft.ReportV
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
-E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmCalculadora.resources
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmClientes.resources
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmCompras.resources
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
@@ -1047,3 +1046,6 @@ E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.cspro
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.CopyComplete
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.exe
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.pdb
+E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.TxtResultBox.resources
+E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmProductos.resources
+E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmValidar_Prueba.resources

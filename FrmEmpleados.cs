@@ -14,10 +14,23 @@ namespace Pantallas_proyecto
 {
     public partial class FrmEmpleados : Form
     {
+
+        private bool letra1 = false;
+        private bool letra2 = false;
+        private bool letra3 = false;
+        private bool letra4 = false;
+        private bool letra5 = false;
+        private bool numero1 = false;
+        private bool numero2 = false;
+        private bool numero3 = false;
+        private bool numero4 = false;
+        private bool numero5 = false;
         public FrmEmpleados()
         {
             InitializeComponent();
         }
+
+       
         private const int CP_NOCLOSE_BUTTON = 0x200;
         protected override CreateParams CreateParams
         {
@@ -31,6 +44,25 @@ namespace Pantallas_proyecto
 
         ClsConexionBD conect = new ClsConexionBD();
         SqlCommand cmd;
+        validaciones validacion = new validaciones();
+
+        public void validar()
+        {
+            if (validacion.Espacio_Blanco(ErrorProvider1, txtNombre) || validacion.Solo_Letras(ErrorProvider1, txtNombre))
+            {
+                if (validacion.Espacio_Blanco(ErrorProvider1, txtNombre))
+                    ErrorProvider1.SetError(txtNombre, "no se puede dejar en blanco");
+                else
+                if (validacion.Solo_Letras(ErrorProvider1, txtNombre))
+                    ErrorProvider1.SetError(txtNombre, "Solo se permite letras");
+            }
+            else
+            {
+                letra1 = true;
+            }
+
+           
+        }
 
         private void label9_Click(object sender, EventArgs e)
         {
@@ -59,36 +91,93 @@ namespace Pantallas_proyecto
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                    if (txtNombre.Text == "  " || txtApellido.Text == "  " || txtPuesto.Text == "  " || txtIdentidad.Text == "  " || txtNumeroTel.Text == "  ")
-                {
-                    MessageBox.Show("No se pueden Insertar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
 
+            letra1 = false; letra2 = false; letra3 = false; letra4 = false; letra5 = false;
+            numero1 = false; numero2 = false; numero3 = false; numero4 = false;
+
+            if (validacion.Espacio_Blanco(ErrorProvider1, txtNombre) || validacion.Solo_Letras(ErrorProvider1, txtNombre))
+            {
+                if (validacion.Espacio_Blanco(ErrorProvider1, txtNombre))
+                    ErrorProvider1.SetError(txtNombre, "no se puede dejar en blanco");
+                else
+                if (validacion.Solo_Letras(ErrorProvider1, txtNombre))
+                    ErrorProvider1.SetError(txtNombre, "Solo se permite letras");
+            }
+            else
+            {
+                letra1 = true;
+            }
+
+            if (validacion.Espacio_Blanco(ErrorProvider1, txtApellido) || validacion.Solo_Letras(ErrorProvider1, txtApellido))
+            {
+                if (validacion.Espacio_Blanco(ErrorProvider1, txtApellido))
+                    ErrorProvider1.SetError(txtApellido, "no se puede dejar en blanco");
+                else
+                if (validacion.Solo_Letras(ErrorProvider1, txtApellido))
+                    ErrorProvider1.SetError(txtApellido, "Solo se permite letras");
+            }
+            else
+            {
+                letra2 = true;
+            }
+
+            if (validacion.Espacio_Blanco(ErrorProvider1, txtIdentidad) || validacion.Solo_Numeros(ErrorProvider1, txtIdentidad))
+            {
+                if (validacion.Espacio_Blanco(ErrorProvider1, txtIdentidad))
+                    ErrorProvider1.SetError(txtIdentidad, "no se puede dejar en blanco");
+                else
+                if (validacion.Solo_Numeros(ErrorProvider1, txtIdentidad))
+                    ErrorProvider1.SetError(txtIdentidad, "Solo se permite numeros");
+            }
+            else
+            {
+                if (txtIdentidad.Text.Length != 13)
+                {
+                    MessageBox.Show("Ingrese 13 digitos en su identidad", "Falta de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNombre.Focus();
+                }
                 else
                 {
-                    cmd = new SqlCommand("Insert into Empleados(codigo_puesto, nombre_empleado, apellido_empleado, numero_identidad_empleado, fecha_nacimiento, fecha_ingreso, num_telefono, Genero) Values(" + txtPuesto.Text + ",'" + txtNombre.Text + "', '" + txtApellido.Text + "', '" + txtIdentidad.Text + "', '" + dtpFechaNacimiento.Text + "','" + dtpFechaIngreso.Text + "','" + txtNumeroTel.Text + "','"+cmbGenero.Text+"')", conect.conexion);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conect.cargarDatosEmpleados(dgvEmpleados);
+                    numero1 = true;
                 }
-            }
-            catch (Exception ex)
-            {
-                //MessageBox.Show(ex.Message.ToString());
-                MessageBox.Show("ERROR AL INSERTAR LOS DATOS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                txtNombre.Text = " ";
-                txtApellido.Text = " ";
-                txtIdentidad.Text = " ";
-                txtPuesto.Text = " ";
-                txtNumeroTel.Text = " ";
-                dtpFechaNacimiento.Text = DateTime.Now.ToShortDateString();
-                dtpFechaIngreso.Text = DateTime.Now.ToShortDateString();
-                cmbGenero.SelectedIndex = -1;
-                txtNombre.Focus();
+                if (numero1 && letra1 && letra2)
+                {
+
+
+
+                    try
+                    {
+
+                        cmd = new SqlCommand("Insert into Empleados(codigo_puesto, nombre_empleado, apellido_empleado, numero_identidad_empleado, fecha_nacimiento, fecha_ingreso, num_telefono, Genero) Values(" + txtPuesto.Text + ",'" + txtNombre.Text + "', '" + txtApellido.Text + "', '" + txtIdentidad.Text + "', '" + dtpFechaNacimiento.Text + "','" + dtpFechaIngreso.Text + "','" + txtNumeroTel.Text + "','" + cmbGenero.Text + "')", conect.conexion);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        conect.cargarDatosEmpleados(dgvEmpleados);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        //MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show("ERROR AL INSERTAR LOS DATOS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        txtNombre.Text = " ";
+                        txtApellido.Text = " ";
+                        txtIdentidad.Text = " ";
+                        txtPuesto.Text = " ";
+                        txtNumeroTel.Text = " ";
+                        dtpFechaNacimiento.Text = DateTime.Now.ToShortDateString();
+                        dtpFechaIngreso.Text = DateTime.Now.ToShortDateString();
+                        cmbGenero.SelectedIndex = -1;
+                        txtNombre.Focus();
+                    }
+                }
+
+           
             }
+
+
+
+
 
         }
 
@@ -170,7 +259,7 @@ namespace Pantallas_proyecto
             
         }
 
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+       /* private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
@@ -218,7 +307,7 @@ namespace Pantallas_proyecto
                 e.Handled = true;
                 return;
             }
-        }
+        }*/
     }
     }
 
