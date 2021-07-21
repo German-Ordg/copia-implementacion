@@ -263,7 +263,7 @@ namespace Pantallas_proyecto
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            frmProveedores fact = new frmProveedores();
+            frmUsuarios fact = new frmUsuarios();
             fact.Show();
         }
 
