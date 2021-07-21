@@ -15,12 +15,20 @@ namespace Pantallas_proyecto
 {
     public partial class frmInventarioParaEmpleado : Form
     {
+        private bool letra1 = false;
+        private bool letra2 = false;
+        private bool letra3 = false;
+        private bool numero1 = false;
+
         public frmInventarioParaEmpleado()
         {
             InitializeComponent();
         }
+
         ClsConexionBD conect = new ClsConexionBD();
         SqlCommand cmd;
+        validaciones validacion = new validaciones();
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -92,28 +100,44 @@ namespace Pantallas_proyecto
 
             }
         }
-        
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            conect.abrir();
-            cmd = new SqlCommand("select * from Productos where codigo_producto = @codigo_producto ", conect.conexion);
-            cmd.Parameters.AddWithValue("@codigo_producto", textBox1.Text);
-            SqlDataReader Productos = cmd.ExecuteReader();
-            if (Productos.Read()) 
+            if (validacion.Espacio_Blanco(ErrorProvider, textBox1) || validacion.Solo_Numeros(ErrorProvider, textBox1))
             {
-                textBox1.Enabled = false;
-                textBox2.Enabled = true;
-                comboBox2.Enabled = true;
-                comboBox2.Text = Productos["codigo_categoria"].ToString();
-                textBox2.Text = Productos["descripcion_producto"].ToString();
+                if (validacion.Espacio_Blanco(ErrorProvider, textBox1))
+                    ErrorProvider.SetError(textBox1, "no se puede dejar en blanco");
+                else
+                if (validacion.Solo_Letras(ErrorProvider, textBox1))
+                    ErrorProvider.SetError(textBox1, "Solo se permite numeros");
             }
             else
             {
-                MessageBox.Show("Error al buscar producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                numero1 = true;
+            }
+            if (numero1)
+            {
+
+                conect.abrir();
+                cmd = new SqlCommand("select * from Productos where codigo_producto = @codigo_producto ", conect.conexion);
+                cmd.Parameters.AddWithValue("@codigo_producto", textBox1.Text);
+                SqlDataReader Productos = cmd.ExecuteReader();
+                if (Productos.Read())
+                {
+                    textBox1.Enabled = false;
+                    textBox2.Enabled = true;
+                    comboBox2.Enabled = true;
+                    comboBox2.Text = Productos["codigo_categoria"].ToString();
+                    textBox2.Text = Productos["descripcion_producto"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Error al buscar producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                conect.cerrar();
 
             }
-            conect.cerrar();
-
         }
     }
 }

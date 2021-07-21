@@ -45,10 +45,11 @@ namespace Pantallas_proyecto
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             label2 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -147,7 +148,8 @@ namespace Pantallas_proyecto
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.toolStripLabel2});
+            this.toolStripLabel2,
+            this.toolStripLabel3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 407);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(684, 25);
@@ -192,9 +194,14 @@ namespace Pantallas_proyecto
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // errorProvider1
+            // ErrorProvider
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.ErrorProvider.ContainerControl = this;
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(0, 22);
             // 
             // frmInventarioParaEmpleado
             // 
@@ -224,7 +231,7 @@ namespace Pantallas_proyecto
             this.Load += new System.EventHandler(this.frmInventarioParaEmpleado_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,6 +252,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider ErrorProvider;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
     }
 }
