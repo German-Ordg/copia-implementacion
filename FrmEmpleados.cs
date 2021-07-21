@@ -46,23 +46,9 @@ namespace Pantallas_proyecto
         SqlCommand cmd;
         validaciones validacion = new validaciones();
 
-        public void validar()
-        {
-            if (validacion.Espacio_Blanco(ErrorProvider1, txtNombre) || validacion.Solo_Letras(ErrorProvider1, txtNombre))
-            {
-                if (validacion.Espacio_Blanco(ErrorProvider1, txtNombre))
-                    ErrorProvider1.SetError(txtNombre, "no se puede dejar en blanco");
-                else
-                if (validacion.Solo_Letras(ErrorProvider1, txtNombre))
-                    ErrorProvider1.SetError(txtNombre, "Solo se permite letras");
-            }
-            else
-            {
-                letra1 = true;
-            }
-
+        
            
-        }
+        
 
         private void label9_Click(object sender, EventArgs e)
         {
@@ -141,10 +127,29 @@ namespace Pantallas_proyecto
                     numero1 = true;
                 }
 
-                if (numero1 && letra1 && letra2)
+
+                if (validacion.Espacio_Blanco(ErrorProvider1, txtNumeroTel) || validacion.Solo_Numeros(ErrorProvider1, txtNumeroTel))
                 {
+                    if (validacion.Espacio_Blanco(ErrorProvider1, txtNumeroTel))
+                        ErrorProvider1.SetError(txtNumeroTel, "No se puede dejar en blanco");
+                    else
+                    if (validacion.Solo_Numeros(ErrorProvider1, txtNumeroTel))
+                        ErrorProvider1.SetError(txtNumeroTel, "Solo se permite numeros");
+                }
 
+                if (txtNumeroTel.Text.Length != 8)
+                {
+                    MessageBox.Show("Ingrese 8 digitos en el telefono del empleado", "Falta de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNumeroTel.Focus();
 
+                }
+                else
+                {
+                    numero2 = true;
+                }
+
+                if (numero1 && letra1 && letra2 && numero2)
+                {
 
                     try
                     {
