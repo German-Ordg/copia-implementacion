@@ -79,7 +79,7 @@ namespace Pantallas_proyecto
             this.txtUsuario.BackColor = System.Drawing.Color.White;
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsuario.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txtUsuario.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txtUsuario.Location = new System.Drawing.Point(152, 102);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
@@ -95,7 +95,7 @@ namespace Pantallas_proyecto
             this.txtContrasena.BackColor = System.Drawing.Color.White;
             this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContrasena.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txtContrasena.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txtContrasena.Location = new System.Drawing.Point(152, 159);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.Name = "txtContrasena";

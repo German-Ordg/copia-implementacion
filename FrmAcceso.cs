@@ -52,35 +52,12 @@ namespace Pantallas_proyecto
 
         private void btnIngreso_Click(object sender, EventArgs e)
         {
-            validaciones validacion = new validaciones();
-
-
-            if (validacion.Espacio_Blanco(ErrorProvider, txtContrasena) || validacion.Espacio_Blanco(ErrorProvider, txtUsuario))
-            {
-                if (validacion.Espacio_Blanco(ErrorProvider, txtContrasena))
-                {
-                    if (!validacion.Espacio_Blanco(ErrorProvider, txtUsuario))
-                    {
-                        ErrorProvider.SetError(txtUsuario, "");
-                    }
-                    ErrorProvider.SetError(txtContrasena, "No se ingreso una contraseña.");
-                }
-                if (validacion.Espacio_Blanco(ErrorProvider, txtUsuario))
-                {
-                    if (!validacion.Espacio_Blanco(ErrorProvider, txtContrasena))
-                    {
-                        ErrorProvider.SetError(txtContrasena, "");
-                    }
-                    ErrorProvider.SetError(txtUsuario, "No se ingreso un usuario.");
-                }
-            }
-            else
-            {
+         
                 if (txtUsuario.Text != "Usuario")
                 {
                     if (txtContrasena.Text != "Contraseña")
                     {
-
+                        
                         Dominio.UserModel model = new Dominio.UserModel();
                         var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
                         if (validar == true)
@@ -106,16 +83,16 @@ namespace Pantallas_proyecto
                         else
                         {
                             msjError("Usuario o contraseña incorrecta \n\t Intente de nuevo");
-                            //txtUsuario.Clear();
-                           // txtContrasena.Clear();
+                            
                         }
+                    
                     }
                     else
                         msjError("Ingrese la contraseña");
                 }
                 else
                     msjError("Ingrese el usuario");
-            }
+            
         }
         private void msjError(string msj)
         {
@@ -166,8 +143,9 @@ namespace Pantallas_proyecto
         {
             if (txtUsuario.Text == "")
             {
-                txtUsuario.Text = "Usuario";
-                txtUsuario.ForeColor = Color.Black;
+                txtUsuario.Text = "Usuario";            
+               // txtUsuario.ForeColor = Color.Black;
+                txtUsuario.ForeColor = SystemColors.GrayText;
             }
         }
 
@@ -185,8 +163,9 @@ namespace Pantallas_proyecto
         {
             if (txtContrasena.Text == "")
             {
-                txtContrasena.Text = "Constraseña";
-                txtContrasena.ForeColor = Color.Black;
+                txtContrasena.Text = "Contraseña";
+             //   txtContrasena.ForeColor = Color.Black;
+                txtContrasena.ForeColor = SystemColors.GrayText;
                 txtContrasena.UseSystemPasswordChar = false;
             }
         }
@@ -270,8 +249,7 @@ namespace Pantallas_proyecto
                         else
                         {
                             msjError("Usuario o contraseña incorrecta \n\t Intente de nuevo");
-                           // txtUsuario.Clear();
-                            //txtContrasena.Clear();
+                         
                         }
                     }
                     else
