@@ -53,45 +53,69 @@ namespace Pantallas_proyecto
         private void btnIngreso_Click(object sender, EventArgs e)
         {
             validaciones validacion = new validaciones();
-            if (txtUsuario.Text != "Usuario")
-            {
-                if (txtContrasena.Text != "Contraseña")
-                {
-                    
-                    Dominio.UserModel model = new Dominio.UserModel();
-                    var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
-                    if (validar == true)
-                    {
-                        this.Hide();
-                        FormBienvenido welcome = new FormBienvenido();
-                        welcome.ShowDialog();
-                        
-                        if (Cashe.UserCache.Position == "Vendedor")
-                        {
-                            FrmMenuPrincipal menu = new FrmMenuPrincipal();
-                            menu.Show();
-                            menu.FormClosed += cerrarSesion;
-                        }
-                        if (Cashe.UserCache.Position == "Gerente")
-                        {
-                            FrmMenuPrincipalGerente menu = new FrmMenuPrincipalGerente();
-                            menu.Show();
-                            menu.FormClosed += cerrarSesion;
-                        }
 
-                    }
-                    else
+
+            if (validacion.Espacio_Blanco(ErrorProvider, txtContrasena) || validacion.Espacio_Blanco(ErrorProvider, txtUsuario))
+            {
+                if (validacion.Espacio_Blanco(ErrorProvider, txtContrasena))
+                {
+                    if (!validacion.Espacio_Blanco(ErrorProvider, txtUsuario))
                     {
-                        msjError("Usuario o contraseña incorrecta \n\t Intente de nuevo");
-                        txtUsuario.Clear();
-                        txtContrasena.Clear();
+                        ErrorProvider.SetError(txtUsuario, "");
                     }
+                    ErrorProvider.SetError(txtContrasena, "No se ingreso una contraseña.");
                 }
-                else
-                    msjError("Ingrese la contraseña");
+                if (validacion.Espacio_Blanco(ErrorProvider, txtUsuario))
+                {
+                    if (!validacion.Espacio_Blanco(ErrorProvider, txtContrasena))
+                    {
+                        ErrorProvider.SetError(txtContrasena, "");
+                    }
+                    ErrorProvider.SetError(txtUsuario, "No se ingreso un usuario.");
+                }
             }
             else
-                msjError("Ingrese el usuario");
+            {
+                if (txtUsuario.Text != "Usuario")
+                {
+                    if (txtContrasena.Text != "Contraseña")
+                    {
+
+                        Dominio.UserModel model = new Dominio.UserModel();
+                        var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
+                        if (validar == true)
+                        {
+                            this.Hide();
+                            FormBienvenido welcome = new FormBienvenido();
+                            welcome.ShowDialog();
+
+                            if (Cashe.UserCache.Position == "Vendedor")
+                            {
+                                FrmMenuPrincipal menu = new FrmMenuPrincipal();
+                                menu.Show();
+                                menu.FormClosed += cerrarSesion;
+                            }
+                            if (Cashe.UserCache.Position == "Gerente")
+                            {
+                                FrmMenuPrincipalGerente menu = new FrmMenuPrincipalGerente();
+                                menu.Show();
+                                menu.FormClosed += cerrarSesion;
+                            }
+
+                        }
+                        else
+                        {
+                            msjError("Usuario o contraseña incorrecta \n\t Intente de nuevo");
+                            //txtUsuario.Clear();
+                           // txtContrasena.Clear();
+                        }
+                    }
+                    else
+                        msjError("Ingrese la contraseña");
+                }
+                else
+                    msjError("Ingrese el usuario");
+            }
         }
         private void msjError(string msj)
         {
@@ -126,7 +150,8 @@ namespace Pantallas_proyecto
 
         private void txtContrasena_TextChanged(object sender, EventArgs e)
         {
-
+            lblError.Visible = false;
+            picError.Visible = false;
         }
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
@@ -182,6 +207,8 @@ namespace Pantallas_proyecto
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
+            lblError.Visible = false;
+            picError.Visible = false;
 
         }
 
@@ -243,8 +270,8 @@ namespace Pantallas_proyecto
                         else
                         {
                             msjError("Usuario o contraseña incorrecta \n\t Intente de nuevo");
-                            txtUsuario.Clear();
-                            txtContrasena.Clear();
+                           // txtUsuario.Clear();
+                            //txtContrasena.Clear();
                         }
                     }
                     else
