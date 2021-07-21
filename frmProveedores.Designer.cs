@@ -71,7 +71,7 @@ namespace Pantallas_proyecto
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(17, 20);
+            this.button2.Location = new System.Drawing.Point(15, 19);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 26);
             this.button2.TabIndex = 53;
@@ -122,7 +122,7 @@ namespace Pantallas_proyecto
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(583, 35);
+            this.button7.Location = new System.Drawing.Point(543, 47);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(112, 26);
             this.button7.TabIndex = 45;
@@ -142,9 +142,9 @@ namespace Pantallas_proyecto
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProovedores.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProovedores.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvProovedores.Location = new System.Drawing.Point(13, 281);
+            this.dgvProovedores.Location = new System.Drawing.Point(81, 277);
             this.dgvProovedores.Name = "dgvProovedores";
-            this.dgvProovedores.Size = new System.Drawing.Size(753, 187);
+            this.dgvProovedores.Size = new System.Drawing.Size(436, 174);
             this.dgvProovedores.TabIndex = 54;
             this.dgvProovedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProovedores_CellContentClick);
             // 
@@ -161,7 +161,7 @@ namespace Pantallas_proyecto
             // 
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Location = new System.Drawing.Point(568, 105);
+            this.groupBox1.Location = new System.Drawing.Point(528, 117);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(140, 102);
             this.groupBox1.TabIndex = 56;
@@ -204,7 +204,7 @@ namespace Pantallas_proyecto
             this.toolStripLabel2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 477);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(780, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(684, 25);
             this.toolStrip1.TabIndex = 57;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -228,7 +228,7 @@ namespace Pantallas_proyecto
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(780, 502);
+            this.ClientSize = new System.Drawing.Size(684, 502);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -243,8 +243,8 @@ namespace Pantallas_proyecto
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(796, 541);
-            this.MinimumSize = new System.Drawing.Size(796, 541);
+            this.MaximumSize = new System.Drawing.Size(700, 541);
+            this.MinimumSize = new System.Drawing.Size(700, 541);
             this.Name = "frmProveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Proveedores";
