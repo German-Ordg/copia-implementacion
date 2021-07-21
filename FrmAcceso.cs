@@ -52,6 +52,7 @@ namespace Pantallas_proyecto
 
         private void btnIngreso_Click(object sender, EventArgs e)
         {
+            validaciones validacion = new validaciones();
             if (txtUsuario.Text != "Usuario")
             {
                 if (txtContrasena.Text != "Contraseña")
