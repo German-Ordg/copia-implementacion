@@ -19,13 +19,14 @@ namespace Pantallas_proyecto
             InitializeComponent();
         }
 
-        public DateTime Fecha1 { get; set; }
-        public DateTime Fecha2 { get; set; }
+        // public DateTime Fecha1 { get; set; }
+        //public DateTime Fecha2 { get; set; }
 
+        
         ClsConexionBD conect = new ClsConexionBD();
         validaciones validacion = new validaciones();
-        private bool letra2 = true;
-        private bool letra = true;
+        private bool letra2 = false;
+        private bool letra = false;
 
         private const int CP_NOCLOSE_BUTTON = 0x200;
         protected override CreateParams CreateParams
@@ -46,6 +47,7 @@ namespace Pantallas_proyecto
         //prueba
         private void frmReportes_Load(object sender, EventArgs e)
         {
+            lblmensaje.Text = "";
             conect.abrir();
             conect.cargarDatosreporte1(dgvcompra);
             conect.abrir();
@@ -58,6 +60,7 @@ namespace Pantallas_proyecto
             dgvrotacion.ForeColor = Color.Black;
             dgvventas.ForeColor = Color.Black;
             dgvmasvendido.ForeColor = Color.Black;
+            
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSetrotacion.ReporteCompras' Puede moverla o quitarla según sea necesario.
             // this.reporteComprasTableAdapter2.Fill(this.db_a75e9e_bderickmoncadaDataSetrotacion.ReporteCompras);
             // TODO: esta línea de código carga datos en la tabla 'DataSetCompra_Fecha.Compra_Fecha' Puede moverla o quitarla según sea necesario.
@@ -86,6 +89,9 @@ namespace Pantallas_proyecto
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            letra2 = false;
+            letra = false;
             if (validacion.Espacio_Blanco_CB(ErrorProvider, CBtipo))
             {
                 if (validacion.Espacio_Blanco_CB(ErrorProvider, CBtipo))
@@ -96,22 +102,23 @@ namespace Pantallas_proyecto
                 letra2 = true;
             }
 
+            
+
             if (letra2)
             {
                 switch (CBtipo.Text)
                 {
                     case "Categoria":
-                        if (letra)
-                        {
-                            ReportParameter[] parameters = new ReportParameter[1];
+                        lblmensaje.Text = "";
+                        ReportParameter[] parameters = new ReportParameter[1];
                             this.reportes.SelectedTab = reportes.TabPages["tab1"];
                             string Categoria = CBcategoria.Text.Trim();
                             parameters[0] = new ReportParameter("Categoria", Categoria);
                             reportViewer1.LocalReport.SetParameters(parameters);
                             this.reportViewer1.RefreshReport();
-                        }
                         break;
                     case "Ventas":
+                        lblmensaje.Text = "";
                         List<impresion_ventas> impresion5 = new List<impresion_ventas>();
 
                         impresion5.Clear();
@@ -137,15 +144,13 @@ namespace Pantallas_proyecto
                         this.reportViewer2.RefreshReport();
                         break;
                     case "Productos a Punto de Acabarse":
+                        lblmensaje.Text = "";
                         this.reportes.SelectedTab = reportes.TabPages["tab3"];
                         this.reportViewer3.RefreshReport();
 
                         break;
-                    case "Talla que Mas se Vende":
-                        this.reportes.SelectedTab = reportes.TabPages["tab4"];
-                        this.reportViewer4.RefreshReport();
-                        break;
                     case "Rotacion del Inventario":
+                        lblmensaje.Text = "";
                         List<impresion1> impresion4 = new List<impresion1>();
 
                         impresion4.Clear();
@@ -169,10 +174,12 @@ namespace Pantallas_proyecto
                         this.reportViewer5.RefreshReport();
                         break;
                     case "Inventario":
+                        lblmensaje.Text = "";
                         this.reportes.SelectedTab = reportes.TabPages["tab6"];
                         this.reportViewer6.RefreshReport();
                         break;
                     case "Compras":
+                        lblmensaje.Text = "";
                         List<impresion1> impresion = new List<impresion1>();
 
                         impresion.Clear();
@@ -196,33 +203,52 @@ namespace Pantallas_proyecto
                         this.reportViewer8.RefreshReport();
                         break;
                     case "Compras por Codigo":
-                        List<impresion1> impresion2 = new List<impresion1>();
-
-                        impresion2.Clear();
-
-                        for (int i = 0; i < dgvcompra.Rows.Count - 1; i++)
+                        lblmensaje.Text = "Debe ingresar un codigo de compra";
+                        if (validacion.Espacio_Blanco(ErrorProvider, txtcodigo) || validacion.Solo_Numeros(ErrorProvider, txtcodigo))
                         {
-                            impresion1 imp = new impresion1();
-                            imp.dato1 = this.dgvcompra.Rows[i].Cells[0].Value.ToString();
-                            imp.dato2 = (string)this.dgvcompra.Rows[i].Cells[1].Value;
-                            imp.dato3 = this.dgvcompra.Rows[i].Cells[2].Value.ToString();
-                            imp.dato4 = this.dgvcompra.Rows[i].Cells[3].Value.ToString();
-                            imp.dato5 = (string)this.dgvcompra.Rows[i].Cells[4].Value;
-                            imp.dato6 = this.dgvcompra.Rows[i].Cells[5].Value.ToString();
-                            imp.dato7 = this.dgvcompra.Rows[i].Cells[6].Value.ToString();
-                            imp.dato8 = this.dgvcompra.Rows[i].Cells[7].Value.ToString();
-                            impresion2.Add(imp);
+                            if (validacion.Espacio_Blanco(ErrorProvider, txtcodigo))
+                                ErrorProvider.SetError(txtcodigo, "no se puede dejar en blanco");
+                            else
+                                if (validacion.Solo_Numeros(ErrorProvider, txtcodigo))
+                                ErrorProvider.SetError(txtcodigo, "solo se permite numeros");
                         }
-                        ReportParameter[] parameters1 = new ReportParameter[1];
-                        this.reportes.SelectedTab = reportes.TabPages["tab8"];
-                        string Codigo = txtcodigo.Text;
-                        parameters1[0] = new ReportParameter("codigo", Codigo);
-                        reportViewer7.LocalReport.SetParameters(parameters1);
-                        reportViewer7.LocalReport.DataSources.Clear();
-                        reportViewer7.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion2));
-                        this.reportViewer7.RefreshReport();
-                        break;
+                        else
+                        {
+                            letra = true;
+                        }
+                        if (letra)
+                        {
+                            lblmensaje.Text = "";
+                            List<impresion1> impresion2 = new List<impresion1>();
+
+                            impresion2.Clear();
+
+                            for (int i = 0; i < dgvcompra.Rows.Count - 1; i++)
+                            {
+                                impresion1 imp = new impresion1();
+                                imp.dato1 = this.dgvcompra.Rows[i].Cells[0].Value.ToString();
+                                imp.dato2 = (string)this.dgvcompra.Rows[i].Cells[1].Value;
+                                imp.dato3 = this.dgvcompra.Rows[i].Cells[2].Value.ToString();
+                                imp.dato4 = this.dgvcompra.Rows[i].Cells[3].Value.ToString();
+                                imp.dato5 = (string)this.dgvcompra.Rows[i].Cells[4].Value;
+                                imp.dato6 = this.dgvcompra.Rows[i].Cells[5].Value.ToString();
+                                imp.dato7 = this.dgvcompra.Rows[i].Cells[6].Value.ToString();
+                                imp.dato8 = this.dgvcompra.Rows[i].Cells[7].Value.ToString();
+                                impresion2.Add(imp);
+                            }
+                            ReportParameter[] parameters1 = new ReportParameter[1];
+                            this.reportes.SelectedTab = reportes.TabPages["tab8"];
+                            string Codigo = txtcodigo.Text;
+                            parameters1[0] = new ReportParameter("codigo", Codigo);
+                            reportViewer7.LocalReport.SetParameters(parameters1);
+                            reportViewer7.LocalReport.DataSources.Clear();
+                            reportViewer7.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion2));
+                            this.reportViewer7.RefreshReport();
+                        }
+                            break;
+                        
                     case "Compras con Fecha":
+                        lblmensaje.Text = "Ingrese una 'Fecha desde' y una 'Fecha hasta'";
                         List<impresion1> impresion3 = new List<impresion1>();
 
                         impresion3.Clear();
@@ -252,6 +278,12 @@ namespace Pantallas_proyecto
                         this.reportViewer9.RefreshReport();
                         break;
                     case "Lo mas Vendido":
+                        lblmensaje.Text = "Ingrese una 'Fecha desde' y una 'Fecha hasta'";
+
+                        DateTime Fecha11 = dateTimePicker1.Value;
+                        DateTime Fecha22 = dateTimePicker2.Value;
+                        var aux = new Metodolomasvendido();
+                        aux.filtrar(dgvmasvendido, Fecha11, Fecha22);
                         List<impresion_ventas> impresion6 = new List<impresion_ventas>();
 
                         impresion6.Clear();
@@ -262,13 +294,6 @@ namespace Pantallas_proyecto
                             imp.dato1 = this.dgvmasvendido.Rows[i].Cells[0].Value.ToString();
                             imp.dato2 = this.dgvmasvendido.Rows[i].Cells[1].Value.ToString();
                             imp.dato3 = this.dgvmasvendido.Rows[i].Cells[2].Value.ToString();
-                            imp.dato4 = this.dgvmasvendido.Rows[i].Cells[3].Value.ToString();
-                            imp.dato5 = this.dgvmasvendido.Rows[i].Cells[4].Value.ToString();
-                            imp.dato6 = this.dgvmasvendido.Rows[i].Cells[5].Value.ToString();
-                            imp.dato7 = this.dgvmasvendido.Rows[i].Cells[6].Value.ToString();
-                            imp.dato8 = this.dgvmasvendido.Rows[i].Cells[7].Value.ToString();
-                            imp.dato9 = this.dgvmasvendido.Rows[i].Cells[8].Value.ToString();
-                            imp.dato10 = this.dgvmasvendido.Rows[i].Cells[9].Value.ToString();
                             impresion6.Add(imp);
                         }
                         this.reportes.SelectedTab = reportes.TabPages["tab4"];
@@ -278,10 +303,6 @@ namespace Pantallas_proyecto
                         break;
                 }
             }
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -359,6 +380,37 @@ namespace Pantallas_proyecto
         public string dato10 { get; set; }
     }
 
+    class Metodolomasvendido
+    {
+        ClsConexionBD conect = new ClsConexionBD();
 
+        public void filtrar(DataGridView data, DateTime fecha1, DateTime fecha2)
+        {
+
+
+            try
+            {
+                conect.cerrar();
+                conect.abrir();
+                SqlCommand sql = new SqlCommand("PA_producto_mas_vendido", conect.conexion);
+                sql.CommandType = CommandType.StoredProcedure;
+                sql.Parameters.Add("@Fecha1", SqlDbType.Date).Value = fecha1;
+                sql.Parameters.Add("@Fecha2", SqlDbType.Date).Value = fecha2;
+
+                sql.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(sql);
+                da.Fill(dt);
+                data.DataSource = dt;
+                conect.cerrar();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("error es: " + ex.ToString());
+            }
+
+        }
+    }
 
 }
