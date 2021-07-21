@@ -15,9 +15,7 @@ namespace Pantallas_proyecto
 {
     public partial class frmInventarioParaEmpleado : Form
     {
-        private bool letra1 = false;
-        private bool letra2 = false;
-        private bool letra3 = false;
+        //private bool letra1 = false;
         private bool numero1 = false;
 
         public frmInventarioParaEmpleado()
