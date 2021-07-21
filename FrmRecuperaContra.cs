@@ -48,7 +48,7 @@ namespace Pantallas_proyecto
                 {
                     ErrorProvider.SetError(cmbUsuariorequerido, "");
                 }
-                ErrorProvider.SetError(cmbUsuariorequerido, "escoja usuario para recuperar contraseña");
+                ErrorProvider.SetError(cmbUsuariorequerido, "Elija un usuario para recuperar contraseña");
             }
             else
             {
@@ -85,7 +85,7 @@ namespace Pantallas_proyecto
             }
             else
             {
-                MessageBox.Show("Error al buscar el Producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al buscar el Correo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             conect.cerrar();
         }
