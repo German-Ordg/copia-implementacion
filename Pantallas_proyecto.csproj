@@ -400,12 +400,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report_mas_vendido.rdlc" />
     <EmbeddedResource Include="Report_productos_por_acabarse.rdlc" />
-    <EmbeddedResource Include="Report_talla_mas_vende.rdlc" />
     <EmbeddedResource Include="Report_rotacion_inventario.rdlc" />
     <EmbeddedResource Include="Report_compras_fechas.rdlc" />
-    <EmbeddedResource Include="Report8.rdlc" />
-    <EmbeddedResource Include="Report9.rdlc" />
-    <EmbeddedResource Include="Reportcompra_fecha.rdlc" />
+    <EmbeddedResource Include="Report_compra_codigo.rdlc" />
+    <EmbeddedResource Include="Report_categorias.rdlc" />
+    <EmbeddedResource Include="Reportcompras.rdlc" />
     <EmbeddedResource Include="Reportinventario.rdlc" />
     <EmbeddedResource Include="Report_ventas.rdlc" />
     <EmbeddedResource Include="Repote_factura.rdlc" />

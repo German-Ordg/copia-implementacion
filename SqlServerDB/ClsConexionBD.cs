@@ -175,6 +175,22 @@ namespace Pantallas_proyecto
             }
         }
 
+        public void cargarDatosreporte5(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("Select * From VCategorias", conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void cargarDatosreporte4(DataGridView dgv)
         {
             try

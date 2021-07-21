@@ -32,7 +32,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>1.108cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -43,7 +43,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato1</Value>
+                              <Value>Codigo</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -73,7 +73,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato2</Value>
+                              <Value>Producto</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -103,7 +103,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato3</Value>
+                              <Value>Categoria</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -133,7 +133,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato4</Value>
+                              <Value>Cantidad</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Existente</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -163,7 +172,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato5</Value>
+                              <Value>Precio</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Actual</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -193,7 +211,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato6</Value>
+                              <Value>Descuento</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -223,7 +241,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato7</Value>
+                              <Value>Talla</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -253,7 +271,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato8</Value>
+                              <Value>Fecha de </Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Compra</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -553,8 +580,8 @@
         </SortExpressions>
         <Top>1.9812cm</Top>
         <Left>0.42473cm</Left>
-        <Height>1.2cm</Height>
-        <Width>15.83017cm</Width>
+        <Height>1.708cm</Height>
+        <Width>15.83016cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

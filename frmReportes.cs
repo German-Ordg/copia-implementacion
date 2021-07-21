@@ -56,11 +56,14 @@ namespace Pantallas_proyecto
             conect.cargarDatosreporte3(dgvventas);
             conect.abrir();
             conect.cargarDatosreporte3(dgvmasvendido);
+            conect.abrir();
+            conect.cargarDatosreporte5(dgvcategorias);
             dgvcompra.ForeColor = Color.Black;
             dgvrotacion.ForeColor = Color.Black;
             dgvventas.ForeColor = Color.Black;
             dgvmasvendido.ForeColor = Color.Black;
-            
+            dgvcategorias.ForeColor = Color.Black;
+
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSetrotacion.ReporteCompras' Puede moverla o quitarla según sea necesario.
             // this.reporteComprasTableAdapter2.Fill(this.db_a75e9e_bderickmoncadaDataSetrotacion.ReporteCompras);
             // TODO: esta línea de código carga datos en la tabla 'DataSetCompra_Fecha.Compra_Fecha' Puede moverla o quitarla según sea necesario.
@@ -85,6 +88,7 @@ namespace Pantallas_proyecto
 
 
 
+            this.reportViewer1.RefreshReport();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -110,13 +114,33 @@ namespace Pantallas_proyecto
                 {
                     case "Categoria":
                         lblmensaje.Text = "";
-                        ReportParameter[] parameters = new ReportParameter[1];
-                            this.reportes.SelectedTab = reportes.TabPages["tab1"];
-                            string Categoria = CBcategoria.Text.Trim();
-                            parameters[0] = new ReportParameter("Categoria", Categoria);
-                            reportViewer1.LocalReport.SetParameters(parameters);
-                            this.reportViewer1.RefreshReport();
-                        break;
+                        List<impresion1> impresion9 = new List<impresion1>();
+
+                        impresion9.Clear();
+
+                        for (int i = 0; i < dgvcategorias.Rows.Count - 1; i++)
+                        {
+                            impresion1 imp = new impresion1();
+                            imp.dato1 = this.dgvcategorias.Rows[i].Cells[0].Value.ToString();
+                            imp.dato2 = this.dgvcategorias.Rows[i].Cells[1].Value.ToString();
+                            imp.dato3 = this.dgvcategorias.Rows[i].Cells[2].Value.ToString();
+                            imp.dato4 = this.dgvcategorias.Rows[i].Cells[3].Value.ToString();
+                            imp.dato5 = this.dgvcategorias.Rows[i].Cells[4].Value.ToString();
+                            imp.dato6 = this.dgvcategorias.Rows[i].Cells[5].Value.ToString();
+                            imp.dato7 = this.dgvcategorias.Rows[i].Cells[6].Value.ToString();
+
+                            impresion9.Add(imp);
+                        }
+                        ReportParameter[] parameters100 = new ReportParameter[1];
+                        this.reportes.SelectedTab = reportes.TabPages["tab1"];
+                        string Categoria = CBcategoria.Text.Trim();
+                        parameters100[0] = new ReportParameter("Categoria", Categoria);
+                        reportViewer1.LocalReport.SetParameters(parameters100);
+                        reportViewer1.LocalReport.DataSources.Clear();
+                        reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion9));
+                        this.reportViewer1.RefreshReport();
+                
+                break;
                     case "Ventas":
                         lblmensaje.Text = "";
                         List<impresion_ventas> impresion5 = new List<impresion_ventas>();

@@ -28,7 +28,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato1</Value>
+                              <Value>Producto</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -58,7 +58,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato2</Value>
+                              <Value>Talla</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -88,7 +88,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato3</Value>
+                              <Value>Total</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Vendido</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -226,6 +235,11 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
+        <SortExpressions>
+          <SortExpression>
+            <Value>=Fields!dato3.Value</Value>
+          </SortExpression>
+        </SortExpressions>
         <Top>1.63267cm</Top>
         <Left>0.46526cm</Left>
         <Height>1.2cm</Height>
@@ -240,7 +254,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>12.27252in</Width>
+  <Width>8.94759in</Width>
   <Page>
     <PageHeader>
       <Height>2.69803cm</Height>

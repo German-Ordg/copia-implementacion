@@ -9,7 +9,7 @@
               <Width>1.6455cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.6455cm</Width>
+              <Width>1.89396cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.6455cm</Width>
@@ -38,7 +38,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>1.108cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -49,7 +49,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato1</Value>
+                              <Value>Codigo</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Venta</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -79,7 +88,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato2</Value>
+                              <Value>Empleado</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -109,7 +118,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato3</Value>
+                              <Value>Tipo Pago</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -139,7 +148,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato4</Value>
+                              <Value>Producto</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -169,7 +178,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato5</Value>
+                              <Value>Cantidad</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -199,7 +208,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato6</Value>
+                              <Value>Precio</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Venta</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -229,7 +247,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato7</Value>
+                              <Value>Sub Total</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -259,7 +277,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato8</Value>
+                              <Value>Fecha</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -289,7 +307,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato9</Value>
+                              <Value>Impuesto</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -319,7 +337,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato10</Value>
+                              <Value>Total</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -676,8 +694,8 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>1.6002cm</Top>
         <Left>0.758cm</Left>
-        <Height>1.2cm</Height>
-        <Width>16.45497cm</Width>
+        <Height>1.708cm</Height>
+        <Width>16.70346cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

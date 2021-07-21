@@ -32,7 +32,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>1.15033cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -43,7 +43,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato1</Value>
+                              <Value>Codigo</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Compra</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -73,7 +82,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato2</Value>
+                              <Value>Proveedor</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -103,7 +112,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato3</Value>
+                              <Value>Tipo Pago</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -133,7 +142,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato4</Value>
+                              <Value>Fecha</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Compra</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -163,7 +181,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato5</Value>
+                              <Value>Producto</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -182,6 +200,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -193,7 +212,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato6</Value>
+                              <Value>Cantidad</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -223,7 +242,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato7</Value>
+                              <Value>Precio</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Compra</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -253,7 +281,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dato8</Value>
+                              <Value>Sub Total</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -548,7 +576,7 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>1.32503cm</Top>
         <Left>0.54881cm</Left>
-        <Height>1.2cm</Height>
+        <Height>1.75033cm</Height>
         <Width>15.47032cm</Width>
         <Style>
           <Border>
@@ -574,7 +602,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reporte de Compras </Value>
+                  <Value>Reporte de Compras por fechas </Value>
                   <Style>
                     <FontSize>20pt</FontSize>
                     <FontWeight>Bold</FontWeight>
