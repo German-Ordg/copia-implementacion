@@ -122,12 +122,12 @@ namespace Pantallas_proyecto
                         {
                             impresion1 imp = new impresion1();
                             imp.dato1 = this.dgvcategorias.Rows[i].Cells[0].Value.ToString();
-                            imp.dato2 = this.dgvcategorias.Rows[i].Cells[1].Value.ToString();
-                            imp.dato3 = this.dgvcategorias.Rows[i].Cells[2].Value.ToString();
-                            imp.dato4 = this.dgvcategorias.Rows[i].Cells[3].Value.ToString();
-                            imp.dato5 = this.dgvcategorias.Rows[i].Cells[4].Value.ToString();
-                            imp.dato6 = this.dgvcategorias.Rows[i].Cells[5].Value.ToString();
-                            imp.dato7 = this.dgvcategorias.Rows[i].Cells[6].Value.ToString();
+                            imp.dato2 = this.dgvcategorias.Rows[i].Cells[2].Value.ToString();
+                            imp.dato3 = this.dgvcategorias.Rows[i].Cells[3].Value.ToString();
+                            imp.dato4 = this.dgvcategorias.Rows[i].Cells[4].Value.ToString();
+                            imp.dato5 = this.dgvcategorias.Rows[i].Cells[5].Value.ToString();
+                            imp.dato6 = this.dgvcategorias.Rows[i].Cells[6].Value.ToString();
+                            imp.dato7 = this.dgvcategorias.Rows[i].Cells[7].Value.ToString();
 
                             impresion9.Add(imp);
                         }

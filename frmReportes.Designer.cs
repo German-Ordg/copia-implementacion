@@ -83,6 +83,8 @@ namespace Pantallas_proyecto
             this.dgvventas = new System.Windows.Forms.DataGridView();
             this.reportes = new System.Windows.Forms.TabControl();
             this.tab1 = new System.Windows.Forms.TabPage();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dgvcategorias = new System.Windows.Forms.DataGridView();
             this.tab6 = new System.Windows.Forms.TabPage();
             this.reportViewer6 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tab7 = new System.Windows.Forms.TabPage();
@@ -131,8 +133,6 @@ namespace Pantallas_proyecto
             this.button1 = new System.Windows.Forms.Button();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblmensaje = new System.Windows.Forms.Label();
-            this.dgvcategorias = new System.Windows.Forms.DataGridView();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.impresion1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.impresion_ventasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductosBindingSource)).BeginInit();
@@ -163,6 +163,7 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dgvventas)).BeginInit();
             this.reportes.SuspendLayout();
             this.tab1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcategorias)).BeginInit();
             this.tab6.SuspendLayout();
             this.tab7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcompra)).BeginInit();
@@ -191,7 +192,6 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dataSetinventario1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetinventario1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvcategorias)).BeginInit();
             this.SuspendLayout();
             // 
             // impresion1BindingSource
@@ -591,6 +591,27 @@ namespace Pantallas_proyecto
             this.tab1.Text = "Reporte1";
             this.tab1.UseVisualStyleBackColor = true;
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Report_categorias.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(836, 455);
+            this.reportViewer1.TabIndex = 1;
+            // 
+            // dgvcategorias
+            // 
+            this.dgvcategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvcategorias.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvcategorias.Location = new System.Drawing.Point(3, 3);
+            this.dgvcategorias.Name = "dgvcategorias";
+            this.dgvcategorias.RowHeadersWidth = 51;
+            this.dgvcategorias.RowTemplate.Height = 24;
+            this.dgvcategorias.Size = new System.Drawing.Size(836, 455);
+            this.dgvcategorias.TabIndex = 0;
+            // 
             // tab6
             // 
             this.tab6.Controls.Add(this.reportViewer6);
@@ -914,26 +935,6 @@ namespace Pantallas_proyecto
             this.lblmensaje.TabIndex = 77;
             this.lblmensaje.Text = "label6";
             // 
-            // dgvcategorias
-            // 
-            this.dgvcategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvcategorias.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvcategorias.Location = new System.Drawing.Point(3, 3);
-            this.dgvcategorias.Name = "dgvcategorias";
-            this.dgvcategorias.RowHeadersWidth = 51;
-            this.dgvcategorias.RowTemplate.Height = 24;
-            this.dgvcategorias.Size = new System.Drawing.Size(836, 455);
-            this.dgvcategorias.TabIndex = 0;
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.Location = new System.Drawing.Point(3, 3);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(836, 455);
-            this.reportViewer1.TabIndex = 1;
-            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -999,6 +1000,7 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dgvventas)).EndInit();
             this.reportes.ResumeLayout(false);
             this.tab1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcategorias)).EndInit();
             this.tab6.ResumeLayout(false);
             this.tab7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvcompra)).EndInit();
@@ -1028,7 +1030,6 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.dataSetinventario1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetinventario1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvcategorias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
