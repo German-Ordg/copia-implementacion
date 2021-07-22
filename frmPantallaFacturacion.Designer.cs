@@ -85,7 +85,6 @@ namespace Pantallas_proyecto
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
-            this.btnEliminarTodo = new System.Windows.Forms.Button();
             this.txtDescuento = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
@@ -108,6 +107,7 @@ namespace Pantallas_proyecto
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lstCompras)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -122,6 +122,7 @@ namespace Pantallas_proyecto
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // brnRegresar
@@ -692,7 +693,6 @@ namespace Pantallas_proyecto
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnBuscarProducto);
             this.groupBox1.Controls.Add(this.nudCantidad);
-            this.groupBox1.Controls.Add(this.btnEliminarTodo);
             this.groupBox1.Controls.Add(this.txtDescuento);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtPrecioUnitario);
@@ -771,22 +771,6 @@ namespace Pantallas_proyecto
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(120, 24);
             this.nudCantidad.TabIndex = 19;
-            // 
-            // btnEliminarTodo
-            // 
-            this.btnEliminarTodo.BackColor = System.Drawing.Color.Maroon;
-            this.btnEliminarTodo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminarTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarTodo.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarTodo.Location = new System.Drawing.Point(435, 167);
-            this.btnEliminarTodo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminarTodo.Name = "btnEliminarTodo";
-            this.btnEliminarTodo.Size = new System.Drawing.Size(133, 37);
-            this.btnEliminarTodo.TabIndex = 18;
-            this.btnEliminarTodo.Text = "Eliminar Todo";
-            this.btnEliminarTodo.UseVisualStyleBackColor = false;
-            this.btnEliminarTodo.Click += new System.EventHandler(this.btnEliminarTodo_Click);
             // 
             // txtDescuento
             // 
@@ -1014,6 +998,10 @@ namespace Pantallas_proyecto
             this.reportViewer1.Size = new System.Drawing.Size(1295, 650);
             this.reportViewer1.TabIndex = 0;
             // 
+            // ErrorProvider
+            // 
+            this.ErrorProvider.ContainerControl = this;
+            // 
             // frmPantallaFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1056,6 +1044,7 @@ namespace Pantallas_proyecto
             this.panel1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1108,7 +1097,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPrecioUnitario;
-        private System.Windows.Forms.Button btnEliminarTodo;
         private System.Windows.Forms.TextBox txtDescuento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnImprimirFactura;
@@ -1140,5 +1128,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.ErrorProvider ErrorProvider;
     }
 }
