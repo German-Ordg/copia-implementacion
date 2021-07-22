@@ -75,7 +75,7 @@ namespace Pantallas_proyecto
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
+           /* try
             {
                 poc = dgvMetodosPago.CurrentRow.Index;
                 codigo = dgvMetodosPago[0, poc].Value.ToString();
@@ -98,7 +98,7 @@ namespace Pantallas_proyecto
             catch (Exception ex)
             {
                 MessageBox.Show("No se pudo eliminar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         int codigo1;
