@@ -113,20 +113,36 @@ namespace Pantallas_proyecto
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            try
+            letra2 = false;
+            letra = false;
+
+            if (validacion.Espacio_Blanco(ErrorProvider, txtPosicion))
             {
-                string query = "Update Empleados_Puestos set descripcion_puesto= '" + txtPosicion.Text + "' where codigo_puesto='" + Record_Id + "'";
-                connect.abrir();
-                SqlCommand comando = new SqlCommand(query, connect.conexion);
-                comando.ExecuteNonQuery();
-                connect.abrir();
-                MessageBox.Show("Se Modificó Correctamente");
-                Limpiar();
-                MostrarDatos();
+                if (validacion.Espacio_Blanco(ErrorProvider, txtPosicion))
+                    ErrorProvider.SetError(txtPosicion, "No se puede dejar en blanco");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                letra2 = true;
+            }
+
+            if (letra2)
+            {
+                try
+                {
+                    string query = "Update Empleados_Puestos set descripcion_puesto= '" + txtPosicion.Text + "' where codigo_puesto='" + Record_Id + "'";
+                    connect.abrir();
+                    SqlCommand comando = new SqlCommand(query, connect.conexion);
+                    comando.ExecuteNonQuery();
+                    connect.abrir();
+                    MessageBox.Show("Se Modificó Correctamente");
+                    Limpiar();
+                    MostrarDatos();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
