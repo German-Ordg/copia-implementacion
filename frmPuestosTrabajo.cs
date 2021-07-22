@@ -26,6 +26,7 @@ namespace Pantallas_proyecto
         }
 
         ClsConexionBD connect = new ClsConexionBD();
+        validaciones validacion = new validaciones();
         int Record_Id;
         private bool letra = false;
         private bool letra2 = false;
@@ -79,10 +80,10 @@ namespace Pantallas_proyecto
             letra2 = false;
             letra = false;
 
-            if (validacion.Espacio_Blanco_CB(ErrorProvider, CBtipo))
+            if (validacion.Espacio_Blanco(ErrorProvider, txtPosicion) || validacion.Solo_Letras(ErrorProvider, txtPosicion))
             {
-                if (validacion.Espacio_Blanco_CB(ErrorProvider, CBtipo))
-                    ErrorProvider.SetError(CBtipo, "no se puede dejar en blanco");
+                if (validacion.Espacio_Blanco(ErrorProvider, txtPosicion))
+                    ErrorProvider.SetError(txtPosicion, "No se puede dejar en blanco");
             }
             else
             {

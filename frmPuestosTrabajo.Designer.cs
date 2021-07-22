@@ -47,12 +47,14 @@ namespace Pantallas_proyecto
             this.tslFecha = new System.Windows.Forms.ToolStripLabel();
             this.tslHora = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DgvPuesto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvPuesto
@@ -230,6 +232,10 @@ namespace Pantallas_proyecto
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // ErrorProvider
+            // 
+            this.ErrorProvider.ContainerControl = this;
+            // 
             // frmPuestosTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,6 +262,7 @@ namespace Pantallas_proyecto
             this.toolStripContainer1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,5 +283,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.ToolStripLabel tslFecha;
         private System.Windows.Forms.ToolStripLabel tslHora;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ErrorProvider ErrorProvider;
     }
 }
