@@ -40,6 +40,7 @@ namespace Pantallas_proyecto
         }
         private void button7_Click(object sender, EventArgs e)
         {
+            conect.cerrar();
             FrmMenuPrincipalGerente gerente = new FrmMenuPrincipalGerente();
             gerente.Show();
             this.Close();
@@ -88,7 +89,7 @@ namespace Pantallas_proyecto
 
 
 
-            this.reportViewer1.RefreshReport();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
