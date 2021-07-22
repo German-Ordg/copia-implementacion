@@ -530,10 +530,11 @@ namespace Pantallas_proyecto
             // 
             // txtNombreCliente
             // 
+            this.ErrorProvider.SetError(this.txtNombreCliente, "No se permite este campo vacío");
             this.txtNombreCliente.Location = new System.Drawing.Point(230, 79);
             this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(186, 22);
+            this.txtNombreCliente.Size = new System.Drawing.Size(172, 22);
             this.txtNombreCliente.TabIndex = 10;
             // 
             // lblNombre
@@ -590,10 +591,11 @@ namespace Pantallas_proyecto
             // 
             // txtRTN
             // 
+            this.ErrorProvider.SetError(this.txtRTN, "No se permite este campo vacío");
             this.txtRTN.Location = new System.Drawing.Point(230, 32);
             this.txtRTN.Margin = new System.Windows.Forms.Padding(4);
             this.txtRTN.Name = "txtRTN";
-            this.txtRTN.Size = new System.Drawing.Size(186, 22);
+            this.txtRTN.Size = new System.Drawing.Size(172, 22);
             this.txtRTN.TabIndex = 5;
             this.txtRTN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRTN_KeyPress);
             // 
@@ -855,10 +857,11 @@ namespace Pantallas_proyecto
             // 
             // txtCodProducto
             // 
+            this.ErrorProvider.SetError(this.txtCodProducto, "Sólo se admiten números");
             this.txtCodProducto.Location = new System.Drawing.Point(132, 26);
             this.txtCodProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodProducto.Name = "txtCodProducto";
-            this.txtCodProducto.Size = new System.Drawing.Size(152, 24);
+            this.txtCodProducto.Size = new System.Drawing.Size(134, 24);
             this.txtCodProducto.TabIndex = 1;
             this.txtCodProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodProducto_KeyPress);
             // 
