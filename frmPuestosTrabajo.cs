@@ -120,6 +120,7 @@ namespace Pantallas_proyecto
             {
                 if (validacion.Espacio_Blanco(ErrorProvider, txtPosicion))
                     ErrorProvider.SetError(txtPosicion, "No se puede dejar en blanco");
+                Limpiar();
             }
             else
             {
