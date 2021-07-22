@@ -42,6 +42,13 @@ namespace Pantallas_proyecto
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblcodigo = new System.Windows.Forms.Label();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
+            this.lblnueva = new System.Windows.Forms.Label();
+            this.btnverificar = new System.Windows.Forms.Button();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.btncambiar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -167,20 +174,113 @@ namespace Pantallas_proyecto
             // 
             this.ErrorProvider.ContainerControl = this;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "label1";
+            // 
+            // lblcodigo
+            // 
+            this.lblcodigo.AutoSize = true;
+            this.lblcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcodigo.ForeColor = System.Drawing.Color.White;
+            this.lblcodigo.Location = new System.Drawing.Point(284, 324);
+            this.lblcodigo.Name = "lblcodigo";
+            this.lblcodigo.Size = new System.Drawing.Size(170, 13);
+            this.lblcodigo.TabIndex = 6;
+            this.lblcodigo.Text = "Ingrese el codigo del correo:";
+            this.lblcodigo.Visible = false;
+            this.lblcodigo.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // txtcodigo
+            // 
+            this.txtcodigo.Location = new System.Drawing.Point(460, 321);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtcodigo.TabIndex = 12;
+            this.txtcodigo.Visible = false;
+            // 
+            // lblnueva
+            // 
+            this.lblnueva.AutoSize = true;
+            this.lblnueva.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnueva.ForeColor = System.Drawing.Color.White;
+            this.lblnueva.Location = new System.Drawing.Point(260, 366);
+            this.lblnueva.Name = "lblnueva";
+            this.lblnueva.Size = new System.Drawing.Size(194, 13);
+            this.lblnueva.TabIndex = 13;
+            this.lblnueva.Text = "Introduzca su nueva contraseña:";
+            this.lblnueva.Visible = false;
+            // 
+            // btnverificar
+            // 
+            this.btnverificar.BackColor = System.Drawing.Color.Maroon;
+            this.btnverificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnverificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnverificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnverificar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnverificar.Location = new System.Drawing.Point(577, 313);
+            this.btnverificar.Name = "btnverificar";
+            this.btnverificar.Size = new System.Drawing.Size(59, 28);
+            this.btnverificar.TabIndex = 15;
+            this.btnverificar.Text = "Verificar Codigo";
+            this.btnverificar.UseVisualStyleBackColor = false;
+            this.btnverificar.Visible = false;
+            this.btnverificar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.BackColor = System.Drawing.Color.White;
+            this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtContrasena.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtContrasena.Location = new System.Drawing.Point(461, 361);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(127, 25);
+            this.txtContrasena.TabIndex = 16;
+            this.txtContrasena.Text = "Contraseña";
+            this.txtContrasena.Visible = false;
+            // 
+            // btncambiar
+            // 
+            this.btncambiar.BackColor = System.Drawing.Color.Maroon;
+            this.btncambiar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btncambiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btncambiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncambiar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btncambiar.Location = new System.Drawing.Point(607, 358);
+            this.btncambiar.Name = "btncambiar";
+            this.btncambiar.Size = new System.Drawing.Size(84, 40);
+            this.btncambiar.TabIndex = 17;
+            this.btncambiar.Text = "Cambiar Contraseña";
+            this.btncambiar.UseVisualStyleBackColor = false;
+            this.btncambiar.Visible = false;
+            this.btncambiar.Click += new System.EventHandler(this.btncambiar_Click);
+            // 
             // FrmRecuperaContra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(787, 316);
+            this.ClientSize = new System.Drawing.Size(787, 433);
+            this.Controls.Add(this.btncambiar);
+            this.Controls.Add(this.txtContrasena);
+            this.Controls.Add(this.btnverificar);
+            this.Controls.Add(this.lblnueva);
+            this.Controls.Add(this.txtcodigo);
+            this.Controls.Add(this.lblcodigo);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnIngreso);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(803, 355);
-            this.MinimumSize = new System.Drawing.Size(803, 355);
             this.Name = "FrmRecuperaContra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recuperar Contraseña";
@@ -206,5 +306,12 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtresultado;
         private System.Windows.Forms.ErrorProvider ErrorProvider;
+        private System.Windows.Forms.Label lblcodigo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtcodigo;
+        private System.Windows.Forms.Button btnverificar;
+        private System.Windows.Forms.Label lblnueva;
+        private System.Windows.Forms.Button btncambiar;
+        private System.Windows.Forms.TextBox txtContrasena;
     }
 }

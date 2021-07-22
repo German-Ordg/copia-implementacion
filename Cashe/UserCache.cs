@@ -14,6 +14,7 @@ namespace Pantallas_proyecto.Cashe
         public static string Position { get; set; }
         public static string FirstName { get; set; }
         public static string LastName { get; set; }
+        public static int numero { get; set; }
 
     }
 }
