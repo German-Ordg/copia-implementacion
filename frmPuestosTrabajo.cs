@@ -119,26 +119,6 @@ namespace Pantallas_proyecto
             }
         }
 
-        private void BtnEliminar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string query = "Delete from Empleados_Puestos WHERE codigo_puesto=@ID";
-                connect.abrir();
-                SqlCommand comando = new SqlCommand(query, connect.conexion);
-                comando.Parameters.AddWithValue("@ID", txtCodigo.Text);
-                comando.ExecuteNonQuery();
-                connect.cerrar();
-                MessageBox.Show("Puesto de Trabajo Eliminado");
-                Limpiar();
-                MostrarDatos();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             tslFecha.Text = DateTime.Now.ToLongDateString();
