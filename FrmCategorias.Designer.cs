@@ -39,7 +39,7 @@ namespace Pantallas_proyecto
             this.label2 = new System.Windows.Forms.Label();
             this.BtnModificar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.txtPosicion = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.DgvCategoria = new System.Windows.Forms.DataGridView();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
@@ -112,6 +112,7 @@ namespace Pantallas_proyecto
             this.BtnModificar.TabIndex = 34;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = false;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnAgregar
             // 
@@ -128,12 +129,12 @@ namespace Pantallas_proyecto
             this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // txtPosicion
+            // txtCategoria
             // 
-            this.txtPosicion.Location = new System.Drawing.Point(151, 127);
-            this.txtPosicion.Name = "txtPosicion";
-            this.txtPosicion.Size = new System.Drawing.Size(180, 20);
-            this.txtPosicion.TabIndex = 32;
+            this.txtCategoria.Location = new System.Drawing.Point(151, 127);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(180, 20);
+            this.txtCategoria.TabIndex = 32;
             // 
             // label1
             // 
@@ -186,7 +187,7 @@ namespace Pantallas_proyecto
             this.toolStripContainer1.ContentPanel.Controls.Add(this.label2);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.BtnModificar);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.BtnAgregar);
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.txtPosicion);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.txtCategoria);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.label1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.DgvCategoria);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.BtnRegresar);
@@ -265,7 +266,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnModificar;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.TextBox txtPosicion;
+        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView DgvCategoria;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;

@@ -64,21 +64,53 @@ namespace Pantallas_proyecto
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             try {
+                if (txtCategoria.Text == "")
+                {
+                    MessageBox.Show("No puede ingresar sin ingresar datos", "Informacion", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+                else {
+                    string query = "INSERT INTO Categoria_Producto (descripcion_categoria) VALUES (@categoria)";
+                    connect.abrir();
+                    SqlCommand comando = new SqlCommand(query, connect.conexion);
+                    comando.Parameters.AddWithValue("@categoria", txtCategoria.Text);
+                    comando.ExecuteNonQuery();
+                    connect.abrir();
+                    MessageBox.Show("Nueva Categoria Ingresada");
+                    MostrarDatos();
+                }
                 
             }
-            catch { }
+            catch (Exception ex){
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void DgvCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Record_Id = Convert.ToInt32(DgvCategoria.Rows[e.RowIndex].Cells[0].Value.ToString());
             txtCodigo.Text = (DgvCategoria.Rows[e.RowIndex].Cells[0].Value.ToString());
-            txtPosicion.Text = (DgvCategoria.Rows[e.RowIndex].Cells[1].Value.ToString());
+            txtCategoria.Text = (DgvCategoria.Rows[e.RowIndex].Cells[1].Value.ToString());
         }
 
         private void FrmCategorias_Load(object sender, EventArgs e)
         {
             MostrarDatos();
+        }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            try {
+                string query = "Update Categoria_Producto set descripcion_categoria= '" + txtCategoria.Text + "'where codigo_categoria='" + Record_Id + "'";
+                connect.abrir();
+                SqlCommand comando = new SqlCommand(query, connect.conexion);
+                comando.ExecuteNonQuery();
+                connect.abrir();
+                MessageBox.Show("Se ha modificado la categoria correctamente");
+            }
+            catch { }
+
+
         }
     }
 }
