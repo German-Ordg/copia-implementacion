@@ -179,7 +179,7 @@ namespace Pantallas_proyecto
         {
             try
             {
-                da = new SqlDataAdapter("Select * From VCategorias", conexion);
+                da = new SqlDataAdapter("Select * From VCategorias ", conexion);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
@@ -195,13 +195,10 @@ namespace Pantallas_proyecto
         {
             try
             {
-                da = new SqlDataAdapter("Select top 10 * From View_ventas" +
-                    "group by descripcion_producto" +
-                    "order by cantidad ", conexion);
+                da = new SqlDataAdapter("Select * From VCategorias where cantidad_existente < 11", conexion);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
-
             }
             catch (Exception ex)
             {

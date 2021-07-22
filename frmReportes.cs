@@ -56,6 +56,7 @@ namespace Pantallas_proyecto
             conect.abrir();
             conect.cargarDatosreporte3(dgvventas);
             conect.abrir();
+            conect.cargarDatosreporte4(dgvacabarse);
             //conect.cargarDatosreporte3(dgvmasvendido);
             conect.abrir();
             conect.cargarDatosreporte5(dgvcategorias);
@@ -64,6 +65,7 @@ namespace Pantallas_proyecto
             dgvventas.ForeColor = Color.Black;
             dgvmasvendido.ForeColor = Color.Black;
             dgvcategorias.ForeColor = Color.Black;
+            dgvacabarse.ForeColor = Color.Black;
 
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSetrotacion.ReporteCompras' Puede moverla o quitarla según sea necesario.
             // this.reporteComprasTableAdapter2.Fill(this.db_a75e9e_bderickmoncadaDataSetrotacion.ReporteCompras);
@@ -86,9 +88,6 @@ namespace Pantallas_proyecto
             this.ProductosTableAdapter.Fill(this.db_a75e9e_bderickmoncadaDataSet2.Productos);
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSet.Categoria_Producto' Puede moverla o quitarla según sea necesario.
             this.categoria_ProductoTableAdapter.Fill(this.db_a75e9e_bderickmoncadaDataSet.Categoria_Producto);
-
-
-
 
         }
 
@@ -170,9 +169,26 @@ namespace Pantallas_proyecto
                         break;
                     case "Productos a Punto de Acabarse":
                         lblmensaje.Text = "";
-                        this.reportes.SelectedTab = reportes.TabPages["tab3"];
-                        this.reportViewer3.RefreshReport();
+                        List<impresion_ventas> impresion12 = new List<impresion_ventas>();
 
+                        impresion12.Clear();
+
+                        for (int i = 0; i < dgvacabarse.Rows.Count - 1; i++)
+                        {
+                            impresion_ventas imp = new impresion_ventas();
+                            imp.dato1 = this.dgvacabarse.Rows[i].Cells[0].Value.ToString();
+                            imp.dato2 = this.dgvacabarse.Rows[i].Cells[2].Value.ToString();
+                            imp.dato3 = this.dgvacabarse.Rows[i].Cells[3].Value.ToString();
+                            imp.dato4 = this.dgvacabarse.Rows[i].Cells[4].Value.ToString();
+                            imp.dato5 = this.dgvacabarse.Rows[i].Cells[5].Value.ToString();
+                            imp.dato6 = this.dgvacabarse.Rows[i].Cells[6].Value.ToString();
+                            imp.dato7 = this.dgvacabarse.Rows[i].Cells[7].Value.ToString();
+                            impresion12.Add(imp);
+                        }
+                        this.reportes.SelectedTab = reportes.TabPages["tab3"];
+                        reportViewer3.LocalReport.DataSources.Clear();
+                        reportViewer3.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion12));
+                        this.reportViewer3.RefreshReport();
                         break;
                     case "Rotacion del Inventario":
                         lblmensaje.Text = "";
