@@ -57,9 +57,10 @@ namespace Pantallas_proyecto
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.Close();
             FrmAcceso acceso = new FrmAcceso();
             acceso.Show();
-            this.Close();
+            
         }
 
         private void button5_Click(object sender, EventArgs e)

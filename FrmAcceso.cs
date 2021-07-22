@@ -59,7 +59,8 @@ namespace Pantallas_proyecto
                     {
                         
                         Dominio.UserModel model = new Dominio.UserModel();
-                        var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
+                        String contra = Encrypt.GetSHA256(txtContrasena.Text);
+                        var validar = model.LoginUser(txtUsuario.Text, contra);
                         if (validar == true)
                         {
                             this.Hide();
@@ -71,13 +72,15 @@ namespace Pantallas_proyecto
                                 FrmMenuPrincipal menu = new FrmMenuPrincipal();
                                 menu.Show();
                                 menu.FormClosed += cerrarSesion;
+                            
                             }
                             if (Cashe.UserCache.Position == "Gerente")
                             {
                                 FrmMenuPrincipalGerente menu = new FrmMenuPrincipalGerente();
                                 menu.Show();
                                 menu.FormClosed += cerrarSesion;
-                            }
+                            
+                        }
 
                         }
                         else
@@ -224,7 +227,8 @@ namespace Pantallas_proyecto
                     {
 
                         Dominio.UserModel model = new Dominio.UserModel();
-                        var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
+                        String contra = Encrypt.GetSHA256(txtContrasena.Text);
+                        var validar = model.LoginUser(txtUsuario.Text, contra);
                         if (validar == true)
                         {
                             this.Hide();
@@ -236,12 +240,14 @@ namespace Pantallas_proyecto
                                 FrmMenuPrincipal menu = new FrmMenuPrincipal();
                                 menu.Show();
                                 menu.FormClosed += cerrarSesion;
+                                
                             }
                             if (Cashe.UserCache.Position == "Gerente")
                             {
                                 FrmMenuPrincipalGerente menu = new FrmMenuPrincipalGerente();
                                 menu.Show();
                                 menu.FormClosed += cerrarSesion;
+                                
                             }
 
 
