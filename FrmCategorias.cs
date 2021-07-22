@@ -77,6 +77,7 @@ namespace Pantallas_proyecto
                     comando.ExecuteNonQuery();
                     connect.abrir();
                     MessageBox.Show("Nueva Categoria Ingresada");
+                    Limpiar();
                     MostrarDatos();
                 }
                 
