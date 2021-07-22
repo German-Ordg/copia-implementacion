@@ -530,7 +530,6 @@ namespace Pantallas_proyecto
             // 
             // txtNombreCliente
             // 
-            this.ErrorProvider.SetError(this.txtNombreCliente, "No se permite este campo vacío");
             this.txtNombreCliente.Location = new System.Drawing.Point(230, 79);
             this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreCliente.Name = "txtNombreCliente";
@@ -591,7 +590,6 @@ namespace Pantallas_proyecto
             // 
             // txtRTN
             // 
-            this.ErrorProvider.SetError(this.txtRTN, "No se permite este campo vacío");
             this.txtRTN.Location = new System.Drawing.Point(230, 32);
             this.txtRTN.Margin = new System.Windows.Forms.Padding(4);
             this.txtRTN.Name = "txtRTN";
@@ -857,7 +855,6 @@ namespace Pantallas_proyecto
             // 
             // txtCodProducto
             // 
-            this.ErrorProvider.SetError(this.txtCodProducto, "Sólo se admiten números");
             this.txtCodProducto.Location = new System.Drawing.Point(132, 26);
             this.txtCodProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodProducto.Name = "txtCodProducto";

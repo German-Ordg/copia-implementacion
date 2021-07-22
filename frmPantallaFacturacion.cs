@@ -62,7 +62,7 @@ namespace Pantallas_proyecto
         {
 
             btnImprimirFactura.Enabled = true;
-            txtImporteAgrabado15.Text = "0.00";
+            txtImporteAgrabado15.Text = "0";
 
             double sumaTotales=0;
             double subTotal;
@@ -185,6 +185,10 @@ namespace Pantallas_proyecto
                     {
                         MessageBox.Show("No se pudo cargar el producto" + ex.ToString());
                     }
+                }
+                else
+                {
+                   
                 }
                 
             }
@@ -324,6 +328,8 @@ namespace Pantallas_proyecto
                     btnBuscarProducto.Enabled = false;
                     btnEditar.Enabled = false;
                     btnActualizar.Enabled = true;
+                    btnCalcularFactura.Enabled = false;
+                    btnImprimirFactura.Enabled = false;
 
                     int a = lstCompras.CurrentRow.Index;
                     txtCodProducto.Text = lstCompras.Rows[a].Cells[0].Value.ToString();
@@ -359,6 +365,7 @@ namespace Pantallas_proyecto
                 lstCompras.Enabled = true;
                 btnAgregar.Enabled = true;
                 txtCodProducto.Enabled=true;
+                btnCalcularFactura.Enabled = true;
 
                 txtCodProducto.Clear();
                 txtDescripcion.Clear();
@@ -453,6 +460,7 @@ namespace Pantallas_proyecto
             if (lstCompras.RowCount<2)
             {
                 MessageBox.Show("No hay items en la lista", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnImprimirFactura.Enabled = false;
             }
             else
             {
@@ -498,6 +506,7 @@ namespace Pantallas_proyecto
 
                                             ingresar();
                                             reporte();
+                                            ((Control)this.tabPage1).Enabled = false;
                                         }
                                     }
                                 }
@@ -509,6 +518,7 @@ namespace Pantallas_proyecto
                                     ingresar();
 
                                     reporte();
+                                    ((Control)this.tabPage1).Enabled = false;
                                 }
 
                             }
