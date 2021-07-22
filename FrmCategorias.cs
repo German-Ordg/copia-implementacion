@@ -86,6 +86,12 @@ namespace Pantallas_proyecto
             }
         }
 
+        public void Limpiar() {
+            txtCodigo.Clear();
+            txtCategoria.Clear();
+
+        }
+
         private void DgvCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Record_Id = Convert.ToInt32(DgvCategoria.Rows[e.RowIndex].Cells[0].Value.ToString());
