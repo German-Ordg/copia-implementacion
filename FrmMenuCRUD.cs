@@ -142,7 +142,7 @@ namespace Pantallas_proyecto
 
         private void btnCategorias_Click(object sender, EventArgs e)
         {
-            FrmCategorias categorias = new FrmCategorias;
+            FrmCategorias categorias = new FrmCategorias();
             categorias.Show();
             this.Hide();
         }
