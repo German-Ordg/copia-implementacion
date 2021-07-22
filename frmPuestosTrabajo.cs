@@ -84,7 +84,10 @@ namespace Pantallas_proyecto
             {
                 if (validacion.Espacio_Blanco(ErrorProvider, txtPosicion))
                     ErrorProvider.SetError(txtPosicion, "No se puede dejar en blanco");
+                if (validacion.Solo_Letras(ErrorProvider, txtPosicion))
+                    ErrorProvider.SetError(txtPosicion, "No se permiten números");
                 Limpiar();
+                
             }
             else
             {
