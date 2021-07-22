@@ -27,6 +27,8 @@ namespace Pantallas_proyecto
 
         ClsConexionBD connect = new ClsConexionBD();
         int Record_Id;
+        private bool letra = false;
+        private bool letra2 = false;
 
         public void MostrarDatos()
         {
@@ -74,29 +76,37 @@ namespace Pantallas_proyecto
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            try
+            letra2 = false;
+            letra = false;
+
+            if (validacion.Espacio_Blanco_CB(ErrorProvider, CBtipo))
             {
-                if (txtPosicion.Text == "")
-                {
-                    MessageBox.Show("No puede ingresar datos en blanco", "Información", MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-                }
-                else
-                {
-                    string query = "INSERT INTO Empleados_Puestos (descripcion_puesto) VALUES (@puesto)";
-                    connect.abrir();
-                    SqlCommand comando = new SqlCommand(query, connect.conexion);
-                    comando.Parameters.AddWithValue("@puesto", txtPosicion.Text);
-                    comando.ExecuteNonQuery();
-                    connect.abrir();
-                    MessageBox.Show("Nuevo Puesto Insertado");
-                    Limpiar();
-                    MostrarDatos();
-                }
+                if (validacion.Espacio_Blanco_CB(ErrorProvider, CBtipo))
+                    ErrorProvider.SetError(CBtipo, "no se puede dejar en blanco");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                letra2 = true;
+            }
+
+            if (letra2)
+            {
+                try
+                {                    
+                        string query = "INSERT INTO Empleados_Puestos (descripcion_puesto) VALUES (@puesto)";
+                        connect.abrir();
+                        SqlCommand comando = new SqlCommand(query, connect.conexion);
+                        comando.Parameters.AddWithValue("@puesto", txtPosicion.Text);
+                        comando.ExecuteNonQuery();
+                        connect.abrir();
+                        MessageBox.Show("Nuevo Puesto Insertado");
+                        Limpiar();
+                        MostrarDatos();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
