@@ -957,7 +957,7 @@ namespace Pantallas_proyecto
             // lblmensaje
             // 
             this.lblmensaje.AutoSize = true;
-            this.lblmensaje.Location = new System.Drawing.Point(1004, 420);
+            this.lblmensaje.Location = new System.Drawing.Point(947, 419);
             this.lblmensaje.Name = "lblmensaje";
             this.lblmensaje.Size = new System.Drawing.Size(46, 17);
             this.lblmensaje.TabIndex = 77;
