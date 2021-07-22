@@ -108,7 +108,9 @@ namespace Pantallas_proyecto
                 connect.abrir();
                 MessageBox.Show("Se ha modificado la categoria correctamente");
             }
-            catch { }
+            catch (Exception ex){
+                MessageBox.Show(ex.Message);
+            }
 
 
         }
