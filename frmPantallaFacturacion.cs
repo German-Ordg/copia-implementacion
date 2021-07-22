@@ -330,6 +330,7 @@ namespace Pantallas_proyecto
                     btnActualizar.Enabled = true;
                     btnCalcularFactura.Enabled = false;
                     btnImprimirFactura.Enabled = false;
+                    btnEliminar.Enabled = false;
 
                     int a = lstCompras.CurrentRow.Index;
                     txtCodProducto.Text = lstCompras.Rows[a].Cells[0].Value.ToString();
@@ -366,6 +367,7 @@ namespace Pantallas_proyecto
                 btnAgregar.Enabled = true;
                 txtCodProducto.Enabled=true;
                 btnCalcularFactura.Enabled = true;
+                btnEliminar.Enabled = true;
 
                 txtCodProducto.Clear();
                 txtDescripcion.Clear();
@@ -386,6 +388,8 @@ namespace Pantallas_proyecto
         {
             if (lstCompras.SelectedRows.Count != 0)
             {
+                btnImprimirFactura.Enabled = false;
+
                 if(lstCompras.CurrentRow.Index != lstCompras.RowCount - 1)
                 {
                     lstCompras.Rows.RemoveAt(lstCompras.CurrentRow.Index);
@@ -715,6 +719,18 @@ namespace Pantallas_proyecto
         private void txtRTN_KeyPress(object sender, KeyPressEventArgs e)
         {
             //val.Only_numbers();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNuevaFactura_Click(object sender, EventArgs e)
+        {
+            frmPantallaFacturacion ss = new frmPantallaFacturacion();
+            ss.Show();
+            this.Hide();
         }
     }
 

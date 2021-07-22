@@ -100,7 +100,6 @@ namespace Pantallas_proyecto
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.reportes = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -108,6 +107,8 @@ namespace Pantallas_proyecto
             this.panel2 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnNuevaFactura = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lstCompras)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -116,13 +117,13 @@ namespace Pantallas_proyecto
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.reportes.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // brnRegresar
@@ -919,16 +920,6 @@ namespace Pantallas_proyecto
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(251, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            // 
             // reportes
             // 
             this.reportes.Controls.Add(this.tabPage1);
@@ -1004,14 +995,43 @@ namespace Pantallas_proyecto
             // 
             this.ErrorProvider.ContainerControl = this;
             // 
+            // btnNuevaFactura
+            // 
+            this.btnNuevaFactura.BackColor = System.Drawing.Color.Maroon;
+            this.btnNuevaFactura.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevaFactura.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNuevaFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnNuevaFactura.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnNuevaFactura.Location = new System.Drawing.Point(1185, 48);
+            this.btnNuevaFactura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNuevaFactura.Name = "btnNuevaFactura";
+            this.btnNuevaFactura.Size = new System.Drawing.Size(144, 30);
+            this.btnNuevaFactura.TabIndex = 23;
+            this.btnNuevaFactura.Text = "Nueva Factura";
+            this.btnNuevaFactura.UseVisualStyleBackColor = false;
+            this.btnNuevaFactura.Click += new System.EventHandler(this.btnNuevaFactura_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Pantallas_proyecto.Properties.Resources.Letras1;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 13);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(191, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // frmPantallaFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1341, 800);
-            this.Controls.Add(this.reportes);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnNuevaFactura);
+            this.Controls.Add(this.reportes);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.brnRegresar);
             this.Controls.Add(this.label10);
@@ -1040,13 +1060,13 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.reportes.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1113,7 +1133,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TabControl reportes;
@@ -1131,5 +1150,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.ErrorProvider ErrorProvider;
+        private System.Windows.Forms.Button btnNuevaFactura;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
