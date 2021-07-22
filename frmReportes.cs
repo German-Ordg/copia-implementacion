@@ -60,6 +60,8 @@ namespace Pantallas_proyecto
             //conect.cargarDatosreporte3(dgvmasvendido);
             conect.abrir();
             conect.cargarDatosreporte5(dgvcategorias);
+            conect.abrir();
+            conect.cargarDatosreporte5(dgvinventario);
             dgvcompra.ForeColor = Color.Black;
             dgvrotacion.ForeColor = Color.Black;
             dgvventas.ForeColor = Color.Black;
@@ -88,6 +90,7 @@ namespace Pantallas_proyecto
             this.ProductosTableAdapter.Fill(this.db_a75e9e_bderickmoncadaDataSet2.Productos);
             // TODO: esta línea de código carga datos en la tabla 'db_a75e9e_bderickmoncadaDataSet.Categoria_Producto' Puede moverla o quitarla según sea necesario.
             this.categoria_ProductoTableAdapter.Fill(this.db_a75e9e_bderickmoncadaDataSet.Categoria_Producto);
+
 
         }
 
@@ -216,7 +219,25 @@ namespace Pantallas_proyecto
                         break;
                     case "Inventario":
                         lblmensaje.Text = "";
+                        List<impresion1> impresion22 = new List<impresion1>();
+
+                        impresion22.Clear();
+
+                        for (int i = 0; i < dgvinventario.Rows.Count - 1; i++)
+                        {
+                            impresion1 imp = new impresion1();
+                            imp.dato1 = this.dgvinventario.Rows[i].Cells[0].Value.ToString();
+                            imp.dato2 = this.dgvinventario.Rows[i].Cells[2].Value.ToString();
+                            imp.dato3 = this.dgvinventario.Rows[i].Cells[3].Value.ToString();
+                            imp.dato4 = this.dgvinventario.Rows[i].Cells[4].Value.ToString();
+                            imp.dato5 = this.dgvinventario.Rows[i].Cells[5].Value.ToString();
+                            imp.dato6 = this.dgvinventario.Rows[i].Cells[6].Value.ToString();
+                            imp.dato7 = this.dgvinventario.Rows[i].Cells[7].Value.ToString();
+                            impresion22.Add(imp);
+                        }
                         this.reportes.SelectedTab = reportes.TabPages["tab6"];
+                        reportViewer6.LocalReport.DataSources.Clear();
+                        reportViewer6.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", impresion22));
                         this.reportViewer6.RefreshReport();
                         break;
                     case "Compras":

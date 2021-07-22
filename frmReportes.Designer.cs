@@ -88,6 +88,7 @@ namespace Pantallas_proyecto
             this.dgvcategorias = new System.Windows.Forms.DataGridView();
             this.tab6 = new System.Windows.Forms.TabPage();
             this.reportViewer6 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dgvinventario = new System.Windows.Forms.DataGridView();
             this.tab7 = new System.Windows.Forms.TabPage();
             this.reportViewer8 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dgvcompra = new System.Windows.Forms.DataGridView();
@@ -167,6 +168,7 @@ namespace Pantallas_proyecto
             this.tab1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcategorias)).BeginInit();
             this.tab6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvinventario)).BeginInit();
             this.tab7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcompra)).BeginInit();
             this.tab8.SuspendLayout();
@@ -629,6 +631,7 @@ namespace Pantallas_proyecto
             // tab6
             // 
             this.tab6.Controls.Add(this.reportViewer6);
+            this.tab6.Controls.Add(this.dgvinventario);
             this.tab6.Location = new System.Drawing.Point(4, 25);
             this.tab6.Name = "tab6";
             this.tab6.Padding = new System.Windows.Forms.Padding(3);
@@ -639,16 +642,27 @@ namespace Pantallas_proyecto
             // 
             // reportViewer6
             // 
-            reportDataSource5.Name = "DataSetVCategorias";
-            reportDataSource5.Value = this.vCategoriasBindingSource2;
+            this.reportViewer6.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource5.Name = "DataSet1";
+            reportDataSource5.Value = this.impresion1BindingSource;
             this.reportViewer6.LocalReport.DataSources.Add(reportDataSource5);
             this.reportViewer6.LocalReport.ReportEmbeddedResource = "Pantallas_proyecto.Reportinventario.rdlc";
             this.reportViewer6.Location = new System.Drawing.Point(3, 3);
             this.reportViewer6.Name = "reportViewer6";
             this.reportViewer6.ServerReport.BearerToken = null;
             this.reportViewer6.Size = new System.Drawing.Size(836, 455);
-            this.reportViewer6.TabIndex = 0;
-            this.reportViewer6.Load += new System.EventHandler(this.reportViewer6_Load);
+            this.reportViewer6.TabIndex = 1;
+            // 
+            // dgvinventario
+            // 
+            this.dgvinventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvinventario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvinventario.Location = new System.Drawing.Point(3, 3);
+            this.dgvinventario.Name = "dgvinventario";
+            this.dgvinventario.RowHeadersWidth = 51;
+            this.dgvinventario.RowTemplate.Height = 24;
+            this.dgvinventario.Size = new System.Drawing.Size(836, 455);
+            this.dgvinventario.TabIndex = 0;
             // 
             // tab7
             // 
@@ -1017,6 +1031,7 @@ namespace Pantallas_proyecto
             this.tab1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvcategorias)).EndInit();
             this.tab6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvinventario)).EndInit();
             this.tab7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvcompra)).EndInit();
             this.tab8.ResumeLayout(false);
@@ -1083,7 +1098,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.BindingSource ProductosBindingSource;
         private db_a75e9e_bderickmoncadaDataSet2TableAdapters.ProductosTableAdapter ProductosTableAdapter;
         private System.Windows.Forms.TabPage tab6;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer6;
         private db_a75e9e_bderickmoncadaDataSet4 db_a75e9e_bderickmoncadaDataSet4;
         private db_a75e9e_bderickmoncadaDataSet4TableAdapters.VCategoriasTableAdapter VCategoriasTableAdapter;
         private System.Windows.Forms.BindingSource dba75e9ebderickmoncadaDataSet4BindingSource;
@@ -1150,5 +1164,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.DataGridView dgvcategorias;
         private System.Windows.Forms.DataGridView dgvacabarse;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer6;
+        private System.Windows.Forms.DataGridView dgvinventario;
     }
 }

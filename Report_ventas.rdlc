@@ -6,13 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.6455cm</Width>
+              <Width>1.3806cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.89396cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.6455cm</Width>
+              <Width>1.6329cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.6455cm</Width>
@@ -21,19 +21,19 @@
               <Width>1.6455cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.6455cm</Width>
+              <Width>1.17076cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.6455cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.6455cm</Width>
+              <Width>1.24333cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.6455cm</Width>
+              <Width>1.62433cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.6455cm</Width>
+              <Width>1.37033cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -582,7 +582,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!dato8.Value</Value>
+                              <Value>=CDate(Fields!dato8.Value).ToString("dd/MM/yyyy")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -601,6 +601,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -695,7 +696,7 @@
         <Top>1.6002cm</Top>
         <Left>0.758cm</Left>
         <Height>1.708cm</Height>
-        <Width>16.70346cm</Width>
+        <Width>15.25272cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -740,10 +741,10 @@
               <Style />
             </Paragraph>
           </Paragraphs>
-          <Top>0.63606cm</Top>
-          <Left>2.8007cm</Left>
+          <Top>0.63605cm</Top>
+          <Left>6.11692cm</Left>
           <Height>1.11619cm</Height>
-          <Width>15.00047cm</Width>
+          <Width>7.25347cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>

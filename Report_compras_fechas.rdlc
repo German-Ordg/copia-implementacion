@@ -65,7 +65,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.98406cm</Width>
+                  <Width>1.61574cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.98406cm</Width>
@@ -80,7 +80,7 @@
                   <Width>1.98406cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.98406cm</Width>
+                  <Width>1.60306cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.98406cm</Width>
@@ -358,7 +358,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -465,7 +464,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!dato4.Value</Value>
+                                  <Value>=CDate(Fields!dato4.Value).ToString("dd/MM/yyyy")</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -484,6 +483,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -646,7 +646,7 @@
             <Top>3.67567cm</Top>
             <Left>0.66958cm</Left>
             <Height>1.7715cm</Height>
-            <Width>15.87248cm</Width>
+            <Width>15.12316cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -685,7 +685,7 @@
               <Top>0.7661cm</Top>
               <Left>4.70732cm</Left>
               <Height>1.062cm</Height>
-              <Width>10.76559cm</Width>
+              <Width>11.46642cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -696,17 +696,6 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Line Name="Line1">
-              <Top>2.40481cm</Top>
-              <Height>0cm</Height>
-              <Width>19.50131cm</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>Solid</Style>
-                </Border>
-              </Style>
-            </Line>
             <Image Name="Image1">
               <Source>Embedded</Source>
               <Value>Sintítulo2</Value>
@@ -715,7 +704,7 @@
               <Left>1.2192cm</Left>
               <Height>1.5cm</Height>
               <Width>1.5cm</Width>
-              <ZIndex>2</ZIndex>
+              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -737,11 +726,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>fecha1</rd:DefaultName>
-              <Top>1.51553cm</Top>
+              <Top>0.3281cm</Top>
               <Left>17.1577cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
-              <ZIndex>3</ZIndex>
+              <ZIndex>2</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -771,7 +760,7 @@
               <Left>21.26403cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
-              <ZIndex>4</ZIndex>
+              <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -782,6 +771,17 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
+            <Line Name="Line1">
+              <Top>2.24253cm</Top>
+              <Height>0cm</Height>
+              <Width>19.50131cm</Width>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <Border>
+                  <Style>Solid</Style>
+                </Border>
+              </Style>
+            </Line>
           </ReportItems>
           <Style>
             <Border>
