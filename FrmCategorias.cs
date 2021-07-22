@@ -41,5 +41,18 @@ namespace Pantallas_proyecto
             menuCRUD.Show();
             this.Close();
         }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            try {
+                if (){
+                
+                }
+                else {
+                
+                }
+            }
+            catch { }
+        }
     }
 }
