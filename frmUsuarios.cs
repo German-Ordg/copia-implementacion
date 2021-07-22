@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
+using System.Security.Cryptography;
 
 namespace Pantallas_proyecto
 {
@@ -20,6 +21,8 @@ namespace Pantallas_proyecto
         }
         SqlCommand scd;
         ClsConexionBD conect = new ClsConexionBD();
+
+        
 
         private const int CP_NOCLOSE_BUTTON = 0x200;
         protected override CreateParams CreateParams
@@ -85,8 +88,15 @@ namespace Pantallas_proyecto
                 }
                 else
                 {
+                    //-------------------------------encriptar contraseña
+                    string contra;
 
-                    scd = new SqlCommand("Insert into Usuarios(codigo_empleado,nombre_usuario, correo_electronico, contrasena, Estado) Values('" + txtcodemp.Text + "','" + txtusuario.Text + "','" + txtcorreo.Text + "','" + txtcontra.Text + "','" + cmbtipousr.Text + "')", conect.conexion);
+
+                    contra = Encrypt.GetSHA256(txtcontra.Text);
+
+
+                    scd = new SqlCommand("Insert into Usuarios(codigo_empleado,nombre_usuario, correo_electronico, contrasena, Estado) Values('" + txtcodemp.Text + "','" + txtusuario.Text + "','" + txtcorreo.Text + "','" + contra + "','" + cmbtipousr.Text + "')", conect.conexion);
+                    //---------------------------------------
                     scd.ExecuteNonQuery();
                     MessageBox.Show("Registro exitoso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conect.CargarDatosUsuario(dataGridView1);
@@ -115,15 +125,21 @@ namespace Pantallas_proyecto
             indice = dataGridView1.CurrentRow.Index;
             try
             {
-
+                //string contraEncrip;
                 cod = dataGridView1[0, indice].Value.ToString();
                 //dataGridView1[1, indice].Value = textBox5.Text;
                 dataGridView1[1, indice].Value = txtusuario.Text;
                 dataGridView1[3, indice].Value = txtcorreo.Text;
-                dataGridView1[2, indice].Value = txtcontra.Text;
-                dataGridView1[4, indice].Value = cmbtipousr.Text;
+                //---------------------------encriptar en el data
 
-                scd = new SqlCommand("Update Usuarios set codigo_empleado = " + txtcodemp.Text + ",   correo_electronico = '" + txtcorreo.Text + "',  contrasena = '" + txtcontra.Text + "', Estado = '" + cmbtipousr.Text + "' where nombre_usuario='" + txtusuario.Text + "'", conect.conexion);
+                string contra;
+
+                dataGridView1[2, indice].Value = Encrypt.GetSHA256(txtcontra.Text);
+                //---------------------------
+                dataGridView1[4, indice].Value = cmbtipousr.Text;
+                contra= Encrypt.GetSHA256(txtcontra.Text);
+
+                scd = new SqlCommand("Update Usuarios set codigo_empleado = " + txtcodemp.Text + ",   correo_electronico = '" + txtcorreo.Text + "',  contrasena = '" + contra + "', Estado = '" + cmbtipousr.Text + "' where nombre_usuario='" + txtusuario.Text + "'", conect.conexion);
 
                 scd.ExecuteNonQuery();
 
@@ -166,13 +182,24 @@ namespace Pantallas_proyecto
         private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int poc;
-
+            String contraencr;
             poc = dataGridView1.CurrentRow.Index;
 
             txtcodemp.Text = dataGridView1[0, poc].Value.ToString();
             txtusuario.Text = dataGridView1[1, poc].Value.ToString();
             txtcorreo.Text = dataGridView1[3, poc].Value.ToString();
-            txtcontra.Text = dataGridView1[2, poc].Value.ToString();
+
+            //------------------------------------------
+
+            /*  contraencr = dataGridView1[2, poc].Value.ToString();
+              encryptedtext = ByteConverter.GetBytes(contraencr);
+              byte[] decryptedtex = Encrypt.Decryption(encryptedtext,
+              RSA.ExportParameters(true), false);
+              txtcontra.Text = ByteConverter.GetString(decryptedtex);
+             // txtcontra.Text = contraencr; */
+            //------------------------------------------
+            txtcontra.Text = "";
+
             cmbtipousr.Text = dataGridView1[4, poc].Value.ToString();
         }
     }
