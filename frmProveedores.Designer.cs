@@ -110,7 +110,7 @@ namespace Pantallas_proyecto
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 48;
-            this.label3.Text = "Direcciòn:";
+            this.label3.Text = "Dirección:";
             // 
             // label1
             // 

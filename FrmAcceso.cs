@@ -282,7 +282,7 @@ namespace Pantallas_proyecto
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-           TxtResultBox cRUD = new TxtResultBox();
+           frmProveedores cRUD = new frmProveedores();
             cRUD.Show();
             this.Hide();
         }

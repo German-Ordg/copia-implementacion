@@ -47,7 +47,7 @@ namespace Pantallas_proyecto
              dgvProovedores.ForeColor = Color.Black;
             try
             {
-                if (txtNombreProovedor.Text == "  " || txtTelefono.Text == "  " || txtDescripcion.Text == "  ")
+                if (txtNombreProovedor.Text == "" || txtTelefono.Text == "" || txtDescripcion.Text == "")
                 {
 
                     MessageBox.Show("No se pueden dejar los campos vacios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
