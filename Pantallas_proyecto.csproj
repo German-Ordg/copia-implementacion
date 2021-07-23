@@ -149,6 +149,7 @@
     <Compile Include="Dominio\UserModel.cs" />
     <Compile Include="EmailServices\MasterEmailServer.cs" />
     <Compile Include="EmailServices\SystemSupportMai.cs" />
+    <Compile Include="Encrypt.cs" />
     <Compile Include="FormBienvenido.cs">
       <SubType>Form</SubType>
     </Compile>

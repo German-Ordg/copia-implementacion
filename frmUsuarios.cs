@@ -82,7 +82,15 @@ namespace Pantallas_proyecto
                     else
                     {
 
-                        scd = new SqlCommand("Insert into Usuarios(codigo_empleado,nombre_usuario, correo_electronico, contrasena, Estado) Values('" + txtcodemp.Text + "','" + txtusuario.Text + "','" + txtcorreo.Text + "','" + txtcontra.Text + "','" + cmbtipousr.Text + "')", conect.conexion);
+                        //-------------------------------encriptar contraseña
+                        string contra;
+
+
+                        contra = Encrypt.GetSHA256(txtcontra.Text);
+
+
+                        scd = new SqlCommand("Insert into Usuarios(codigo_empleado,nombre_usuario, correo_electronico, contrasena, Estado) Values('" + txtcodemp.Text + "','" + txtusuario.Text + "','" + txtcorreo.Text + "','" + contra + "','" + cmbtipousr.Text + "')", conect.conexion);
+                        //---------------------------------------
                         scd.ExecuteNonQuery();
                         MessageBox.Show("Registro exitoso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         conect.CargarDatosUsuario(dataGridView1);
@@ -137,10 +145,18 @@ namespace Pantallas_proyecto
                     //dataGridView1[1, indice].Value = textBox5.Text;
                     dataGridView1[1, indice].Value = txtusuario.Text;
                     dataGridView1[3, indice].Value = txtcorreo.Text;
-                    dataGridView1[2, indice].Value = txtcontra.Text;
+                    //---------------------------encriptar en el data
+
+                    string contra;
+
+                    dataGridView1[2, indice].Value = Encrypt.GetSHA256(txtcontra.Text);
+                    //---------------------------
                     dataGridView1[4, indice].Value = cmbtipousr.Text;
 
-                    scd = new SqlCommand("Update Usuarios set codigo_empleado = " + txtcodemp.Text + ",   correo_electronico = '" + txtcorreo.Text + "',  contrasena = '" + txtcontra.Text + "', Estado = '" + cmbtipousr.Text + "' where nombre_usuario='" + txtusuario.Text + "'", conect.conexion);
+
+                    contra = Encrypt.GetSHA256(txtcontra.Text);
+
+                    scd = new SqlCommand("Update Usuarios set codigo_empleado = " + txtcodemp.Text + ",   correo_electronico = '" + txtcorreo.Text + "',  contrasena = '" + contra + "', Estado = '" + cmbtipousr.Text + "' where nombre_usuario='" + txtusuario.Text + "'", conect.conexion);
 
                     scd.ExecuteNonQuery();
 
@@ -190,7 +206,7 @@ namespace Pantallas_proyecto
             txtcodemp.Text = dataGridView1[0, poc].Value.ToString();
             txtusuario.Text = dataGridView1[1, poc].Value.ToString();
             txtcorreo.Text = dataGridView1[3, poc].Value.ToString();
-            txtcontra.Text = dataGridView1[2, poc].Value.ToString();
+            //txtcontra.Text = dataGridView1[2, poc].Value.ToString();   (NO SE MUESTRA LA CONTRASEñA POR QUE ESTA ENCRIPTADA Y ASI ES LO CORRECTO)
             cmbtipousr.Text = dataGridView1[4, poc].Value.ToString();
         }
 

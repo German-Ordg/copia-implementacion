@@ -27,6 +27,9 @@ namespace Pantallas_proyecto.SqlServerDB
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.Read() == true)
                     {
+                        Random random = new Random();
+                        Cashe.UserCache.numero = random.Next(1000, 9999);
+
                         string userName = reader.GetString(1);
                         string userMail = reader.GetString(3);
                         string accountPassword = reader.GetString(2);
@@ -34,13 +37,13 @@ namespace Pantallas_proyecto.SqlServerDB
                         mailService.sendMail(
                           subject: "SISTEMA: Peticion de recuperacion de contraseña",
                           body: "Hola, " + userName + "\nSolicitaste recuperar tu contraseña.\n" +
-                          "Tu contraseña es: " + accountPassword +
-                          "\n Recuerdalo",
+                          "Tu codigo es: " + Cashe.UserCache.numero +
+                          "\n Introduce este codigo en el programa para cambiar de contraseña",
                           recipientMail: new List<string> { userMail }
                           );
                         return "Hola, " + userName + "\n Solicitaste recuperar tu contraseña.\n" +
                           "Porfavor Revisa tu Correo: " + userMail +
-                          "\n Recuerdalo";
+                          "\n Ingresa el codigo que aparece en la parte de abajo";
                     }
                     else
                         return "Lo sentimos, tu no tienes una cuenta con ese correo o usuario";

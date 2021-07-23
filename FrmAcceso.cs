@@ -59,8 +59,9 @@ namespace Pantallas_proyecto
                     {
                         
                         Dominio.UserModel model = new Dominio.UserModel();
-                        var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
-                        if (validar == true)
+                    String contra = Encrypt.GetSHA256(txtContrasena.Text);
+                    var validar = model.LoginUser(txtUsuario.Text, contra);
+                    if (validar == true)
                         {
                             this.Hide();
                             FormBienvenido welcome = new FormBienvenido();
@@ -224,7 +225,8 @@ namespace Pantallas_proyecto
                     {
 
                         Dominio.UserModel model = new Dominio.UserModel();
-                        var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
+                        String contra = Encrypt.GetSHA256(txtContrasena.Text);
+                        var validar = model.LoginUser(txtUsuario.Text, contra);
                         if (validar == true)
                         {
                             this.Hide();

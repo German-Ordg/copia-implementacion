@@ -32,6 +32,7 @@ namespace Pantallas_proyecto
 
         ClsConexionBD conect = new ClsConexionBD();
         SqlCommand cmd;
+        SqlCommand scd;
         private void button1_Click(object sender, EventArgs e)
         {
             FrmAcceso acceso = new FrmAcceso();
@@ -56,6 +57,11 @@ namespace Pantallas_proyecto
                 var user = new Dominio.UserModel();
                 var result = user.recoverPassword(cmbUsuariorequerido.Text);
                 txtresultado.Text = result;
+
+                txtcodigo.Visible = true;
+                lblcodigo.Visible = true;
+                btnverificar.Visible = true;
+                cmbUsuariorequerido.Enabled = false;
             }
         }
 
@@ -88,6 +94,60 @@ namespace Pantallas_proyecto
                 MessageBox.Show("Error al buscar el Correo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             conect.cerrar();
+        }
+
+        private void btnverificar_Click(object sender, EventArgs e)
+        {
+            int valor = Convert.ToInt32(txtcodigo.Text);
+            if (Cashe.UserCache.numero == valor)
+            {
+                lblnueva.Visible = true;
+                txtContrasena.Visible = true;
+                lblcodigo.Visible = false;
+                txtcodigo.Visible = false;
+                btnverificar.Visible = false;
+                btncambiar.Visible = true;
+
+
+
+            }
+            else
+            {
+
+                MessageBox.Show("Codigo Incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btncambiar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conect.abrir();
+                string contra;
+                contra = Encrypt.GetSHA256(txtContrasena.Text);
+
+                scd = new SqlCommand("update Usuarios set contrasena='" + contra + "' where nombre_usuario = '" + cmbUsuariorequerido.Text + "'", conect.conexion);
+
+                scd.ExecuteNonQuery();
+
+                MessageBox.Show("Contraseña actualizada!", "AVISO", MessageBoxButtons.OK);
+                conect.cerrar();
+                lblnueva.Visible = false;
+                btncambiar.Visible = false;
+                txtContrasena.Visible = false;
+                txtresultado.Text = "";
+                txtresultado.Visible = false;
+                cmbUsuariorequerido.Text = "";
+                cmbUsuariorequerido.Enabled = true;
+                lblcorreo.Visible = false;
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cambiar contraseña", "ERROR", MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+
+            }
         }
     }
 }
