@@ -36,7 +36,7 @@ namespace Pantallas_proyecto
         public void MostrarDatos() {
             try {
                 string consulta = "SELECT codigo_categoria as Codigo, descripcion_categoria as Descripcion FROM Categoria_Producto";
-                SqlDataAdapter adaptador = new SqlDataAdapter(consulta, ConnectionState.conexion);
+                SqlDataAdapter adaptador = new SqlDataAdapter(consulta, connect.conexion);
                 DataTable tabla = new DataTable();
                 adaptador.Fill(tabla);
 
