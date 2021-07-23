@@ -26,7 +26,10 @@ namespace Pantallas_proyecto
         }
 
         ClsConexionBD connect = new ClsConexionBD();
+        validaciones validacion = new validaciones();
         int Record_Id;
+        private bool letra = false;
+        private bool letra2 = false;
 
         public void MostrarDatos()
         {
@@ -74,68 +77,79 @@ namespace Pantallas_proyecto
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            try
+            letra2 = false;
+            letra = false;
+
+            if (validacion.Espacio_Blanco(ErrorProvider, txtPosicion) || validacion.Solo_Letras(ErrorProvider, txtPosicion))
             {
-                if (txtPosicion.Text == "")
-                {
-                    MessageBox.Show("No puede ingresar datos en blanco", "Información", MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-                }
-                else
-                {
-                    string query = "INSERT INTO Empleados_Puestos (descripcion_puesto) VALUES (@puesto)";
-                    connect.abrir();
-                    SqlCommand comando = new SqlCommand(query, connect.conexion);
-                    comando.Parameters.AddWithValue("@puesto", txtPosicion.Text);
-                    comando.ExecuteNonQuery();
-                    connect.abrir();
-                    MessageBox.Show("Nuevo Puesto Insertado");
-                    Limpiar();
-                    MostrarDatos();
-                }
+                if (validacion.Espacio_Blanco(ErrorProvider, txtPosicion))
+                    ErrorProvider.SetError(txtPosicion, "No se puede dejar en blanco");
+                if (validacion.Solo_Letras(ErrorProvider, txtPosicion))
+                    ErrorProvider.SetError(txtPosicion, "No se permiten números");
+                Limpiar();
+                
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                letra2 = true;
+            }
+
+            if (letra2)
+            {
+                try
+                {                    
+                        string query = "INSERT INTO Empleados_Puestos (descripcion_puesto) VALUES (@puesto)";
+                        connect.abrir();
+                        SqlCommand comando = new SqlCommand(query, connect.conexion);
+                        comando.Parameters.AddWithValue("@puesto", txtPosicion.Text);
+                        comando.ExecuteNonQuery();
+                        connect.abrir();
+                        MessageBox.Show("Nuevo Puesto Insertado");
+                        Limpiar();
+                        MostrarDatos();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string query = "Update Empleados_Puestos set descripcion_puesto= '" + txtPosicion.Text + "' where codigo_puesto='" + Record_Id + "'";
-                connect.abrir();
-                SqlCommand comando = new SqlCommand(query, connect.conexion);
-                comando.ExecuteNonQuery();
-                connect.abrir();
-                MessageBox.Show("Se Modificó Correctamente");
-                Limpiar();
-                MostrarDatos();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+            letra2 = false;
+            letra = false;
 
-        private void BtnEliminar_Click(object sender, EventArgs e)
-        {
-            try
+            if (validacion.Espacio_Blanco(ErrorProvider, txtPosicion) || validacion.Solo_Letras(ErrorProvider, txtPosicion))
             {
-                string query = "Delete from Empleados_Puestos WHERE codigo_puesto=@ID";
-                connect.abrir();
-                SqlCommand comando = new SqlCommand(query, connect.conexion);
-                comando.Parameters.AddWithValue("@ID", txtCodigo.Text);
-                comando.ExecuteNonQuery();
-                connect.cerrar();
-                MessageBox.Show("Puesto de Trabajo Eliminado");
+                if (validacion.Espacio_Blanco(ErrorProvider, txtPosicion))
+                    ErrorProvider.SetError(txtPosicion, "No se puede dejar en blanco");
+                if (validacion.Solo_Letras(ErrorProvider, txtPosicion))
+                    ErrorProvider.SetError(txtPosicion, "No se permiten números");
                 Limpiar();
-                MostrarDatos();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                letra2 = true;
+            }
+
+            if (letra2)
+            {
+                try
+                {
+                    string query = "Update Empleados_Puestos set descripcion_puesto= '" + txtPosicion.Text + "' where codigo_puesto='" + Record_Id + "'";
+                    connect.abrir();
+                    SqlCommand comando = new SqlCommand(query, connect.conexion);
+                    comando.ExecuteNonQuery();
+                    connect.abrir();
+                    MessageBox.Show("Se Modificó Correctamente");
+                    Limpiar();
+                    MostrarDatos();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
