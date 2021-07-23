@@ -36,82 +36,7 @@ namespace Pantallas_proyecto
         }
 
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            conect.abrir();
-            letra = false;
-
-
-            if (validacion.Espacio_Blanco(errorProvider1, txtcodemp) || validacion.Solo_Numeros(errorProvider1, txtcodemp))
-            {
-                if (validacion.Espacio_Blanco(errorProvider1, txtcodemp))
-                    errorProvider1.SetError(txtcodemp, "no se puede dejar en blanco");
-                else
-                    if (validacion.Solo_Numeros(errorProvider1, txtcodemp))
-                    errorProvider1.SetError(txtcodemp, "solo se permite numeros");
-            }
-            else
-            {
-                letra = true;
-            }
-
-            if (letra)
-            {
-
-                try
-                {
-                    if (txtcodemp.Text == "" || txtusuario.Text == "" || txtcontra.Text == "" || txtcorreo.Text == "" || cmbtipousr.SelectedIndex == -1)
-                    {
-                        MessageBox.Show("Muestre los datos a modificar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                        /* bool Solo_Numeros = false;
-                         foreach (char caracter in txtcodemp.Text)
-                         {
-                             if (Char.IsDigit(caracter))
-                             {
-                                 Solo_Numeros = true;
-                                 break;
-
-                             }
-                             else
-                             {
-                                 Solo_Numeros = true;
-                                 break;
-                             }
-                         }
-                         if (Solo_Numeros)
-                         {
-                             errorProvider1.SetError(txtcodemp, "Solo se aceptan números");
-                         }
-                         else
-                         {
-                             errorProvider1.Clear();
-                         }*/
-
-                    }
-                    else
-                    {
-                        scd = new SqlCommand("DELETE FROM Usuarios WHERE nombre_usuario = '" + txtusuario.Text + "' ", conect.conexion);
-                        scd.ExecuteNonQuery();
-                        conect.CargarDatosUsuario(dataGridView1);
-
-                        txtcodemp.Clear();
-                        txtusuario.Clear();
-                        txtcontra.Clear();
-                        txtcorreo.Clear();
-                        cmbtipousr.SelectedIndex = -1;
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                    MessageBox.Show("Error al borrar datos", "ERROR", MessageBoxButtons.OK,
-                                        MessageBoxIcon.Error);
-                }
-            }
-            conect.cerrar();
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -152,29 +77,6 @@ namespace Pantallas_proyecto
                     {
                         MessageBox.Show("No puede ingresar datos en blanco", "Información", MessageBoxButtons.OK,
                                          MessageBoxIcon.Information);
-                       /* bool Solo_Numeros = false;
-                        foreach (char caracter in txtcodemp.Text)
-                        {
-                            if (Char.IsDigit(caracter))
-                            {
-                                Solo_Numeros = true;
-                                break;
-
-                            }
-                            else
-                            {
-                                Solo_Numeros = true;
-                                break;
-                            }
-                        }
-                        if (Solo_Numeros)
-                        {
-                            errorProvider1.SetError(txtcodemp, "Solo se aceptan números");
-                        }
-                        else
-                        {
-                            errorProvider1.Clear();
-                        }*/
 
                     }
                     else
