@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
+using System.Xml.Schema;
 
 namespace Pantallas_proyecto
 {
@@ -20,6 +21,8 @@ namespace Pantallas_proyecto
         }
         SqlCommand scd;
         ClsConexionBD conect = new ClsConexionBD();
+        validaciones validacion = new validaciones();
+        private bool letra = false;
 
         private const int CP_NOCLOSE_BUTTON = 0x200;
         protected override CreateParams CreateParams
@@ -36,31 +39,76 @@ namespace Pantallas_proyecto
         private void button3_Click(object sender, EventArgs e)
         {
             conect.abrir();
-            try
+            letra = false;
+
+
+            if (validacion.Espacio_Blanco(errorProvider1, txtcodemp) || validacion.Solo_Numeros(errorProvider1, txtcodemp))
             {
-                if (txtcodemp.Text == "" || txtusuario.Text == "" || txtcontra.Text == "" || txtcorreo.Text == "" || cmbtipousr.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Muestre los datos a modificar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                if (validacion.Espacio_Blanco(errorProvider1, txtcodemp))
+                    errorProvider1.SetError(txtcodemp, "no se puede dejar en blanco");
                 else
-                {
-                    scd = new SqlCommand("DELETE FROM Usuarios WHERE nombre_usuario = '" + txtusuario.Text + "' ", conect.conexion);
-                    scd.ExecuteNonQuery();
-                    conect.CargarDatosUsuario(dataGridView1);
-
-                    txtcodemp.Clear();
-                    txtusuario.Clear();
-                    txtcontra.Clear();
-                    txtcorreo.Clear();
-                    cmbtipousr.SelectedIndex = -1;
-                }
-
+                    if (validacion.Solo_Numeros(errorProvider1, txtcodemp))
+                    errorProvider1.SetError(txtcodemp, "solo se permite numeros");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.ToString());
-                MessageBox.Show("Error al borrar datos", "ERROR", MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
+                letra = true;
+            }
+
+            if (letra)
+            {
+
+                try
+                {
+                    if (txtcodemp.Text == "" || txtusuario.Text == "" || txtcontra.Text == "" || txtcorreo.Text == "" || cmbtipousr.SelectedIndex == -1)
+                    {
+                        MessageBox.Show("Muestre los datos a modificar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        /* bool Solo_Numeros = false;
+                         foreach (char caracter in txtcodemp.Text)
+                         {
+                             if (Char.IsDigit(caracter))
+                             {
+                                 Solo_Numeros = true;
+                                 break;
+
+                             }
+                             else
+                             {
+                                 Solo_Numeros = true;
+                                 break;
+                             }
+                         }
+                         if (Solo_Numeros)
+                         {
+                             errorProvider1.SetError(txtcodemp, "Solo se aceptan números");
+                         }
+                         else
+                         {
+                             errorProvider1.Clear();
+                         }*/
+
+                    }
+                    else
+                    {
+                        scd = new SqlCommand("DELETE FROM Usuarios WHERE nombre_usuario = '" + txtusuario.Text + "' ", conect.conexion);
+                        scd.ExecuteNonQuery();
+                        conect.CargarDatosUsuario(dataGridView1);
+
+                        txtcodemp.Clear();
+                        txtusuario.Clear();
+                        txtcontra.Clear();
+                        txtcorreo.Clear();
+                        cmbtipousr.SelectedIndex = -1;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    MessageBox.Show("Error al borrar datos", "ERROR", MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                }
             }
             conect.cerrar();
         }
@@ -76,34 +124,81 @@ namespace Pantallas_proyecto
         private void button2_Click_1(object sender, EventArgs e)
         {
             conect.abrir();
-            try
+
+            letra = false;
+
+
+            if (validacion.Espacio_Blanco(errorProvider1, txtcodemp) || validacion.Solo_Numeros(errorProvider1, txtcodemp))
             {
-                if (txtcodemp.Text == "" || txtusuario.Text == "" || txtcorreo.Text == "" || txtcontra.Text == "" || cmbtipousr.Text == "")
-                {
-                    MessageBox.Show("No puede ingresar datos en blanco", "Información", MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-                }
+                if (validacion.Espacio_Blanco(errorProvider1, txtcodemp))
+                    errorProvider1.SetError(txtcodemp, "no se puede dejar en blanco");
                 else
-                {
-
-                    scd = new SqlCommand("Insert into Usuarios(codigo_empleado,nombre_usuario, correo_electronico, contrasena, Estado) Values('" + txtcodemp.Text + "','" + txtusuario.Text + "','" + txtcorreo.Text + "','" + txtcontra.Text + "','" + cmbtipousr.Text + "')", conect.conexion);
-                    scd.ExecuteNonQuery();
-                    MessageBox.Show("Registro exitoso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conect.CargarDatosUsuario(dataGridView1);
-                    txtcodemp.Text = " ";
-                    txtusuario.Text = " ";
-                    txtcorreo.Text = " ";
-                    txtcontra.Text = " ";
-                    cmbtipousr.Text = " ";
-
-                }
-                conect.cerrar();
+                    if (validacion.Solo_Numeros(errorProvider1, txtcodemp))
+                    errorProvider1.SetError(txtcodemp, "solo se permite numeros");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.ToString());
-                MessageBox.Show("Error al ingresar datos", "ERROR", MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
+                letra = true;
+            }
+
+            if (letra)
+            {
+
+
+
+                try
+                {
+                    if (txtcodemp.Text == "" || txtusuario.Text == "" || txtcorreo.Text == "" || txtcontra.Text == "" || cmbtipousr.Text == "")
+                    {
+                        MessageBox.Show("No puede ingresar datos en blanco", "Información", MessageBoxButtons.OK,
+                                         MessageBoxIcon.Information);
+                       /* bool Solo_Numeros = false;
+                        foreach (char caracter in txtcodemp.Text)
+                        {
+                            if (Char.IsDigit(caracter))
+                            {
+                                Solo_Numeros = true;
+                                break;
+
+                            }
+                            else
+                            {
+                                Solo_Numeros = true;
+                                break;
+                            }
+                        }
+                        if (Solo_Numeros)
+                        {
+                            errorProvider1.SetError(txtcodemp, "Solo se aceptan números");
+                        }
+                        else
+                        {
+                            errorProvider1.Clear();
+                        }*/
+
+                    }
+                    else
+                    {
+
+                        scd = new SqlCommand("Insert into Usuarios(codigo_empleado,nombre_usuario, correo_electronico, contrasena, Estado) Values('" + txtcodemp.Text + "','" + txtusuario.Text + "','" + txtcorreo.Text + "','" + txtcontra.Text + "','" + cmbtipousr.Text + "')", conect.conexion);
+                        scd.ExecuteNonQuery();
+                        MessageBox.Show("Registro exitoso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        conect.CargarDatosUsuario(dataGridView1);
+                        txtcodemp.Text = " ";
+                        txtusuario.Text = " ";
+                        txtcorreo.Text = " ";
+                        txtcontra.Text = " ";
+                        cmbtipousr.Text = " ";
+
+                    }
+                    conect.cerrar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    MessageBox.Show("Error al ingresar datos", "ERROR", MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -113,31 +208,52 @@ namespace Pantallas_proyecto
             int indice;
             String cod;
             indice = dataGridView1.CurrentRow.Index;
-            try
+
+            letra = false;
+
+
+            if (validacion.Espacio_Blanco(errorProvider1, txtcodemp) || validacion.Solo_Numeros(errorProvider1, txtcodemp))
             {
-
-                cod = dataGridView1[0, indice].Value.ToString();
-                //dataGridView1[1, indice].Value = textBox5.Text;
-                dataGridView1[1, indice].Value = txtusuario.Text;
-                dataGridView1[3, indice].Value = txtcorreo.Text;
-                dataGridView1[2, indice].Value = txtcontra.Text;
-                dataGridView1[4, indice].Value = cmbtipousr.Text;
-
-                scd = new SqlCommand("Update Usuarios set codigo_empleado = " + txtcodemp.Text + ",   correo_electronico = '" + txtcorreo.Text + "',  contrasena = '" + txtcontra.Text + "', Estado = '" + cmbtipousr.Text + "' where nombre_usuario='" + txtusuario.Text + "'", conect.conexion);
-
-                scd.ExecuteNonQuery();
-
-                MessageBox.Show("Registro Modificado!", "AVISO", MessageBoxButtons.OK);
-
-                conect.CargarDatosUsuario(dataGridView1);
-
-
+                if (validacion.Espacio_Blanco(errorProvider1, txtcodemp))
+                    errorProvider1.SetError(txtcodemp, "no se puede dejar en blanco");
+                else
+                    if (validacion.Solo_Numeros(errorProvider1, txtcodemp))
+                    errorProvider1.SetError(txtcodemp, "solo se permite numeros");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.ToString());
-                MessageBox.Show("Error al modificar datos", "ERROR", MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
+                letra = true;
+            }
+
+            if (letra)
+            {
+
+                try
+                {
+
+                    cod = dataGridView1[0, indice].Value.ToString();
+                    //dataGridView1[1, indice].Value = textBox5.Text;
+                    dataGridView1[1, indice].Value = txtusuario.Text;
+                    dataGridView1[3, indice].Value = txtcorreo.Text;
+                    dataGridView1[2, indice].Value = txtcontra.Text;
+                    dataGridView1[4, indice].Value = cmbtipousr.Text;
+
+                    scd = new SqlCommand("Update Usuarios set codigo_empleado = " + txtcodemp.Text + ",   correo_electronico = '" + txtcorreo.Text + "',  contrasena = '" + txtcontra.Text + "', Estado = '" + cmbtipousr.Text + "' where nombre_usuario='" + txtusuario.Text + "'", conect.conexion);
+
+                    scd.ExecuteNonQuery();
+
+                    MessageBox.Show("Registro Modificado!", "AVISO", MessageBoxButtons.OK);
+
+                    conect.CargarDatosUsuario(dataGridView1);
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    MessageBox.Show("Error al modificar datos", "ERROR", MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                }
             }
             conect.cerrar();
         }
@@ -175,5 +291,7 @@ namespace Pantallas_proyecto
             txtcontra.Text = dataGridView1[2, poc].Value.ToString();
             cmbtipousr.Text = dataGridView1[4, poc].Value.ToString();
         }
+
+      
     }
 }
