@@ -1506,3 +1506,4 @@ C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.csproj.CoreCompile
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.csproj.CopyComplete
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.exe
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
