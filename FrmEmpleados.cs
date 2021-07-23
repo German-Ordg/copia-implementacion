@@ -77,7 +77,7 @@ namespace Pantallas_proyecto
             catch (Exception ex)
             {
                 //MessageBox.Show(ex.Message.ToString());
-                MessageBox.Show("ERROR AL INSERTAR LOS DATOS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ERROR AL INSERTAR LOS DATOS" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 txtNombre.Text = " ";
                 txtApellido.Text = " ";
