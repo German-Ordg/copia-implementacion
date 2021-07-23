@@ -74,6 +74,15 @@ namespace Pantallas_proyecto
             MostrarDatos();
         }
 
+        validaciones validacion = new validaciones();
+
+        public void validar() {
+            if (validacion.Espacio_Blanco(errorProvider1, txtCategoria) || validacion.Solo_Letras(errorProvider1, txtCategoria)) {
+            
+            }
+        }
+
+
         private void DgvCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Record_Id = Convert.ToInt32(DgvCategoria.Rows[e.RowIndex].Cells[0].Value.ToString());
@@ -111,6 +120,8 @@ namespace Pantallas_proyecto
 
 
         }
+
+
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
