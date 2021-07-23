@@ -207,6 +207,7 @@ namespace Pantallas_proyecto
             txtusuario.Text = dataGridView1[1, poc].Value.ToString();
             txtcorreo.Text = dataGridView1[3, poc].Value.ToString();
             //txtcontra.Text = dataGridView1[2, poc].Value.ToString();   (NO SE MUESTRA LA CONTRASEñA POR QUE ESTA ENCRIPTADA Y ASI ES LO CORRECTO)
+            txtcontra.Text = "";
             cmbtipousr.Text = dataGridView1[4, poc].Value.ToString();
         }
 
