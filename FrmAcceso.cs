@@ -282,8 +282,9 @@ namespace Pantallas_proyecto
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            FrmCategorias fact = new FrmCategorias();
-            fact.Show();
+           TxtResultBox cRUD = new TxtResultBox();
+            cRUD.Show();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
