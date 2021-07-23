@@ -29,6 +29,7 @@ namespace Pantallas_proyecto
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRecuperaContra));
             this.button1 = new System.Windows.Forms.Button();
             this.btnIngreso = new System.Windows.Forms.Button();
@@ -40,7 +41,9 @@ namespace Pantallas_proyecto
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -160,6 +163,10 @@ namespace Pantallas_proyecto
             this.label2.TabIndex = 7;
             this.label2.Text = "HEAVEN";
             // 
+            // ErrorProvider
+            // 
+            this.ErrorProvider.ContainerControl = this;
+            // 
             // FrmRecuperaContra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,6 +187,7 @@ namespace Pantallas_proyecto
             this.Load += new System.EventHandler(this.FrmRecuperaContra_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +205,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtresultado;
+        private System.Windows.Forms.ErrorProvider ErrorProvider;
     }
 }

@@ -932,7 +932,6 @@ C:\Users\Sebas\Documents\Clases\Desarrollo de software\Trabajo\bin\Debug\zh-CHS\
 C:\Users\Sebas\Documents\Clases\Desarrollo de software\Trabajo\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Sebas\Documents\Clases\Desarrollo de software\Trabajo\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
 C:\Users\Sebas\Documents\Clases\Desarrollo de software\Trabajo\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
-C:\Users\Sebas\Documents\Clases\Desarrollo de software\Trabajo\obj\Debug\Pantallas_proyecto.FrmCalculadora.resources
 C:\Users\Sebas\Documents\Clases\Desarrollo de software\Trabajo\obj\Debug\Pantallas_proyecto.FrmClientes.resources
 C:\Users\Sebas\Documents\Clases\Desarrollo de software\Trabajo\obj\Debug\Pantallas_proyecto.FrmCompras.resources
 C:\Users\Sebas\Documents\Clases\Desarrollo de software\Trabajo\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
@@ -1136,3 +1135,5 @@ C:\Users\Administrador\Desktop\Repositorio Desarrollo\Actual\DESARROLLO_DE_SOFTW
 C:\Users\Administrador\Desktop\Repositorio Desarrollo\Actual\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.CopyComplete
 C:\Users\Administrador\Desktop\Repositorio Desarrollo\Actual\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.exe
 C:\Users\Administrador\Desktop\Repositorio Desarrollo\Actual\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\Sebas\Documents\Clases\Desarrollo de software\Trabajo\obj\Debug\Pantallas_proyecto.TxtResultBox.resources
+C:\Users\Sebas\Documents\Clases\Desarrollo de software\Trabajo\obj\Debug\Pantallas_proyecto.FrmValidar_Prueba.resources

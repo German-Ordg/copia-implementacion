@@ -52,45 +52,47 @@ namespace Pantallas_proyecto
 
         private void btnIngreso_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text != "Usuario")
-            {
-                if (txtContrasena.Text != "Contraseña")
+         
+                if (txtUsuario.Text != "Usuario")
                 {
-                    
-                    Dominio.UserModel model = new Dominio.UserModel();
-                    var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
-                    if (validar == true)
+                    if (txtContrasena.Text != "Contraseña")
                     {
-                        this.Hide();
-                        FormBienvenido welcome = new FormBienvenido();
-                        welcome.ShowDialog();
                         
-                        if (Cashe.UserCache.Position == "Vendedor")
+                        Dominio.UserModel model = new Dominio.UserModel();
+                        var validar = model.LoginUser(txtUsuario.Text, txtContrasena.Text);
+                        if (validar == true)
                         {
-                            FrmMenuPrincipal menu = new FrmMenuPrincipal();
-                            menu.Show();
-                            menu.FormClosed += cerrarSesion;
-                        }
-                        if (Cashe.UserCache.Position == "Gerente")
-                        {
-                            FrmMenuPrincipalGerente menu = new FrmMenuPrincipalGerente();
-                            menu.Show();
-                            menu.FormClosed += cerrarSesion;
-                        }
+                            this.Hide();
+                            FormBienvenido welcome = new FormBienvenido();
+                            welcome.ShowDialog();
 
+                            if (Cashe.UserCache.Position == "Vendedor")
+                            {
+                                FrmMenuPrincipal menu = new FrmMenuPrincipal();
+                                menu.Show();
+                                menu.FormClosed += cerrarSesion;
+                            }
+                            if (Cashe.UserCache.Position == "Gerente")
+                            {
+                                FrmMenuPrincipalGerente menu = new FrmMenuPrincipalGerente();
+                                menu.Show();
+                                menu.FormClosed += cerrarSesion;
+                            }
+
+                        }
+                        else
+                        {
+                            msjError("Usuario o contraseña incorrecta \n\t Intente de nuevo");
+                            
+                        }
+                    
                     }
                     else
-                    {
-                        msjError("Usuario o contraseña incorrecta \n\t Intente de nuevo");
-                        txtUsuario.Clear();
-                        txtContrasena.Clear();
-                    }
+                        msjError("Ingrese la contraseña");
                 }
                 else
-                    msjError("Ingrese la contraseña");
-            }
-            else
-                msjError("Ingrese el usuario");
+                    msjError("Ingrese el usuario");
+            
         }
         private void msjError(string msj)
         {
@@ -125,7 +127,8 @@ namespace Pantallas_proyecto
 
         private void txtContrasena_TextChanged(object sender, EventArgs e)
         {
-
+            lblError.Visible = false;
+            picError.Visible = false;
         }
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
@@ -140,8 +143,9 @@ namespace Pantallas_proyecto
         {
             if (txtUsuario.Text == "")
             {
-                txtUsuario.Text = "Usuario";
-                txtUsuario.ForeColor = Color.Black;
+                txtUsuario.Text = "Usuario";            
+               // txtUsuario.ForeColor = Color.Black;
+                txtUsuario.ForeColor = SystemColors.GrayText;
             }
         }
 
@@ -159,8 +163,9 @@ namespace Pantallas_proyecto
         {
             if (txtContrasena.Text == "")
             {
-                txtContrasena.Text = "Constraseña";
-                txtContrasena.ForeColor = Color.Black;
+                txtContrasena.Text = "Contraseña";
+             //   txtContrasena.ForeColor = Color.Black;
+                txtContrasena.ForeColor = SystemColors.GrayText;
                 txtContrasena.UseSystemPasswordChar = false;
             }
         }
@@ -181,6 +186,8 @@ namespace Pantallas_proyecto
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
+            lblError.Visible = false;
+            picError.Visible = false;
 
         }
 
@@ -242,8 +249,7 @@ namespace Pantallas_proyecto
                         else
                         {
                             msjError("Usuario o contraseña incorrecta \n\t Intente de nuevo");
-                            txtUsuario.Clear();
-                            txtContrasena.Clear();
+                         
                         }
                     }
                     else
