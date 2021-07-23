@@ -33,6 +33,24 @@ namespace Pantallas_proyecto
         ClsConexionBD connect = new ClsConexionBD();
         int Record_Id;
 
+        public void MostrarDatos()
+        {
+            try
+            {
+                string consulta = "SELECT codigo_categoria as Código, descripcion_categoria as Categoria FROM Categoria_Producto";
+                SqlDataAdapter adaptador = new SqlDataAdapter(consulta, connect.conexion);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+
+                DgvCategoria.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                DgvCategoria.DataSource = tabla;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
             FrmMenuCRUD CRUD = new FrmMenuCRUD();
