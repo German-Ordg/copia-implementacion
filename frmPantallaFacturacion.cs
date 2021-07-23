@@ -150,7 +150,7 @@ namespace Pantallas_proyecto
            
            if(txtCodProducto.Text.Length>0)
             {
-                if(val.Only_numbers(ErrorProvider,txtCodProducto)==false)
+                if(val.Solo_Numeros(ErrorProvider,txtCodProducto)==false)
                 {
                     fac.CodigoProducto = Int32.Parse(txtCodProducto.Text);
 
