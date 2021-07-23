@@ -65,7 +65,7 @@ namespace Pantallas_proyecto
             catch (Exception ex)
             {
                 //MessageBox.Show(ex.Message.ToString());
-                MessageBox.Show("ERROR AL INSERTAR LOS DATOS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ERROR AL INSERTAR LOS DATOS" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                
                 txtNombreProovedor.Clear();
@@ -79,7 +79,7 @@ namespace Pantallas_proyecto
             dgvProovedores.ForeColor = Color.Black;
             SqlDataAdapter da;
             DataTable dt;
-            DataSet DS;
+           
             da = new SqlDataAdapter("Select * From Proveedores", conect.conexion);
             dt = new DataTable();
             da.Fill(dt);
@@ -204,6 +204,18 @@ namespace Pantallas_proyecto
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void dgvProovedores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int poc;
+
+            poc = dgvProovedores.CurrentRow.Index;
+
+            txtNombreProovedor.Text = dgvProovedores[1, poc].Value.ToString();
+            txtTelefono.Text = dgvProovedores[2, poc].Value.ToString();
+            txtDescripcion.Text = dgvProovedores[3, poc].Value.ToString();
+           
         }
     }
     }

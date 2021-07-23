@@ -41,10 +41,22 @@ namespace Pantallas_proyecto
 
         private void btnIngreso_Click(object sender, EventArgs e)
         {
-            txtresultado.Visible = true;
-            var user = new Dominio.UserModel();
-            var result = user.recoverPassword(cmbUsuariorequerido.Text);
-            txtresultado.Text = result;
+            validaciones validacion = new validaciones();
+            if (validacion.Espacio_Blanco_CB(ErrorProvider, cmbUsuariorequerido))
+            {
+                if (!validacion.Espacio_Blanco_CB(ErrorProvider, cmbUsuariorequerido))
+                {
+                    ErrorProvider.SetError(cmbUsuariorequerido, "");
+                }
+                ErrorProvider.SetError(cmbUsuariorequerido, "Elija un usuario para recuperar contraseña");
+            }
+            else
+            {
+                txtresultado.Visible = true;
+                var user = new Dominio.UserModel();
+                var result = user.recoverPassword(cmbUsuariorequerido.Text);
+                txtresultado.Text = result;
+            }
         }
 
         private void FrmRecuperaContra_Load(object sender, EventArgs e)
@@ -73,7 +85,7 @@ namespace Pantallas_proyecto
             }
             else
             {
-                MessageBox.Show("Error al buscar el Producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al buscar el Correo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             conect.cerrar();
         }
