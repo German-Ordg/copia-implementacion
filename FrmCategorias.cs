@@ -68,5 +68,17 @@ namespace Pantallas_proyecto
             tslFecha.Text = DateTime.Now.ToLongDateString();
             tslHora.Text = DateTime.Now.ToLongTimeString();
         }
+
+        private void FrmCategorias_Load(object sender, EventArgs e)
+        {
+            MostrarDatos();
+        }
+
+        private void DgvCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Record_Id = Convert.ToInt32(DgvCategoria.Rows[e.RowIndex].Cells[0].Value.ToString());
+            txtCodigo.Text = (DgvCategoria.Rows[e.RowIndex].Cells[0].Value.ToString());
+            txtCategoria.Text = (DgvCategoria.Rows[e.RowIndex].Cells[1].Value.ToString());
+        }
     }
 }
