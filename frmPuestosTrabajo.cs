@@ -124,6 +124,7 @@ namespace Pantallas_proyecto
             {
                 if (validacion.Espacio_Blanco(ErrorProvider, txtPosicion))
                     ErrorProvider.SetError(txtPosicion, "No se puede dejar en blanco");
+                else
                 if (validacion.Solo_Letras(ErrorProvider, txtPosicion))
                     ErrorProvider.SetError(txtPosicion, "No se permiten números");
                 Limpiar();
@@ -157,6 +158,11 @@ namespace Pantallas_proyecto
         {
             tslFecha.Text = DateTime.Now.ToLongDateString();
             tslHora.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
