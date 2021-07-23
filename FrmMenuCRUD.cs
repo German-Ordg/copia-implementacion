@@ -139,5 +139,12 @@ namespace Pantallas_proyecto
             toolStripLabel1.Text = DateTime.Now.ToLongDateString();
             toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
         }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            FrmCategorias categorias = new FrmCategorias();
+            categorias.Show();
+            this.Hide();
+        }
     }
 }
