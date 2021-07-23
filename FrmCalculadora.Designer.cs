@@ -49,13 +49,14 @@ namespace Pantallas_proyecto
             this.TxtResulttxt = new System.Windows.Forms.TextBox();
             this.BtnClear = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn7
             // 
-            this.btn7.BackColor = System.Drawing.Color.SkyBlue;
+            this.btn7.BackColor = System.Drawing.Color.Gold;
             this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn7.Location = new System.Drawing.Point(48, 124);
+            this.btn7.Location = new System.Drawing.Point(48, 135);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(85, 41);
             this.btn7.TabIndex = 0;
@@ -65,9 +66,9 @@ namespace Pantallas_proyecto
             // 
             // btn8
             // 
-            this.btn8.BackColor = System.Drawing.Color.SkyBlue;
+            this.btn8.BackColor = System.Drawing.Color.Gold;
             this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn8.Location = new System.Drawing.Point(139, 124);
+            this.btn8.Location = new System.Drawing.Point(139, 135);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(85, 41);
             this.btn8.TabIndex = 1;
@@ -77,9 +78,9 @@ namespace Pantallas_proyecto
             // 
             // btn9
             // 
-            this.btn9.BackColor = System.Drawing.Color.SkyBlue;
+            this.btn9.BackColor = System.Drawing.Color.Gold;
             this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn9.Location = new System.Drawing.Point(230, 124);
+            this.btn9.Location = new System.Drawing.Point(230, 135);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(85, 41);
             this.btn9.TabIndex = 2;
@@ -92,7 +93,7 @@ namespace Pantallas_proyecto
             this.divideBtn.BackColor = System.Drawing.Color.Maroon;
             this.divideBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.divideBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.divideBtn.Location = new System.Drawing.Point(321, 124);
+            this.divideBtn.Location = new System.Drawing.Point(321, 135);
             this.divideBtn.Name = "divideBtn";
             this.divideBtn.Size = new System.Drawing.Size(85, 41);
             this.divideBtn.TabIndex = 3;
@@ -102,9 +103,9 @@ namespace Pantallas_proyecto
             // 
             // btn4
             // 
-            this.btn4.BackColor = System.Drawing.Color.SkyBlue;
+            this.btn4.BackColor = System.Drawing.Color.Gold;
             this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4.Location = new System.Drawing.Point(48, 171);
+            this.btn4.Location = new System.Drawing.Point(48, 182);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(85, 41);
             this.btn4.TabIndex = 4;
@@ -117,7 +118,7 @@ namespace Pantallas_proyecto
             this.restarbtn.BackColor = System.Drawing.Color.Maroon;
             this.restarbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.restarbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.restarbtn.Location = new System.Drawing.Point(321, 216);
+            this.restarbtn.Location = new System.Drawing.Point(321, 227);
             this.restarbtn.Name = "restarbtn";
             this.restarbtn.Size = new System.Drawing.Size(85, 41);
             this.restarbtn.TabIndex = 8;
@@ -127,9 +128,9 @@ namespace Pantallas_proyecto
             // 
             // btn3
             // 
-            this.btn3.BackColor = System.Drawing.Color.SkyBlue;
+            this.btn3.BackColor = System.Drawing.Color.Gold;
             this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn3.Location = new System.Drawing.Point(230, 216);
+            this.btn3.Location = new System.Drawing.Point(230, 227);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(85, 41);
             this.btn3.TabIndex = 7;
@@ -139,9 +140,9 @@ namespace Pantallas_proyecto
             // 
             // btn2
             // 
-            this.btn2.BackColor = System.Drawing.Color.SkyBlue;
+            this.btn2.BackColor = System.Drawing.Color.Gold;
             this.btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2.Location = new System.Drawing.Point(139, 216);
+            this.btn2.Location = new System.Drawing.Point(139, 227);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(85, 41);
             this.btn2.TabIndex = 6;
@@ -151,9 +152,9 @@ namespace Pantallas_proyecto
             // 
             // btn1
             // 
-            this.btn1.BackColor = System.Drawing.Color.SkyBlue;
+            this.btn1.BackColor = System.Drawing.Color.Gold;
             this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.Location = new System.Drawing.Point(48, 216);
+            this.btn1.Location = new System.Drawing.Point(48, 227);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(85, 41);
             this.btn1.TabIndex = 5;
@@ -166,7 +167,7 @@ namespace Pantallas_proyecto
             this.sumarbtn.BackColor = System.Drawing.Color.Maroon;
             this.sumarbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sumarbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sumarbtn.Location = new System.Drawing.Point(321, 263);
+            this.sumarbtn.Location = new System.Drawing.Point(321, 274);
             this.sumarbtn.Name = "sumarbtn";
             this.sumarbtn.Size = new System.Drawing.Size(85, 41);
             this.sumarbtn.TabIndex = 12;
@@ -176,9 +177,9 @@ namespace Pantallas_proyecto
             // 
             // btnigual
             // 
-            this.btnigual.BackColor = System.Drawing.Color.Gold;
+            this.btnigual.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnigual.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnigual.Location = new System.Drawing.Point(230, 263);
+            this.btnigual.Location = new System.Drawing.Point(230, 274);
             this.btnigual.Name = "btnigual";
             this.btnigual.Size = new System.Drawing.Size(85, 41);
             this.btnigual.TabIndex = 11;
@@ -188,9 +189,9 @@ namespace Pantallas_proyecto
             // 
             // btnpunto
             // 
-            this.btnpunto.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnpunto.BackColor = System.Drawing.Color.Gold;
             this.btnpunto.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnpunto.Location = new System.Drawing.Point(139, 263);
+            this.btnpunto.Location = new System.Drawing.Point(139, 274);
             this.btnpunto.Name = "btnpunto";
             this.btnpunto.Size = new System.Drawing.Size(85, 41);
             this.btnpunto.TabIndex = 10;
@@ -200,9 +201,9 @@ namespace Pantallas_proyecto
             // 
             // btn0
             // 
-            this.btn0.BackColor = System.Drawing.Color.SkyBlue;
+            this.btn0.BackColor = System.Drawing.Color.Gold;
             this.btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn0.Location = new System.Drawing.Point(48, 263);
+            this.btn0.Location = new System.Drawing.Point(48, 274);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(85, 41);
             this.btn0.TabIndex = 9;
@@ -215,7 +216,7 @@ namespace Pantallas_proyecto
             this.multiplicarbtn.BackColor = System.Drawing.Color.Maroon;
             this.multiplicarbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.multiplicarbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.multiplicarbtn.Location = new System.Drawing.Point(321, 171);
+            this.multiplicarbtn.Location = new System.Drawing.Point(321, 182);
             this.multiplicarbtn.Name = "multiplicarbtn";
             this.multiplicarbtn.Size = new System.Drawing.Size(85, 41);
             this.multiplicarbtn.TabIndex = 15;
@@ -225,9 +226,9 @@ namespace Pantallas_proyecto
             // 
             // btn6
             // 
-            this.btn6.BackColor = System.Drawing.Color.SkyBlue;
+            this.btn6.BackColor = System.Drawing.Color.Gold;
             this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn6.Location = new System.Drawing.Point(230, 171);
+            this.btn6.Location = new System.Drawing.Point(230, 182);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(85, 41);
             this.btn6.TabIndex = 14;
@@ -237,9 +238,9 @@ namespace Pantallas_proyecto
             // 
             // btn5
             // 
-            this.btn5.BackColor = System.Drawing.Color.SkyBlue;
+            this.btn5.BackColor = System.Drawing.Color.Gold;
             this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5.Location = new System.Drawing.Point(139, 171);
+            this.btn5.Location = new System.Drawing.Point(139, 182);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(85, 41);
             this.btn5.TabIndex = 13;
@@ -250,7 +251,7 @@ namespace Pantallas_proyecto
             // TxtResulttxt
             // 
             this.TxtResulttxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtResulttxt.Location = new System.Drawing.Point(48, 73);
+            this.TxtResulttxt.Location = new System.Drawing.Point(48, 84);
             this.TxtResulttxt.Multiline = true;
             this.TxtResulttxt.Name = "TxtResulttxt";
             this.TxtResulttxt.Size = new System.Drawing.Size(358, 43);
@@ -263,7 +264,7 @@ namespace Pantallas_proyecto
             this.BtnClear.BackColor = System.Drawing.Color.Maroon;
             this.BtnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClear.ForeColor = System.Drawing.Color.MintCream;
-            this.BtnClear.Location = new System.Drawing.Point(139, 310);
+            this.BtnClear.Location = new System.Drawing.Point(139, 321);
             this.BtnClear.Name = "BtnClear";
             this.BtnClear.Size = new System.Drawing.Size(176, 41);
             this.BtnClear.TabIndex = 17;
@@ -287,6 +288,18 @@ namespace Pantallas_proyecto
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 53.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(72, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(316, 81);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "HEAVEN";
+            // 
             // TxtResultBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,6 +307,7 @@ namespace Pantallas_proyecto
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(460, 416);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.BtnClear);
             this.Controls.Add(this.TxtResulttxt);
@@ -345,5 +359,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.TextBox TxtResulttxt;
         private System.Windows.Forms.Button BtnClear;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label1;
     }
 }
