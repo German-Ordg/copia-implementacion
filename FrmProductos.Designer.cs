@@ -674,7 +674,7 @@ namespace Pantallas_proyecto
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1413, 675);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.groupBox2);
@@ -693,7 +693,7 @@ namespace Pantallas_proyecto
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1429, 714);
-            this.MinimumSize = new System.Drawing.Size(1027, 597);
+            this.MinimumSize = new System.Drawing.Size(1429, 714);
             this.Name = "FrmProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmProductos";

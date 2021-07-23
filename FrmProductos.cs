@@ -136,43 +136,56 @@ namespace Pantallas_proyecto
 
                     else
                     {
+                        bool igual=false;
+                        for (int i = 0; i <= contador; i++)
+                        {
+                            if (codigoProducto.Text == productosArrays[i,0])
+                            {
+                                igual= true;
+                            }
+                        }
 
-                        productosArrays[contador, 0] = codigoProducto.Text;
-                        productosArrays[contador, 1] = descripcionProducto.Text;
-                        productosArrays[contador, 2] = cmbCategoria.Text;
-                        productosArrays[contador, 3] = talla.Text;
-                        productosArrays[contador, 4] = precioCompra.Text;
-                        productosArrays[contador, 5] = precioActual.Text;
-                        productosArrays[contador, 6] = cantidad.Text;
-                        productosArrays[contador, 7] = descuento.Text;
-                        contador++;
+                        if (igual == false)
+                        {
+                            productosArrays[contador, 0] = codigoProducto.Text;
+                            productosArrays[contador, 1] = descripcionProducto.Text;
+                            productosArrays[contador, 2] = cmbCategoria.Text;
+                            productosArrays[contador, 3] = talla.Text;
+                            productosArrays[contador, 4] = precioCompra.Text;
+                            productosArrays[contador, 5] = precioActual.Text;
+                            productosArrays[contador, 6] = cantidad.Text;
+                            productosArrays[contador, 7] = descuento.Text;
+                            contador++;
 
-                        producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
-                        int RowsEscribir = dgvProductosCompra.Rows.Count - 1;
-                        dgvProductosCompra.Rows.Add(1);
-                        dgvProductosCompra.Rows[RowsEscribir].Cells[0].Value = codigoProducto.Text;
-                        dgvProductosCompra.Rows[RowsEscribir].Cells[1].Value = descripcionProducto.Text;
-                        dgvProductosCompra.Rows[RowsEscribir].Cells[2].Value = cmbCategoria.Text;
-                        dgvProductosCompra.Rows[RowsEscribir].Cells[3].Value = talla.Text;
-                        dgvProductosCompra.Rows[RowsEscribir].Cells[4].Value = precioCompra.Text;
-                        dgvProductosCompra.Rows[RowsEscribir].Cells[5].Value = precioActual.Text;
-                        dgvProductosCompra.Rows[RowsEscribir].Cells[6].Value = cantidad.Text;
-                        dgvProductosCompra.Rows[RowsEscribir].Cells[7].Value = descuento.Text;
+                            producto.Codigo_producto = Convert.ToInt32(codigoProducto.Text);
+                            int RowsEscribir = dgvProductosCompra.Rows.Count - 1;
+                            dgvProductosCompra.Rows.Add(1);
+                            dgvProductosCompra.Rows[RowsEscribir].Cells[0].Value = codigoProducto.Text;
+                            dgvProductosCompra.Rows[RowsEscribir].Cells[1].Value = descripcionProducto.Text;
+                            dgvProductosCompra.Rows[RowsEscribir].Cells[2].Value = cmbCategoria.Text;
+                            dgvProductosCompra.Rows[RowsEscribir].Cells[3].Value = talla.Text;
+                            dgvProductosCompra.Rows[RowsEscribir].Cells[4].Value = precioCompra.Text;
+                            dgvProductosCompra.Rows[RowsEscribir].Cells[5].Value = precioActual.Text;
+                            dgvProductosCompra.Rows[RowsEscribir].Cells[6].Value = cantidad.Text;
+                            dgvProductosCompra.Rows[RowsEscribir].Cells[7].Value = descuento.Text;
 
-                        codigoProducto.Clear();
-                        descripcionProducto.Clear();
-                        cantidad.Clear();
-                        precioActual.Clear();
-                        descuento.Clear();
-                        talla.Clear();
-                        cmbCategoria.Items.Clear();
-                        descripcionProducto.Clear();
-                        precioCompra.Clear();
-                        cmbCategoria.Enabled = true;
-                        descripcionProducto.Enabled = true;
-                        codigoProducto.Enabled = true;
-                        talla.Enabled = true;
-                        categorias();
+                            codigoProducto.Clear();
+                            descripcionProducto.Clear();
+                            cantidad.Clear();
+                            precioActual.Clear();
+                            descuento.Clear();
+                            talla.Clear();
+                            cmbCategoria.Items.Clear();
+                            descripcionProducto.Clear();
+                            precioCompra.Clear();
+                            cmbCategoria.Enabled = true;
+                            descripcionProducto.Enabled = true;
+                            codigoProducto.Enabled = true;
+                            talla.Enabled = true;
+                            categorias();
+                        }
+                        else
+                            MessageBox.Show("Esta ingresando un producto que ya fue ingresado","Aviso",MessageBoxButtons.OK);
 
                     }
 
@@ -413,7 +426,6 @@ namespace Pantallas_proyecto
 
             FrmCompras compras = new FrmCompras();
             compras.codigoCompra.Text = compra.Text;
-            compras.dateFecha.Value = Convert.ToDateTime(fecha.Text);
             compras.Show();
             this.Close();
         }

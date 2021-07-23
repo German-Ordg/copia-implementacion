@@ -282,7 +282,7 @@ namespace Pantallas_proyecto
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            frmUsuarios cRUD = new frmUsuarios();
+            FrmProductos cRUD = new FrmProductos();
             cRUD.Show();
             this.Hide();
         }
