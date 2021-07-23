@@ -51,6 +51,11 @@ namespace Pantallas_proyecto
             }
         }
 
+        public void Limpiar() {
+            txtCodigo.Clear();
+            txtCategoria.Clear();
+        }
+
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
             FrmMenuCRUD CRUD = new FrmMenuCRUD();
