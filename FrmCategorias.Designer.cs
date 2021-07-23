@@ -87,6 +87,7 @@ namespace Pantallas_proyecto
             this.BtnModificar.TabIndex = 33;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = false;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnAgregar
             // 

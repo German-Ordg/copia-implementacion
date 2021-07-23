@@ -111,5 +111,22 @@ namespace Pantallas_proyecto
 
 
         }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            try {
+                string query = "Update Categoria_Producto set descripcion_categoria= '" + txtCategoria.Text + "' where Codigo_Categoria='" + Record_Id + "'";
+                connect.abrir();
+                SqlCommand comando = new SqlCommand(query, connect.conexion);
+                comando.ExecuteNonQuery();
+                connect.abrir();
+                MessageBox.Show("Se Modificó Correctamente");
+                Limpiar();
+                MostrarDatos();
+            }
+            catch (Exception ex){
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
