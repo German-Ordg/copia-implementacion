@@ -1051,3 +1051,9 @@ C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmValidar_Prueba.
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.TxtResultBox.resources
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmProductos.resources
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmValidar_Prueba.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.TxtResultBox.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.FrmProductos.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.FrmValidar_Prueba.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\RdlCompile.cache
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\RdlCompile.compiled

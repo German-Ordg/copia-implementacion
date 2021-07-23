@@ -85,7 +85,6 @@ namespace Pantallas_proyecto
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
-            this.btnEliminarTodo = new System.Windows.Forms.Button();
             this.txtDescuento = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
@@ -101,13 +100,15 @@ namespace Pantallas_proyecto
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.reportes = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnNuevaFactura = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lstCompras)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -116,12 +117,13 @@ namespace Pantallas_proyecto
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.reportes.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // brnRegresar
@@ -532,7 +534,7 @@ namespace Pantallas_proyecto
             this.txtNombreCliente.Location = new System.Drawing.Point(230, 79);
             this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(186, 22);
+            this.txtNombreCliente.Size = new System.Drawing.Size(172, 22);
             this.txtNombreCliente.TabIndex = 10;
             // 
             // lblNombre
@@ -592,7 +594,7 @@ namespace Pantallas_proyecto
             this.txtRTN.Location = new System.Drawing.Point(230, 32);
             this.txtRTN.Margin = new System.Windows.Forms.Padding(4);
             this.txtRTN.Name = "txtRTN";
-            this.txtRTN.Size = new System.Drawing.Size(186, 22);
+            this.txtRTN.Size = new System.Drawing.Size(172, 22);
             this.txtRTN.TabIndex = 5;
             this.txtRTN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRTN_KeyPress);
             // 
@@ -692,7 +694,6 @@ namespace Pantallas_proyecto
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnBuscarProducto);
             this.groupBox1.Controls.Add(this.nudCantidad);
-            this.groupBox1.Controls.Add(this.btnEliminarTodo);
             this.groupBox1.Controls.Add(this.txtDescuento);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtPrecioUnitario);
@@ -771,22 +772,6 @@ namespace Pantallas_proyecto
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(120, 24);
             this.nudCantidad.TabIndex = 19;
-            // 
-            // btnEliminarTodo
-            // 
-            this.btnEliminarTodo.BackColor = System.Drawing.Color.Maroon;
-            this.btnEliminarTodo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminarTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarTodo.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarTodo.Location = new System.Drawing.Point(435, 167);
-            this.btnEliminarTodo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminarTodo.Name = "btnEliminarTodo";
-            this.btnEliminarTodo.Size = new System.Drawing.Size(133, 37);
-            this.btnEliminarTodo.TabIndex = 18;
-            this.btnEliminarTodo.Text = "Eliminar Todo";
-            this.btnEliminarTodo.UseVisualStyleBackColor = false;
-            this.btnEliminarTodo.Click += new System.EventHandler(this.btnEliminarTodo_Click);
             // 
             // txtDescuento
             // 
@@ -874,7 +859,7 @@ namespace Pantallas_proyecto
             this.txtCodProducto.Location = new System.Drawing.Point(132, 26);
             this.txtCodProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodProducto.Name = "txtCodProducto";
-            this.txtCodProducto.Size = new System.Drawing.Size(152, 24);
+            this.txtCodProducto.Size = new System.Drawing.Size(134, 24);
             this.txtCodProducto.TabIndex = 1;
             this.txtCodProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodProducto_KeyPress);
             // 
@@ -935,16 +920,6 @@ namespace Pantallas_proyecto
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(251, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            // 
             // reportes
             // 
             this.reportes.Controls.Add(this.tabPage1);
@@ -957,6 +932,7 @@ namespace Pantallas_proyecto
             // 
             // tabPage1
             // 
+            this.tabPage1.AccessibleName = "tab1";
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -964,7 +940,7 @@ namespace Pantallas_proyecto
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1301, 656);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Facturación";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel1
@@ -985,13 +961,14 @@ namespace Pantallas_proyecto
             // 
             // tabPage2
             // 
+            this.tabPage2.AccessibleName = "tab2";
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1301, 656);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Impresión de Factura";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel2
@@ -1014,14 +991,47 @@ namespace Pantallas_proyecto
             this.reportViewer1.Size = new System.Drawing.Size(1295, 650);
             this.reportViewer1.TabIndex = 0;
             // 
+            // ErrorProvider
+            // 
+            this.ErrorProvider.ContainerControl = this;
+            // 
+            // btnNuevaFactura
+            // 
+            this.btnNuevaFactura.BackColor = System.Drawing.Color.Maroon;
+            this.btnNuevaFactura.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevaFactura.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNuevaFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnNuevaFactura.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnNuevaFactura.Location = new System.Drawing.Point(1185, 48);
+            this.btnNuevaFactura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNuevaFactura.Name = "btnNuevaFactura";
+            this.btnNuevaFactura.Size = new System.Drawing.Size(144, 30);
+            this.btnNuevaFactura.TabIndex = 23;
+            this.btnNuevaFactura.Text = "Nueva Factura";
+            this.btnNuevaFactura.UseVisualStyleBackColor = false;
+            this.btnNuevaFactura.Click += new System.EventHandler(this.btnNuevaFactura_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Pantallas_proyecto.Properties.Resources.Letras1;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 13);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(191, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // frmPantallaFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1341, 800);
-            this.Controls.Add(this.reportes);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnNuevaFactura);
+            this.Controls.Add(this.reportes);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.brnRegresar);
             this.Controls.Add(this.label10);
@@ -1050,12 +1060,13 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.reportes.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1108,7 +1119,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPrecioUnitario;
-        private System.Windows.Forms.Button btnEliminarTodo;
         private System.Windows.Forms.TextBox txtDescuento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnImprimirFactura;
@@ -1123,7 +1133,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TabControl reportes;
@@ -1140,5 +1149,8 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.ErrorProvider ErrorProvider;
+        private System.Windows.Forms.Button btnNuevaFactura;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

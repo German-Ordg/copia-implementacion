@@ -17,7 +17,7 @@ namespace Pantallas_proyecto
     public partial class frmPantallaFacturacion : Form
     {
 
-        validaciones val = new validaciones();
+        
 
         public frmPantallaFacturacion()
         {
@@ -41,11 +41,7 @@ namespace Pantallas_proyecto
         ClsConexionBD con = new ClsConexionBD();
         ClsClientes clie = new ClsClientes();
         ClsPantallaFacturacion fac = new ClsPantallaFacturacion();
-
-
-       
-        
-
+        validaciones val = new validaciones();
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -66,7 +62,7 @@ namespace Pantallas_proyecto
         {
 
             btnImprimirFactura.Enabled = true;
-            txtImporteAgrabado15.Text = "0.00";
+            txtImporteAgrabado15.Text = "0";
 
             double sumaTotales=0;
             double subTotal;
@@ -132,9 +128,8 @@ namespace Pantallas_proyecto
             btnEliminar.Enabled = false;
             btnAgregar.Enabled = false;
             btnEditar.Enabled = false;
-            btnEliminarTodo.Enabled = false;
             timer1.Enabled = true;
-
+           
             this.reportViewer1.RefreshReport();
         }
 
@@ -150,41 +145,52 @@ namespace Pantallas_proyecto
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
-           if(txtCodProducto.TextLength!=0)
+
+
+           
+           if(txtCodProducto.Text.Length>0)
             {
-                fac.CodigoProducto = Int32.Parse(txtCodProducto.Text);
-                
-
-                String buscarProducto = "SELECT [descripcion_producto] descripcion, " +
-                    "[cantidad_existente] cantidad, [precio_actual] precio, " +
-                    "[descuento_producto] descuento FROM [dbo].[Productos] " +
-                    "WHERE [codigo_producto]="+fac.CodigoProducto ;
-
-                con.abrir();
-                try
+                if(val.Only_numbers(ErrorProvider,txtCodProducto)==false)
                 {
-                    
-                    cmd = new SqlCommand(buscarProducto, con.conexion);
-                    dr = cmd.ExecuteReader();
-                    while (dr.Read())
+                    fac.CodigoProducto = Int32.Parse(txtCodProducto.Text);
+
+
+                    String buscarProducto = "SELECT [descripcion_producto] descripcion, " +
+                        "[cantidad_existente] cantidad, [precio_actual] precio, " +
+                        "[descuento_producto] descuento FROM [dbo].[Productos] " +
+                        "WHERE [codigo_producto]=" + fac.CodigoProducto;
+
+                    con.abrir();
+                    try
                     {
-                        fac.DescripcionProducto = dr["descripcion"].ToString();
-                        fac.CantidadInventario = Int32.Parse(dr["cantidad"].ToString());
-                        fac.PrecioProducto = Double.Parse(dr["precio"].ToString());
-                        fac.DescuentoProducto = Double.Parse(dr["descuento"].ToString());
+
+                        cmd = new SqlCommand(buscarProducto, con.conexion);
+                        dr = cmd.ExecuteReader();
+                        while (dr.Read())
+                        {
+                            fac.DescripcionProducto = dr["descripcion"].ToString();
+                            fac.CantidadInventario = Int32.Parse(dr["cantidad"].ToString());
+                            fac.PrecioProducto = Double.Parse(dr["precio"].ToString());
+                            fac.DescuentoProducto = Double.Parse(dr["descuento"].ToString());
+                        }
+                        dr.Close();
+
+                        txtDescuento.Text = fac.DescuentoProducto.ToString();
+                        txtPrecioUnitario.Text = fac.PrecioProducto.ToString();
+                        txtDescripcion.Text = fac.DescripcionProducto;
+                        btnAgregar.Enabled = true;
+
                     }
-                    dr.Close();
-                                        
-                    txtDescuento.Text = fac.DescuentoProducto.ToString();
-                    txtPrecioUnitario.Text = fac.PrecioProducto.ToString();
-                    txtDescripcion.Text = fac.DescripcionProducto;
-                    btnAgregar.Enabled = true;
-                    
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo cargar el producto" + ex.ToString());
+                    }
                 }
-                catch(Exception ex)
+                else
                 {
-                    MessageBox.Show("No se pudo cargar el producto" + ex.ToString());
+                   
                 }
+                
             }
             else
             {
@@ -241,7 +247,6 @@ namespace Pantallas_proyecto
                     {
                         btnEliminar.Enabled = true;
                         btnEditar.Enabled = true;
-                        btnEliminarTodo.Enabled = true;
                         btnCalcularFactura.Enabled = true;
 
                         fac.CantidadProducto = Int32.Parse(nudCantidad.Value.ToString());
@@ -323,6 +328,9 @@ namespace Pantallas_proyecto
                     btnBuscarProducto.Enabled = false;
                     btnEditar.Enabled = false;
                     btnActualizar.Enabled = true;
+                    btnCalcularFactura.Enabled = false;
+                    btnImprimirFactura.Enabled = false;
+                    btnEliminar.Enabled = false;
 
                     int a = lstCompras.CurrentRow.Index;
                     txtCodProducto.Text = lstCompras.Rows[a].Cells[0].Value.ToString();
@@ -358,6 +366,8 @@ namespace Pantallas_proyecto
                 lstCompras.Enabled = true;
                 btnAgregar.Enabled = true;
                 txtCodProducto.Enabled=true;
+                btnCalcularFactura.Enabled = true;
+                btnEliminar.Enabled = true;
 
                 txtCodProducto.Clear();
                 txtDescripcion.Clear();
@@ -378,6 +388,8 @@ namespace Pantallas_proyecto
         {
             if (lstCompras.SelectedRows.Count != 0)
             {
+                btnImprimirFactura.Enabled = false;
+
                 if(lstCompras.CurrentRow.Index != lstCompras.RowCount - 1)
                 {
                     lstCompras.Rows.RemoveAt(lstCompras.CurrentRow.Index);
@@ -447,65 +459,78 @@ namespace Pantallas_proyecto
 
         private void btnImprimirFactura_Click(object sender, EventArgs e)
         {
-            if (cmbTipoPago.SelectedIndex == -1)
+
+            
+            if (lstCompras.RowCount<2)
             {
-                MessageBox.Show("Seleccione un tipo de pago", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No hay items en la lista", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnImprimirFactura.Enabled = false;
             }
             else
             {
-                if (cmbVendedor.SelectedIndex == -1)
+                if (cmbTipoPago.SelectedIndex == -1)
                 {
-                    MessageBox.Show("Seleccione un vendedor", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Seleccione un tipo de pago", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    if (lstCompras.RowCount == -1)
+                    if (cmbVendedor.SelectedIndex == -1)
                     {
-                        MessageBox.Show("Ingrese un producto a comprar", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Seleccione un vendedor", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        if (rbConNombre.Checked == false && rbSinNombre.Checked == false)
+                        if (lstCompras.RowCount == -1)
                         {
-                            MessageBox.Show("Seleccione si la factura es con nombre o sin nombre", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Ingrese un producto a comprar", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
-                            if (rbConNombre.Checked)
+                            if (rbConNombre.Checked == false && rbSinNombre.Checked == false)
                             {
-                                if (txtRTN.TextLength == 0)
+                                MessageBox.Show("Seleccione si la factura es con nombre o sin nombre", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                if (rbConNombre.Checked)
                                 {
-                                    MessageBox.Show("Ingrese el RTN del cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                }
-                                else
-                                {
-                                    if (txtNombreCliente.TextLength == 0)
+                                    if (txtRTN.TextLength == 0)
                                     {
-                                        MessageBox.Show("Ingrese el nombre del cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        MessageBox.Show("Ingrese el RTN del cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     }
                                     else
                                     {
+                                        if (txtNombreCliente.TextLength == 0)
+                                        {
+                                            MessageBox.Show("Ingrese el nombre del cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        }
+                                        else
+                                        {
 
 
-                                        ingresar();
-                                        reporte();
+                                            ingresar();
+                                            reporte();
+                                            ((Control)this.tabPage1).Enabled = false;
+                                        }
                                     }
                                 }
+
+                                if (rbSinNombre.Checked)
+                                {
+
+
+                                    ingresar();
+
+                                    reporte();
+                                    ((Control)this.tabPage1).Enabled = false;
+                                }
+
                             }
-
-                            if (rbSinNombre.Checked)
-                            {
-
-                                
-                                ingresar();
-
-                                reporte();
-                            }
-
                         }
                     }
                 }
             }
+            
 
         }
 
@@ -633,7 +658,7 @@ namespace Pantallas_proyecto
                 
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -694,6 +719,18 @@ namespace Pantallas_proyecto
         private void txtRTN_KeyPress(object sender, KeyPressEventArgs e)
         {
             //val.Only_numbers();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNuevaFactura_Click(object sender, EventArgs e)
+        {
+            frmPantallaFacturacion ss = new frmPantallaFacturacion();
+            ss.Show();
+            this.Hide();
         }
     }
 
