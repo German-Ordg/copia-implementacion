@@ -80,5 +80,36 @@ namespace Pantallas_proyecto
             txtCodigo.Text = (DgvCategoria.Rows[e.RowIndex].Cells[0].Value.ToString());
             txtCategoria.Text = (DgvCategoria.Rows[e.RowIndex].Cells[1].Value.ToString());
         }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtCategoria.Text == "")
+                {
+                    MessageBox.Show("No puede ingresar datos en blanco", "Informacion", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+
+                }
+                else {
+                    string query = "INSERT INTO Categoria_Producto (categoria_producto) VALUES (@categoria)";
+                    connect.abrir();
+                    SqlCommand comando = new SqlCommand(query, connect.conexion);
+                    comando.Parameters.AddWithValue("@categoria", txtCategoria.Text);
+                    comando.ExecuteNonQuery();
+                    connect.abrir();
+                    MessageBox.Show("Nuevo Puesto Insertado");
+                    Limpiar();
+                    MostrarDatos();
+                }
+            }
+            catch (Exception ex){
+
+                MessageBox.Show(ex.Message);
+            
+            }
+
+
+        }
     }
 }

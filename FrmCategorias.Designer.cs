@@ -101,6 +101,7 @@ namespace Pantallas_proyecto
             this.BtnAgregar.TabIndex = 32;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // txtCategoria
             // 
