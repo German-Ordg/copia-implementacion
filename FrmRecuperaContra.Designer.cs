@@ -77,7 +77,7 @@ namespace Pantallas_proyecto
             this.btnIngreso.Location = new System.Drawing.Point(538, 146);
             this.btnIngreso.Name = "btnIngreso";
             this.btnIngreso.Size = new System.Drawing.Size(98, 40);
-            this.btnIngreso.TabIndex = 9;
+            this.btnIngreso.TabIndex = 2;
             this.btnIngreso.Text = "Recuperar";
             this.btnIngreso.UseVisualStyleBackColor = false;
             this.btnIngreso.Click += new System.EventHandler(this.btnIngreso_Click);
@@ -111,7 +111,7 @@ namespace Pantallas_proyecto
             this.cmbUsuariorequerido.Location = new System.Drawing.Point(118, 109);
             this.cmbUsuariorequerido.Name = "cmbUsuariorequerido";
             this.cmbUsuariorequerido.Size = new System.Drawing.Size(170, 21);
-            this.cmbUsuariorequerido.TabIndex = 4;
+            this.cmbUsuariorequerido.TabIndex = 1;
             this.cmbUsuariorequerido.SelectedIndexChanged += new System.EventHandler(this.cmbUsuariorequerido_SelectedIndexChanged);
             // 
             // lblcorreo
@@ -183,7 +183,7 @@ namespace Pantallas_proyecto
             this.btncambiar.Location = new System.Drawing.Point(623, 357);
             this.btncambiar.Name = "btncambiar";
             this.btncambiar.Size = new System.Drawing.Size(84, 40);
-            this.btncambiar.TabIndex = 23;
+            this.btncambiar.TabIndex = 6;
             this.btncambiar.Text = "Cambiar Contraseña";
             this.btncambiar.UseVisualStyleBackColor = false;
             this.btncambiar.Visible = false;
@@ -199,9 +199,13 @@ namespace Pantallas_proyecto
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(127, 25);
-            this.txtContrasena.TabIndex = 22;
+            this.txtContrasena.TabIndex = 5;
             this.txtContrasena.Text = "Contraseña";
             this.txtContrasena.Visible = false;
+            this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
+            this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
+            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
+            this.txtContrasena.Leave += new System.EventHandler(this.txtContrasena_Leave);
             // 
             // btnverificar
             // 
@@ -213,7 +217,7 @@ namespace Pantallas_proyecto
             this.btnverificar.Location = new System.Drawing.Point(593, 312);
             this.btnverificar.Name = "btnverificar";
             this.btnverificar.Size = new System.Drawing.Size(59, 28);
-            this.btnverificar.TabIndex = 21;
+            this.btnverificar.TabIndex = 4;
             this.btnverificar.Text = "Verificar Codigo";
             this.btnverificar.UseVisualStyleBackColor = false;
             this.btnverificar.Visible = false;
@@ -236,8 +240,9 @@ namespace Pantallas_proyecto
             this.txtcodigo.Location = new System.Drawing.Point(476, 320);
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtcodigo.TabIndex = 19;
+            this.txtcodigo.TabIndex = 3;
             this.txtcodigo.Visible = false;
+            this.txtcodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcodigo_KeyPress);
             // 
             // lblcodigo
             // 

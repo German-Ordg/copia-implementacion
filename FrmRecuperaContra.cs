@@ -149,5 +149,104 @@ namespace Pantallas_proyecto
 
             }
         }
+
+        private void txtContrasena_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+                    conect.abrir();
+                    string contra;
+                    contra = Encrypt.GetSHA256(txtContrasena.Text);
+
+                    scd = new SqlCommand("update Usuarios set contrasena='" + contra + "' where nombre_usuario = '" + cmbUsuariorequerido.Text + "'", conect.conexion);
+
+                    scd.ExecuteNonQuery();
+
+                    MessageBox.Show("Contraseña actualizada!", "AVISO", MessageBoxButtons.OK);
+                    conect.cerrar();
+                    lblnueva.Visible = false;
+                    btncambiar.Visible = false;
+                    txtContrasena.Visible = false;
+                    txtresultado.Text = "";
+                    txtresultado.Visible = false;
+                    cmbUsuariorequerido.Text = "";
+                    cmbUsuariorequerido.Enabled = true;
+                    lblcorreo.Visible = false;
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error al cambiar contraseña", "ERROR", MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+
+                }
+            }
+
+        }
+
+        private void btncambiar_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btncambiar_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContrasena_Enter(object sender, EventArgs e)
+        {
+            if (txtContrasena.Text == "Contraseña")
+            {
+                txtContrasena.Text = "";
+                txtContrasena.ForeColor = Color.Black;
+                txtContrasena.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtContrasena_Leave(object sender, EventArgs e)
+        {
+            if (txtContrasena.Text == "")
+            {
+                txtContrasena.Text = "Contraseña";
+                txtContrasena.ForeColor = SystemColors.GrayText;
+                txtContrasena.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+
+                int valor = Convert.ToInt32(txtcodigo.Text);
+                if (Cashe.UserCache.numero == valor)
+                {
+                    lblnueva.Visible = true;
+                    txtContrasena.Visible = true;
+                    lblcodigo.Visible = false;
+                    txtcodigo.Visible = false;
+                    btnverificar.Visible = false;
+                    btncambiar.Visible = true;
+
+
+
+                }
+                else
+                {
+
+                    MessageBox.Show("Codigo Incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            
+        }
     }
 }
