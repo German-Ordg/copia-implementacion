@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Pantallas_proyecto
 {
@@ -28,6 +29,9 @@ namespace Pantallas_proyecto
                 return myCp;
             }
         }
+
+        ClsConexionBD connect = new ClsConexionBD();
+        int Record_Id;
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
