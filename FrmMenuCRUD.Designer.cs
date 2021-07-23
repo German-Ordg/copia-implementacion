@@ -53,6 +53,7 @@ namespace Pantallas_proyecto
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnCategorias = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -220,7 +221,7 @@ namespace Pantallas_proyecto
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(109, 269);
+            this.button2.Location = new System.Drawing.Point(109, 255);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(211, 69);
             this.button2.TabIndex = 13;
@@ -236,7 +237,7 @@ namespace Pantallas_proyecto
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(381, 269);
+            this.button1.Location = new System.Drawing.Point(381, 255);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(211, 69);
             this.button1.TabIndex = 11;
@@ -252,7 +253,7 @@ namespace Pantallas_proyecto
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button6.Location = new System.Drawing.Point(229, 367);
+            this.button6.Location = new System.Drawing.Point(109, 356);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(211, 69);
             this.button6.TabIndex = 18;
@@ -290,12 +291,29 @@ namespace Pantallas_proyecto
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnCategorias
+            // 
+            this.btnCategorias.BackColor = System.Drawing.Color.Maroon;
+            this.btnCategorias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCategorias.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategorias.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCategorias.Location = new System.Drawing.Point(381, 356);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Size = new System.Drawing.Size(211, 69);
+            this.btnCategorias.TabIndex = 76;
+            this.btnCategorias.Text = "Categorías";
+            this.btnCategorias.UseVisualStyleBackColor = false;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
+            // 
             // FrmMenuCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(704, 470);
+            this.Controls.Add(this.btnCategorias);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -347,5 +365,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnCategorias;
     }
 }
