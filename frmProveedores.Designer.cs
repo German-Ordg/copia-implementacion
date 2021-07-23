@@ -48,26 +48,23 @@ namespace Pantallas_proyecto
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProovedores)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(77, 138);
+            label2.Location = new System.Drawing.Point(103, 170);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(75, 20);
+            label2.Size = new System.Drawing.Size(95, 25);
             label2.TabIndex = 47;
             label2.Text = "Teléfono:";
             // 
@@ -77,9 +74,10 @@ namespace Pantallas_proyecto
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(15, 19);
+            this.button2.Location = new System.Drawing.Point(20, 23);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 26);
+            this.button2.Size = new System.Drawing.Size(149, 32);
             this.button2.TabIndex = 53;
             this.button2.Text = "Agregar";
             this.button2.UseVisualStyleBackColor = false;
@@ -87,17 +85,19 @@ namespace Pantallas_proyecto
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(158, 187);
+            this.txtDescripcion.Location = new System.Drawing.Point(211, 230);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(289, 62);
+            this.txtDescripcion.Size = new System.Drawing.Size(384, 75);
             this.txtDescripcion.TabIndex = 50;
             // 
             // txtNombreProovedor
             // 
-            this.txtNombreProovedor.Location = new System.Drawing.Point(158, 91);
+            this.txtNombreProovedor.Location = new System.Drawing.Point(211, 112);
+            this.txtNombreProovedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreProovedor.Name = "txtNombreProovedor";
-            this.txtNombreProovedor.Size = new System.Drawing.Size(289, 20);
+            this.txtNombreProovedor.Size = new System.Drawing.Size(384, 22);
             this.txtNombreProovedor.TabIndex = 49;
             this.txtNombreProovedor.TextChanged += new System.EventHandler(this.txtNombreProovedor_TextChanged);
             this.txtNombreProovedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreProovedor_KeyPress);
@@ -106,9 +106,10 @@ namespace Pantallas_proyecto
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(77, 187);
+            this.label3.Location = new System.Drawing.Point(103, 230);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 20);
+            this.label3.Size = new System.Drawing.Size(99, 25);
             this.label3.TabIndex = 48;
             this.label3.Text = "Dirección:";
             // 
@@ -116,9 +117,10 @@ namespace Pantallas_proyecto
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 88);
+            this.label1.Location = new System.Drawing.Point(9, 108);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 20);
+            this.label1.Size = new System.Drawing.Size(182, 25);
             this.label1.TabIndex = 46;
             this.label1.Text = "Nombre Proveedor:";
             // 
@@ -128,9 +130,10 @@ namespace Pantallas_proyecto
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(543, 47);
+            this.button7.Location = new System.Drawing.Point(724, 58);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(112, 26);
+            this.button7.Size = new System.Drawing.Size(149, 32);
             this.button7.TabIndex = 45;
             this.button7.Text = "Regresar";
             this.button7.UseVisualStyleBackColor = false;
@@ -148,18 +151,21 @@ namespace Pantallas_proyecto
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProovedores.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProovedores.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvProovedores.Location = new System.Drawing.Point(81, 277);
+            this.dgvProovedores.Location = new System.Drawing.Point(108, 341);
+            this.dgvProovedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvProovedores.Name = "dgvProovedores";
-            this.dgvProovedores.Size = new System.Drawing.Size(436, 174);
+            this.dgvProovedores.RowHeadersWidth = 51;
+            this.dgvProovedores.Size = new System.Drawing.Size(581, 214);
             this.dgvProovedores.TabIndex = 54;
             this.dgvProovedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProovedores_CellClick);
             this.dgvProovedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProovedores_CellContentClick);
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(158, 138);
+            this.txtTelefono.Location = new System.Drawing.Point(211, 170);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(289, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(384, 22);
             this.txtTelefono.TabIndex = 55;
             this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
@@ -168,9 +174,11 @@ namespace Pantallas_proyecto
             // 
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Location = new System.Drawing.Point(528, 117);
+            this.groupBox1.Location = new System.Drawing.Point(704, 144);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(140, 102);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(187, 126);
             this.groupBox1.TabIndex = 56;
             this.groupBox1.TabStop = false;
             // 
@@ -180,9 +188,10 @@ namespace Pantallas_proyecto
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(17, 62);
+            this.button3.Location = new System.Drawing.Point(23, 76);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 26);
+            this.button3.Size = new System.Drawing.Size(149, 32);
             this.button3.TabIndex = 54;
             this.button3.Text = "Modificar";
             this.button3.UseVisualStyleBackColor = false;
@@ -192,9 +201,10 @@ namespace Pantallas_proyecto
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::Pantallas_proyecto.Properties.Resources.Letras1;
-            this.pictureBox1.Location = new System.Drawing.Point(175, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(233, 28);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(341, 62);
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
             // 
@@ -206,12 +216,13 @@ namespace Pantallas_proyecto
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.toolStripLabel2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 477);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 583);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(684, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(909, 25);
             this.toolStrip1.TabIndex = 57;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -219,7 +230,7 @@ namespace Pantallas_proyecto
             // 
             this.toolStripLabel1.ForeColor = System.Drawing.Color.Black;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(38, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(47, 22);
             this.toolStripLabel1.Text = "Fecha";
             this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
@@ -227,27 +238,19 @@ namespace Pantallas_proyecto
             // 
             this.toolStripLabel2.ForeColor = System.Drawing.Color.Black;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(33, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(42, 22);
             this.toolStripLabel2.Text = "Hora";
             // 
-            // errorProvider1
+            // ErrorProvider
             // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
-            // 
-            // errorProvider3
-            // 
-            this.errorProvider3.ContainerControl = this;
+            this.ErrorProvider.ContainerControl = this;
             // 
             // frmProveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(684, 502);
+            this.ClientSize = new System.Drawing.Size(909, 608);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -261,9 +264,10 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.button7);
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 541);
-            this.MinimumSize = new System.Drawing.Size(700, 541);
+            this.MaximumSize = new System.Drawing.Size(927, 655);
+            this.MinimumSize = new System.Drawing.Size(927, 655);
             this.Name = "frmProveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Proveedores";
@@ -273,9 +277,7 @@ namespace Pantallas_proyecto
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,8 +300,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.ErrorProvider errorProvider2;
-        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider ErrorProvider;
     }
 }

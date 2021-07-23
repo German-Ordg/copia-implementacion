@@ -32,7 +32,10 @@ namespace Pantallas_proyecto
 
         ClsConexionBD conect = new ClsConexionBD();
         SqlCommand cmd;
-
+        validaciones validacion = new validaciones();
+        private bool letra2 = false;
+        private bool letra = false;
+        private bool letra3 = false;
 
 
         private void button7_Click(object sender, EventArgs e)
@@ -44,34 +47,80 @@ namespace Pantallas_proyecto
 
         private void button2_Click(object sender, EventArgs e)
         {
-             dgvProovedores.ForeColor = Color.Black;
-            try
+
+            letra2 = false;
+            letra = false;
+            letra3 = false;
+            dgvProovedores.ForeColor = Color.Black;
+            if (validacion.Espacio_Blanco(ErrorProvider, txtNombreProovedor) || validacion.Solo_Letras(ErrorProvider, txtNombreProovedor))
             {
-                if (txtNombreProovedor.Text == "" || txtTelefono.Text == "" || txtDescripcion.Text == "")
-                {
-
-                    MessageBox.Show("No se pueden dejar los campos vacios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
+                if (validacion.Espacio_Blanco(ErrorProvider, txtNombreProovedor))
+                    ErrorProvider.SetError(txtNombreProovedor, "no se puede dejar en blanco");
                 else
+                    if (validacion.Solo_Letras(ErrorProvider, txtNombreProovedor))
+                    ErrorProvider.SetError(txtNombreProovedor, "solo se permite numeros");
+            }
+            else
+            {
+                letra = true;
+            }
+            if (validacion.Espacio_Blanco(ErrorProvider, txtDescripcion) || validacion.Solo_Letras(ErrorProvider, txtDescripcion))
+            {
+                if (validacion.Espacio_Blanco(ErrorProvider, txtDescripcion))
+                    ErrorProvider.SetError(txtDescripcion, "no se puede dejar en blanco");
+                else
+                    if (validacion.Solo_Letras(ErrorProvider, txtDescripcion))
+                    ErrorProvider.SetError(txtDescripcion, "solo se permite numeros");
+            }
+            else
+            {
+                letra2 = true;
+            }
+            if (validacion.Espacio_Blanco(ErrorProvider, txtTelefono) || validacion.Solo_Numeros(ErrorProvider, txtTelefono))
+            {
+                if (validacion.Espacio_Blanco(ErrorProvider, txtTelefono))
+                    ErrorProvider.SetError(txtTelefono, "no se puede dejar en blanco");
+                else
+                    if (validacion.Solo_Numeros(ErrorProvider, txtTelefono))
+                    ErrorProvider.SetError(txtTelefono, "solo se permite numeros");
+            }
+            else
+            {
+                letra3 = true;
+            }
+            if (letra && letra2 && letra3)
+            {
+                try
                 {
-                    cmd = new SqlCommand("Insert into Proveedores(nombre_proveedor, numero_contacto, direccion_proveedor) values('"+ txtNombreProovedor.Text +"','"+ txtTelefono.Text +"','" + txtDescripcion.Text +"')", conect.conexion);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conect.cargarProveedores(dgvProovedores);
-                    dgvProovedores.ForeColor = Color.Black;
+                    if (txtNombreProovedor.Text == "" || txtTelefono.Text == "" || txtDescripcion.Text == "")
+                    {
+
+                        MessageBox.Show("No se pueden dejar los campos vacios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    else
+                    {
+                        cmd = new SqlCommand("Insert into Proveedores(nombre_proveedor, numero_contacto, direccion_proveedor) values('" + txtNombreProovedor.Text + "','" + txtTelefono.Text + "','" + txtDescripcion.Text + "')", conect.conexion);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        conect.cargarProveedores(dgvProovedores);
+                        dgvProovedores.ForeColor = Color.Black;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message.ToString());
+                    MessageBox.Show("ERROR AL INSERTAR LOS DATOS" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                    txtNombreProovedor.Clear();
+                    txtTelefono.Clear();
+                    txtDescripcion.Clear();
                 }
             }
-            catch (Exception ex)
-            {
-                //MessageBox.Show(ex.Message.ToString());
-                MessageBox.Show("ERROR AL INSERTAR LOS DATOS" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-               
-                txtNombreProovedor.Clear();
-                txtTelefono.Clear();
-                txtDescripcion.Clear();
-            }
+            txtDescripcion.Text = "";
+            txtNombreProovedor.Text = "";
+            txtTelefono.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -112,32 +161,74 @@ namespace Pantallas_proyecto
             int indice;
             int codigo;
             indice = dgvProovedores.CurrentRow.Index;
-
-            try
+            letra2 = false;
+            letra = false;
+            letra3 = false;
+            if (validacion.Espacio_Blanco(ErrorProvider, txtNombreProovedor) || validacion.Solo_Letras(ErrorProvider, txtNombreProovedor))
             {
-                codigo = Convert.ToInt32(dgvProovedores[0, indice].Value);
-
-
-                dgvProovedores[1, indice].Value = txtNombreProovedor.Text;
-                dgvProovedores[2, indice].Value = txtTelefono.Text;
-                dgvProovedores[3, indice].Value = txtDescripcion.Text;
-               
-
-                cmd = new SqlCommand("UPDATE Proveedores SET nombre_proveedor = '" + txtNombreProovedor.Text + "',  numero_contacto = '" + txtTelefono.Text + "', direccion_proveedor = '" + txtDescripcion.Text + "'  where codigo_proveedor = " + codigo, conect.conexion);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("El registro fue actualizado exitosamente");
-                conect.cargarProveedores(dgvProovedores);
-               
-               
-                txtNombreProovedor.Clear();
-                txtTelefono.Clear();
-                txtDescripcion.Clear();
-                txtNombreProovedor.Focus();
-
+                if (validacion.Espacio_Blanco(ErrorProvider, txtNombreProovedor))
+                    ErrorProvider.SetError(txtNombreProovedor, "no se puede dejar en blanco");
+                else
+                    if (validacion.Solo_Letras(ErrorProvider, txtNombreProovedor))
+                    ErrorProvider.SetError(txtNombreProovedor, "solo se permite numeros");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("El registro no pudo ser actualizado" + ex, "INFO", MessageBoxButtons.OK);
+                letra = true;
+            }
+            if (validacion.Espacio_Blanco(ErrorProvider, txtDescripcion) || validacion.Solo_Letras(ErrorProvider, txtDescripcion))
+            {
+                if (validacion.Espacio_Blanco(ErrorProvider, txtDescripcion))
+                    ErrorProvider.SetError(txtDescripcion, "no se puede dejar en blanco");
+                else
+                    if (validacion.Solo_Letras(ErrorProvider, txtDescripcion))
+                    ErrorProvider.SetError(txtDescripcion, "solo se permite numeros");
+            }
+            else
+            {
+                letra2 = true;
+            }
+            if (validacion.Espacio_Blanco(ErrorProvider, txtTelefono) || validacion.Solo_Numeros(ErrorProvider, txtTelefono))
+            {
+                if (validacion.Espacio_Blanco(ErrorProvider, txtTelefono))
+                    ErrorProvider.SetError(txtTelefono, "no se puede dejar en blanco");
+                else
+                    if (validacion.Solo_Numeros(ErrorProvider, txtTelefono))
+                    ErrorProvider.SetError(txtTelefono, "solo se permite numeros");
+            }
+            else
+            {
+                letra3 = true;
+            }
+
+            if (letra && letra2 && letra3)
+            {
+                try
+                {
+                    codigo = Convert.ToInt32(dgvProovedores[0, indice].Value);
+
+
+                    dgvProovedores[1, indice].Value = txtNombreProovedor.Text;
+                    dgvProovedores[2, indice].Value = txtTelefono.Text;
+                    dgvProovedores[3, indice].Value = txtDescripcion.Text;
+
+
+                    cmd = new SqlCommand("UPDATE Proveedores SET nombre_proveedor = '" + txtNombreProovedor.Text + "',  numero_contacto = '" + txtTelefono.Text + "', direccion_proveedor = '" + txtDescripcion.Text + "'  where codigo_proveedor = " + codigo, conect.conexion);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("El registro fue actualizado exitosamente");
+                    conect.cargarProveedores(dgvProovedores);
+
+
+                    txtNombreProovedor.Clear();
+                    txtTelefono.Clear();
+                    txtDescripcion.Clear();
+                    txtNombreProovedor.Focus();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El registro no pudo ser actualizado" + ex, "INFO", MessageBoxButtons.OK);
+                }
             }
         }
 
@@ -148,33 +239,7 @@ namespace Pantallas_proyecto
             dgvProovedores.ForeColor = Color.Black;
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int indice = dgvProovedores.CurrentRow.Index;
-                int codigo = Convert.ToInt32(dgvProovedores[0, indice].Value);
-
-                if (indice == -1)
-                {
-                    MessageBox.Show("Seleccione los datos que desea eliminar");
-                }
-                else
-                {
-                    cmd = new SqlCommand("DELETE FROM Proveedores Where codigo_proveedor = " + codigo, conect.conexion);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Se han eliminado los datos correctamente", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conect.cargarMetodosPago(dgvProovedores);
-                    txtDescripcion.Clear();
-
-                    indice = -1;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pudo eliminar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+       
 
         private void txtTelefono_TextChanged(object sender, EventArgs e)
         {
@@ -183,12 +248,7 @@ namespace Pantallas_proyecto
 
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Solo Numeros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
+
         }
 
         private void txtNombreProovedor_TextChanged(object sender, EventArgs e)
@@ -198,12 +258,7 @@ namespace Pantallas_proyecto
 
         private void txtNombreProovedor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Solo Letras", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
+
         }
 
         private void dgvProovedores_CellClick(object sender, DataGridViewCellEventArgs e)
