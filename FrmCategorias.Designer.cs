@@ -39,16 +39,16 @@ namespace Pantallas_proyecto
             this.label2 = new System.Windows.Forms.Label();
             this.BtnModificar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.txtPosicion = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.DgvPuesto = new System.Windows.Forms.DataGridView();
+            this.DgvCategoria = new System.Windows.Forms.DataGridView();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tslFecha = new System.Windows.Forms.ToolStripLabel();
             this.tslHora = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvPuesto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvCategoria)).BeginInit();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -112,6 +112,7 @@ namespace Pantallas_proyecto
             this.BtnModificar.TabIndex = 34;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = false;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnAgregar
             // 
@@ -126,13 +127,14 @@ namespace Pantallas_proyecto
             this.BtnAgregar.TabIndex = 33;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // txtPosicion
+            // txtCategoria
             // 
-            this.txtPosicion.Location = new System.Drawing.Point(151, 127);
-            this.txtPosicion.Name = "txtPosicion";
-            this.txtPosicion.Size = new System.Drawing.Size(180, 20);
-            this.txtPosicion.TabIndex = 32;
+            this.txtCategoria.Location = new System.Drawing.Point(151, 127);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(180, 20);
+            this.txtCategoria.TabIndex = 32;
             // 
             // label1
             // 
@@ -145,9 +147,9 @@ namespace Pantallas_proyecto
             this.label1.TabIndex = 31;
             this.label1.Text = "Código:";
             // 
-            // DgvPuesto
+            // DgvCategoria
             // 
-            this.DgvPuesto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -155,10 +157,10 @@ namespace Pantallas_proyecto
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvPuesto.DefaultCellStyle = dataGridViewCellStyle1;
-            this.DgvPuesto.Location = new System.Drawing.Point(24, 198);
-            this.DgvPuesto.Name = "DgvPuesto";
-            this.DgvPuesto.ReadOnly = true;
+            this.DgvCategoria.DefaultCellStyle = dataGridViewCellStyle1;
+            this.DgvCategoria.Location = new System.Drawing.Point(24, 198);
+            this.DgvCategoria.Name = "DgvCategoria";
+            this.DgvCategoria.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -166,9 +168,10 @@ namespace Pantallas_proyecto
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvPuesto.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DgvPuesto.Size = new System.Drawing.Size(369, 175);
-            this.DgvPuesto.TabIndex = 30;
+            this.DgvCategoria.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DgvCategoria.Size = new System.Drawing.Size(369, 175);
+            this.DgvCategoria.TabIndex = 30;
+            this.DgvCategoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCategoria_CellContentClick);
             // 
             // toolStripContainer1
             // 
@@ -184,9 +187,9 @@ namespace Pantallas_proyecto
             this.toolStripContainer1.ContentPanel.Controls.Add(this.label2);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.BtnModificar);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.BtnAgregar);
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.txtPosicion);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.txtCategoria);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.label1);
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.DgvPuesto);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.DgvCategoria);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.BtnRegresar);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.pictureBox1);
             this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(411, 387);
@@ -240,8 +243,9 @@ namespace Pantallas_proyecto
             this.MinimumSize = new System.Drawing.Size(427, 451);
             this.Name = "FrmCategorias";
             this.Text = "Heaven Store - Categorías";
+            this.Load += new System.EventHandler(this.FrmCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvPuesto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvCategoria)).EndInit();
             this.toolStripContainer1.BottomToolStripPanel.ResumeLayout(false);
             this.toolStripContainer1.BottomToolStripPanel.PerformLayout();
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);
@@ -262,9 +266,9 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnModificar;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.TextBox txtPosicion;
+        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView DgvPuesto;
+        private System.Windows.Forms.DataGridView DgvCategoria;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel tslFecha;

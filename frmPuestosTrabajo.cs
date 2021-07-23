@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
+
 namespace Pantallas_proyecto
 {
     public partial class frmPuestosTrabajo : Form
