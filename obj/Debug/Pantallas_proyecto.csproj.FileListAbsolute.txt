@@ -1148,3 +1148,4 @@ C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug
 C:\Users\VIMAS\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.CopyComplete
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.exe
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
