@@ -17,6 +17,8 @@ namespace Pantallas_proyecto
             InitializeComponent();
         }
 
+        
+
         private const int CP_NOCLOSE_BUTTON = 0x200;
         protected override CreateParams CreateParams
         {
@@ -63,10 +65,13 @@ namespace Pantallas_proyecto
                     var validar = model.LoginUser(txtUsuario.Text, contra);
                     if (validar == true)
                         {
+
+
+                        if (Cashe.UserCache.estado == "ACTIVO")
+                        {
                             this.Hide();
                             FormBienvenido welcome = new FormBienvenido();
                             welcome.ShowDialog();
-
                             if (Cashe.UserCache.Position == "Vendedor")
                             {
                                 FrmMenuPrincipal menu = new FrmMenuPrincipal();
@@ -79,8 +84,10 @@ namespace Pantallas_proyecto
                                 menu.Show();
                                 menu.FormClosed += cerrarSesion;
                             }
-
-                        }
+                        }                  
+                        else
+                            MessageBox.Show("Tu cuenta esta INACTIVA", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                         else
                         {
                             msjError("Usuario o contraseña incorrecta \n\t Intente de nuevo");
@@ -229,22 +236,26 @@ namespace Pantallas_proyecto
                         var validar = model.LoginUser(txtUsuario.Text, contra);
                         if (validar == true)
                         {
-                            this.Hide();
-                            FormBienvenido welcome = new FormBienvenido();
-                            welcome.ShowDialog();
-
-                            if (Cashe.UserCache.Position == "Vendedor")
+                            if (Cashe.UserCache.estado == "ACTIVO")
                             {
-                                FrmMenuPrincipal menu = new FrmMenuPrincipal();
-                                menu.Show();
-                                menu.FormClosed += cerrarSesion;
+                                this.Hide();
+                                FormBienvenido welcome = new FormBienvenido();
+                                welcome.ShowDialog();
+                                if (Cashe.UserCache.Position == "Vendedor")
+                                {
+                                    FrmMenuPrincipal menu = new FrmMenuPrincipal();
+                                    menu.Show();
+                                    menu.FormClosed += cerrarSesion;
+                                }
+                                if (Cashe.UserCache.Position == "Gerente")
+                                {
+                                    FrmMenuPrincipalGerente menu = new FrmMenuPrincipalGerente();
+                                    menu.Show();
+                                    menu.FormClosed += cerrarSesion;
+                                }
                             }
-                            if (Cashe.UserCache.Position == "Gerente")
-                            {
-                                FrmMenuPrincipalGerente menu = new FrmMenuPrincipalGerente();
-                                menu.Show();
-                                menu.FormClosed += cerrarSesion;
-                            }
+                            else
+                                MessageBox.Show("Tu cuenta esta INACTIVA", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
 
                         }

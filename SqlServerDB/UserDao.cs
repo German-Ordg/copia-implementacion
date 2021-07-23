@@ -95,6 +95,7 @@ namespace Pantallas_proyecto.SqlServerDB
                             Cashe.UserCache.Position = reader.GetString(3);
                             Cashe.UserCache.FirstName = reader.GetString(4);
                             Cashe.UserCache.LastName = reader.GetString(5);
+                            Cashe.UserCache.estado = reader.GetString(6);
                         }
                         return true;
                     }
