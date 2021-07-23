@@ -1047,3 +1047,6 @@ E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.cspro
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.CopyComplete
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.exe
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.pdb
+C:\Users\Usuario\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
+C:\Users\Usuario\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmProductos.resources
+C:\Users\Usuario\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmValidar_Prueba.resources

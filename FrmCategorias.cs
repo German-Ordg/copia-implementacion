@@ -92,13 +92,13 @@ namespace Pantallas_proyecto
 
                 }
                 else {
-                    string query = "INSERT INTO Categoria_Producto (categoria_producto) VALUES (@categoria)";
+                    string query = "INSERT INTO Categoria_Producto (descripcion_categoria) VALUES (@categoria)";
                     connect.abrir();
                     SqlCommand comando = new SqlCommand(query, connect.conexion);
                     comando.Parameters.AddWithValue("@categoria", txtCategoria.Text);
                     comando.ExecuteNonQuery();
                     connect.abrir();
-                    MessageBox.Show("Nuevo Puesto Insertado");
+                    MessageBox.Show("Nueva Categoria Insertado");
                     Limpiar();
                     MostrarDatos();
                 }
