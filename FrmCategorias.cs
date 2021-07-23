@@ -78,7 +78,16 @@ namespace Pantallas_proyecto
 
         public void validar() {
             if (validacion.Espacio_Blanco(errorProvider1, txtCategoria) || validacion.Solo_Letras(errorProvider1, txtCategoria)) {
-            
+
+                if (validacion.Espacio_Blanco(errorProvider1, txtCategoria))
+                {
+                    errorProvider1.SetError(txtCategoria, "No se puede dejar en blanco las categorias");
+                }
+                else
+                {
+                    if (validacion.Solo_Letras(errorProvider1, txtCategoria))
+                        errorProvider1.SetError(txtCategoria, "Solo es permitido ingresar letras");
+                }
             }
         }
 
@@ -92,15 +101,24 @@ namespace Pantallas_proyecto
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+            
             try
             {
-                if (txtCategoria.Text == "")
+                if (validacion.Espacio_Blanco(errorProvider1, txtCategoria) || validacion.Solo_Letras(errorProvider1, txtCategoria))
                 {
-                    MessageBox.Show("No puede ingresar datos en blanco", "Informacion", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
 
+                    if (validacion.Espacio_Blanco(errorProvider1, txtCategoria))
+                    {
+                        errorProvider1.SetError(txtCategoria, "No se puede dejar en blanco las categorias");
+                    }
+                    else
+                    {
+                        if (validacion.Solo_Letras(errorProvider1, txtCategoria))
+                            errorProvider1.SetError(txtCategoria, "Solo es permitido ingresar letras");
+                    }
                 }
-                else {
+                else { 
+
                     string query = "INSERT INTO Categoria_Producto (descripcion_categoria) VALUES (@categoria)";
                     connect.abrir();
                     SqlCommand comando = new SqlCommand(query, connect.conexion);
@@ -125,7 +143,23 @@ namespace Pantallas_proyecto
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
+            
             try {
+                if (validacion.Espacio_Blanco(errorProvider1, txtCategoria) || validacion.Solo_Letras(errorProvider1, txtCategoria))
+                {
+
+                    if (validacion.Espacio_Blanco(errorProvider1, txtCategoria))
+                    {
+                        errorProvider1.SetError(txtCategoria, "No se puede dejar en blanco las categorias");
+                    }
+                    else
+                    {
+                        if (validacion.Solo_Letras(errorProvider1, txtCategoria))
+                            errorProvider1.SetError(txtCategoria, "Solo es permitido ingresar letras");
+                    }
+                }
+                else { 
+
                 string query = "Update Categoria_Producto set descripcion_categoria= '" + txtCategoria.Text + "' where Codigo_Categoria='" + Record_Id + "'";
                 connect.abrir();
                 SqlCommand comando = new SqlCommand(query, connect.conexion);
@@ -134,6 +168,8 @@ namespace Pantallas_proyecto
                 MessageBox.Show("Se Modificó Correctamente");
                 Limpiar();
                 MostrarDatos();
+
+                }
             }
             catch (Exception ex){
                 MessageBox.Show(ex.Message);
