@@ -128,7 +128,83 @@ namespace Pantallas_proyecto
                 MessageBox.Show("No se pueden cargar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void cargarDatosreporte1(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("Select * From View_compras", conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void cargarDatosreporte2(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("Select * From View_rotacion", conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void cargarDatosreporte3(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("Select * From View_ventas", conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void cargarDatosreporte5(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("Select * From VCategorias ", conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void cargarDatosreporte4(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("Select * From VCategorias where cantidad_existente < 11", conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pueden cargar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public void cargarMetodosPago(DataGridView dgv)
         {
             try

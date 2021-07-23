@@ -398,15 +398,15 @@
     <EmbeddedResource Include="FormBienvenido.resx">
       <DependentUpon>FormBienvenido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report2.rdlc" />
-    <EmbeddedResource Include="Report3.rdlc" />
-    <EmbeddedResource Include="Report4.rdlc" />
-    <EmbeddedResource Include="Report5.rdlc" />
-    <EmbeddedResource Include="Report6.rdlc" />
-    <EmbeddedResource Include="Report8.rdlc" />
-    <EmbeddedResource Include="Report9.rdlc" />
-    <EmbeddedResource Include="Reportcompra_fecha.rdlc" />
+    <EmbeddedResource Include="Report_mas_vendido.rdlc" />
+    <EmbeddedResource Include="Report_productos_por_acabarse.rdlc" />
+    <EmbeddedResource Include="Report_rotacion_inventario.rdlc" />
+    <EmbeddedResource Include="Report_compras_fechas.rdlc" />
+    <EmbeddedResource Include="Report_compra_codigo.rdlc" />
+    <EmbeddedResource Include="Report_categorias.rdlc" />
+    <EmbeddedResource Include="Reportcompras.rdlc" />
     <EmbeddedResource Include="Reportinventario.rdlc" />
+    <EmbeddedResource Include="Report_ventas.rdlc" />
     <EmbeddedResource Include="Repote_factura.rdlc" />
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
@@ -619,6 +619,9 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\impresion.datasource" />
+    <None Include="Properties\DataSources\impresion1.datasource" />
+    <None Include="Properties\DataSources\impresion2.datasource" />
+    <None Include="Properties\DataSources\impresion_ventas.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
