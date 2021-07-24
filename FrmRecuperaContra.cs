@@ -29,10 +29,11 @@ namespace Pantallas_proyecto
                 return myCp;
             }
         }
-
+        validaciones validacion = new validaciones();
         ClsConexionBD conect = new ClsConexionBD();
         SqlCommand cmd;
         SqlCommand scd;
+        private bool letra2 = false;
         private void button1_Click(object sender, EventArgs e)
         {
             FrmAcceso acceso = new FrmAcceso();
@@ -42,7 +43,7 @@ namespace Pantallas_proyecto
 
         private void btnIngreso_Click(object sender, EventArgs e)
         {
-            validaciones validacion = new validaciones();
+           
             if (validacion.Espacio_Blanco_CB(ErrorProvider, cmbUsuariorequerido))
             {
                 if (!validacion.Espacio_Blanco_CB(ErrorProvider, cmbUsuariorequerido))
@@ -69,6 +70,7 @@ namespace Pantallas_proyecto
         {
             txtresultado.Visible = false;
             lblcorreo.Visible = false;
+            chkMostrarContra.Visible = false;
             conect.abrir();
             conect.CargaDeUsuarios(cmbUsuariorequerido);
             conect.cerrar();
@@ -98,23 +100,40 @@ namespace Pantallas_proyecto
 
         private void btnverificar_Click(object sender, EventArgs e)
         {
-            int valor = Convert.ToInt32(txtcodigo.Text);
-            if (Cashe.UserCache.numero == valor)
+             letra2 = false;
+            if (validacion.Espacio_Blanco(ErrorProvider, txtcodigo) || validacion.Solo_Numeros(ErrorProvider, txtcodigo))
             {
-                lblnueva.Visible = true;
-                txtContrasena.Visible = true;
-                lblcodigo.Visible = false;
-                txtcodigo.Visible = false;
-                btnverificar.Visible = false;
-                btncambiar.Visible = true;
-
-
-
+                if (validacion.Espacio_Blanco(ErrorProvider, txtcodigo))
+                    ErrorProvider.SetError(txtcodigo, "No se puede dejar en blanco");
+                else
+                if (validacion.Solo_Numeros(ErrorProvider, txtcodigo))
+                    ErrorProvider.SetError(txtcodigo, "No se permiten números");
             }
             else
             {
+                letra2 = true;
+            }
+            if (letra2)
+            {
+                int valor = Convert.ToInt32(txtcodigo.Text);
+                if (Cashe.UserCache.numero == valor)
+                {
+                    lblnueva.Visible = true;
+                    txtContrasena.Visible = true;
+                    lblcodigo.Visible = false;
+                    txtcodigo.Visible = false;
+                    btnverificar.Visible = false;
+                    btncambiar.Visible = true;
+                    chkMostrarContra.Visible = true;
 
-                MessageBox.Show("Codigo Incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                }
+                else
+                {
+
+                    MessageBox.Show("Codigo Incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -247,6 +266,21 @@ namespace Pantallas_proyecto
 
             }
             
+        }
+
+        private void chkMostrarContra_CheckedChanged(object sender, EventArgs e)
+        {
+            string text = txtContrasena.Text;
+            if (chkMostrarContra.Checked)
+            {
+                txtContrasena.UseSystemPasswordChar = false;
+                txtContrasena.Text = text;
+            }
+            else
+            {
+                txtContrasena.UseSystemPasswordChar = true;
+                txtContrasena.Text = text;
+            }
         }
     }
 }
