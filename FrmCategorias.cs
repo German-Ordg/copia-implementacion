@@ -117,17 +117,48 @@ namespace Pantallas_proyecto
                             errorProvider1.SetError(txtCategoria, "Solo es permitido ingresar letras");
                     }
                 }
-                else { 
+                else {
+                    
+                    int cont=0;
+                    bool resp = false;                 
+                    connect.abrir();
+                    SqlCommand comando1 = new SqlCommand("select descripcion_categoria from Categoria_Producto", connect.conexion);
 
-                    string query = "INSERT INTO Categoria_Producto (descripcion_categoria) VALUES (@categoria)";
-                    connect.abrir();
-                    SqlCommand comando = new SqlCommand(query, connect.conexion);
-                    comando.Parameters.AddWithValue("@categoria", txtCategoria.Text);
-                    comando.ExecuteNonQuery();
-                    connect.abrir();
-                    MessageBox.Show("Nueva Categoria Insertado");
-                    Limpiar();
-                    MostrarDatos();
+                    SqlDataReader reader = comando1.ExecuteReader();
+
+                    List<string> resultado = new List<string>();
+                    while (reader.Read())
+                    {
+                        resultado.Add(Convert.ToString(reader["descripcion_categoria"]));
+                        cont++;
+                    }
+
+                    string[] arrayCate = resultado.ToArray();
+
+                    
+                    connect.cerrar();
+                    for (int i = 0; i < cont; i++)
+                    {
+                        if (arrayCate[i] == txtCategoria.Text)
+                            resp = true;
+                    }
+
+
+                    if (resp == false)
+                    {
+                        string query = "INSERT INTO Categoria_Producto (descripcion_categoria) VALUES (@categoria)";
+                        connect.abrir();
+                        SqlCommand comando = new SqlCommand(query, connect.conexion);
+                        comando.Parameters.AddWithValue("@categoria", txtCategoria.Text);
+                        comando.ExecuteNonQuery();
+                        connect.abrir();
+                        MessageBox.Show("Nueva Categoria Insertado");
+                        Limpiar();
+                        MostrarDatos();
+                    }
+                    else
+                        MessageBox.Show("La categoria ya esta registrada, intente otra", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
                 }
             }
             catch (Exception ex){
