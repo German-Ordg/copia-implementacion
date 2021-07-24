@@ -159,6 +159,7 @@ namespace Pantallas_proyecto
                 cmbUsuariorequerido.Text = "";
                 cmbUsuariorequerido.Enabled = true;
                 lblcorreo.Visible = false;
+                chkMostrarContra.Visible = false;
 
             }
             catch (Exception)
