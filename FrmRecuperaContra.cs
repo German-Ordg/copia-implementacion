@@ -107,7 +107,7 @@ namespace Pantallas_proyecto
                     ErrorProvider.SetError(txtcodigo, "No se puede dejar en blanco");
                 else
                 if (validacion.Solo_Numeros(ErrorProvider, txtcodigo))
-                    ErrorProvider.SetError(txtcodigo, "No se permiten números");
+                    ErrorProvider.SetError(txtcodigo, "Solo se permiten números");
             }
             else
             {
@@ -282,6 +282,11 @@ namespace Pantallas_proyecto
                 txtContrasena.UseSystemPasswordChar = true;
                 txtContrasena.Text = text;
             }
+        }
+
+        private void txtcodigo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

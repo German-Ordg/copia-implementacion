@@ -86,7 +86,7 @@ namespace Pantallas_proyecto
                             }
                         }                  
                         else
-                            MessageBox.Show("Tu cuenta esta INACTIVA", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Tu cuenta esta INACTIVA, Contacte al Gerente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                         else
                         {
@@ -255,7 +255,7 @@ namespace Pantallas_proyecto
                                 }
                             }
                             else
-                                MessageBox.Show("Tu cuenta esta INACTIVA", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("Tu cuenta esta INACTIVA, Contacte al Gerente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
 
                         }
