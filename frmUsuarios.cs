@@ -23,6 +23,10 @@ namespace Pantallas_proyecto
         ClsConexionBD conect = new ClsConexionBD();
         validaciones validacion = new validaciones();
         private bool letra = false;
+        private bool letra2 = false;
+        private bool letra3 = false;
+        private bool letra4 = false;
+        private bool letra5 = false;
 
         private const int CP_NOCLOSE_BUTTON = 0x200;
         protected override CreateParams CreateParams
@@ -51,7 +55,10 @@ namespace Pantallas_proyecto
             conect.abrir();
 
             letra = false;
-
+            letra2 = false;
+            letra3 = false;
+            letra4 = false;
+            letra5 = false;
 
             if (validacion.Espacio_Blanco(errorProvider1, txtcodemp) || validacion.Solo_Numeros(errorProvider1, txtcodemp))
             {
@@ -65,8 +72,45 @@ namespace Pantallas_proyecto
             {
                 letra = true;
             }
+            if (validacion.Espacio_Blanco(errorProvider1, txtusuario))
+            {
+                if (validacion.Espacio_Blanco(errorProvider1, txtusuario))
+                    errorProvider1.SetError(txtusuario, "no se puede dejar en blanco");
+            }
+            else
+            {
+                letra2 = true;
+            }
+            if (validacion.Espacio_Blanco(errorProvider1, txtcorreo))
+            {
+                if (validacion.Espacio_Blanco(errorProvider1, txtcorreo))
+                    errorProvider1.SetError(txtcorreo, "no se puede dejar en blanco");
+            }
+            else
+            {
+                letra3 = true;
+            }
+            if (validacion.Espacio_Blanco_CB(errorProvider1, cmbtipousr))
+            {
+                if (validacion.Espacio_Blanco_CB(errorProvider1, cmbtipousr))
+                    errorProvider1.SetError(cmbtipousr, "no se puede dejar en blanco");
+            }
+            else
+            {
+                letra4 = true;
+            }
+            if (validacion.Espacio_Blanco(errorProvider2, txtcontra))
+            {
+                if (validacion.Espacio_Blanco(errorProvider2, txtcontra))
+                    errorProvider2.SetError(txtcontra, "no se puede dejar en blanco");
+            }
+            else
+            {
+                letra5 = true;
+            }
 
-            if (letra)
+
+            if (letra && letra2 && letra3 && letra4 && letra5)
             {
 
 
@@ -120,7 +164,10 @@ namespace Pantallas_proyecto
             indice = dataGridView1.CurrentRow.Index;
 
             letra = false;
-
+            letra2 = false;
+            letra3 = false;
+            letra4 = false;
+            letra5 = true;
 
             if (validacion.Espacio_Blanco(errorProvider1, txtcodemp) || validacion.Solo_Numeros(errorProvider1, txtcodemp))
             {
@@ -134,8 +181,45 @@ namespace Pantallas_proyecto
             {
                 letra = true;
             }
+            if (validacion.Espacio_Blanco(errorProvider1, txtusuario))
+            {
+                if (validacion.Espacio_Blanco(errorProvider1, txtusuario))
+                    errorProvider1.SetError(txtusuario, "no se puede dejar en blanco");
+            }
+            else
+            {
+                letra2 = true;
+            }
+            if (validacion.Espacio_Blanco(errorProvider1, txtcorreo))
+            {
+                if (validacion.Espacio_Blanco(errorProvider1, txtcorreo))
+                    errorProvider1.SetError(txtcorreo, "no se puede dejar en blanco");
+            }
+            else
+            {
+                letra3 = true;
+            }
+            if (validacion.Espacio_Blanco_CB(errorProvider1, cmbtipousr))
+            {
+                if (validacion.Espacio_Blanco_CB(errorProvider1, cmbtipousr))
+                    errorProvider1.SetError(cmbtipousr, "no se puede dejar en blanco");
+            }
+            else
+            {
+                letra4 = true;
+            }
+            if (validacion.Espacio_Blanco(errorProvider2, txtcontra))
+            {
+                errorProvider2.Clear();
+            }
+            else
+            {
+                letra5 = true;
+            }
+           
 
-            if (letra)
+
+            if (letra && letra2 && letra3 && letra4)
             {
 
                 try
@@ -216,6 +300,9 @@ namespace Pantallas_proyecto
             cmbtipousr.Text = dataGridView1[4, poc].Value.ToString();
         }
 
-      
+        private void cmbtipousr_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
