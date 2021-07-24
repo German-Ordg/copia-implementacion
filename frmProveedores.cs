@@ -58,7 +58,7 @@ namespace Pantallas_proyecto
                     ErrorProvider.SetError(txtNombreProovedor, "no se puede dejar en blanco");
                 else
                     if (validacion.Solo_Letras(ErrorProvider, txtNombreProovedor))
-                    ErrorProvider.SetError(txtNombreProovedor, "solo se permite numeros");
+                    ErrorProvider.SetError(txtNombreProovedor, "solo se permite letras");
             }
             else
             {
@@ -70,7 +70,7 @@ namespace Pantallas_proyecto
                     ErrorProvider.SetError(txtDescripcion, "no se puede dejar en blanco");
                 else
                     if (validacion.Solo_Letras(ErrorProvider, txtDescripcion))
-                    ErrorProvider.SetError(txtDescripcion, "solo se permite numeros");
+                    ErrorProvider.SetError(txtDescripcion, "solo se permite letras");
             }
             else
             {
@@ -170,7 +170,7 @@ namespace Pantallas_proyecto
                     ErrorProvider.SetError(txtNombreProovedor, "no se puede dejar en blanco");
                 else
                     if (validacion.Solo_Letras(ErrorProvider, txtNombreProovedor))
-                    ErrorProvider.SetError(txtNombreProovedor, "solo se permite numeros");
+                    ErrorProvider.SetError(txtNombreProovedor, "solo se permite letras");
             }
             else
             {
@@ -182,7 +182,7 @@ namespace Pantallas_proyecto
                     ErrorProvider.SetError(txtDescripcion, "no se puede dejar en blanco");
                 else
                     if (validacion.Solo_Letras(ErrorProvider, txtDescripcion))
-                    ErrorProvider.SetError(txtDescripcion, "solo se permite numeros");
+                    ErrorProvider.SetError(txtDescripcion, "solo se permite letras");
             }
             else
             {

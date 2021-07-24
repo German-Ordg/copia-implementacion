@@ -176,12 +176,6 @@
     </Compile>
     <Compile Include="MetodoBucasrProducto.cs" />
     <Compile Include="MetodoBuscarCodigo.cs" />
-    <Compile Include="FrmValidar-Prueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmValidar-Prueba.Designer.cs">
-      <DependentUpon>FrmValidar-Prueba.cs</DependentUpon>
-    </Compile>
     <Compile Include="MetodoBuscarDescripcion.cs" />
     <Compile Include="SqlServerDB\ClsConexionBD.cs" />
     <Compile Include="db_a75e9e_bderickmoncadaDataSet11.Designer.cs">
@@ -220,12 +214,6 @@
     </Compile>
     <Compile Include="FrmAcceso.Designer.cs">
       <DependentUpon>FrmAcceso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmClientes.Designer.cs">
-      <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCompras.cs">
       <SubType>Form</SubType>
@@ -338,9 +326,6 @@
     <EmbeddedResource Include="FrmCategorias.resx">
       <DependentUpon>FrmCategorias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmClientes.resx">
-      <DependentUpon>FrmClientes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmCompras.resx">
       <DependentUpon>FrmCompras.cs</DependentUpon>
     </EmbeddedResource>
@@ -388,9 +373,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmValidar-Prueba.resx">
-      <DependentUpon>FrmValidar-Prueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

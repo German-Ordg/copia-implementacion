@@ -234,6 +234,7 @@ namespace Pantallas_proyecto
         {
             textBox1.Enabled = false;
             textBox2.Enabled = false;
+            timer1.Enabled = true;
 
             cargarDatosProductos(dgvProductos, "Productos");
             categorias();
@@ -538,6 +539,12 @@ namespace Pantallas_proyecto
                 //el resto de teclas pulsadas se desactivan
                 e.Handled = true;
             }
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
+            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }
