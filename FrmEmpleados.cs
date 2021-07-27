@@ -196,7 +196,7 @@ namespace Pantallas_proyecto
 
                     }
                     else
-                        MessageBox.Show("Esta ingresando una Identidad que ya fue registrada", "Aviso", MessageBoxButtons.OK);
+                        MessageBox.Show("Esta ingresando una Identidad que ya fue registrada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
 
 
