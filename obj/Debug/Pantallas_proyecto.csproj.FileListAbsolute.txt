@@ -1477,7 +1477,6 @@ C:\Users\Sebas\Desktop\desarollo\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForm
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.TxtResultBox.resources
-C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.FrmClientes.resources
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.FrmCompras.resources
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
@@ -1494,7 +1493,6 @@ C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.frmPuestosTrabajo.
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.frmReportes.resources
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
-C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.FrmValidar_Prueba.resources
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.frmProveedores.resources
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.FormBienvenido.resources
