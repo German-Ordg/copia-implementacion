@@ -43,10 +43,10 @@ namespace Pantallas_proyecto
         ClsConexionBD conect = new ClsConexionBD();
         SqlCommand cmd;
         validaciones validacion = new validaciones();
+        SqlCommand comm;
 
-        
-           
-        
+
+
 
         private void label9_Click(object sender, EventArgs e)
         {
@@ -158,8 +158,8 @@ namespace Pantallas_proyecto
                     {
                         igual = true;
                     }
-                    
-                   
+                    conect.cerrar();
+
 
                     if (igual == false)
                     {
@@ -168,12 +168,12 @@ namespace Pantallas_proyecto
 
                         try
                         {
-
+                            conect.abrir();
                             cmd = new SqlCommand("Insert into Empleados(codigo_puesto, nombre_empleado, apellido_empleado, numero_identidad_empleado, fecha_nacimiento, fecha_ingreso, num_telefono, Genero) Values(" + txtPuesto.Text + ",'" + txtNombre.Text + "', '" + txtApellido.Text + "', '" + txtIdentidad.Text + "', '" + dtpFechaNacimiento.Text + "','" + dtpFechaIngreso.Text + "','" + txtNumeroTel.Text + "','" + cmbGenero.Text + "')", conect.conexion);
                             cmd.ExecuteNonQuery();
                             MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             conect.cargarDatosEmpleados(dgvEmpleados);
-
+                            conect.cerrar();
                         }
                         catch (Exception ex)
                         {
@@ -190,7 +190,7 @@ namespace Pantallas_proyecto
                             cmbGenero.SelectedIndex = -1;
                             txtNombre.Focus();
                         }
-                        conect.cerrar();
+                        
 
 
 
