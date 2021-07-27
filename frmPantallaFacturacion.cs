@@ -200,9 +200,9 @@ namespace Pantallas_proyecto
 
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
-            FrmClientes cli = new FrmClientes();
+            //FrmClientes cli = new FrmClientes();
 
-            cli.Show();
+            //cli.Show();
 
         }
 

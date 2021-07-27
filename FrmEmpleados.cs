@@ -20,7 +20,11 @@ namespace Pantallas_proyecto
         private bool numero1 = false;
         private bool numero2 = false;
         public int EmpleadoEdad;
-        
+
+        string[,] identidadArrays = new string[20, 8];
+
+        int contador = 0;
+
         public FrmEmpleados()
         {
             InitializeComponent();
@@ -143,39 +147,74 @@ namespace Pantallas_proyecto
                     numero2 = true;
                 }
 
+
+
+
                 if (numero1 && letra1 && letra2 && numero2)
                 {
+                    bool igual = false;
+                    for (int i = 0; i <= contador; i++)
+                    {
+                        if (txtIdentidad.Text == identidadArrays[i, 0])
+                        {
+                            igual = true;
+                        }
+                    }
+
+                    if (igual == false)
+                    {
+
+                        identidadArrays[contador, 0] = txtPuesto.Text;
+                        identidadArrays[contador, 1] = txtNombre.Text;
+                        identidadArrays[contador, 2] = txtApellido.Text;
+                        identidadArrays[contador, 3] = txtIdentidad.Text;
+                        identidadArrays[contador, 4] = dtpFechaNacimiento.Text;
+                        identidadArrays[contador, 5] = dtpFechaIngreso.Text;
+                        identidadArrays[contador, 6] = txtNumeroTel.Text;
+                        identidadArrays[contador, 7] = cmbGenero.Text;
+                        contador++;
+
+                        try
+                        {
+
+                            cmd = new SqlCommand("Insert into Empleados(codigo_puesto, nombre_empleado, apellido_empleado, numero_identidad_empleado, fecha_nacimiento, fecha_ingreso, num_telefono, Genero) Values(" + txtPuesto.Text + ",'" + txtNombre.Text + "', '" + txtApellido.Text + "', '" + txtIdentidad.Text + "', '" + dtpFechaNacimiento.Text + "','" + dtpFechaIngreso.Text + "','" + txtNumeroTel.Text + "','" + cmbGenero.Text + "')", conect.conexion);
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            conect.cargarDatosEmpleados(dgvEmpleados);
+
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message.ToString());
+                            MessageBox.Show("ERROR AL INSERTAR LOS DATOS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            txtNombre.Text = " ";
+                            txtApellido.Text = " ";
+                            txtIdentidad.Text = " ";
+                            txtPuesto.Text = " ";
+                            txtNumeroTel.Text = " ";
+                            dtpFechaNacimiento.Text = DateTime.Now.ToShortDateString();
+                            dtpFechaIngreso.Text = DateTime.Now.ToShortDateString();
+                            cmbGenero.SelectedIndex = -1;
+                            txtNombre.Focus();
+                        }
+
+
+
+
+                    }
+                    else
+                        MessageBox.Show("Esta ingresando un producto que ya fue ingresado", "Aviso", MessageBoxButtons.OK);
+
+
 
                     
-
-                    try
-                    {
-
-                        cmd = new SqlCommand("Insert into Empleados(codigo_puesto, nombre_empleado, apellido_empleado, numero_identidad_empleado, fecha_nacimiento, fecha_ingreso, num_telefono, Genero) Values(" + txtPuesto.Text + ",'" + txtNombre.Text + "', '" + txtApellido.Text + "', '" + txtIdentidad.Text + "', '" + dtpFechaNacimiento.Text + "','" + dtpFechaIngreso.Text + "','" + txtNumeroTel.Text + "','" + cmbGenero.Text + "')", conect.conexion);
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        conect.cargarDatosEmpleados(dgvEmpleados);
-
-                    }
-                    catch (Exception ex)
-                    {
-                        //MessageBox.Show(ex.Message.ToString());
-                        MessageBox.Show("ERROR AL INSERTAR LOS DATOS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                        txtNombre.Text = " ";
-                        txtApellido.Text = " ";
-                        txtIdentidad.Text = " ";
-                        txtPuesto.Text = " ";
-                        txtNumeroTel.Text = " ";
-                        dtpFechaNacimiento.Text = DateTime.Now.ToShortDateString();
-                        dtpFechaIngreso.Text = DateTime.Now.ToShortDateString();
-                        cmbGenero.SelectedIndex = -1;
-                        txtNombre.Focus();
-                    }
                 }
 
            
             }
+
+           
 
 
 

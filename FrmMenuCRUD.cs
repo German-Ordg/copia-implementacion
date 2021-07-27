@@ -41,8 +41,8 @@ namespace Pantallas_proyecto
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmClientes clientes = new FrmClientes();
-            clientes.Show();
+            //FrmClientes clientes = new FrmClientes();
+            //clientes.Show();
             this.Hide();
         }
 
@@ -83,8 +83,8 @@ namespace Pantallas_proyecto
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            FrmClientes clientes = new FrmClientes();
-            clientes.Show();
+            //FrmClientes clientes = new FrmClientes();
+            //clientes.Show();
             this.Hide();
         }
 

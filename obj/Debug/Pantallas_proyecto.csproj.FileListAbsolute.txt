@@ -1019,7 +1019,6 @@ E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\zh-CHS\Microsoft.ReportV
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
-E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmClientes.resources
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmCompras.resources
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
@@ -1317,7 +1316,6 @@ C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmProductos.resou
 C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmValidar_Prueba.resources
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.TxtResultBox.resources
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmProductos.resources
-E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmValidar_Prueba.resources
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\bin\Debug\Microsoft.ReportViewer.WebForms.dll
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.TxtResultBox.resources
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.FrmProductos.resources
@@ -1507,3 +1505,4 @@ C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.exe
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.pdb
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
+E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
