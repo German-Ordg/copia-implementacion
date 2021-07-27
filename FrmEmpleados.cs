@@ -19,6 +19,7 @@ namespace Pantallas_proyecto
         private bool letra2 = false;
         private bool numero1 = false;
         private bool numero2 = false;
+        private bool numero3 = false;
         public int EmpleadoEdad;
 
         
@@ -145,10 +146,23 @@ namespace Pantallas_proyecto
                     numero2 = true;
                 }
 
+                if (validacion.Espacio_Blanco(ErrorProvider1, txtApellido) || validacion.Solo_Numeros(ErrorProvider1, txtPuesto))
+                {
+                    if (validacion.Espacio_Blanco(ErrorProvider1, txtPuesto))
+                        ErrorProvider1.SetError(txtPuesto, "no se puede dejar en blanco");
+                    else
+                    if (validacion.Solo_Numeros(ErrorProvider1, txtPuesto))
+                        ErrorProvider1.SetError(txtPuesto, "Solo se permite numeros");
+                }
+                else
+                {
+                    numero3 = true;
+                }
 
 
 
-                if (numero1 && letra1 && letra2 && numero2)
+
+                if (numero1 && letra1 && letra2 && numero2 && numero3)
                 {
                     bool igual = false;
                     conect.abrir();
