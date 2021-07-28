@@ -16,6 +16,11 @@ namespace Pantallas_proyecto
             InitializeComponent();
         }
 
+        validaciones validacion = new validaciones();
+        private bool letra = false;
+        private bool letra2 = false;
+        private bool letra3 = false;
+
         private const int CP_NOCLOSE_BUTTON = 0x200;
         protected override CreateParams CreateParams
         {
@@ -73,34 +78,7 @@ namespace Pantallas_proyecto
             cargarDatosCompras(dgvProveedores, "Compras");
 
 
-            //Llenar Combobox Categoria Productos
 
-            //try
-            //{
-            //    SqlCommand comando = new SqlCommand("SELECT codigo_categoria,descripcion_categoria FROM Categoria_Producto", conect2.conexion);
-
-            //    conect2.abrir();
-            //    SqlDataReader registro = comando.ExecuteReader();
-            //    while (registro.Read())
-
-
-            //    {
-            //        comboBox1.Items.Add(registro["descripcion_categoria"].ToString());
-
-            //    }
-            //    conect2.cerrar();
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error al cargar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
-            //------------------------------------------------------------------------------------------------------------------------------------------
-            //------------------------------------------------------------------------------------------------------------------------------------------
-
-
-            //metodo para cargar datos en combobox pago 
 
             try
             {
@@ -186,19 +164,50 @@ namespace Pantallas_proyecto
         private void button2_Click_2(object sender, EventArgs e)
         {
 
-
-            //if (producto.Codigo_compra == 0 || Convert.ToInt32(codigoProducto.Text) <= 0)
-            //{
-            //    MessageBox.Show("Ingrese un valor mayor a cero", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    codigoProducto.Clear();
-            //    codigoProducto.Focus();
-
-            //}
+            letra = false;
+            letra2 = false;
+            letra3 = false;
 
 
-            //---------------------------------------------------------------------------------------------------------------------------------
-            //Compras
-            try
+            if (validacion.Espacio_Blanco(errorProvider1, codigoCompra))
+            {
+                if (validacion.Espacio_Blanco(errorProvider1, codigoCompra))
+                    errorProvider1.SetError(codigoCompra, "no se puede dejar en blanco");
+            }
+            else
+            {
+                letra = true;
+            }
+
+
+            if (validacion.Espacio_Blanco_CB(errorProvider1, comboProveedor))
+            {
+                if (validacion.Espacio_Blanco_CB(errorProvider1, comboProveedor))
+                    errorProvider1.SetError(comboProveedor, "no se puede dejar en blanco");
+            }
+            else
+            {
+                letra2 = true;
+            }
+
+
+
+            if (validacion.Espacio_Blanco_CB(errorProvider1, comboPago))
+            {
+                if (validacion.Espacio_Blanco_CB(errorProvider1, comboPago))
+                    errorProvider1.SetError(comboPago, "no se puede dejar en blanco");
+            }
+            else
+            {
+                letra3 = true;
+            }
+
+
+            if (letra && letra2 && letra3)
+            {
+                //---------------------------------------------------------------------------------------------------------------------------------
+                //Compras
+                try
             {
                 if (codigoCompra.Text == string.Empty || comboProveedor.Text == string.Empty || comboPago.Text == string.Empty || dateFecha.Text == string.Empty)
                     MessageBox.Show("Porfavor llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -246,7 +255,7 @@ namespace Pantallas_proyecto
 
             }
 
-            
+            }
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
