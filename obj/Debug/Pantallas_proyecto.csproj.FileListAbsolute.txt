@@ -231,7 +231,6 @@ C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debu
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
-C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmClientes.resources
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmCompras.resources
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
@@ -691,7 +690,6 @@ C:\Users\Usuario\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas
 C:\Users\Usuario\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.exe
 C:\Users\Usuario\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.pdb
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.TxtResultBox.resources
-C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmValidar_Prueba.resources
 C:\Users\dell_\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
 C:\Users\dell_\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
 C:\Users\dell_\Source\Repos\DESARROLLO_DE_SOFTWARE_GRUPO\obj\Debug\Pantallas_proyecto.FrmCalculadora.resources
@@ -1507,3 +1505,4 @@ C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.exe
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.pdb
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
