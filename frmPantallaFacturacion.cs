@@ -43,6 +43,8 @@ namespace Pantallas_proyecto
         ClsPantallaFacturacion fac = new ClsPantallaFacturacion();
         validaciones val = new validaciones();
 
+        bool val1 = false, val2 = false, val3 = false;
+
         private void label6_Click(object sender, EventArgs e)
         {
             
@@ -145,10 +147,22 @@ namespace Pantallas_proyecto
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
+            val1 = false;
 
+            if (val.Espacio_Blanco(ErrorProvider, txtCodProducto) || val.Solo_Numeros(ErrorProvider, txtCodProducto))
+            {
+                if (val.Espacio_Blanco(ErrorProvider, txtCodProducto))
+                    ErrorProvider.SetError(txtCodProducto, "no se puede dejar en blanco");
+                else
+                    if (val.Solo_Numeros(ErrorProvider, txtCodProducto))
+                    ErrorProvider.SetError(txtCodProducto, "solo se permite numeros");
+            }
+            else
+            {
+                val1 = true;
+            }
 
-           
-           if(txtCodProducto.Text.Length>0)
+            if (val1)
             {
                 if(val.Solo_Numeros(ErrorProvider,txtCodProducto)==false)
                 {
@@ -200,9 +214,7 @@ namespace Pantallas_proyecto
 
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
-            FrmClientes cli = new FrmClientes();
-
-            cli.Show();
+            
 
         }
 
@@ -461,6 +473,10 @@ namespace Pantallas_proyecto
         {
 
             
+            
+
+
+
             if (lstCompras.RowCount<2)
             {
                 MessageBox.Show("No hay items en la lista", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -492,7 +508,7 @@ namespace Pantallas_proyecto
                             }
                             else
                             {
-                                if (rbConNombre.Checked)
+                                if (rbConNombre.Checked && val2 && val3)
                                 {
                                     if (txtRTN.TextLength == 0)
                                     {

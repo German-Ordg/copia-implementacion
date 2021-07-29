@@ -491,7 +491,6 @@ C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\bin\Debug\zh-CHS\Mic
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.csprojAssemblyReference.cache
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
-C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.FrmClientes.resources
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.FrmCompras.resources
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
@@ -1321,7 +1320,6 @@ E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmVa
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\bin\Debug\Microsoft.ReportViewer.WebForms.dll
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.TxtResultBox.resources
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.FrmProductos.resources
-C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.FrmValidar_Prueba.resources
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\RdlCompile.cache
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\RdlCompile.compiled
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.exe.config
@@ -1507,3 +1505,8 @@ C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.exe
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.pdb
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\bin\Debug\Pantallas_proyecto.exe.manifest
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\bin\Debug\Pantallas_proyecto.application
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.exe.manifest
+C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.application
