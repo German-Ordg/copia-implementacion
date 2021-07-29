@@ -962,6 +962,7 @@ namespace Pantallas_proyecto
             this.lblmensaje.Size = new System.Drawing.Size(46, 17);
             this.lblmensaje.TabIndex = 77;
             this.lblmensaje.Text = "label6";
+            this.lblmensaje.Click += new System.EventHandler(this.lblmensaje_Click);
             // 
             // frmReportes
             // 

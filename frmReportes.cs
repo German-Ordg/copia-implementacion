@@ -57,7 +57,6 @@ namespace Pantallas_proyecto
             conect.cargarDatosreporte3(dgvventas);
             conect.abrir();
             conect.cargarDatosreporte4(dgvacabarse);
-            //conect.cargarDatosreporte3(dgvmasvendido);
             conect.abrir();
             conect.cargarDatosreporte5(dgvcategorias);
             conect.abrir();
@@ -116,7 +115,7 @@ namespace Pantallas_proyecto
                 switch (CBtipo.Text)
                 {
                     case "Categoria":
-                        lblmensaje.Text = "";
+                        lblmensaje.Text = "Seleccione una categoria";
                         List<impresion1> impresion9 = new List<impresion1>();
 
                         impresion9.Clear();
@@ -414,6 +413,11 @@ namespace Pantallas_proyecto
             TxtResultBox gerente = new TxtResultBox();
             gerente.Show();
             
+        }
+
+        private void lblmensaje_Click(object sender, EventArgs e)
+        {
+
         }
     }
     public class impresion1
