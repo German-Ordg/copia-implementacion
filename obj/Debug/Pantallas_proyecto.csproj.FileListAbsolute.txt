@@ -318,7 +318,6 @@ C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForm
 C:\Users\JULIO\Desktop\Proyecto1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
 C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
-C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmClientes.resources
 C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmCompras.resources
 C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
 C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
@@ -1312,7 +1311,6 @@ C:\Users\dell_\source\repos\DESARROLLO\obj\Debug\Pantallas_proyecto.exe
 C:\Users\dell_\source\repos\DESARROLLO\obj\Debug\Pantallas_proyecto.pdb
 C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.TxtResultBox.resources
 C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmProductos.resources
-C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmValidar_Prueba.resources
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.TxtResultBox.resources
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmProductos.resources
 E:\ArchivosGit\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmValidar_Prueba.resources
@@ -1506,3 +1504,4 @@ C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.pdb
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
+C:\Users\JULIO\Desktop\Proyecto1\obj\Debug\Pantallas_proyecto.FrmCategorias.resources

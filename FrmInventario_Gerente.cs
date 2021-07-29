@@ -14,12 +14,15 @@ namespace Pantallas_proyecto
 {
     public partial class FrmInventario_Gerente : Form
     {
+        private bool numero1 = false;
+
         public FrmInventario_Gerente()
         {
             InitializeComponent();
         }
         ClsConexionBD conect = new ClsConexionBD();
         SqlCommand cmd;
+        validaciones validacion = new validaciones();
 
 
         private const int CP_NOCLOSE_BUTTON = 0x200;
@@ -85,8 +88,22 @@ namespace Pantallas_proyecto
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            var aux = new MetodoBuscarCodigo();
-            aux.filtrar1(dataGridView1, this.textBox1.Text.Trim());
+            {
+                if (/*validacion.Espacio_Blanco(ErrorProvider, textBox1) || */validacion.Solo_Numeros(ErrorProvider, textBox1))
+                {
+                   /* if (validacion.Espacio_Blanco(ErrorProvider, textBox1))
+                        ErrorProvider.SetError(textBox1, "no se puede dejar en blanco");
+                    else*/
+                    if (validacion.Solo_Letras(ErrorProvider, textBox1))
+                        ErrorProvider.SetError(textBox1, "Solo se permite numeros");
+                }
+                else
+                {
+                    numero1 = true;
+                }
+                var aux = new MetodoBuscarCodigo();
+                aux.filtrar1(dataGridView1, this.textBox1.Text.Trim());
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
