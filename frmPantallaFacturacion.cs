@@ -472,8 +472,36 @@ namespace Pantallas_proyecto
         private void btnImprimirFactura_Click(object sender, EventArgs e)
         {
 
-            
-            
+            val2 = false;
+            val3 = false;
+
+            if (rbConNombre.Checked)
+            {
+                if (val.Solo_Numeros(ErrorProvider, txtRTN))
+                {
+
+                    if (val.Solo_Numeros(ErrorProvider, txtRTN))
+                        ErrorProvider.SetError(txtRTN, "No se permiten letras ni dejar en blanco");
+                }
+                else
+                {
+                    val2 = true;
+                }
+
+                if (val.Solo_Letras(ErrorProvider, txtNombreCliente))
+                {
+
+                    if (val.Solo_Letras(ErrorProvider, txtNombreCliente))
+                        ErrorProvider.SetError(txtNombreCliente, "No se permiten números ni dejar en blanco");
+                }
+                else
+                {
+                    val3 = true;
+                }
+
+
+            }
+
 
 
 
