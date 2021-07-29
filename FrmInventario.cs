@@ -70,7 +70,7 @@ namespace Pantallas_proyecto
                 if (validacion.Espacio_Blanco(ErrorProvider, textBox1) || validacion.Solo_Numeros(ErrorProvider, textBox1))
                 {
                     if (validacion.Espacio_Blanco(ErrorProvider, textBox1)) ;
-                    //ErrorProvider.SetError(textBox1, "no se puede dejar en blanco");
+                    
                     else
                     if (validacion.Solo_Letras(ErrorProvider, textBox1))
                         ErrorProvider.SetError(textBox1, "Solo se permite numeros");
