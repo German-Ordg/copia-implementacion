@@ -72,21 +72,6 @@ namespace Pantallas_proyecto
             {
                 letra = true;
             }
-
-            if (validacion.Solo_Numeros(errorProvider1, txtcodemp))
-            {
-
-                    if (validacion.Solo_Numeros(errorProvider1, txtcodemp))
-                    errorProvider1.SetError(txtcodemp, "solo se permite numeros");
-            }
-            else
-            {
-                letra = true;
-            }
-
-
-
-
             if (validacion.Espacio_Blanco(errorProvider1, txtusuario))
             {
                 if (validacion.Espacio_Blanco(errorProvider1, txtusuario))
