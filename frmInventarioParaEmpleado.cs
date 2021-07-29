@@ -66,8 +66,7 @@ namespace Pantallas_proyecto
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            //var aux = new MetodoBuscarCodigo();
-           // aux.filtrar1(textBox2.Text, this.textBox1.Text.Trim());
+           
         }
         FrmInventario_Gerente fact = new FrmInventario_Gerente();
 
