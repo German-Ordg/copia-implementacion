@@ -69,19 +69,13 @@ namespace Pantallas_proyecto
             {
                 try
                 {
-                    if (txtDescripcion.Text == "")
-                    {
-                        MessageBox.Show("No se pueden Insertar datos en blanco", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
+
                         cmd = new SqlCommand("INSERT INTO Metodo_Pago (descripcion_pago) VALUES ('" + txtDescripcion.Text + "')", conect.conexion);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Los Datos han sido insertados con Exitos", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         conect.cargarMetodosPago(dgvMetodosPago);
 
                         txtDescripcion.Clear();
-                    }
                 }
                 catch (Exception ex)
                 {
