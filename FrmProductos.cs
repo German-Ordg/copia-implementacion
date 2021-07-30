@@ -350,107 +350,113 @@ namespace Pantallas_proyecto
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-
-            if (MessageBox.Show("¿Seguro que desea terminar la compra?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (productosArrays[0,0]==null)
             {
+                MessageBox.Show("No hay productos en la compra", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                try
+            }
+            else
+            {
+                if (MessageBox.Show("¿Seguro que desea terminar la compra?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
-         
-                   
-                    producto.Codigo_compra = Convert.ToInt32(compra.Text);
-                    producto.Descripcion_fecha = fecha.Text;
-                    producto.Descripcion_proveedor = proveedor.Text;
-                    producto.Codigo_proveedor = producto.buscarProveedor(producto.Descripcion_proveedor);
-                    producto.Descripcion_pago = pago.Text;
-                    producto.Codigo_pago = producto.buscarPago(producto.Descripcion_pago);
-                    producto.agregarCompra();
-
-
-
-                    
-                }
-
-
-                catch (Exception)
-                {
-
-                    MessageBox.Show("Error al ingresar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-
-                for (int u = 0; u < contador; u++)
-                {
                     try
                     {
-                        producto.Codigo_producto = Convert.ToInt32(productosArrays[u, 0]);
 
-                        if (producto.buscarProducto(productosArrays[u, 0]) != producto.Codigo_producto)
-                        {
-                            producto.Codigo_producto = Convert.ToInt32(productosArrays[u, 0]);
-                            producto.Descripcion = productosArrays[u, 1];
-                            producto.Cantidad = Convert.ToInt32(productosArrays[u, 6]);
-                            producto.Precio_actual = Convert.ToDouble(productosArrays[u, 5]);
-                            producto.Descuento = Convert.ToDouble(productosArrays[u, 7]);
-                            producto.Talla = productosArrays[u, 3];
-                            producto.Descripcion_Categoria = productosArrays[u, 2];
-                            producto.Categoria = Convert.ToInt32(producto.buscarCategoria(producto.Descripcion_Categoria));
-                            producto.agregarProducto();
-                            cargarDatosProductos(dgvProductos, "Productos");
+
+
+                        producto.Codigo_compra = Convert.ToInt32(compra.Text);
+                        producto.Descripcion_fecha = fecha.Text;
+                        producto.Descripcion_proveedor = proveedor.Text;
+                        producto.Codigo_proveedor = producto.buscarProveedor(producto.Descripcion_proveedor);
+                        producto.Descripcion_pago = pago.Text;
+                        producto.Codigo_pago = producto.buscarPago(producto.Descripcion_pago);
+                        producto.agregarCompra();
 
 
 
 
-                        }
-
-                        else
-                            if (producto.buscarProducto(productosArrays[u, 0]) == producto.Codigo_producto)
-                        {
-
-
-                            producto.Codigo_producto = Convert.ToInt32(productosArrays[u, 0]);
-
-
-                            int cant = producto.buscarProducto2(productosArrays[u, 0]);
-
-                            producto.Cantidad = Convert.ToInt32(productosArrays[u, 6]) + cant;
-                            producto.Precio_actual = Convert.ToDouble(productosArrays[u, 5]);
-                            producto.Descuento = Convert.ToDouble(productosArrays[u, 7]);
-
-                            producto.actualizarProducto();
-                            cargarDatosProductos(dgvProductos, "Productos");
-
-
-
-                        }
-
-                        producto.Cantidad_compra = Convert.ToInt32(productosArrays[u, 6]);
-                        producto.Precio_compra = Convert.ToDouble(productosArrays[u, 4]);
-
-                        producto.agregarDetalleCompra();
                     }
 
 
-                     
-
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-                        MessageBox.Show("Error al ingresar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        MessageBox.Show("Error al ingresar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+
+                    for (int u = 0; u < contador; u++)
+                    {
+                        try
+                        {
+                            producto.Codigo_producto = Convert.ToInt32(productosArrays[u, 0]);
+
+                            if (producto.buscarProducto(productosArrays[u, 0]) != producto.Codigo_producto)
+                            {
+                                producto.Codigo_producto = Convert.ToInt32(productosArrays[u, 0]);
+                                producto.Descripcion = productosArrays[u, 1];
+                                producto.Cantidad = Convert.ToInt32(productosArrays[u, 6]);
+                                producto.Precio_actual = Convert.ToDouble(productosArrays[u, 5]);
+                                producto.Descuento = Convert.ToDouble(productosArrays[u, 7]);
+                                producto.Talla = productosArrays[u, 3];
+                                producto.Descripcion_Categoria = productosArrays[u, 2];
+                                producto.Categoria = Convert.ToInt32(producto.buscarCategoria(producto.Descripcion_Categoria));
+                                producto.agregarProducto();
+                                cargarDatosProductos(dgvProductos, "Productos");
+
+
+
+
+                            }
+
+                            else
+                                if (producto.buscarProducto(productosArrays[u, 0]) == producto.Codigo_producto)
+                            {
+
+
+                                producto.Codigo_producto = Convert.ToInt32(productosArrays[u, 0]);
+
+
+                                int cant = producto.buscarProducto2(productosArrays[u, 0]);
+
+                                producto.Cantidad = Convert.ToInt32(productosArrays[u, 6]) + cant;
+                                producto.Precio_actual = Convert.ToDouble(productosArrays[u, 5]);
+                                producto.Descuento = Convert.ToDouble(productosArrays[u, 7]);
+
+                                producto.actualizarProducto();
+                                cargarDatosProductos(dgvProductos, "Productos");
+
+
+
+                            }
+
+                            producto.Cantidad_compra = Convert.ToInt32(productosArrays[u, 6]);
+                            producto.Precio_compra = Convert.ToDouble(productosArrays[u, 4]);
+
+                            producto.agregarDetalleCompra();
+                        }
+
+
+
+
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al ingresar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+
 
                     }
 
 
+
+
+                    this.Close();
+                    FrmCompras fact = new FrmCompras();
+                    fact.Show();
                 }
-            
-
-
-
-            this.Close();
-                FrmCompras fact = new FrmCompras();
-                fact.Show();
             }
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -619,6 +625,17 @@ namespace Pantallas_proyecto
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
+            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
             toolStripLabel1.Text = DateTime.Now.ToLongDateString();
             toolStripLabel2.Text = DateTime.Now.ToLongTimeString();

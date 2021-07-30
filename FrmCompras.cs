@@ -296,6 +296,11 @@ namespace Pantallas_proyecto
                 e.Handled = true;
             }
         }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
