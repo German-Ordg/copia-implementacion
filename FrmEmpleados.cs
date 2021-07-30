@@ -19,8 +19,11 @@ namespace Pantallas_proyecto
         private bool letra2 = false;
         private bool numero1 = false;
         private bool numero2 = false;
+        private bool numero3 = false;
         public int EmpleadoEdad;
+
         
+
         public FrmEmpleados()
         {
             InitializeComponent();
@@ -41,10 +44,10 @@ namespace Pantallas_proyecto
         ClsConexionBD conect = new ClsConexionBD();
         SqlCommand cmd;
         validaciones validacion = new validaciones();
+        SqlCommand comm;
 
-        
-           
-        
+
+
 
         private void label9_Click(object sender, EventArgs e)
         {
@@ -143,39 +146,81 @@ namespace Pantallas_proyecto
                     numero2 = true;
                 }
 
-                if (numero1 && letra1 && letra2 && numero2)
+                if (validacion.Espacio_Blanco(ErrorProvider1, txtApellido) || validacion.Solo_Numeros(ErrorProvider1, txtPuesto))
                 {
+                    if (validacion.Espacio_Blanco(ErrorProvider1, txtPuesto))
+                        ErrorProvider1.SetError(txtPuesto, "no se puede dejar en blanco");
+                    else
+                    if (validacion.Solo_Numeros(ErrorProvider1, txtPuesto))
+                        ErrorProvider1.SetError(txtPuesto, "Solo se permite numeros");
+                }
+                else
+                {
+                    numero3 = true;
+                }
+
+
+
+
+                if (numero1 && letra1 && letra2 && numero2 && numero3)
+                {
+                    bool igual = false;
+                    conect.abrir();
+                    SqlCommand comando = new SqlCommand("select * from Empleados where numero_identidad_empleado = '"+ txtIdentidad.Text+"'",conect.conexion);
+                    SqlDataReader registro = comando.ExecuteReader();
+                    if (registro.Read())
+                    {
+                        igual = true;
+                    }
+                    conect.cerrar();
+
+
+                    if (igual == false)
+                    {
+
+                        
+
+                        try
+                        {
+                            conect.abrir();
+                            cmd = new SqlCommand("Insert into Empleados(codigo_puesto, nombre_empleado, apellido_empleado, numero_identidad_empleado, fecha_nacimiento, fecha_ingreso, num_telefono, Genero) Values(" + txtPuesto.Text + ",'" + txtNombre.Text + "', '" + txtApellido.Text + "', '" + txtIdentidad.Text + "', '" + dtpFechaNacimiento.Text + "','" + dtpFechaIngreso.Text + "','" + txtNumeroTel.Text + "','" + cmbGenero.Text + "')", conect.conexion);
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            conect.cargarDatosEmpleados(dgvEmpleados);
+                            conect.cerrar();
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message.ToString());
+                            MessageBox.Show("ERROR AL INSERTAR LOS DATOS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            txtNombre.Text = " ";
+                            txtApellido.Text = " ";
+                            txtIdentidad.Text = " ";
+                            txtPuesto.Text = " ";
+                            txtNumeroTel.Text = " ";
+                            dtpFechaNacimiento.Text = DateTime.Now.ToShortDateString();
+                            dtpFechaIngreso.Text = DateTime.Now.ToShortDateString();
+                            cmbGenero.SelectedIndex = -1;
+                            txtNombre.Focus();
+                        }
+                        
+
+
+
+                    }
+                    else
+                        MessageBox.Show("Esta ingresando una Identidad que ya fue registrada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
 
                     
-
-                    try
-                    {
-
-                        cmd = new SqlCommand("Insert into Empleados(codigo_puesto, nombre_empleado, apellido_empleado, numero_identidad_empleado, fecha_nacimiento, fecha_ingreso, num_telefono, Genero) Values(" + txtPuesto.Text + ",'" + txtNombre.Text + "', '" + txtApellido.Text + "', '" + txtIdentidad.Text + "', '" + dtpFechaNacimiento.Text + "','" + dtpFechaIngreso.Text + "','" + txtNumeroTel.Text + "','" + cmbGenero.Text + "')", conect.conexion);
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        conect.cargarDatosEmpleados(dgvEmpleados);
-
-                    }
-                    catch (Exception ex)
-                    {
-                        //MessageBox.Show(ex.Message.ToString());
-                        MessageBox.Show("ERROR AL INSERTAR LOS DATOS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                        txtNombre.Text = " ";
-                        txtApellido.Text = " ";
-                        txtIdentidad.Text = " ";
-                        txtPuesto.Text = " ";
-                        txtNumeroTel.Text = " ";
-                        dtpFechaNacimiento.Text = DateTime.Now.ToShortDateString();
-                        dtpFechaIngreso.Text = DateTime.Now.ToShortDateString();
-                        cmbGenero.SelectedIndex = -1;
-                        txtNombre.Focus();
-                    }
                 }
 
            
             }
+
+           
 
 
 
