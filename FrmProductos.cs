@@ -15,11 +15,18 @@ namespace Pantallas_proyecto
             InitializeComponent();
 
         }
-
+        private bool letra = false;
+        private bool letra2 = false;
+        private bool letra3 = false;
+        private bool letra4 = false;
+        private bool letra5 = false;
+        private bool letra6 = false;
+        private bool letra7 = false;
 
         ClsConexionBD conect2 = new ClsConexionBD();
         Productos producto = new Productos();
         FrmCompras compras = new FrmCompras();
+        validaciones validacion = new validaciones();
 
         string[,] productosArrays = new string[20, 8];
 
@@ -71,8 +78,103 @@ namespace Pantallas_proyecto
         private void button2_Click(object sender, EventArgs e)
         {
 
+            letra = false;
+            letra2 = false;
+            letra3= false;
+            letra4 = false;
+            letra5 = false;
+            letra6 = false;
+            letra7 = false;
 
-            try
+            if (validacion.Espacio_Blanco(errorProvider1, descripcionProducto))
+            {
+                if (validacion.Espacio_Blanco(errorProvider1, descripcionProducto))
+                    errorProvider1.SetError(descripcionProducto, "no se puede dejar en blanco");
+               
+            }
+            else
+            {
+                letra = true;
+            }
+
+            if (validacion.Espacio_Blanco_CB(errorProvider1, cmbCategoria))
+            {
+                if (validacion.Espacio_Blanco_CB(errorProvider1, cmbCategoria))
+                    errorProvider1.SetError(cmbCategoria, "no se puede dejar en blanco");
+
+            }
+            else
+            {
+                letra2 = true;
+            }
+
+
+            if (validacion.Espacio_Blanco(errorProvider1, precioCompra) )
+            {
+                if (validacion.Espacio_Blanco(errorProvider1, precioCompra))
+                    errorProvider1.SetError(precioCompra, "no se puede dejar en blanco");
+               
+            }
+            else
+            {
+                letra3 = true;
+            }
+
+
+            if (validacion.Espacio_Blanco(errorProvider1, precioActual))
+            {
+                if (validacion.Espacio_Blanco(errorProvider1, precioActual))
+                    errorProvider1.SetError(precioActual, "no se puede dejar en blanco");
+              
+            }
+            else
+            {
+                letra4= true;
+            }
+
+            if (validacion.Espacio_Blanco(errorProvider1, cantidad) || validacion.Solo_Numeros(errorProvider1, cantidad))
+            {
+                if (validacion.Espacio_Blanco(errorProvider1, cantidad))
+                    errorProvider1.SetError(cantidad, "no se puede dejar en blanco");
+                else
+                    if (validacion.Solo_Numeros(errorProvider1, cantidad))
+                    errorProvider1.SetError(cantidad, "solo se permite numeros enteros");
+            }
+            else
+            {
+                letra5 = true;
+            }
+
+
+            if (validacion.Espacio_Blanco(errorProvider1, descuento))
+            {
+                if (validacion.Espacio_Blanco(errorProvider1, descuento))
+                    errorProvider1.SetError(descuento, "no se puede dejar en blanco");
+            }
+            else
+            {
+                letra6 = true;
+            }
+
+            if (validacion.Espacio_Blanco(errorProvider1, codigoProducto))
+            {
+                if (validacion.Espacio_Blanco(errorProvider1, codigoProducto))
+                    errorProvider1.SetError(codigoProducto, "no se puede dejar en blanco");
+
+            }
+            else
+            {
+                letra7 = true;
+            }
+
+
+
+
+            if (letra && letra2 && letra3 && letra4 && letra5 && letra6&& letra7)
+            {
+
+
+                try
             {
                 if (codigoProducto.Text == string.Empty || descripcionProducto.Text == string.Empty || cmbCategoria.Text == string.Empty || precioCompra.Text == string.Empty || precioActual.Text == string.Empty || cantidad.Text == string.Empty || descuento.Text == string.Empty)
                     MessageBox.Show("Porfavor llene todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -200,7 +302,7 @@ namespace Pantallas_proyecto
 
             }
 
-          
+          }
 
 
         }
@@ -463,82 +565,57 @@ namespace Pantallas_proyecto
 
         private void precioCompra_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            //Para obligar a que sólo se introduzcan números
-            if (Char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
-                e.Handled = false;
-            }
-            else
-              if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                //el resto de teclas pulsadas se desactivan
                 e.Handled = true;
             }
+
+            // solo 1 punto decimal
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
         }
 
         private void precioActual_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            //Para obligar a que sólo se introduzcan números
-            if (Char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
-                e.Handled = false;
-            }
-            else
-              if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                //el resto de teclas pulsadas se desactivan
                 e.Handled = true;
             }
+
+            // solo 1 punto decimal
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
         }
 
         private void cantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            //Para obligar a que sólo se introduzcan números
-            if (Char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                e.Handled = false;
-            }
-            else
-              if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                //el resto de teclas pulsadas se desactivan
                 e.Handled = true;
             }
+
         }
 
         private void descuento_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            //Para obligar a que sólo se introduzcan números
-            if (Char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
-                e.Handled = false;
-            }
-            else
-              if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                //el resto de teclas pulsadas se desactivan
                 e.Handled = true;
             }
+
+            // solo 1 punto decimal
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

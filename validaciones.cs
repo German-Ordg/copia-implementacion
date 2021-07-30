@@ -8,8 +8,13 @@ using System.Xml.Schema;
 
 namespace Pantallas_proyecto
 {
+
     public partial class validaciones
     {
+
+
+
+
         //valida espacios en blanco
         public bool Espacio_Blanco(ErrorProvider ubicacionError, TextBox txt)
         {
