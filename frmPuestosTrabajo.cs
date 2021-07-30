@@ -128,7 +128,7 @@ namespace Pantallas_proyecto
                     }
                 }
                 else
-                    MessageBox.Show("Esta ingresando un Puesto que ya fue registrada", "Aviso", MessageBoxButtons.OK);
+                    MessageBox.Show("Esta ingresando un Puesto que ya fue registrado", "Aviso", MessageBoxButtons.OK);
 
             }
         }
@@ -184,7 +184,7 @@ namespace Pantallas_proyecto
                     }
                 }
                 else
-                    MessageBox.Show("Esta ingresando un Puesto que ya fue registrada", "Aviso", MessageBoxButtons.OK);
+                    MessageBox.Show("Esta ingresando un Puesto que ya fue registrado", "Aviso", MessageBoxButtons.OK);
             }
         }
 
