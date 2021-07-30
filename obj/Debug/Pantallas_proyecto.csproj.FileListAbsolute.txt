@@ -1497,7 +1497,6 @@ C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.exe
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.pdb
 C:\Users\Sebas\Desktop\desarollo\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
 C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
-C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
 C:\Users\dell_\Source\Repos\DESARROL\bin\Debug\Pantallas_proyecto.exe.config
 C:\Users\dell_\Source\Repos\DESARROL\bin\Debug\Pantallas_proyecto.exe
 C:\Users\dell_\Source\Repos\DESARROL\bin\Debug\Pantallas_proyecto.pdb
@@ -1593,3 +1592,8 @@ C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\bin\Debug\Pantallas_
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.exe.manifest
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.application
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Pantallas_proyecto.exe.manifest
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\bin\Debug\Pantallas_proyecto.application
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.exe.manifest
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.application
+C:\Users\david\source\repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_55\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache

@@ -67,21 +67,36 @@ namespace Pantallas_proyecto
 
             if (letra2)
             {
-                try
-                {
 
+                bool igual = false;
+                conect.abrir();
+                SqlCommand comando1 = new SqlCommand("select * from Metodo_pago where descripcion_pago = '" + txtDescripcion.Text + "'", conect.conexion);
+                SqlDataReader registro = comando1.ExecuteReader();
+                if (registro.Read())
+                {
+                    igual = true;
+                }
+                conect.cerrar();
+                if (igual == false)
+                {
+                    try
+                    {
+                        conect.abrir();
                         cmd = new SqlCommand("INSERT INTO Metodo_Pago (descripcion_pago) VALUES ('" + txtDescripcion.Text + "')", conect.conexion);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Los Datos han sido insertados con Exitos", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         conect.cargarMetodosPago(dgvMetodosPago);
-
+                        conect.cerrar();
                         txtDescripcion.Clear();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al ingresar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtDescripcion.Clear();
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al ingresar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtDescripcion.Clear();
-                }
+                else
+                    MessageBox.Show("Esta ingresando un Metodo de pago que ya fue registrado", "Aviso", MessageBoxButtons.OK);
             }
         }
 
@@ -110,29 +125,43 @@ namespace Pantallas_proyecto
 
             if (letra2)
             {
-                try
+                bool igual = false;
+                conect.abrir();
+                SqlCommand comando1 = new SqlCommand("select * from Metodo_pago where descripcion_pago = '" + txtDescripcion.Text + "'", conect.conexion);
+                SqlDataReader registro = comando1.ExecuteReader();
+                if (registro.Read())
                 {
-                    if (txtDescripcion.Text == "")
+                    igual = true;
+                }
+                conect.cerrar();
+                if (igual == false)
+                {
+                    try
                     {
-                        MessageBox.Show("Seleccione la descripción del método de Pago que desea modificar haciendo clic sobre la descripción que desea cambiar o modificar. Recuerde que Tampoco es permitido dejar sin descripción algún método de pago.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        codigo1 = Convert.ToInt32(dgvMetodosPago[0, poc].Value);
-                        dgvMetodosPago[1, poc].Value = txtDescripcion.Text;
+                        if (txtDescripcion.Text == "")
+                        {
+                            MessageBox.Show("Seleccione la descripción del método de Pago que desea modificar haciendo clic sobre la descripción que desea cambiar o modificar. Recuerde que Tampoco es permitido dejar sin descripción algún método de pago.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            codigo1 = Convert.ToInt32(dgvMetodosPago[0, poc].Value);
+                            dgvMetodosPago[1, poc].Value = txtDescripcion.Text;
 
-                        cmd = new SqlCommand("UPDATE Metodo_Pago SET descripcion_pago = '" + txtDescripcion.Text + "' WHERE codigo_pago = " + codigo1, conect.conexion);
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("El Registro fue actualizado exitosamente.", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        conect.cargarMetodosPago(dgvMetodosPago);
-                        codigo1 = 0;
-                        txtDescripcion.Clear();
+                            cmd = new SqlCommand("UPDATE Metodo_Pago SET descripcion_pago = '" + txtDescripcion.Text + "' WHERE codigo_pago = " + codigo1, conect.conexion);
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("El Registro fue actualizado exitosamente.", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            conect.cargarMetodosPago(dgvMetodosPago);
+                            codigo1 = 0;
+                            txtDescripcion.Clear();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo modificar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("No se pudo modificar los datos" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                else
+                    MessageBox.Show("Esta ingresando un Metodo de pago que ya fue registrado", "Aviso", MessageBoxButtons.OK);
             }
         }
 

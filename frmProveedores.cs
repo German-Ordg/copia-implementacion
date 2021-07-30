@@ -90,33 +90,56 @@ namespace Pantallas_proyecto
             }
             if (letra && letra2 && letra3)
             {
-                try
+
+                bool igual = false;
+                conect.abrir();
+                SqlCommand comando1 = new SqlCommand("select * from Proveedores where  nombre_proveedor= '" + txtNombreProovedor.Text + "'", conect.conexion);
+                SqlDataReader registro = comando1.ExecuteReader();
+                if (registro.Read())
                 {
-                    if (txtNombreProovedor.Text == "" || txtTelefono.Text == "" || txtDescripcion.Text == "")
+                    igual = true;
+                }
+                conect.cerrar();
+                conect.abrir();
+                SqlCommand comando2 = new SqlCommand("select * from Proveedores where  numero_contacto= '" + txtTelefono.Text + "'", conect.conexion);
+                SqlDataReader registro2 = comando2.ExecuteReader();
+                if (registro2.Read())
+                {
+                    igual = true;
+                }
+                conect.cerrar();
+                if (igual == false)
+                {
+                    try
                     {
+                        if (txtNombreProovedor.Text == "" || txtTelefono.Text == "" || txtDescripcion.Text == "")
+                        {
 
-                        MessageBox.Show("No se pueden dejar los campos vacios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("No se pueden dejar los campos vacios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                        else
+                        {
+                            cmd = new SqlCommand("Insert into Proveedores(nombre_proveedor, numero_contacto, direccion_proveedor) values('" + txtNombreProovedor.Text + "','" + txtTelefono.Text + "','" + txtDescripcion.Text + "')", conect.conexion);
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            conect.cargarProveedores(dgvProovedores);
+                            dgvProovedores.ForeColor = Color.Black;
+                        }
                     }
-
-                    else
+                    catch (Exception ex)
                     {
-                        cmd = new SqlCommand("Insert into Proveedores(nombre_proveedor, numero_contacto, direccion_proveedor) values('" + txtNombreProovedor.Text + "','" + txtTelefono.Text + "','" + txtDescripcion.Text + "')", conect.conexion);
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        conect.cargarProveedores(dgvProovedores);
-                        dgvProovedores.ForeColor = Color.Black;
+                        //MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show("ERROR AL INSERTAR LOS DATOS" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                        txtNombreProovedor.Clear();
+                        txtTelefono.Clear();
+                        txtDescripcion.Clear();
                     }
                 }
-                catch (Exception ex)
-                {
-                    //MessageBox.Show(ex.Message.ToString());
-                    MessageBox.Show("ERROR AL INSERTAR LOS DATOS" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
-                    txtNombreProovedor.Clear();
-                    txtTelefono.Clear();
-                    txtDescripcion.Clear();
-                }
+                else
+                    MessageBox.Show("Esta ingresando un nombre o telefono que ya fue registrado", "Aviso", MessageBoxButtons.OK);
             }
             txtDescripcion.Text = "";
             txtNombreProovedor.Text = "";
@@ -203,33 +226,35 @@ namespace Pantallas_proyecto
 
             if (letra && letra2 && letra3)
             {
-                try
-                {
-                    codigo = Convert.ToInt32(dgvProovedores[0, indice].Value);
+                
+                    try
+                    {
+                        codigo = Convert.ToInt32(dgvProovedores[0, indice].Value);
 
 
-                    dgvProovedores[1, indice].Value = txtNombreProovedor.Text;
-                    dgvProovedores[2, indice].Value = txtTelefono.Text;
-                    dgvProovedores[3, indice].Value = txtDescripcion.Text;
+                        dgvProovedores[1, indice].Value = txtNombreProovedor.Text;
+                        dgvProovedores[2, indice].Value = txtTelefono.Text;
+                        dgvProovedores[3, indice].Value = txtDescripcion.Text;
 
 
-                    cmd = new SqlCommand("UPDATE Proveedores SET nombre_proveedor = '" + txtNombreProovedor.Text + "',  numero_contacto = '" + txtTelefono.Text + "', direccion_proveedor = '" + txtDescripcion.Text + "'  where codigo_proveedor = " + codigo, conect.conexion);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("El registro fue actualizado exitosamente");
-                    conect.cargarProveedores(dgvProovedores);
+                        cmd = new SqlCommand("UPDATE Proveedores SET nombre_proveedor = '" + txtNombreProovedor.Text + "',  numero_contacto = '" + txtTelefono.Text + "', direccion_proveedor = '" + txtDescripcion.Text + "'  where codigo_proveedor = " + codigo, conect.conexion);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("El registro fue actualizado exitosamente");
+                        conect.cargarProveedores(dgvProovedores);
 
 
-                    txtNombreProovedor.Clear();
-                    txtTelefono.Clear();
-                    txtDescripcion.Clear();
-                    txtNombreProovedor.Focus();
+                        txtNombreProovedor.Clear();
+                        txtTelefono.Clear();
+                        txtDescripcion.Clear();
+                        txtNombreProovedor.Focus();
 
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("El registro no pudo ser actualizado" + ex, "INFO", MessageBoxButtons.OK);
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("El registro no pudo ser actualizado" + ex, "INFO", MessageBoxButtons.OK);
-                }
-            }
+
         }
 
         private void frmProveedores_Load(object sender, EventArgs e)

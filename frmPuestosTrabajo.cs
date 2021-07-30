@@ -173,7 +173,7 @@ namespace Pantallas_proyecto
                         connect.abrir();
                         SqlCommand comando = new SqlCommand(query, connect.conexion);
                         comando.ExecuteNonQuery();
-                        connect.abrir();
+                        connect.cerrar();
                         MessageBox.Show("Se Modificó Correctamente");
                         Limpiar();
                         MostrarDatos();

@@ -149,7 +149,6 @@ namespace Pantallas_proyecto
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.ToString());
                     MessageBox.Show("Error al ingresar datos", "ERROR", MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
                 }
@@ -257,7 +256,6 @@ namespace Pantallas_proyecto
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.ToString());
                     MessageBox.Show("Error al modificar datos", "ERROR", MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
                 }

@@ -68,7 +68,6 @@ namespace Pantallas_proyecto
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
-            conect.abrir();
             conect.cargarDatosEmpleados(dgvEmpleados);
         }
 
@@ -76,6 +75,7 @@ namespace Pantallas_proyecto
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            
 
             letra1 = false; letra2 = false; numero1 = false; numero2 = false; 
 
@@ -164,8 +164,10 @@ namespace Pantallas_proyecto
 
                 if (numero1 && letra1 && letra2 && numero2 && numero3)
                 {
-                    bool igual = false;
+
                     conect.abrir();
+                    bool igual = false;
+                    
                     SqlCommand comando = new SqlCommand("select * from Empleados where numero_identidad_empleado = '"+ txtIdentidad.Text+"'",conect.conexion);
                     SqlDataReader registro = comando.ExecuteReader();
                     if (registro.Read())
@@ -187,13 +189,6 @@ namespace Pantallas_proyecto
                             cmd.ExecuteNonQuery();
                             MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             conect.cargarDatosEmpleados(dgvEmpleados);
-                            conect.cerrar();
-                        }
-                        catch (Exception ex)
-                        {
-                            //MessageBox.Show(ex.Message.ToString());
-                            MessageBox.Show("ERROR AL INSERTAR LOS DATOS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                             txtNombre.Text = " ";
                             txtApellido.Text = " ";
                             txtIdentidad.Text = " ";
@@ -202,6 +197,14 @@ namespace Pantallas_proyecto
                             dtpFechaNacimiento.Text = DateTime.Now.ToShortDateString();
                             dtpFechaIngreso.Text = DateTime.Now.ToShortDateString();
                             cmbGenero.SelectedIndex = -1;
+                            txtNombre.Focus();
+                            conect.cerrar();
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message.ToString());
+                            MessageBox.Show("ERROR AL INSERTAR LOS DATOS", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                             txtNombre.Focus();
                         }
                         
@@ -220,12 +223,7 @@ namespace Pantallas_proyecto
            
             }
 
-           
-
-
-
-
-
+            
         }
 
         private void txtBuscarEmpleado_TextChanged(object sender, EventArgs e)
@@ -236,6 +234,7 @@ namespace Pantallas_proyecto
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            conect.abrir();
             int indice;
             int codigo;
             indice = dgvEmpleados.CurrentRow.Index;
@@ -349,6 +348,7 @@ namespace Pantallas_proyecto
                 }
 
             }
+            conect.cerrar();
         }
 
         private void dgvEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -380,56 +380,6 @@ namespace Pantallas_proyecto
         {
             
         }
-
-       /* private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Solo letras se permiten", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Solo letras se permiten", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txtIdentidad_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Solo numeros se permiten", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txtPuesto_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Solo numeros se permiten", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txtNumeroTel_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Solo numeros se permiten", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
-        }*/
     }
-    }
+}
 
