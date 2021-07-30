@@ -1382,7 +1382,6 @@ C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.csproj.AssemblyReference.cache
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmAcceso.resources
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.TxtResultBox.resources
-C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmClientes.resources
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmCompras.resources
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmEmpleados.resources
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmImpresionFactura.resources
@@ -1399,7 +1398,6 @@ C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmRecuperaContra.resources
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmReportes.resources
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmUsuarios.resources
-C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmValidar_Prueba.resources
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.Properties.Resources.resources
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.frmProveedores.resources
 C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FormBienvenido.resources
@@ -1594,3 +1592,4 @@ C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\bin\Debug\Pantallas_
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\bin\Debug\Pantallas_proyecto.application
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.exe.manifest
 C:\Users\WILSON\Desktop\Desarrollo de Software\Repositorio2\obj\Debug\Pantallas_proyecto.application
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.FrmCategorias.resources

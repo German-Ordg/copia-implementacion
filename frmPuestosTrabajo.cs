@@ -88,7 +88,7 @@ namespace Pantallas_proyecto
                 if (validacion.Solo_Letras(ErrorProvider, txtPosicion))
                     ErrorProvider.SetError(txtPosicion, "No se permiten números");
                 Limpiar();
-                
+
             }
             else
             {
@@ -97,8 +97,21 @@ namespace Pantallas_proyecto
 
             if (letra2)
             {
-                try
-                {                    
+                bool igual = false;
+                connect.abrir();
+                SqlCommand comando1 = new SqlCommand("select * from Empleados_Puestos where descripcion_puesto = '" + txtPosicion.Text + "'", connect.conexion);
+                SqlDataReader registro = comando1.ExecuteReader();
+                if (registro.Read())
+                {
+                    igual = true;
+                }
+                connect.cerrar();
+
+
+                if (igual == false)
+                {
+                    try
+                    {
                         string query = "INSERT INTO Empleados_Puestos (descripcion_puesto) VALUES (@puesto)";
                         connect.abrir();
                         SqlCommand comando = new SqlCommand(query, connect.conexion);
@@ -108,11 +121,15 @@ namespace Pantallas_proyecto
                         MessageBox.Show("Nuevo Puesto Insertado");
                         Limpiar();
                         MostrarDatos();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                else
+                    MessageBox.Show("Esta ingresando un Puesto que ya fue registrado", "Aviso", MessageBoxButtons.OK);
+
             }
         }
 
@@ -137,21 +154,37 @@ namespace Pantallas_proyecto
 
             if (letra2)
             {
-                try
+                bool igual = false;
+                connect.abrir();
+                SqlCommand comando1 = new SqlCommand("select * from Empleados_Puestos where descripcion_puesto = '" + txtPosicion.Text + "'", connect.conexion);
+                SqlDataReader registro = comando1.ExecuteReader();
+                if (registro.Read())
                 {
-                    string query = "Update Empleados_Puestos set descripcion_puesto= '" + txtPosicion.Text + "' where codigo_puesto='" + Record_Id + "'";
-                    connect.abrir();
-                    SqlCommand comando = new SqlCommand(query, connect.conexion);
-                    comando.ExecuteNonQuery();
-                    connect.abrir();
-                    MessageBox.Show("Se Modificó Correctamente");
-                    Limpiar();
-                    MostrarDatos();
+                    igual = true;
                 }
-                catch (Exception ex)
+                connect.cerrar();
+
+
+                if (igual == false)
                 {
-                    MessageBox.Show(ex.Message);
+                    try
+                    {
+                        string query = "Update Empleados_Puestos set descripcion_puesto= '" + txtPosicion.Text + "' where codigo_puesto='" + Record_Id + "'";
+                        connect.abrir();
+                        SqlCommand comando = new SqlCommand(query, connect.conexion);
+                        comando.ExecuteNonQuery();
+                        connect.abrir();
+                        MessageBox.Show("Se Modificó Correctamente");
+                        Limpiar();
+                        MostrarDatos();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
+                else
+                    MessageBox.Show("Esta ingresando un Puesto que ya fue registrado", "Aviso", MessageBoxButtons.OK);
             }
         }
 
