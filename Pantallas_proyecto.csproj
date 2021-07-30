@@ -702,5 +702,8 @@
   <ItemGroup>
     <None Include="Resources\Letras1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonCategorias.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

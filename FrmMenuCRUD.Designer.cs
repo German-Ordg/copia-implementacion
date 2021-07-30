@@ -33,27 +33,27 @@ namespace Pantallas_proyecto
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuCRUD));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.métodoDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contactosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnCategorias = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.métodoDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -83,46 +83,6 @@ namespace Pantallas_proyecto
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
-            // empleadosToolStripMenuItem
-            // 
-            this.empleadosToolStripMenuItem.Image = global::Pantallas_proyecto.Properties.Resources.carnet_de_identidad;
-            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.empleadosToolStripMenuItem.Text = "Empleados";
-            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Image = global::Pantallas_proyecto.Properties.Resources.cliente;
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
-            // 
-            // proveedoresToolStripMenuItem
-            // 
-            this.proveedoresToolStripMenuItem.Image = global::Pantallas_proyecto.Properties.Resources.camion_de_reparto;
-            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.proveedoresToolStripMenuItem.Text = "Proveedores";
-            this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
-            // 
-            // métodoDePagoToolStripMenuItem
-            // 
-            this.métodoDePagoToolStripMenuItem.Image = global::Pantallas_proyecto.Properties.Resources.tarjeta_de_debito;
-            this.métodoDePagoToolStripMenuItem.Name = "métodoDePagoToolStripMenuItem";
-            this.métodoDePagoToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.métodoDePagoToolStripMenuItem.Text = "Métodos de Pago";
-            this.métodoDePagoToolStripMenuItem.Click += new System.EventHandler(this.métodoDePagoToolStripMenuItem_Click);
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.Image = global::Pantallas_proyecto.Properties.Resources.libro_de_contactos;
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.clientesToolStripMenuItem.Text = "Puestos de Trabajo";
-            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
-            // 
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -145,14 +105,6 @@ namespace Pantallas_proyecto
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(125, 6);
-            // 
-            // acercaDeToolStripMenuItem
-            // 
-            this.acercaDeToolStripMenuItem.Image = global::Pantallas_proyecto.Properties.Resources.informacion;
-            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
-            this.acercaDeToolStripMenuItem.Text = "Acerca de";
-            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -179,6 +131,69 @@ namespace Pantallas_proyecto
             this.button5.Text = "Regresar";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripLabel2});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 445);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(704, 25);
+            this.toolStrip1.TabIndex = 75;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.Black;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
+            this.toolStripLabel1.Text = "toolStripLabel1";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.ForeColor = System.Drawing.Color.Black;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(86, 22);
+            this.toolStripLabel2.Text = "toolStripLabel2";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnCategorias
+            // 
+            this.btnCategorias.BackColor = System.Drawing.Color.Maroon;
+            this.btnCategorias.BackgroundImage = global::Pantallas_proyecto.Properties.Resources.botonCategorias;
+            this.btnCategorias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCategorias.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategorias.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCategorias.Location = new System.Drawing.Point(381, 356);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Size = new System.Drawing.Size(211, 69);
+            this.btnCategorias.TabIndex = 76;
+            this.btnCategorias.UseVisualStyleBackColor = false;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Maroon;
+            this.button6.BackgroundImage = global::Pantallas_proyecto.Properties.Resources.botonclientes2;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button6.Location = new System.Drawing.Point(109, 356);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(211, 69);
+            this.button6.TabIndex = 18;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button4
             // 
@@ -244,68 +259,53 @@ namespace Pantallas_proyecto
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button6
+            // empleadosToolStripMenuItem
             // 
-            this.button6.BackColor = System.Drawing.Color.Maroon;
-            this.button6.BackgroundImage = global::Pantallas_proyecto.Properties.Resources.botonclientes2;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button6.Location = new System.Drawing.Point(109, 356);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(211, 69);
-            this.button6.TabIndex = 18;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.empleadosToolStripMenuItem.Image = global::Pantallas_proyecto.Properties.Resources.carnet_de_identidad;
+            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.empleadosToolStripMenuItem.Text = "Empleados";
+            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
-            // toolStrip1
+            // usuariosToolStripMenuItem
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStripLabel2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 445);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(704, 25);
-            this.toolStrip1.TabIndex = 75;
-            this.toolStrip1.Text = "toolStrip1";
+            this.usuariosToolStripMenuItem.Image = global::Pantallas_proyecto.Properties.Resources.cliente;
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
-            // toolStripLabel1
+            // proveedoresToolStripMenuItem
             // 
-            this.toolStripLabel1.ForeColor = System.Drawing.Color.Black;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
-            this.toolStripLabel1.Text = "toolStripLabel1";
+            this.proveedoresToolStripMenuItem.Image = global::Pantallas_proyecto.Properties.Resources.camion_de_reparto;
+            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.proveedoresToolStripMenuItem.Text = "Proveedores";
+            this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
-            // toolStripLabel2
+            // métodoDePagoToolStripMenuItem
             // 
-            this.toolStripLabel2.ForeColor = System.Drawing.Color.Black;
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(86, 22);
-            this.toolStripLabel2.Text = "toolStripLabel2";
+            this.métodoDePagoToolStripMenuItem.Image = global::Pantallas_proyecto.Properties.Resources.tarjeta_de_debito;
+            this.métodoDePagoToolStripMenuItem.Name = "métodoDePagoToolStripMenuItem";
+            this.métodoDePagoToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.métodoDePagoToolStripMenuItem.Text = "Métodos de Pago";
+            this.métodoDePagoToolStripMenuItem.Click += new System.EventHandler(this.métodoDePagoToolStripMenuItem_Click);
             // 
-            // timer1
+            // clientesToolStripMenuItem
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.clientesToolStripMenuItem.Image = global::Pantallas_proyecto.Properties.Resources.libro_de_contactos;
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.clientesToolStripMenuItem.Text = "Puestos de Trabajo";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
-            // btnCategorias
+            // acercaDeToolStripMenuItem
             // 
-            this.btnCategorias.BackColor = System.Drawing.Color.Maroon;
-            this.btnCategorias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCategorias.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategorias.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCategorias.Location = new System.Drawing.Point(381, 356);
-            this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Size = new System.Drawing.Size(211, 69);
-            this.btnCategorias.TabIndex = 76;
-            this.btnCategorias.Text = "Categorías";
-            this.btnCategorias.UseVisualStyleBackColor = false;
-            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
+            this.acercaDeToolStripMenuItem.Image = global::Pantallas_proyecto.Properties.Resources.informacion;
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.acercaDeToolStripMenuItem.Text = "Acerca de";
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // FrmMenuCRUD
             // 
