@@ -229,6 +229,7 @@ namespace Pantallas_proyecto
                 
                     try
                     {
+                    conect.abrir();
                         codigo = Convert.ToInt32(dgvProovedores[0, indice].Value);
 
 
@@ -247,6 +248,7 @@ namespace Pantallas_proyecto
                         txtTelefono.Clear();
                         txtDescripcion.Clear();
                         txtNombreProovedor.Focus();
+                    conect.cerrar();
 
                     }
                     catch (Exception ex)
