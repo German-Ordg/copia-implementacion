@@ -65,13 +65,14 @@ namespace Pantallas_proyecto
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            tslFecha.Text = DateTime.Now.ToLongDateString();
-            tslHora.Text = DateTime.Now.ToLongTimeString();
+            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
+            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void FrmCategorias_Load(object sender, EventArgs e)
         {
             MostrarDatos();
+            timer1.Enabled = true;
         }
 
         validaciones validacion = new validaciones();
@@ -211,5 +212,12 @@ namespace Pantallas_proyecto
         {
 
         }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            toolStripLabel1.Text = DateTime.Now.ToLongDateString();
+            toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
+        }
+    
     }
 }

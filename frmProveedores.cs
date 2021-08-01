@@ -112,6 +112,7 @@ namespace Pantallas_proyecto
                 {
                     try
                     {
+                        conect.abrir();
                         if (txtNombreProovedor.Text == "" || txtTelefono.Text == "" || txtDescripcion.Text == "")
                         {
 
@@ -137,6 +138,7 @@ namespace Pantallas_proyecto
                         txtTelefono.Clear();
                         txtDescripcion.Clear();
                     }
+                    conect.cerrar();
                 }
                 else
                     MessageBox.Show("Esta ingresando un nombre o telefono que ya fue registrado", "Aviso", MessageBoxButtons.OK);
@@ -227,6 +229,7 @@ namespace Pantallas_proyecto
             if (letra && letra2 && letra3)
             {
                 
+ 
                     try
                     {
                     conect.abrir();
@@ -255,7 +258,7 @@ namespace Pantallas_proyecto
                     {
                         MessageBox.Show("El registro no pudo ser actualizado" + ex, "INFO", MessageBoxButtons.OK);
                     }
-                }
+            }
 
         }
 

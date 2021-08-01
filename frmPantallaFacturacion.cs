@@ -765,6 +765,11 @@ namespace Pantallas_proyecto
             //val.Only_numbers();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
