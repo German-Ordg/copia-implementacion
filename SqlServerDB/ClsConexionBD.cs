@@ -117,7 +117,7 @@ namespace Pantallas_proyecto
         {
             try
             {
-                da = new SqlDataAdapter("Select * From Empleados", conexion);
+                da = new SqlDataAdapter("Select * From vista_empleados", conexion);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
