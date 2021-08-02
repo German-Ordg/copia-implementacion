@@ -884,7 +884,6 @@
                         </Border>
                       </Style>
                     </Rectangle>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -927,6 +926,7 @@
                 <Style>
                   <FontWeight>Heavy</FontWeight>
                   <Format>#,0.00;(#,0.00)</Format>
+                  <TextDecoration>Underline</TextDecoration>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -959,6 +959,7 @@
                 <Value>Total:</Value>
                 <Style>
                   <FontWeight>Heavy</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
                 </Style>
               </TextRun>
             </TextRuns>
