@@ -240,7 +240,7 @@ namespace Pantallas_proyecto
             try
             {
 
-                da = new SqlDataAdapter("SELECT * FROM Proveedores", conexion);
+                da = new SqlDataAdapter("SELECT * FROM VistaProveedores", conexion);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
