@@ -98,7 +98,7 @@ namespace Pantallas_proyecto
         {
             try
             {
-                da = new SqlDataAdapter("select * from Usuarios", conexion);
+                da = new SqlDataAdapter("select * from VistaUsuarios", conexion);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
@@ -209,7 +209,7 @@ namespace Pantallas_proyecto
         {
             try
             {
-                da = new SqlDataAdapter("SELECT * FROM Metodo_Pago", conexion);
+                da = new SqlDataAdapter("SELECT * FROM VistaMetodoPago", conexion);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
