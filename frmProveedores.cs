@@ -229,11 +229,14 @@ namespace Pantallas_proyecto
 
             if (letra && letra2 && letra3)
             {
-                
-               
+
+                SqlCommand comando = new SqlCommand("select nombre_proveedor from Proveedores where nombre_proveedor ='"+txtNombreProovedor.Text+"'", conect.conexion);
+                SqlDataReader registro = comando.ExecuteReader();
+                if (registro.Read())
+                {
                     try
                     {
-                    conect.abrir();
+                        conect.abrir();
                         codigo = Convert.ToInt32(dgvProovedores[0, indice].Value);
 
 
@@ -252,13 +255,16 @@ namespace Pantallas_proyecto
                         txtTelefono.Clear();
                         txtDescripcion.Clear();
                         txtNombreProovedor.Focus();
-                    conect.cerrar();
+                        conect.cerrar();
 
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("El registro no pudo ser actualizado" + ex, "INFO", MessageBoxButtons.OK);
+                        MessageBox.Show("El registro no pudo ser actualizado" , "INFO", MessageBoxButtons.OK);
                     }
+                }else
+                    MessageBox.Show("El proveedor no existe, debe agregarlo antes de modificar" , "INFO", MessageBoxButtons.OK);
+
             }
 
         }
