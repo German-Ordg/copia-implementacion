@@ -141,5 +141,12 @@ namespace Pantallas_proyecto
             categorias.Show();
             this.Hide();
         }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCategorias categorias = new FrmCategorias();
+            categorias.Show();
+            this.Hide();
+        }
     }
 }
