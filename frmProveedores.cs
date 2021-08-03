@@ -64,13 +64,11 @@ namespace Pantallas_proyecto
             {
                 letra = true;
             }
-            if (validacion.Espacio_Blanco(ErrorProvider, txtDescripcion) || validacion.Solo_Letras(ErrorProvider, txtDescripcion))
+            if (validacion.Espacio_Blanco(ErrorProvider, txtDescripcion) )
             {
                 if (validacion.Espacio_Blanco(ErrorProvider, txtDescripcion))
                     ErrorProvider.SetError(txtDescripcion, "no se puede dejar en blanco");
-                else
-                    if (validacion.Solo_Letras(ErrorProvider, txtDescripcion))
-                    ErrorProvider.SetError(txtDescripcion, "solo se permite letras");
+                
             }
             else
             {
@@ -87,6 +85,11 @@ namespace Pantallas_proyecto
             else
             {
                 letra3 = true;
+            }
+            if (txtTelefono.Text.Length < 8 || txtTelefono.Text.Length > 8)
+            {
+                ErrorProvider.SetError(txtTelefono, "Numero invalido");
+                letra3 = false;
             }
             if (letra && letra2 && letra3)
             {
@@ -202,13 +205,11 @@ namespace Pantallas_proyecto
             {
                 letra = true;
             }
-            if (validacion.Espacio_Blanco(ErrorProvider, txtDescripcion) || validacion.Solo_Letras(ErrorProvider, txtDescripcion))
+            if (validacion.Espacio_Blanco(ErrorProvider, txtDescripcion) )
             {
                 if (validacion.Espacio_Blanco(ErrorProvider, txtDescripcion))
                     ErrorProvider.SetError(txtDescripcion, "no se puede dejar en blanco");
-                else
-                    if (validacion.Solo_Letras(ErrorProvider, txtDescripcion))
-                    ErrorProvider.SetError(txtDescripcion, "solo se permite letras");
+                
             }
             else
             {
@@ -227,13 +228,14 @@ namespace Pantallas_proyecto
                 letra3 = true;
             }
 
+            if (txtTelefono.Text.Length<8 || txtTelefono.Text.Length > 8) {
+                ErrorProvider.SetError(txtTelefono, "Numero invalido");
+                letra3 = false;
+            }
             if (letra && letra2 && letra3)
             {
 
-                SqlCommand comando = new SqlCommand("select nombre_proveedor from Proveedores where nombre_proveedor ='"+txtNombreProovedor.Text+"'", conect.conexion);
-                SqlDataReader registro = comando.ExecuteReader();
-                if (registro.Read())
-                {
+                
                     try
                     {
                         conect.abrir();
@@ -247,7 +249,7 @@ namespace Pantallas_proyecto
 
                         cmd = new SqlCommand("UPDATE Proveedores SET nombre_proveedor = '" + txtNombreProovedor.Text + "',  numero_contacto = '" + txtTelefono.Text + "', direccion_proveedor = '" + txtDescripcion.Text + "'  where codigo_proveedor = " + codigo, conect.conexion);
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("El registro fue actualizado exitosamente");
+                        MessageBox.Show("El registro fue actualizado exitosamente","Informacion",MessageBoxButtons.OK, MessageBoxIcon.Information);
                         conect.cargarProveedores(dgvProovedores);
 
 
@@ -260,10 +262,9 @@ namespace Pantallas_proyecto
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("El registro no pudo ser actualizado" , "INFO", MessageBoxButtons.OK);
+                        MessageBox.Show("El registro no pudo ser actualizado" , "INFO", MessageBoxButtons.OK,MessageBoxIcon.Error);
                     }
-                }else
-                    MessageBox.Show("El proveedor no existe, debe agregarlo antes de modificar" , "INFO", MessageBoxButtons.OK);
+                
 
             }
 
