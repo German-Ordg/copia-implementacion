@@ -120,7 +120,7 @@ namespace Pantallas_proyecto
 
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Versión de programa en proceso de Desarrollo.", "Acerca de", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Versión de programa Final.", "Acerca de", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void contactosToolStripMenuItem_Click(object sender, EventArgs e)
