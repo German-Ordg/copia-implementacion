@@ -156,6 +156,7 @@ namespace Pantallas_proyecto
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(158, 138);
+            this.txtTelefono.MaxLength = 8;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(289, 20);
             this.txtTelefono.TabIndex = 55;

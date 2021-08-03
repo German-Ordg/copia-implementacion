@@ -126,6 +126,9 @@ namespace Pantallas_proyecto
                             MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             conect.cargarProveedores(dgvProovedores);
                             dgvProovedores.ForeColor = Color.Black;
+                            txtDescripcion.Text = "";
+                            txtNombreProovedor.Text = "";
+                            txtTelefono.Text = "";
                         }
                     }
                     catch (Exception ex)
@@ -143,9 +146,7 @@ namespace Pantallas_proyecto
                 else
                     MessageBox.Show("Esta ingresando un nombre o telefono que ya fue registrado", "Aviso", MessageBoxButtons.OK);
             }
-            txtDescripcion.Text = "";
-            txtNombreProovedor.Text = "";
-            txtTelefono.Text = "";
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -229,7 +230,7 @@ namespace Pantallas_proyecto
             if (letra && letra2 && letra3)
             {
                 
- 
+               
                     try
                     {
                     conect.abrir();
