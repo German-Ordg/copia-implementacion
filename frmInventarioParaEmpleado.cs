@@ -51,10 +51,11 @@ namespace Pantallas_proyecto
 
         private void frmInventarioParaEmpleado_Load(object sender, EventArgs e)
         {
-            comboBox2.Enabled = false;
-            textBox2.Enabled = false;
-           
-           
+            cmbcategoria.Enabled = false;
+            txtdescripcion.Enabled = false;
+            conect.abrir();
+            conect.CargaDeCategoria(cmbcategoria);
+            conect.cerrar();
             timer1.Enabled = true;
         }
 
@@ -79,7 +80,17 @@ namespace Pantallas_proyecto
             {
                 conect.cerrar();
                 conect.abrir();
-                cmd = new SqlCommand("Update Productos set codigo_categoria = '"+comboBox2.Text+"', descripcion_producto = '" + textBox2.Text + "'Where codigo_producto = "+ textBox1.Text, conect.conexion);
+                string codigoCategoria="";
+                SqlCommand comando = new SqlCommand("Select codigo_categoria from Categoria_Producto where descripcion_categoria='"+cmbcategoria.Text +"'",conect.conexion);
+                SqlDataReader registro = comando.ExecuteReader();
+                while (registro.Read())
+                {
+                    codigoCategoria = registro["codigo_categoria"].ToString();
+                }
+                conect.cerrar();
+                conect.abrir();
+                
+                cmd = new SqlCommand("Update Productos set codigo_categoria = '"+ codigoCategoria + "', descripcion_producto = '" + txtdescripcion.Text + "'Where codigo_producto = "+ txtcodigo.Text, conect.conexion);
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Se Ha actualizado Correctamente");
@@ -99,13 +110,13 @@ namespace Pantallas_proyecto
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (validacion.Espacio_Blanco(ErrorProvider, textBox1) || validacion.Solo_Numeros(ErrorProvider, textBox1))
+            if (validacion.Espacio_Blanco(ErrorProvider, txtcodigo) || validacion.Solo_Numeros(ErrorProvider, txtcodigo))
             {
-                if (validacion.Espacio_Blanco(ErrorProvider, textBox1))
-                    ErrorProvider.SetError(textBox1, "no se puede dejar en blanco");
+                if (validacion.Espacio_Blanco(ErrorProvider, txtcodigo))
+                    ErrorProvider.SetError(txtcodigo, "no se puede dejar en blanco");
                 else
-                if (validacion.Solo_Letras(ErrorProvider, textBox1))
-                    ErrorProvider.SetError(textBox1, "Solo se permite numeros");
+                if (validacion.Solo_Letras(ErrorProvider, txtcodigo))
+                    ErrorProvider.SetError(txtcodigo, "Solo se permite numeros");
             }
             else
             {
@@ -115,16 +126,16 @@ namespace Pantallas_proyecto
             {
 
                 conect.abrir();
-                cmd = new SqlCommand("select * from Productos where codigo_producto = @codigo_producto ", conect.conexion);
-                cmd.Parameters.AddWithValue("@codigo_producto", textBox1.Text);
+                cmd = new SqlCommand("select * from VistaProductoCatego where codigo_producto = @codigo_producto ", conect.conexion);
+                cmd.Parameters.AddWithValue("@codigo_producto", txtcodigo.Text);
                 SqlDataReader Productos = cmd.ExecuteReader();
                 if (Productos.Read())
                 {
-                    textBox1.Enabled = false;
-                    textBox2.Enabled = true;
-                    comboBox2.Enabled = true;
-                    comboBox2.Text = Productos["codigo_categoria"].ToString();
-                    textBox2.Text = Productos["descripcion_producto"].ToString();
+                    txtcodigo.Enabled = false;
+                    txtdescripcion.Enabled = true;
+                    cmbcategoria.Enabled = true;
+                    cmbcategoria.Text = Productos["descripcion_categoria"].ToString();
+                    txtdescripcion.Text = Productos["descripcion_producto"].ToString();
                 }
                 else
                 {
@@ -134,6 +145,11 @@ namespace Pantallas_proyecto
                 conect.cerrar();
 
             }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

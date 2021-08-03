@@ -301,6 +301,21 @@ namespace Pantallas_proyecto
         {
 
         }
+
+        private void comboPago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void codigoCompra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboProveedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

@@ -147,6 +147,7 @@ namespace Pantallas_proyecto
             this.comboPago.Name = "comboPago";
             this.comboPago.Size = new System.Drawing.Size(159, 21);
             this.comboPago.TabIndex = 153;
+            this.comboPago.SelectedIndexChanged += new System.EventHandler(this.comboPago_SelectedIndexChanged);
             // 
             // comboProveedor
             // 
@@ -156,6 +157,7 @@ namespace Pantallas_proyecto
             this.comboProveedor.Name = "comboProveedor";
             this.comboProveedor.Size = new System.Drawing.Size(159, 21);
             this.comboProveedor.TabIndex = 152;
+            this.comboProveedor.SelectedIndexChanged += new System.EventHandler(this.comboProveedor_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -181,6 +183,7 @@ namespace Pantallas_proyecto
             this.codigoCompra.Name = "codigoCompra";
             this.codigoCompra.Size = new System.Drawing.Size(159, 20);
             this.codigoCompra.TabIndex = 88;
+            this.codigoCompra.TextChanged += new System.EventHandler(this.codigoCompra_TextChanged);
             this.codigoCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.codigoCompra_KeyPress);
             // 
             // label12

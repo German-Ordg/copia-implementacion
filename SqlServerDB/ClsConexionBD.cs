@@ -52,6 +52,24 @@ namespace Pantallas_proyecto
                                 MessageBoxButtons.OK);
             }
         }
+        public void CargaDeCategoria(ComboBox cmb)
+        {
+            try
+            {
+                SqlCommand comando = new SqlCommand("select descripcion_categoria from Categoria_Producto", conexion);
+                SqlDataReader registro = comando.ExecuteReader();
+                while (registro.Read())
+                {
+                    cmb.Items.Add(registro["descripcion_categoria"].ToString());
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos!", "ERROR",
+                                MessageBoxButtons.OK);
+            }
+        }
 
         public string correo()
         {

@@ -32,19 +32,19 @@ namespace Pantallas_proyecto
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventarioParaEmpleado));
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnregresar = new System.Windows.Forms.Button();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cmbcategoria = new System.Windows.Forms.ComboBox();
+            this.btnaceptar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             label2 = new System.Windows.Forms.Label();
@@ -62,27 +62,27 @@ namespace Pantallas_proyecto
             label2.TabIndex = 33;
             label2.Text = "Categoría:";
             // 
-            // button7
+            // btnregresar
             // 
-            this.button7.BackColor = System.Drawing.Color.Maroon;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(550, 33);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(112, 26);
-            this.button7.TabIndex = 31;
-            this.button7.Text = "Regresar";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnregresar.BackColor = System.Drawing.Color.Maroon;
+            this.btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnregresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnregresar.ForeColor = System.Drawing.Color.White;
+            this.btnregresar.Location = new System.Drawing.Point(550, 33);
+            this.btnregresar.Name = "btnregresar";
+            this.btnregresar.Size = new System.Drawing.Size(112, 26);
+            this.btnregresar.TabIndex = 31;
+            this.btnregresar.Text = "Regresar";
+            this.btnregresar.UseVisualStyleBackColor = false;
+            this.btnregresar.Click += new System.EventHandler(this.button7_Click);
             // 
-            // textBox1
+            // txtcodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(178, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 20);
-            this.textBox1.TabIndex = 37;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtcodigo.Location = new System.Drawing.Point(178, 75);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(159, 20);
+            this.txtcodigo.TabIndex = 37;
+            this.txtcodigo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -104,33 +104,29 @@ namespace Pantallas_proyecto
             this.label1.TabIndex = 32;
             this.label1.Text = "Código:";
             // 
-            // comboBox2
+            // cmbcategoria
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.comboBox2.Location = new System.Drawing.Point(178, 121);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(159, 21);
-            this.comboBox2.TabIndex = 42;
+            this.cmbcategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbcategoria.FormattingEnabled = true;
+            this.cmbcategoria.Location = new System.Drawing.Point(178, 121);
+            this.cmbcategoria.Name = "cmbcategoria";
+            this.cmbcategoria.Size = new System.Drawing.Size(159, 21);
+            this.cmbcategoria.TabIndex = 42;
+            this.cmbcategoria.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // button2
+            // btnaceptar
             // 
-            this.button2.BackColor = System.Drawing.Color.Maroon;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(550, 366);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 26);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "Aceptar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnaceptar.BackColor = System.Drawing.Color.Maroon;
+            this.btnaceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnaceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaceptar.ForeColor = System.Drawing.Color.White;
+            this.btnaceptar.Location = new System.Drawing.Point(550, 366);
+            this.btnaceptar.Name = "btnaceptar";
+            this.btnaceptar.Size = new System.Drawing.Size(112, 26);
+            this.btnaceptar.TabIndex = 44;
+            this.btnaceptar.Text = "Aceptar";
+            this.btnaceptar.UseVisualStyleBackColor = false;
+            this.btnaceptar.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
             // 
@@ -179,13 +175,13 @@ namespace Pantallas_proyecto
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // textBox2
+            // txtdescripcion
             // 
-            this.textBox2.Location = new System.Drawing.Point(178, 171);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(484, 158);
-            this.textBox2.TabIndex = 60;
+            this.txtdescripcion.Location = new System.Drawing.Point(178, 171);
+            this.txtdescripcion.Multiline = true;
+            this.txtdescripcion.Name = "txtdescripcion";
+            this.txtdescripcion.Size = new System.Drawing.Size(484, 158);
+            this.txtdescripcion.TabIndex = 60;
             // 
             // btnBuscar
             // 
@@ -212,16 +208,16 @@ namespace Pantallas_proyecto
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(684, 432);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtdescripcion);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnaceptar);
+            this.Controls.Add(this.cmbcategoria);
+            this.Controls.Add(this.txtcodigo);
             this.Controls.Add(this.label3);
             this.Controls.Add(label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnregresar);
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -241,18 +237,18 @@ namespace Pantallas_proyecto
 
         #endregion
 
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnregresar;
+        private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cmbcategoria;
+        private System.Windows.Forms.Button btnaceptar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtdescripcion;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.ErrorProvider ErrorProvider;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
