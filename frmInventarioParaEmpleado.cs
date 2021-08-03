@@ -85,9 +85,7 @@ namespace Pantallas_proyecto
                 MessageBox.Show("Se Ha actualizado Correctamente");
                 conect.cerrar();
 
-                FrmInventario_Gerente fact = new FrmInventario_Gerente();
-                fact.Show();
-                this.Hide();
+                this.Close();
 
 
 

@@ -86,6 +86,7 @@ namespace Pantallas_proyecto
             this.dgvProveedores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProveedores.Location = new System.Drawing.Point(3, 16);
             this.dgvProveedores.Name = "dgvProveedores";
+            this.dgvProveedores.ReadOnly = true;
             this.dgvProveedores.RowHeadersWidth = 51;
             this.dgvProveedores.Size = new System.Drawing.Size(304, 149);
             this.dgvProveedores.TabIndex = 109;
