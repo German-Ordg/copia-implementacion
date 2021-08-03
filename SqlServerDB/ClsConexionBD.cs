@@ -70,6 +70,24 @@ namespace Pantallas_proyecto
                                 MessageBoxButtons.OK);
             }
         }
+        public void CargaDePuestos(ComboBox cmb)
+        {
+            try
+            {
+                SqlCommand comando = new SqlCommand("select descripcion_puesto from Empleados_Puestos", conexion);
+                SqlDataReader registro = comando.ExecuteReader();
+                while (registro.Read())
+                {
+                    cmb.Items.Add(registro["descripcion_puesto"].ToString());
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos!", "ERROR",
+                                MessageBoxButtons.OK);
+            }
+        }
 
         public string correo()
         {

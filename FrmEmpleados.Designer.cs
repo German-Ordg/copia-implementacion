@@ -36,7 +36,6 @@ namespace Pantallas_proyecto
             this.label4 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtIdentidad = new System.Windows.Forms.TextBox();
-            this.txtPuesto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@ namespace Pantallas_proyecto
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.ErrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cmbPuesto = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider1)).BeginInit();
@@ -111,13 +111,6 @@ namespace Pantallas_proyecto
             this.txtIdentidad.Name = "txtIdentidad";
             this.txtIdentidad.Size = new System.Drawing.Size(157, 20);
             this.txtIdentidad.TabIndex = 5;
-            // 
-            // txtPuesto
-            // 
-            this.txtPuesto.Location = new System.Drawing.Point(120, 228);
-            this.txtPuesto.Name = "txtPuesto";
-            this.txtPuesto.Size = new System.Drawing.Size(157, 20);
-            this.txtPuesto.TabIndex = 6;
             // 
             // label5
             // 
@@ -319,7 +312,7 @@ namespace Pantallas_proyecto
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.toolStripLabel2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 533);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 545);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(770, 25);
             this.toolStrip1.TabIndex = 39;
@@ -341,12 +334,22 @@ namespace Pantallas_proyecto
             // 
             this.ErrorProvider1.ContainerControl = this;
             // 
+            // cmbPuesto
+            // 
+            this.cmbPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPuesto.FormattingEnabled = true;
+            this.cmbPuesto.Location = new System.Drawing.Point(120, 250);
+            this.cmbPuesto.Name = "cmbPuesto";
+            this.cmbPuesto.Size = new System.Drawing.Size(157, 21);
+            this.cmbPuesto.TabIndex = 40;
+            // 
             // FrmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(770, 558);
+            this.ClientSize = new System.Drawing.Size(770, 570);
+            this.Controls.Add(this.cmbPuesto);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.cmbGenero);
             this.Controls.Add(this.label11);
@@ -365,7 +368,6 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtPuesto);
             this.Controls.Add(this.txtIdentidad);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label4);
@@ -373,8 +375,8 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(786, 604);
-            this.MinimumSize = new System.Drawing.Size(786, 596);
+            this.MaximumSize = new System.Drawing.Size(786, 609);
+            this.MinimumSize = new System.Drawing.Size(786, 609);
             this.Name = "FrmEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Empleados";
@@ -394,7 +396,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtIdentidad;
-        private System.Windows.Forms.TextBox txtPuesto;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -417,5 +418,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ErrorProvider ErrorProvider1;
+        private System.Windows.Forms.ComboBox cmbPuesto;
     }
 }
