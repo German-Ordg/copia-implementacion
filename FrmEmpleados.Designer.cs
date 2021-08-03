@@ -338,7 +338,7 @@ namespace Pantallas_proyecto
             // 
             this.cmbPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPuesto.FormattingEnabled = true;
-            this.cmbPuesto.Location = new System.Drawing.Point(120, 250);
+            this.cmbPuesto.Location = new System.Drawing.Point(120, 227);
             this.cmbPuesto.Name = "cmbPuesto";
             this.cmbPuesto.Size = new System.Drawing.Size(157, 21);
             this.cmbPuesto.TabIndex = 40;
