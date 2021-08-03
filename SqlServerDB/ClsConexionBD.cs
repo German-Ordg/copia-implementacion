@@ -224,7 +224,7 @@ namespace Pantallas_proyecto
         {
             try
             {
-                da = new SqlDataAdapter("Select * From Productos", conexion);
+                da = new SqlDataAdapter("Select * From VistaProductos", conexion);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
