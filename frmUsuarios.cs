@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
 using System.Xml.Schema;
+using System.Text.RegularExpressions;
 
 namespace Pantallas_proyecto
 {
@@ -27,6 +28,7 @@ namespace Pantallas_proyecto
         private bool letra3 = false;
         private bool letra4 = false;
         private bool letra5 = false;
+        private bool letra6 = false;
 
         private const int CP_NOCLOSE_BUTTON = 0x200;
         protected override CreateParams CreateParams
@@ -49,7 +51,26 @@ namespace Pantallas_proyecto
             this.Hide();
         }
 
-
+        private Boolean email_bien_escrito(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void button2_Click_1(object sender, EventArgs e)
         {
             conect.abrir();
@@ -59,6 +80,7 @@ namespace Pantallas_proyecto
             letra3 = false;
             letra4 = false;
             letra5 = false;
+            letra6 = false;
 
             if (validacion.Espacio_Blanco(errorProvider1, txtcodemp) || validacion.Solo_Numeros(errorProvider1, txtcodemp))
             {
@@ -109,8 +131,18 @@ namespace Pantallas_proyecto
                 letra5 = true;
             }
 
+            if (email_bien_escrito(txtcorreo.Text))
+            {
+                letra6 = true;
+                
+            }
+            else
+            {
+                errorProvider2.SetError(txtcorreo, "Direccion de Correo invalida");
+            }
 
-            if (letra && letra2 && letra3 && letra4 && letra5)
+
+            if (letra && letra2 && letra3 && letra4 && letra5 && letra6)
             {
 
 
@@ -167,6 +199,7 @@ namespace Pantallas_proyecto
             letra3 = false;
             letra4 = false;
             letra5 = true;
+            letra6 = false;
 
             if (validacion.Espacio_Blanco(errorProvider1, txtcodemp) || validacion.Solo_Numeros(errorProvider1, txtcodemp))
             {
@@ -215,10 +248,19 @@ namespace Pantallas_proyecto
             {
                 letra5 = true;
             }
-           
+
+            if (email_bien_escrito(txtcorreo.Text))
+            {
+                letra6 = true;
+
+            }
+            else
+            {
+                errorProvider2.SetError(txtcorreo, "Direccion de Correo invalida");
+            }
 
 
-            if (letra && letra2 && letra3 && letra4)
+            if (letra && letra2 && letra3 && letra4 && letra6)
             {
 
                 try
