@@ -6,14 +6,23 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+using Pantallas_proyecto.Properties;
+using System.Configuration;
 
 namespace Pantallas_proyecto
 {
     public class ClsConexionBD
     {
+
+        public static string ObtenerString() {
+
+            return Settings.Default.db_a75e9e_bderickmoncadaConnectionString;
+        }
+
+
         SqlDataAdapter da;
         DataTable dt;
-        public SqlConnection conexion = new SqlConnection("Data Source = SQL5053.site4now.net; Initial Catalog = db_a75e9e_bderickmoncada; User Id = db_a75e9e_bderickmoncada_admin; Password = grp5admin");
+        public SqlConnection conexion = new SqlConnection(ObtenerString());
         public void abrir()
         {
             try
@@ -29,9 +38,10 @@ namespace Pantallas_proyecto
         {
             conexion.Close();
         }
+
         protected SqlConnection GetSqlConnection()
         {
-            return new SqlConnection("Data Source = SQL5053.site4now.net; Initial Catalog = db_a75e9e_bderickmoncada; User Id = db_a75e9e_bderickmoncada_admin; Password = grp5admin");
+            return new SqlConnection(ObtenerString());
         }
 
         public void CargaDeUsuarios(ComboBox cmb)
