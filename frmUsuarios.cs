@@ -73,7 +73,7 @@ namespace Pantallas_proyecto
         }
         private void button2_Click_1(object sender, EventArgs e)
         {
-            conect.abrir();
+            errorProvider2.Clear();
 
             letra = false;
             letra2 = false;
@@ -140,7 +140,42 @@ namespace Pantallas_proyecto
             {
                 errorProvider2.SetError(txtcorreo, "Direccion de Correo invalida");
             }
+            conect.abrir();
+            SqlCommand comando3 = new SqlCommand("select nombre_usuario from Usuarios where  nombre_usuario= '" + txtusuario.Text + "'", conect.conexion);
+            SqlDataReader registro3 = comando3.ExecuteReader();
+            if (registro3.Read())
+            {
+                letra6 = false;
+                errorProvider2.SetError(txtusuario, "Nombre de Usuario no disponible");
+                
+            }
+            conect.cerrar();
 
+            conect.abrir();
+            SqlCommand comando2 = new SqlCommand("select codigo_empleado from Usuarios where  codigo_empleado= '" + txtcodemp.Text + "'", conect.conexion);
+            SqlDataReader registro2 = comando2.ExecuteReader();
+            if (registro2.Read())
+            {
+                letra6 = false;
+                errorProvider2.SetError(txtcodemp, "Codigo ya Registrado");
+                conect.cerrar();
+            }
+            else {
+                conect.cerrar();
+                conect.abrir();
+                SqlCommand comando1 = new SqlCommand("select correo_electronico from Usuarios where  correo_electronico= '" + txtcorreo.Text + "'", conect.conexion);
+                SqlDataReader registro = comando1.ExecuteReader();
+                if (registro.Read())
+                {
+                    letra6 = false;
+                    errorProvider2.SetError(txtcorreo, "Correo ya Registrado");
+                    conect.cerrar();
+                }
+
+                conect.cerrar();
+            }
+            
+            
 
             if (letra && letra2 && letra3 && letra4 && letra5 && letra6)
             {
@@ -149,15 +184,8 @@ namespace Pantallas_proyecto
 
                 try
                 {
-                    if (txtcodemp.Text == "" || txtusuario.Text == "" || txtcorreo.Text == "" || txtcontra.Text == "" || cmbtipousr.Text == "")
-                    {
-                        MessageBox.Show("No puede ingresar datos en blanco", "Información", MessageBoxButtons.OK,
-                                         MessageBoxIcon.Information);
-
-                    }
-                    else
-                    {
-
+                    conect.cerrar();
+                    conect.abrir();
                         //-------------------------------encriptar contraseña
                         string contra;
 
@@ -176,7 +204,7 @@ namespace Pantallas_proyecto
                         txtcontra.Text = " ";
                         cmbtipousr.Text = " ";
 
-                    }
+                    
                     conect.cerrar();
                 }
                 catch (Exception ex)
