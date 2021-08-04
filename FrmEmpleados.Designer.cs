@@ -108,6 +108,7 @@ namespace Pantallas_proyecto
             // txtIdentidad
             // 
             this.txtIdentidad.Location = new System.Drawing.Point(120, 174);
+            this.txtIdentidad.MaxLength = 13;
             this.txtIdentidad.Name = "txtIdentidad";
             this.txtIdentidad.Size = new System.Drawing.Size(157, 20);
             this.txtIdentidad.TabIndex = 5;
@@ -257,6 +258,7 @@ namespace Pantallas_proyecto
             // txtNumeroTel
             // 
             this.txtNumeroTel.Location = new System.Drawing.Point(120, 277);
+            this.txtNumeroTel.MaxLength = 8;
             this.txtNumeroTel.Name = "txtNumeroTel";
             this.txtNumeroTel.Size = new System.Drawing.Size(157, 20);
             this.txtNumeroTel.TabIndex = 35;
