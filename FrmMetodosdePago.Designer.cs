@@ -69,6 +69,7 @@ namespace Pantallas_proyecto
             // 
             // dgvMetodosPago
             // 
+            this.dgvMetodosPago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMetodosPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMetodosPago.Location = new System.Drawing.Point(16, 193);
             this.dgvMetodosPago.Name = "dgvMetodosPago";
