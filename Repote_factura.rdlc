@@ -676,7 +676,7 @@
               <Top>1.655in</Top>
               <Left>1.53277in</Left>
               <Height>0.25in</Height>
-              <Width>1in</Width>
+              <Width>1.275in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -705,7 +705,7 @@
               <Top>1.26333in</Top>
               <Left>1.67166in</Left>
               <Height>0.25in</Height>
-              <Width>1in</Width>
+              <Width>2.46667in</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -1013,7 +1013,7 @@
               <Top>2.02167in</Top>
               <Left>2.355in</Left>
               <Height>0.625in</Height>
-              <Width>1.83333in</Width>
+              <Width>1.975in</Width>
               <ZIndex>12</ZIndex>
               <Style>
                 <Border>
@@ -1043,7 +1043,7 @@
               <Top>0.88in</Top>
               <Left>5.305in</Left>
               <Height>0.25in</Height>
-              <Width>1in</Width>
+              <Width>1.18333in</Width>
               <ZIndex>13</ZIndex>
               <Style>
                 <Border>
@@ -1073,7 +1073,7 @@
               <Top>1.255in</Top>
               <Left>5.34111in</Left>
               <Height>0.25in</Height>
-              <Width>1in</Width>
+              <Width>1.14722in</Width>
               <ZIndex>14</ZIndex>
               <Style>
                 <Border>
