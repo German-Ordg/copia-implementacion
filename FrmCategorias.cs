@@ -19,6 +19,8 @@ namespace Pantallas_proyecto
             timer1.Enabled = true;
         }
 
+        bool letra = false;
+        bool letra2 = false;
         private const int CP_NOCLOSE_BUTTON = 0x200;
         protected override CreateParams CreateParams
         {
@@ -175,36 +177,85 @@ namespace Pantallas_proyecto
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            
-            try {
-                if (validacion.Espacio_Blanco(errorProvider1, txtCategoria) || validacion.Solo_Letras(errorProvider1, txtCategoria))
+            letra = false;
+            letra2 = false;
+            bool resp = false;
+
+            if (validacion.Espacio_Blanco(errorProvider1, txtCategoria) || validacion.Solo_Letras(errorProvider1, txtCategoria))
+            {
+
+                if (validacion.Espacio_Blanco(errorProvider1, txtCategoria))
                 {
-
-                    if (validacion.Espacio_Blanco(errorProvider1, txtCategoria))
-                    {
-                        errorProvider1.SetError(txtCategoria, "No se puede dejar en blanco las categorias");
-                    }
-                    else
-                    {
-                        if (validacion.Solo_Letras(errorProvider1, txtCategoria))
-                            errorProvider1.SetError(txtCategoria, "Solo es permitido ingresar letras");
-                    }
+                    errorProvider1.SetError(txtCategoria, "No se puede dejar en blanco las categorias");
                 }
-                else { 
-
-                string query = "Update Categoria_Producto set descripcion_categoria= '" + txtCategoria.Text + "' where Codigo_Categoria='" + Record_Id + "'";
-                connect.abrir();
-                SqlCommand comando = new SqlCommand(query, connect.conexion);
-                comando.ExecuteNonQuery();
-                connect.abrir();
-                MessageBox.Show("Se Modificó Correctamente");
-                Limpiar();
-                MostrarDatos();
-
+                else
+                {
+                    if (validacion.Solo_Letras(errorProvider1, txtCategoria))
+                        errorProvider1.SetError(txtCategoria, "Solo es permitido ingresar letras");
                 }
             }
-            catch (Exception ex){
-                MessageBox.Show(ex.Message);
+            else
+            {
+                letra = true;
+            }
+            if (validacion.Espacio_Blanco(errorProvider1, txtCodigo))
+            {
+
+                if (validacion.Espacio_Blanco(errorProvider1, txtCodigo))
+                {
+                    errorProvider1.SetError(txtCodigo, "Debe seleccionar el registro que desea cambiar");
+                }
+            }
+            else
+            {
+                letra2 = true;
+                int cont = 0;
+                
+                connect.abrir();
+                SqlCommand comando1 = new SqlCommand("select descripcion_categoria from Categoria_Producto", connect.conexion);
+
+                SqlDataReader reader = comando1.ExecuteReader();
+
+                List<string> resultado = new List<string>();
+                while (reader.Read())
+                {
+                    resultado.Add(Convert.ToString(reader["descripcion_categoria"]));
+                    cont++;
+                }
+
+                string[] arrayCate = resultado.ToArray();
+
+
+                connect.cerrar();
+                for (int i = 0; i < cont; i++)
+                {
+                    if (arrayCate[i] == txtCategoria.Text)
+                        resp = true;
+                }
+                if (resp != false)
+                {
+                    errorProvider1.SetError(txtCategoria, "No se puede ingresar la misma categoria");
+                }
+            }
+            if (letra && letra2 && resp==false)
+            {
+                try
+                {
+
+
+                    string query = "Update Categoria_Producto set descripcion_categoria= '" + txtCategoria.Text + "' where Codigo_Categoria='" + Record_Id + "'";
+                    connect.abrir();
+                    SqlCommand comando = new SqlCommand(query, connect.conexion);
+                    comando.ExecuteNonQuery();
+                    connect.abrir();
+                    MessageBox.Show("Se Modificó Correctamente");
+                    Limpiar();
+                    MostrarDatos();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
