@@ -196,7 +196,7 @@ namespace Pantallas_proyecto
             this.toolStripContainer1.ContentPanel.Controls.Add(this.BtnRegresar);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.DgvCategoria);
             this.toolStripContainer1.ContentPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(545, 472);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(545, 466);
             this.toolStripContainer1.ContentPanel.Load += new System.EventHandler(this.toolStripContainer1_ContentPanel_Load);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.LeftToolStripPanelVisible = false;

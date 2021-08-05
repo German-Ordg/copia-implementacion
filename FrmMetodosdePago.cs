@@ -146,13 +146,14 @@ namespace Pantallas_proyecto
                         {
                             codigo1 = Convert.ToInt32(dgvMetodosPago[0, poc].Value);
                             dgvMetodosPago[1, poc].Value = txtDescripcion.Text;
-
+                            conect.abrir();
                             cmd = new SqlCommand("UPDATE Metodo_Pago SET descripcion_pago = '" + txtDescripcion.Text + "' WHERE codigo_pago = " + codigo1, conect.conexion);
                             cmd.ExecuteNonQuery();
                             MessageBox.Show("El Registro fue actualizado exitosamente.", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             conect.cargarMetodosPago(dgvMetodosPago);
                             codigo1 = 0;
                             txtDescripcion.Clear();
+                            conect.cerrar();
                         }
                     }
                     catch (Exception ex)
