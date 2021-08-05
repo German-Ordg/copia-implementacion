@@ -351,6 +351,13 @@ namespace Pantallas_proyecto
                     txtPrecioUnitario.Text = lstCompras.Rows[a].Cells[3].Value.ToString();
                     txtDescuento.Text = lstCompras.Rows[a].Cells[4].Value.ToString();
                     lstCompras.Enabled = false;
+
+                    fac.CodigoProducto = Int32.Parse(lstCompras.Rows[a].Cells[0].Value.ToString());
+                    fac.CantidadProducto = Int32.Parse(lstCompras.Rows[a].Cells[1].Value.ToString());
+                    fac.DescripcionProducto = lstCompras.Rows[a].Cells[2].Value.ToString();
+                    fac.PrecioProducto = Double.Parse(lstCompras.Rows[a].Cells[3].Value.ToString());
+                    fac.DescuentoProducto = Double.Parse(lstCompras.Rows[a].Cells[4].Value.ToString());
+
                 }
                 else
                 {
@@ -366,15 +373,15 @@ namespace Pantallas_proyecto
             {
 
                 int n = lstCompras.CurrentRow.Index;
+                double total = Int32.Parse(nudCantidad.Value.ToString()) * fac.PrecioProducto;
 
                 lstCompras.Rows[n].Cells[0].Value = fac.CodigoProducto.ToString();
                 lstCompras.Rows[n].Cells[1].Value = nudCantidad.Value.ToString();
                 lstCompras.Rows[n].Cells[2].Value = fac.DescripcionProducto.ToString();
                 lstCompras.Rows[n].Cells[3].Value = fac.PrecioProducto.ToString();
                 lstCompras.Rows[n].Cells[4].Value = fac.DescuentoProducto.ToString();
-
-                double total = Int32.Parse(nudCantidad.Value.ToString()) * fac.PrecioProducto;
                 lstCompras.Rows[n].Cells[5].Value = total.ToString();
+
                 lstCompras.Enabled = true;
                 btnAgregar.Enabled = true;
                 txtCodProducto.Enabled=true;
@@ -549,12 +556,20 @@ namespace Pantallas_proyecto
                                             MessageBox.Show("Ingrese el nombre del cliente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         }
                                         else
-                                        {
+                                        { 
+                                            if(txtRTN.TextLength!=14)
+                                            {
+                                                MessageBox.Show("El RTN no es válido. Por favor ingréselo sin guiones ni espacios", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            }
+                                            else
+                                            {
+                                                ingresar();
+                                                reporte();
+                                                ((Control)this.tabPage1).Enabled = false;
+                                            }
 
 
-                                            ingresar();
-                                            reporte();
-                                            ((Control)this.tabPage1).Enabled = false;
+                                            
                                         }
                                     }
                                 }
