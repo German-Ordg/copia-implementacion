@@ -282,7 +282,7 @@ namespace Pantallas_proyecto
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-           frmPantallaFacturacion cRUD = new frmPantallaFacturacion();
+           FrmMenuCRUD cRUD = new FrmMenuCRUD();
             cRUD.Show();
             this.Hide();
         }

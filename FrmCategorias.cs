@@ -104,7 +104,7 @@ namespace Pantallas_proyecto
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            
+            errorProvider2.Clear();
             try
             {
                 if (validacion.Espacio_Blanco(errorProvider1, txtCategoria) || validacion.Solo_Letras(errorProvider1, txtCategoria))
@@ -177,33 +177,34 @@ namespace Pantallas_proyecto
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
             letra = false;
             letra2 = false;
             bool resp = false;
 
-            if (validacion.Espacio_Blanco(errorProvider1, txtCategoria) || validacion.Solo_Letras(errorProvider1, txtCategoria))
+            if (validacion.Espacio_Blanco(errorProvider2, txtCategoria) || validacion.Solo_Letras(errorProvider2, txtCategoria))
             {
 
-                if (validacion.Espacio_Blanco(errorProvider1, txtCategoria))
+                if (validacion.Espacio_Blanco(errorProvider2, txtCategoria))
                 {
-                    errorProvider1.SetError(txtCategoria, "No se puede dejar en blanco las categorias");
+                    errorProvider2.SetError(txtCategoria, "No se puede dejar en blanco las categorias");
                 }
                 else
                 {
-                    if (validacion.Solo_Letras(errorProvider1, txtCategoria))
-                        errorProvider1.SetError(txtCategoria, "Solo es permitido ingresar letras");
+                    if (validacion.Solo_Letras(errorProvider2, txtCategoria))
+                        errorProvider2.SetError(txtCategoria, "Solo es permitido ingresar letras");
                 }
             }
             else
             {
                 letra = true;
             }
-            if (validacion.Espacio_Blanco(errorProvider1, txtCodigo))
+            if (validacion.Espacio_Blanco(errorProvider2, txtCodigo))
             {
 
-                if (validacion.Espacio_Blanco(errorProvider1, txtCodigo))
+                if (validacion.Espacio_Blanco(errorProvider2, txtCodigo))
                 {
-                    errorProvider1.SetError(txtCodigo, "Debe seleccionar el registro que desea cambiar");
+                    errorProvider2.SetError(txtCodigo, "Debe seleccionar el registro que desea cambiar");
                 }
             }
             else
