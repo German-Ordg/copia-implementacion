@@ -77,6 +77,7 @@ namespace Pantallas_proyecto
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+            ErrorProvider1.Clear();
             letra2 = false;
             letra = false;
 
@@ -135,24 +136,34 @@ namespace Pantallas_proyecto
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
+            ErrorProvider.Clear();
             letra2 = false;
             letra = false;
 
-            if (validacion.Espacio_Blanco(ErrorProvider, txtPosicion) || validacion.Solo_Letras(ErrorProvider, txtPosicion))
+            if (validacion.Espacio_Blanco(ErrorProvider1, txtPosicion) || validacion.Solo_Letras(ErrorProvider1, txtPosicion))
             {
-                if (validacion.Espacio_Blanco(ErrorProvider, txtPosicion))
-                    ErrorProvider.SetError(txtPosicion, "No se puede dejar en blanco");
+                if (validacion.Espacio_Blanco(ErrorProvider1, txtPosicion))
+                    ErrorProvider1.SetError(txtPosicion, "No se puede dejar en blanco");
                 else
-                if (validacion.Solo_Letras(ErrorProvider, txtPosicion))
-                    ErrorProvider.SetError(txtPosicion, "No se permiten números");
+                if (validacion.Solo_Letras(ErrorProvider1, txtPosicion))
+                    ErrorProvider1.SetError(txtPosicion, "No se permiten números");
                 Limpiar();
             }
             else
             {
                 letra2 = true;
             }
+            if (validacion.Espacio_Blanco(ErrorProvider1, txtCodigo))
+            {
+                if (validacion.Espacio_Blanco(ErrorProvider1, txtCodigo))
+                    ErrorProvider1.SetError(txtCodigo, "Debe seleccionar el registro que desea cambiar");
+            }
+            else
+            {
+                letra = true;
+            }
 
-            if (letra2)
+            if (letra2 && letra)
             {
                 bool igual = false;
                 connect.abrir();
