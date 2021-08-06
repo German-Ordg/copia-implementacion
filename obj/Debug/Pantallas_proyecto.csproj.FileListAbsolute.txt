@@ -1604,3 +1604,7 @@ C:\Users\Sebas\Documents\Clases\Desarrollo de software\trabajo\bin\Debug\Pantall
 C:\Users\Sebas\Documents\Clases\Desarrollo de software\trabajo\obj\Debug\Pantallas_proyecto.FrmCategorias.resources
 C:\Users\Sebas\Documents\Clases\Desarrollo de software\trabajo\obj\Debug\Pantallas_proyecto.exe.manifest
 C:\Users\Sebas\Documents\Clases\Desarrollo de software\trabajo\obj\Debug\Pantallas_proyecto.application
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.exe.manifest
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\bin\Debug\Pantallas_proyecto.application
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.exe.manifest
+C:\Users\VIMAS\Source\Repos\German-Ordg\DESARROLLO_DE_SOFTWARE_GRUPO_5\obj\Debug\Pantallas_proyecto.application

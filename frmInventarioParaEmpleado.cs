@@ -15,7 +15,7 @@ namespace Pantallas_proyecto
 {
     public partial class frmInventarioParaEmpleado : Form
     {
-        //private bool letra1 = false;
+        private bool letra1 = false;
         private bool numero1 = false;
 
         public frmInventarioParaEmpleado()
@@ -75,37 +75,51 @@ namespace Pantallas_proyecto
 
         private void button2_Click(object sender, EventArgs e)
         {
+            ErrorProvider1.Clear();
+            letra1 = false;
 
-            try
+            if (validacion.Espacio_Blanco(ErrorProvider1, txtdescripcion))
             {
-                conect.cerrar();
-                conect.abrir();
-                string codigoCategoria="";
-                SqlCommand comando = new SqlCommand("Select codigo_categoria from Categoria_Producto where descripcion_categoria='"+cmbcategoria.Text +"'",conect.conexion);
-                SqlDataReader registro = comando.ExecuteReader();
-                while (registro.Read())
+                if (validacion.Espacio_Blanco(ErrorProvider1, txtdescripcion))
+                    ErrorProvider.SetError(txtdescripcion, "No se puede dejar en blanco");
+            }
+            else
+            {
+                letra1 = true;
+            }
+            if (letra1)
+            {
+                try
                 {
-                    codigoCategoria = registro["codigo_categoria"].ToString();
+                    conect.cerrar();
+                    conect.abrir();
+                    string codigoCategoria = "";
+                    SqlCommand comando = new SqlCommand("Select codigo_categoria from Categoria_Producto where descripcion_categoria='" + cmbcategoria.Text + "'", conect.conexion);
+                    SqlDataReader registro = comando.ExecuteReader();
+                    while (registro.Read())
+                    {
+                        codigoCategoria = registro["codigo_categoria"].ToString();
+                    }
+                    conect.cerrar();
+                    conect.abrir();
+
+                    cmd = new SqlCommand("Update Productos set codigo_categoria = '" + codigoCategoria + "', descripcion_producto = '" + txtdescripcion.Text + "'Where codigo_producto = " + txtcodigo.Text, conect.conexion);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Se Ha actualizado Correctamente");
+                    conect.cerrar();
+
+                    this.Close();
+                    FrmInventario_Gerente invtGer = new FrmInventario_Gerente();
+                    invtGer.Show();
                 }
-                conect.cerrar();
-                conect.abrir();
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
                 
-                cmd = new SqlCommand("Update Productos set codigo_categoria = '"+ codigoCategoria + "', descripcion_producto = '" + txtdescripcion.Text + "'Where codigo_producto = "+ txtcodigo.Text, conect.conexion);
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Se Ha actualizado Correctamente");
-                conect.cerrar();
-
-                this.Close();
-
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al buscar producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

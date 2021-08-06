@@ -47,9 +47,11 @@ namespace Pantallas_proyecto
             this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             label2 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -180,7 +182,7 @@ namespace Pantallas_proyecto
             this.txtdescripcion.Location = new System.Drawing.Point(178, 171);
             this.txtdescripcion.Multiline = true;
             this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(484, 158);
+            this.txtdescripcion.Size = new System.Drawing.Size(464, 158);
             this.txtdescripcion.TabIndex = 60;
             // 
             // btnBuscar
@@ -200,6 +202,10 @@ namespace Pantallas_proyecto
             // ErrorProvider
             // 
             this.ErrorProvider.ContainerControl = this;
+            // 
+            // ErrorProvider1
+            // 
+            this.ErrorProvider1.ContainerControl = this;
             // 
             // frmInventarioParaEmpleado
             // 
@@ -230,6 +236,7 @@ namespace Pantallas_proyecto
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +259,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.ErrorProvider ErrorProvider;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.ErrorProvider ErrorProvider1;
     }
 }

@@ -36,11 +36,12 @@ namespace Pantallas_proyecto
         {
             FrmMenuPrincipalGerente gerente = new FrmMenuPrincipalGerente();
             gerente.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Close();
             frmInventarioParaEmpleado fact = new frmInventarioParaEmpleado();
             fact.Show();
         }
