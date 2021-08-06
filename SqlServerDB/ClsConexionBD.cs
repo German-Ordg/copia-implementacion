@@ -99,6 +99,25 @@ namespace Pantallas_proyecto
             }
         }
 
+        public void CargaDeNombreUsuarios(ComboBox cmb)
+        {
+            try
+            {
+                SqlCommand comando = new SqlCommand("select [nombre_empleado],[apellido_empleado] from [Empleados]", conexion);
+                SqlDataReader registro = comando.ExecuteReader();
+                while (registro.Read())
+                {
+                    cmb.Items.Add(registro["nombre_empleado"].ToString()+" "+ registro["apellido_empleado"].ToString());
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos!", "ERROR",
+                                MessageBoxButtons.OK);
+            }
+        }
+
         public string correo()
         {
             //Recuperar correo desde sql

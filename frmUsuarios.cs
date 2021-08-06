@@ -171,20 +171,23 @@ namespace Pantallas_proyecto
                     conect.cerrar();
 
                     
-                        conect.abrir();
-                        SqlCommand comando2 = new SqlCommand("select codigo_empleado from Usuarios where  codigo_empleado= '" + txtcodemp.Text + "'", conect.conexion);
-                        SqlDataReader registro2 = comando2.ExecuteReader();
-            
-            
-            if (registro2.Read())
-                        {
-                            letra8 = false;
-                            errorProvider2.SetError(txtcodemp, "Codigo ya Registrado");
-                          conect.cerrar();
+              
+
+
+            conect.abrir();
+            SqlCommand comando4 = new SqlCommand("select [codigo_empleado] from Usuarios where  [codigo_empleado]= '" + txtcodemp.Text + "'", conect.conexion);
+            SqlDataReader registro4 = comando4.ExecuteReader();
+            if (registro4.Read())
+            {
+                letra8 = false;
+                errorProvider2.SetError(txtcodemp, "Codigo ya Registrado");
+
             }
 
-                conect.cerrar();
-                conect.abrir();
+            conect.cerrar();
+
+
+            conect.abrir();
                             SqlCommand comando1 = new SqlCommand("select correo_electronico from Usuarios where  correo_electronico= '" + txtcorreo.Text + "'", conect.conexion);
                             SqlDataReader registro = comando1.ExecuteReader();
                             if (registro.Read())
@@ -373,6 +376,7 @@ namespace Pantallas_proyecto
             toolStripLabel2.ForeColor = Color.Black;
             conect.abrir();
             conect.CargarDatosUsuario(dataGridView1);
+            conect.CargaDeNombreUsuarios(cmbEmpleado);
             dataGridView1.ForeColor = Color.Black;
         }
 
@@ -404,6 +408,32 @@ namespace Pantallas_proyecto
         private void cmbtipousr_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmbEmpleado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                conect.abrir();
+                SqlCommand codemple = new SqlCommand(" select [codigo_empelado] from [Empleados] where  [nombre_empleado]+' '+[apellido_empleado]= '" + cmbEmpleado.Text + "'", conect.conexion);
+                SqlDataReader registro2 = codemple.ExecuteReader();
+
+
+                if (registro2.Read())
+                {
+                    txtcodemp.Text = registro2["codigo_empelado"].ToString();
+
+
+                }
+
+                conect.cerrar();
+            }
+            catch (Exception)
+            {
+
+                errorProvider1.SetError(cmbEmpleado, "Codigo no encontrado, Intente de nuevo");
+            }
+            
         }
     }
 }
