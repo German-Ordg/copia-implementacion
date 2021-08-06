@@ -182,15 +182,23 @@ namespace Pantallas_proyecto
                 {
 
                     conect.abrir();
-                    bool igual = false;
-                    
-                    SqlCommand comando = new SqlCommand("select * from Empleados where numero_identidad_empleado = '"+ txtIdentidad.Text+"'",conect.conexion);
-                    SqlDataReader registro = comando.ExecuteReader();
-                    if (registro.Read())
-                    {
-                        igual = true;
-                    }
-                    conect.cerrar();
+                bool igual = false;
+
+                SqlCommand comando = new SqlCommand("select * from Empleados where numero_identidad_empleado = '" + txtIdentidad.Text + "'", conect.conexion);
+                SqlDataReader registro = comando.ExecuteReader();
+                if (registro.Read())
+                {
+                    igual = true;
+                }
+                bool igual2 = false;
+
+                SqlCommand comando2 = new SqlCommand("select * from Empleados where num_telefono  = '" + txtNumeroTel.Text + "'", conect.conexion);
+                SqlDataReader registro2 = comando2.ExecuteReader();
+                if (registro2.Read())
+                {
+                    igual2 = true;
+                }
+                conect.cerrar();
                     conect.abrir();
                     string codigopuesto = "";
                     SqlCommand comando1 = new SqlCommand("Select codigo_puesto from Empleados_Puestos where descripcion_puesto='" + cmbPuesto.Text + "'", conect.conexion);
@@ -201,7 +209,7 @@ namespace Pantallas_proyecto
                     }
                     conect.cerrar();
 
-                    if (igual == false)
+                    if (igual == false && igual2 == false)
                     {
 
                         
@@ -237,7 +245,7 @@ namespace Pantallas_proyecto
 
                     }
                     else
-                        MessageBox.Show("Esta ingresando una Identidad que ya fue registrada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Esta ingresando una Identidad o numero de telefono que ya fue registrada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
 
