@@ -68,6 +68,10 @@ namespace Pantallas_proyecto
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
+            dtpFechaNacimiento.MaxDate = DateTime.Now.AddYears(-18);
+            dtpFechaIngreso.MaxDate = DateTime.Now.AddMonths(3);
+            dtpFechaIngreso.MinDate = DateTime.Now.AddMonths(-3);
+            dtpFechaNacimiento.MinDate = DateTime.Now.AddYears(-90);
             conect.abrir();
             conect.cargarDatosEmpleados(dgvEmpleados);
             conect.CargaDePuestos(cmbPuesto);
@@ -411,6 +415,11 @@ namespace Pantallas_proyecto
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void dtpFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
