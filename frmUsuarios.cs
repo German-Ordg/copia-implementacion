@@ -30,6 +30,9 @@ namespace Pantallas_proyecto
         private bool letra4 = false;
         private bool letra5 = false;
         private bool letra6 = false;
+        private bool letra7 = false;
+        private bool letra8 = false;
+        private bool letra9 = false;
 
         private const int CP_NOCLOSE_BUTTON = 0x200;
         protected override CreateParams CreateParams
@@ -82,6 +85,9 @@ namespace Pantallas_proyecto
             letra4 = false;
             letra5 = false;
             letra6 = false;
+            letra7 = true;
+            letra8 = true;
+            letra9 = true;
 
             if (validacion.Espacio_Blanco(errorProvider1, txtcodemp) || validacion.Solo_Numeros(errorProvider1, txtcodemp))
             {
@@ -158,7 +164,7 @@ namespace Pantallas_proyecto
                     SqlDataReader registro3 = comando3.ExecuteReader();
                     if (registro3.Read())
                     {
-                        letra6 = false;
+                        letra7 = false;
                         errorProvider2.SetError(txtusuario, "Nombre de Usuario no disponible");
 
                     }
@@ -168,35 +174,36 @@ namespace Pantallas_proyecto
                         conect.abrir();
                         SqlCommand comando2 = new SqlCommand("select codigo_empleado from Usuarios where  codigo_empleado= '" + txtcodemp.Text + "'", conect.conexion);
                         SqlDataReader registro2 = comando2.ExecuteReader();
-                        if (registro2.Read())
+            
+            
+            if (registro2.Read())
                         {
-                            letra6 = false;
+                            letra8 = false;
                             errorProvider2.SetError(txtcodemp, "Codigo ya Registrado");
-                            conect.cerrar();
-                        }
-                        else
-                        {
-                      
-                            conect.abrir();
+                          conect.cerrar();
+            }
+
+                conect.cerrar();
+                conect.abrir();
                             SqlCommand comando1 = new SqlCommand("select correo_electronico from Usuarios where  correo_electronico= '" + txtcorreo.Text + "'", conect.conexion);
                             SqlDataReader registro = comando1.ExecuteReader();
                             if (registro.Read())
                             {
-                                letra6 = false;
+                                letra9 = false;
                                 errorProvider2.SetError(txtcorreo, "Correo ya Registrado");
                              
                             }
 
                             conect.cerrar();
-                        }
-            
+                        
 
-            
-            
-            
-            
 
-            if (letra && letra2 && letra3 && letra4 && letra5 && letra6)
+
+            conect.cerrar();
+
+
+
+            if (letra && letra2 && letra3 && letra4 && letra5 && letra6 && letra7 && letra8 && letra9)
             {
 
 
@@ -220,6 +227,7 @@ namespace Pantallas_proyecto
                         txtcodemp.Clear();
                         txtusuario.Clear();
                         txtcorreo.Clear();
+                    txtcontra.Clear();
                         cmbtipousr.SelectedIndex = -1;
 
                     
@@ -328,16 +336,21 @@ namespace Pantallas_proyecto
                     contra = Encrypt.GetSHA256(txtcontra.Text);
                     if (txtcontra.Text=="")
                     {
-                        scd = new SqlCommand("Update Usuarios set codigo_empleado = " + txtcodemp.Text + ",   correo_electronico = '" + txtcorreo.Text + "', Estado = '" + cmbtipousr.Text + "' where nombre_usuario='" + txtusuario.Text + "'", conect.conexion);
+                        scd = new SqlCommand("Update Usuarios set codigo_empleado = " + txtcodemp.Text + ",   correo_electronico = '" + txtcorreo.Text + "',   nombre_usuario= '" + txtusuario.Text + "', Estado = '" + cmbtipousr.Text + "' where nombre_usuario='" + txtusuario2.Text + "'", conect.conexion);
                     }
                     else
                     {
-                        scd = new SqlCommand("Update Usuarios set codigo_empleado = " + txtcodemp.Text + ",   correo_electronico = '" + txtcorreo.Text + "',  contrasena = '" + contra + "', Estado = '" + cmbtipousr.Text + "' where nombre_usuario='" + txtusuario.Text + "'", conect.conexion);
+                        scd = new SqlCommand("Update Usuarios set codigo_empleado = " + txtcodemp.Text + ",   correo_electronico = '" + txtcorreo.Text + "',   nombre_usuario= '" + txtusuario.Text + "',  contrasena = '" + contra + "', Estado = '" + cmbtipousr.Text + "' where nombre_usuario='" + txtusuario.Text + "'", conect.conexion);
                     }
                     scd.ExecuteNonQuery();
 
                     MessageBox.Show("Registro Modificado!", "AVISO", MessageBoxButtons.OK);
-
+                    txtcodemp.Clear();
+                    txtusuario.Clear();
+                    txtusuario2.Clear();
+                    txtcorreo.Clear();
+                    txtcontra.Clear();
+                    cmbtipousr.SelectedIndex = -1;
                     conect.CargarDatosUsuario(dataGridView1);
 
 
@@ -353,6 +366,7 @@ namespace Pantallas_proyecto
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
+            txtusuario2.Visible = false;
             timer1.Enabled = true;
             toolStrip1.ForeColor = Color.Black;
             toolStripLabel1.ForeColor = Color.Black;
@@ -380,6 +394,7 @@ namespace Pantallas_proyecto
 
             txtcodemp.Text = dataGridView1[0, poc].Value.ToString();
             txtusuario.Text = dataGridView1[1, poc].Value.ToString();
+            txtusuario2.Text = dataGridView1[1, poc].Value.ToString();
             txtcorreo.Text = dataGridView1[3, poc].Value.ToString();
             //txtcontra.Text = dataGridView1[2, poc].Value.ToString();   (NO SE MUESTRA LA CONTRASEñA POR QUE ESTA ENCRIPTADA Y ASI ES LO CORRECTO)
             txtcontra.Text = "";
