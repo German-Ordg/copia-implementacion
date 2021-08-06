@@ -140,7 +140,7 @@ namespace Pantallas_proyecto
                 {
                     numero1 = true;
                 }
-
+            }
 
                 if (validacion.Espacio_Blanco(ErrorProvider1, txtNumeroTel) || validacion.Solo_Numeros(ErrorProvider1, txtNumeroTel))
                 {
@@ -150,16 +150,19 @@ namespace Pantallas_proyecto
                     if (validacion.Solo_Numeros(ErrorProvider1, txtNumeroTel))
                         ErrorProvider1.SetError(txtNumeroTel, "Solo se permite numeros");
                 }
-
-                if (txtNumeroTel.Text.Length != 8)
-                {
-                    MessageBox.Show("Ingrese 8 digitos en el telefono del empleado", "Falta de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtNumeroTel.Focus();
-
-                }
                 else
                 {
-                    numero2 = true;
+
+                    if (txtNumeroTel.Text.Length != 8)
+                    {
+                        MessageBox.Show("Ingrese 8 digitos en el telefono del empleado", "Falta de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtNumeroTel.Focus();
+
+                    }
+                    else
+                    {
+                        numero2 = true;
+                    }
                 }
 
                 if (validacion.Espacio_Blanco_CB(ErrorProvider1, cmbPuesto) )
@@ -210,12 +213,12 @@ namespace Pantallas_proyecto
                             cmd.ExecuteNonQuery();
                             MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             conect.cargarDatosEmpleados(dgvEmpleados);
-                            txtNombre.Text = " ";
-                            txtApellido.Text = " ";
-                            txtIdentidad.Text = " ";
+                            txtNombre.Text = "";
+                            txtApellido.Text = "";
+                            txtIdentidad.Text = "";
                             
-                            txtNumeroTel.Text = " ";
-                            dtpFechaNacimiento.Text = DateTime.Now.ToShortDateString();
+                            txtNumeroTel.Text = "";
+                            dtpFechaNacimiento.Value = DateTime.Now.AddYears(-19);
                             dtpFechaIngreso.Text = DateTime.Now.ToShortDateString();
                             cmbGenero.SelectedIndex = -1;
                             txtNombre.Focus();
@@ -236,15 +239,8 @@ namespace Pantallas_proyecto
                     else
                         MessageBox.Show("Esta ingresando una Identidad que ya fue registrada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-
-
-                    
                 }
 
-           
-            }
-
-            
         }
 
         private void txtBuscarEmpleado_TextChanged(object sender, EventArgs e)
@@ -374,12 +370,12 @@ namespace Pantallas_proyecto
                         MessageBox.Show("El registro fue actualizado exitosamente");
                         conect.cargarDatosEmpleados(dgvEmpleados);
                         conect.cerrar();
-                        txtNombre.Text = " ";
-                        txtApellido.Text = " ";
-                        txtIdentidad.Text = " ";
+                        txtNombre.Text = "";
+                        txtApellido.Text = "";
+                        txtIdentidad.Text = "";
                         
-                        txtNumeroTel.Text = " ";
-                        dtpFechaNacimiento.Text = DateTime.Now.ToShortDateString();
+                        txtNumeroTel.Text = "";
+                        dtpFechaNacimiento.Value = DateTime.Now.AddYears(-19);
                         dtpFechaIngreso.Text = DateTime.Now.ToShortDateString();
                         cmbGenero.SelectedIndex = -1;
                         txtNombre.Focus();

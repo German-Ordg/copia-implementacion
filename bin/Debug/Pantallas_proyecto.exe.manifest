@@ -709,7 +709,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xfu6jd64gBYn/v38o5cgcH7NTC4o9qxsP6BNSUlqdJQ=</dsig:DigestValue>
+        <dsig:DigestValue>Exbv0TyL192V/t04h7T/gohdWyNHgv7sanR5cDRIbVk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
