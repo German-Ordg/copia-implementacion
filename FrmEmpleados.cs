@@ -17,6 +17,7 @@ namespace Pantallas_proyecto
 
         private bool letra1 = false;
         private bool letra2 = false;
+        private bool letra4 = false;
         private bool numero1 = false;
         private bool numero2 = false;
         private bool numero3 = false;
@@ -84,8 +85,16 @@ namespace Pantallas_proyecto
         {
             
 
-            letra1 = false; letra2 = false; numero1 = false; numero2 = false; 
-
+            letra1 = false; letra2 = false; letra4 = false; numero1 = false; numero2 = false;
+            if (validacion.Espacio_Blanco_CB(ErrorProvider1, cmbGenero) )
+            {
+                if (validacion.Espacio_Blanco_CB(ErrorProvider1, cmbGenero))
+                    ErrorProvider1.SetError(cmbGenero, "no se puede dejar en blanco");
+            }
+            else
+            {
+                letra4 = true;
+            }
             if (validacion.Espacio_Blanco(ErrorProvider1, txtNombre) || validacion.Solo_Letras(ErrorProvider1, txtNombre))
             {
                 if (validacion.Espacio_Blanco(ErrorProvider1, txtNombre))
