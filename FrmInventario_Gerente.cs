@@ -17,6 +17,8 @@ namespace Pantallas_proyecto
         public FrmInventario_Gerente()
         {
             InitializeComponent();
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
         }
         ClsConexionBD conect = new ClsConexionBD();
         SqlCommand cmd;
