@@ -59,9 +59,13 @@ namespace Pantallas_proyecto
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.ErrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.cmbPuesto = new System.Windows.Forms.ComboBox();
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -117,6 +121,7 @@ namespace Pantallas_proyecto
             this.txtIdentidad.Name = "txtIdentidad";
             this.txtIdentidad.Size = new System.Drawing.Size(208, 22);
             this.txtIdentidad.TabIndex = 5;
+            this.txtIdentidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdentidad_KeyPress);
             // 
             // label5
             // 
@@ -285,6 +290,7 @@ namespace Pantallas_proyecto
             this.txtNumeroTel.Size = new System.Drawing.Size(208, 22);
             this.txtNumeroTel.TabIndex = 35;
             this.txtNumeroTel.TextChanged += new System.EventHandler(this.txtNumeroTel_TextChanged);
+            this.txtNumeroTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroTel_KeyPress);
             // 
             // btnModificar
             // 
@@ -372,6 +378,14 @@ namespace Pantallas_proyecto
             this.cmbPuesto.Size = new System.Drawing.Size(208, 24);
             this.cmbPuesto.TabIndex = 40;
             // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
             // FrmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -415,6 +429,8 @@ namespace Pantallas_proyecto
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,5 +465,7 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ErrorProvider ErrorProvider1;
         private System.Windows.Forms.ComboBox cmbPuesto;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
     }
 }

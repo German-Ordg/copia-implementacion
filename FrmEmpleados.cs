@@ -441,6 +441,26 @@ namespace Pantallas_proyecto
         {
 
         }
+
+        private void txtNumeroTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider2.Clear();
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                errorProvider2.SetError(txtNumeroTel, "No se permiten espacios en blanco");
+                e.Handled = true;
+            }
+        }
+
+        private void txtIdentidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            errorProvider3.Clear();
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                errorProvider3.SetError(txtIdentidad, "No se permiten espacios en blanco");
+                e.Handled = true;
+            }
+        }
     }
 }
 
