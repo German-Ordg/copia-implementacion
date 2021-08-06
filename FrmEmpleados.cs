@@ -190,8 +190,9 @@ namespace Pantallas_proyecto
                 {
                     igual = true;
                 }
+                conect.cerrar();
                 bool igual2 = false;
-
+                conect.abrir();
                 SqlCommand comando2 = new SqlCommand("select * from Empleados where num_telefono  = '" + txtNumeroTel.Text + "'", conect.conexion);
                 SqlDataReader registro2 = comando2.ExecuteReader();
                 if (registro2.Read())
