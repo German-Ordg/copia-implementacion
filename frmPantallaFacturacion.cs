@@ -131,6 +131,7 @@ namespace Pantallas_proyecto
             btnAgregar.Enabled = false;
             btnEditar.Enabled = false;
             timer1.Enabled = true;
+            nudCantidad.Value = 1;
            
             this.reportViewer1.RefreshReport();
         }
@@ -358,6 +359,28 @@ namespace Pantallas_proyecto
                     fac.PrecioProducto = Double.Parse(lstCompras.Rows[a].Cells[3].Value.ToString());
                     fac.DescuentoProducto = Double.Parse(lstCompras.Rows[a].Cells[4].Value.ToString());
 
+
+                    String buscarProducto = "SELECT [cantidad_existente] cantidad  FROM [dbo].[Productos] " +
+                        "WHERE [codigo_producto]=" + fac.CodigoProducto;
+
+                    con.abrir();
+                    try
+                    {
+
+                        cmd = new SqlCommand(buscarProducto, con.conexion);
+                        dr = cmd.ExecuteReader();
+                        while (dr.Read())
+                        {
+                            fac.CantidadInventario = Int32.Parse(dr["cantidad"].ToString());
+                        }
+                        dr.Close();
+                                           
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo cargar la cantidad en inventario" + ex.ToString());
+                    }
+
                 }
                 else
                 {
@@ -371,31 +394,37 @@ namespace Pantallas_proyecto
         {
             if (nudCantidad.Value <= fac.CantidadInventario)
             {
+                if (nudCantidad.Value >= 1)
+                {
+                    int n = lstCompras.CurrentRow.Index;
+                    double total = Int32.Parse(nudCantidad.Value.ToString()) * fac.PrecioProducto;
 
-                int n = lstCompras.CurrentRow.Index;
-                double total = Int32.Parse(nudCantidad.Value.ToString()) * fac.PrecioProducto;
+                    lstCompras.Rows[n].Cells[0].Value = fac.CodigoProducto.ToString();
+                    lstCompras.Rows[n].Cells[1].Value = nudCantidad.Value.ToString();
+                    lstCompras.Rows[n].Cells[2].Value = fac.DescripcionProducto.ToString();
+                    lstCompras.Rows[n].Cells[3].Value = fac.PrecioProducto.ToString();
+                    lstCompras.Rows[n].Cells[4].Value = fac.DescuentoProducto.ToString();
+                    lstCompras.Rows[n].Cells[5].Value = total.ToString();
 
-                lstCompras.Rows[n].Cells[0].Value = fac.CodigoProducto.ToString();
-                lstCompras.Rows[n].Cells[1].Value = nudCantidad.Value.ToString();
-                lstCompras.Rows[n].Cells[2].Value = fac.DescripcionProducto.ToString();
-                lstCompras.Rows[n].Cells[3].Value = fac.PrecioProducto.ToString();
-                lstCompras.Rows[n].Cells[4].Value = fac.DescuentoProducto.ToString();
-                lstCompras.Rows[n].Cells[5].Value = total.ToString();
+                    lstCompras.Enabled = true;
+                    btnAgregar.Enabled = true;
+                    txtCodProducto.Enabled = true;
+                    btnCalcularFactura.Enabled = true;
+                    btnEliminar.Enabled = true;
 
-                lstCompras.Enabled = true;
-                btnAgregar.Enabled = true;
-                txtCodProducto.Enabled=true;
-                btnCalcularFactura.Enabled = true;
-                btnEliminar.Enabled = true;
-
-                txtCodProducto.Clear();
-                txtDescripcion.Clear();
-                txtDescuento.Clear();
-                txtPrecioUnitario.Clear();
-                nudCantidad.Value = 1;
-                btnActualizar.Enabled = false;
-                btnBuscarProducto.Enabled = true;
-                btnEditar.Enabled = true;
+                    txtCodProducto.Clear();
+                    txtDescripcion.Clear();
+                    txtDescuento.Clear();
+                    txtPrecioUnitario.Clear();
+                    nudCantidad.Value = 1;
+                    btnActualizar.Enabled = false;
+                    btnBuscarProducto.Enabled = true;
+                    btnEditar.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Se tiene que ingresar al menos 1 artículo", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {

@@ -64,9 +64,10 @@ namespace Pantallas_proyecto
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(39, 228);
+            label2.Location = new System.Drawing.Point(52, 281);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(144, 20);
+            label2.Size = new System.Drawing.Size(179, 25);
             label2.TabIndex = 13;
             label2.Text = "Correo Electrónico:";
             // 
@@ -77,9 +78,10 @@ namespace Pantallas_proyecto
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(869, 54);
+            this.button1.Location = new System.Drawing.Point(1159, 66);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 37);
+            this.button1.Size = new System.Drawing.Size(156, 46);
             this.button1.TabIndex = 11;
             this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = false;
@@ -89,9 +91,10 @@ namespace Pantallas_proyecto
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 173);
+            this.label1.Location = new System.Drawing.Point(52, 213);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 20);
+            this.label1.Size = new System.Drawing.Size(85, 25);
             this.label1.TabIndex = 12;
             this.label1.Text = "Usuario:";
             // 
@@ -99,9 +102,10 @@ namespace Pantallas_proyecto
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 291);
+            this.label3.Location = new System.Drawing.Point(52, 358);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 20);
+            this.label3.Size = new System.Drawing.Size(120, 25);
             this.label3.TabIndex = 14;
             this.label3.Text = "Contraseña:";
             // 
@@ -109,31 +113,35 @@ namespace Pantallas_proyecto
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(39, 353);
+            this.label5.Location = new System.Drawing.Point(52, 434);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 20);
+            this.label5.Size = new System.Drawing.Size(129, 25);
             this.label5.TabIndex = 16;
             this.label5.Text = "Tipo Usuario:";
             // 
             // txtusuario
             // 
-            this.txtusuario.Location = new System.Drawing.Point(215, 173);
+            this.txtusuario.Location = new System.Drawing.Point(287, 213);
+            this.txtusuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(159, 20);
+            this.txtusuario.Size = new System.Drawing.Size(211, 22);
             this.txtusuario.TabIndex = 18;
             // 
             // txtcorreo
             // 
-            this.txtcorreo.Location = new System.Drawing.Point(215, 228);
+            this.txtcorreo.Location = new System.Drawing.Point(287, 281);
+            this.txtcorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtcorreo.Name = "txtcorreo";
-            this.txtcorreo.Size = new System.Drawing.Size(159, 20);
+            this.txtcorreo.Size = new System.Drawing.Size(211, 22);
             this.txtcorreo.TabIndex = 19;
             // 
             // txtcontra
             // 
-            this.txtcontra.Location = new System.Drawing.Point(215, 291);
+            this.txtcontra.Location = new System.Drawing.Point(287, 358);
+            this.txtcontra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtcontra.Name = "txtcontra";
-            this.txtcontra.Size = new System.Drawing.Size(159, 20);
+            this.txtcontra.Size = new System.Drawing.Size(211, 22);
             this.txtcontra.TabIndex = 20;
             // 
             // btnCrear
@@ -143,9 +151,10 @@ namespace Pantallas_proyecto
             this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrear.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCrear.Location = new System.Drawing.Point(215, 432);
+            this.btnCrear.Location = new System.Drawing.Point(287, 532);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(124, 41);
+            this.btnCrear.Size = new System.Drawing.Size(165, 50);
             this.btnCrear.TabIndex = 23;
             this.btnCrear.Text = "Crear Usuario";
             this.btnCrear.UseVisualStyleBackColor = false;
@@ -158,20 +167,22 @@ namespace Pantallas_proyecto
             this.cmbtipousr.Items.AddRange(new object[] {
             "ACTIVO",
             "INACTIVO"});
-            this.cmbtipousr.Location = new System.Drawing.Point(215, 352);
+            this.cmbtipousr.Location = new System.Drawing.Point(287, 433);
+            this.cmbtipousr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbtipousr.Name = "cmbtipousr";
-            this.cmbtipousr.Size = new System.Drawing.Size(159, 21);
+            this.cmbtipousr.Size = new System.Drawing.Size(211, 24);
             this.cmbtipousr.TabIndex = 24;
             this.cmbtipousr.SelectedIndexChanged += new System.EventHandler(this.cmbtipousr_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(420, 128);
+            this.dataGridView1.Location = new System.Drawing.Point(560, 158);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(566, 227);
+            this.dataGridView1.Size = new System.Drawing.Size(770, 279);
             this.dataGridView1.TabIndex = 25;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_2);
@@ -183,9 +194,10 @@ namespace Pantallas_proyecto
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnModificar.Location = new System.Drawing.Point(672, 432);
+            this.btnModificar.Location = new System.Drawing.Point(896, 532);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(152, 41);
+            this.btnModificar.Size = new System.Drawing.Size(203, 50);
             this.btnModificar.TabIndex = 27;
             this.btnModificar.Text = "Modifcar Usuario";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -193,18 +205,20 @@ namespace Pantallas_proyecto
             // 
             // txtcodemp
             // 
-            this.txtcodemp.Location = new System.Drawing.Point(215, 116);
+            this.txtcodemp.Location = new System.Drawing.Point(287, 143);
+            this.txtcodemp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtcodemp.Name = "txtcodemp";
-            this.txtcodemp.Size = new System.Drawing.Size(159, 20);
+            this.txtcodemp.Size = new System.Drawing.Size(211, 22);
             this.txtcodemp.TabIndex = 29;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(39, 116);
+            this.label7.Location = new System.Drawing.Point(52, 143);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(135, 20);
+            this.label7.Size = new System.Drawing.Size(168, 25);
             this.label7.TabIndex = 28;
             this.label7.Text = "Codigo Empleado";
             // 
@@ -215,22 +229,22 @@ namespace Pantallas_proyecto
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.toolStripLabel2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 567);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 702);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1026, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1368, 25);
             this.toolStrip1.TabIndex = 30;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(111, 22);
             this.toolStripLabel1.Text = "toolStripLabel1";
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(86, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(111, 22);
             this.toolStripLabel2.Text = "toolStripLabel2";
             // 
             // timer1
@@ -240,9 +254,10 @@ namespace Pantallas_proyecto
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Pantallas_proyecto.Properties.Resources.Letras1;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(338, 79);
+            this.pictureBox1.Size = new System.Drawing.Size(451, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
@@ -257,10 +272,10 @@ namespace Pantallas_proyecto
             // 
             // frmUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1026, 592);
+            this.ClientSize = new System.Drawing.Size(1368, 727);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.txtcodemp);
@@ -279,10 +294,11 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1044, 638);
+            this.MaximumSize = new System.Drawing.Size(1386, 774);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1026, 596);
+            this.MinimumSize = new System.Drawing.Size(1362, 723);
             this.Name = "frmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Usuarios";

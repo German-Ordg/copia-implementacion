@@ -23,6 +23,7 @@ namespace Pantallas_proyecto
         SqlCommand scd;
         ClsConexionBD conect = new ClsConexionBD();
         validaciones validacion = new validaciones();
+
         private bool letra = false;
         private bool letra2 = false;
         private bool letra3 = false;
@@ -85,15 +86,18 @@ namespace Pantallas_proyecto
             if (validacion.Espacio_Blanco(errorProvider1, txtcodemp) || validacion.Solo_Numeros(errorProvider1, txtcodemp))
             {
                 if (validacion.Espacio_Blanco(errorProvider1, txtcodemp))
-                    errorProvider1.SetError(txtcodemp, "no se puede dejar en blanco");
+                    errorProvider1.SetError(txtcodemp, "no se puede dejar en blanco"); 
                 else
                     if (validacion.Solo_Numeros(errorProvider1, txtcodemp))
                     errorProvider1.SetError(txtcodemp, "solo se permite numeros");
+
             }
             else
             {
                 letra = true;
             }
+
+
             if (validacion.Espacio_Blanco(errorProvider1, txtusuario))
             {
                 if (validacion.Espacio_Blanco(errorProvider1, txtusuario))
@@ -103,6 +107,8 @@ namespace Pantallas_proyecto
             {
                 letra2 = true;
             }
+
+
             if (validacion.Espacio_Blanco(errorProvider1, txtcorreo))
             {
                 if (validacion.Espacio_Blanco(errorProvider1, txtcorreo))
@@ -112,6 +118,8 @@ namespace Pantallas_proyecto
             {
                 letra3 = true;
             }
+
+
             if (validacion.Espacio_Blanco_CB(errorProvider1, cmbtipousr))
             {
                 if (validacion.Espacio_Blanco_CB(errorProvider1, cmbtipousr))
@@ -121,6 +129,8 @@ namespace Pantallas_proyecto
             {
                 letra4 = true;
             }
+
+
             if (validacion.Espacio_Blanco(errorProvider2, txtcontra))
             {
                 if (validacion.Espacio_Blanco(errorProvider2, txtcontra))
@@ -131,6 +141,7 @@ namespace Pantallas_proyecto
                 letra5 = true;
             }
 
+
             if (email_bien_escrito(txtcorreo.Text))
             {
                 letra6 = true;
@@ -140,40 +151,48 @@ namespace Pantallas_proyecto
             {
                 errorProvider2.SetError(txtcorreo, "Direccion de Correo invalida");
             }
-            conect.abrir();
-            SqlCommand comando3 = new SqlCommand("select nombre_usuario from Usuarios where  nombre_usuario= '" + txtusuario.Text + "'", conect.conexion);
-            SqlDataReader registro3 = comando3.ExecuteReader();
-            if (registro3.Read())
-            {
-                letra6 = false;
-                errorProvider2.SetError(txtusuario, "Nombre de Usuario no disponible");
-                
-            }
-            conect.cerrar();
+                      
 
-            conect.abrir();
-            SqlCommand comando2 = new SqlCommand("select codigo_empleado from Usuarios where  codigo_empleado= '" + txtcodemp.Text + "'", conect.conexion);
-            SqlDataReader registro2 = comando2.ExecuteReader();
-            if (registro2.Read())
-            {
-                letra6 = false;
-                errorProvider2.SetError(txtcodemp, "Codigo ya Registrado");
-                conect.cerrar();
-            }
-            else {
-                conect.cerrar();
-                conect.abrir();
-                SqlCommand comando1 = new SqlCommand("select correo_electronico from Usuarios where  correo_electronico= '" + txtcorreo.Text + "'", conect.conexion);
-                SqlDataReader registro = comando1.ExecuteReader();
-                if (registro.Read())
-                {
-                    letra6 = false;
-                    errorProvider2.SetError(txtcorreo, "Correo ya Registrado");
+                    conect.abrir();
+                    SqlCommand comando3 = new SqlCommand("select nombre_usuario from Usuarios where  nombre_usuario= '" + txtusuario.Text + "'", conect.conexion);
+                    SqlDataReader registro3 = comando3.ExecuteReader();
+                    if (registro3.Read())
+                    {
+                        letra6 = false;
+                        errorProvider2.SetError(txtusuario, "Nombre de Usuario no disponible");
+
+                    }
                     conect.cerrar();
-                }
 
-                conect.cerrar();
-            }
+                    
+                        conect.abrir();
+                        SqlCommand comando2 = new SqlCommand("select codigo_empleado from Usuarios where  codigo_empleado= '" + txtcodemp.Text + "'", conect.conexion);
+                        SqlDataReader registro2 = comando2.ExecuteReader();
+                        if (registro2.Read())
+                        {
+                            letra6 = false;
+                            errorProvider2.SetError(txtcodemp, "Codigo ya Registrado");
+                            conect.cerrar();
+                        }
+                        else
+                        {
+                      
+                            conect.abrir();
+                            SqlCommand comando1 = new SqlCommand("select correo_electronico from Usuarios where  correo_electronico= '" + txtcorreo.Text + "'", conect.conexion);
+                            SqlDataReader registro = comando1.ExecuteReader();
+                            if (registro.Read())
+                            {
+                                letra6 = false;
+                                errorProvider2.SetError(txtcorreo, "Correo ya Registrado");
+                             
+                            }
+
+                            conect.cerrar();
+                        }
+            
+
+            
+            
             
             
 
@@ -184,7 +203,7 @@ namespace Pantallas_proyecto
 
                 try
                 {
-                    conect.cerrar();
+                 
                     conect.abrir();
                         //-------------------------------encriptar contraseña
                         string contra;
@@ -193,16 +212,15 @@ namespace Pantallas_proyecto
                         contra = Encrypt.GetSHA256(txtcontra.Text);
 
 
-                        scd = new SqlCommand("Insert into Usuarios(codigo_empleado,nombre_usuario, correo_electronico, contrasena, Estado) Values('" + txtcodemp.Text + "','" + txtusuario.Text + "','" + txtcorreo.Text + "','" + contra + "','" + cmbtipousr.Text + "')", conect.conexion);
-                        //---------------------------------------
+                        scd = new SqlCommand("Insert into Usuarios(codigo_empleado, nombre_usuario, correo_electronico, contrasena, Estado) Values('" + txtcodemp.Text + "','" + txtusuario.Text + "','" + txtcorreo.Text + "','" + contra + "','" + cmbtipousr.Text + "')", conect.conexion);
+                        //-------------------------------
                         scd.ExecuteNonQuery();
                         MessageBox.Show("Registro exitoso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         conect.CargarDatosUsuario(dataGridView1);
-                        txtcodemp.Text = " ";
-                        txtusuario.Text = " ";
-                        txtcorreo.Text = " ";
-                        txtcontra.Text = " ";
-                        cmbtipousr.Text = " ";
+                        txtcodemp.Clear();
+                        txtusuario.Clear();
+                        txtcorreo.Clear();
+                        cmbtipousr.SelectedIndex = -1;
 
                     
                     conect.cerrar();
