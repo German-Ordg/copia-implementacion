@@ -392,15 +392,39 @@ namespace Pantallas_proyecto
 
         private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            
             int poc;
 
             poc = dataGridView1.CurrentRow.Index;
 
             txtcodemp.Text = dataGridView1[0, poc].Value.ToString();
+            string codigo = txtcodemp.Text;
+
+            try
+            {
+                
+                conect.abrir();
+                SqlCommand comando = new SqlCommand("select [nombre_empleado],[apellido_empleado] from [Empleados] where [codigo_empelado]=" + codigo + "", conect.conexion);
+                SqlDataReader registro = comando.ExecuteReader();
+                while (registro.Read())
+                {
+                    cmbEmpleado.Text = (registro["nombre_empleado"].ToString() + " " + registro["apellido_empleado"].ToString());
+                }
+
+                conect.cerrar();
+            }
+            catch (Exception)
+            {
+                
+                
+            }
+           
+
+
             txtusuario.Text = dataGridView1[1, poc].Value.ToString();
             txtusuario2.Text = dataGridView1[1, poc].Value.ToString();
             txtcorreo.Text = dataGridView1[3, poc].Value.ToString();
-            //txtcontra.Text = dataGridView1[2, poc].Value.ToString();   (NO SE MUESTRA LA CONTRASEñA POR QUE ESTA ENCRIPTADA Y ASI ES LO CORRECTO)
+            
             txtcontra.Text = "";
             cmbtipousr.Text = dataGridView1[4, poc].Value.ToString();
         }
@@ -412,8 +436,10 @@ namespace Pantallas_proyecto
 
         private void cmbEmpleado_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             try
             {
+                errorProvider1.Clear();
                 conect.abrir();
                 SqlCommand codemple = new SqlCommand(" select [codigo_empelado] from [Empleados] where  [nombre_empleado]+' '+[apellido_empleado]= '" + cmbEmpleado.Text + "'", conect.conexion);
                 SqlDataReader registro2 = codemple.ExecuteReader();
@@ -430,8 +456,8 @@ namespace Pantallas_proyecto
             }
             catch (Exception)
             {
-
-                errorProvider1.SetError(cmbEmpleado, "Codigo no encontrado, Intente de nuevo");
+                
+                //errorProvider1.SetError(cmbEmpleado, "Codigo no encontrado, Intente de nuevo");
             }
             
         }
