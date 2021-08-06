@@ -89,6 +89,7 @@ namespace Pantallas_proyecto
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnquitar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -319,6 +320,7 @@ namespace Pantallas_proyecto
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnquitar);
             this.groupBox4.Controls.Add(this.cmbCategoria);
             this.groupBox4.Controls.Add(this.descripcionProducto);
             this.groupBox4.Controls.Add(this.label3);
@@ -715,6 +717,23 @@ namespace Pantallas_proyecto
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // btnquitar
+            // 
+            this.btnquitar.BackColor = System.Drawing.Color.Maroon;
+            this.btnquitar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnquitar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnquitar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnquitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnquitar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnquitar.Location = new System.Drawing.Point(352, 222);
+            this.btnquitar.Name = "btnquitar";
+            this.btnquitar.Size = new System.Drawing.Size(137, 32);
+            this.btnquitar.TabIndex = 187;
+            this.btnquitar.Text = "quitar seleccion";
+            this.btnquitar.UseVisualStyleBackColor = false;
+            this.btnquitar.Visible = false;
+            this.btnquitar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -743,7 +762,7 @@ namespace Pantallas_proyecto
             this.MinimumSize = new System.Drawing.Size(1428, 737);
             this.Name = "FrmProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmProductos";
+            this.Text = "Heaven Store -Productos de la Factura";
             this.Load += new System.EventHandler(this.FrmProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -822,5 +841,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnquitar;
     }
 }

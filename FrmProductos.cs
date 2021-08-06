@@ -27,6 +27,7 @@ namespace Pantallas_proyecto
         Productos producto = new Productos();
         FrmCompras compras = new FrmCompras();
         validaciones validacion = new validaciones();
+        ClsConexionBD conect = new ClsConexionBD();
 
         string[,] productosArrays = new string[20, 8];
 
@@ -239,15 +240,27 @@ namespace Pantallas_proyecto
                     else
                     {
                         bool igual=false;
-                        for (int i = 0; i <= contador; i++)
-                        {
-                            if (codigoProducto.Text == productosArrays[i,0])
+                        
+                            conect.abrir();
+                            SqlCommand comando3 = new SqlCommand("select codigo_producto from Productos where  codigo_producto= '" + codigoProducto.Text + "'", conect.conexion);
+                            SqlDataReader registro3 = comando3.ExecuteReader();
+                            if (registro3.Read()&& codigoProducto.Enabled==true)
                             {
-                                igual= true;
-                            }
-                        }
+                                igual = true;
+                                errorProvider1.SetError(codigoProducto, "Codigo de Producto asignado a otro");
 
-                        if (igual == false)
+                            }
+                            conect.cerrar();
+
+                            for (int i = 0; i <= contador; i++)
+                            {
+                                if (codigoProducto.Text == productosArrays[i, 0])
+                                {
+                                    igual = true;
+                                    errorProvider1.SetError(codigoProducto, "Ya agrego este producto anteriormente a la factura");
+                                }
+                            }
+                            if (igual == false)
                         {
                             productosArrays[contador, 0] = codigoProducto.Text;
                             productosArrays[contador, 1] = descripcionProducto.Text;
@@ -284,10 +297,11 @@ namespace Pantallas_proyecto
                             descripcionProducto.Enabled = true;
                             codigoProducto.Enabled = true;
                             talla.Enabled = true;
+                            btnquitar.Visible = false;
                             categorias();
                         }
-                        else
-                            MessageBox.Show("Esta ingresando un producto que ya fue ingresado","Aviso",MessageBoxButtons.OK);
+                       // else
+                           // MessageBox.Show("Esta ingresando un producto que ya fue ingresado","Aviso",MessageBoxButtons.OK);
 
                     }
 
@@ -466,6 +480,9 @@ namespace Pantallas_proyecto
             descripcionProducto.Enabled = false;
             codigoProducto.Enabled = false;
             talla.Enabled = false;
+            btnquitar.Visible = true;
+            precioCompra.Text = "";
+            cantidad.Text = "";
             cmbCategoria.Text = dgvProductos.CurrentRow.Cells[1].Value.ToString();
             codigoProducto.Text = dgvProductos.CurrentRow.Cells[0].Value.ToString();
             descripcionProducto.Text = dgvProductos.CurrentRow.Cells[2].Value.ToString();
@@ -639,6 +656,15 @@ namespace Pantallas_proyecto
         {
             toolStripLabel1.Text = DateTime.Now.ToLongDateString();
             toolStripLabel2.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cmbCategoria.Enabled = true;
+            descripcionProducto.Enabled = true;
+            codigoProducto.Enabled = true;
+            talla.Enabled = true;
+            btnquitar.Visible = false;
         }
     }
 }

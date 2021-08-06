@@ -114,7 +114,7 @@ namespace Pantallas_proyecto
             conect2.abrir();
             cmd = new SqlCommand(" SET IDENTITY_INSERT Compras ON Insert into Compras (codigo_compra, fecha_compra ) values(" + codigo_compra + ", '" + descripcion_fecha + "') SET IDENTITY_INSERT Compras OFF ", conect2.conexion); //Asignacion de valores en la bd
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Los datos han sido insertados", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("La compra fue realizada", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             conect2.cerrar();
 
         }
