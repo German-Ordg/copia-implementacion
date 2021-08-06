@@ -142,7 +142,7 @@ namespace Pantallas_proyecto
                     connect.cerrar();
                     for (int i = 0; i < cont; i++)
                     {
-                        if (arrayCate[i] == txtCategoria.Text)
+                        if (arrayCate[i].ToLower() == txtCategoria.Text.ToLower())
                             resp = true;
                     }
 
@@ -230,10 +230,10 @@ namespace Pantallas_proyecto
                 connect.cerrar();
                 for (int i = 0; i < cont; i++)
                 {
-                    if (arrayCate[i] == txtCategoria.Text)
+                    if (arrayCate[i].ToLower() == txtCategoria.Text.ToLower())
                         resp = true;
                 }
-                if (resp != false)
+                if (resp == true)
                 {
                     errorProvider1.SetError(txtCategoria, "No se puede ingresar la misma categoria");
                 }
