@@ -213,11 +213,11 @@ namespace Pantallas_proyecto
                             cmd.ExecuteNonQuery();
                             MessageBox.Show("Se han ingresado los Datos con Exito ", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             conect.cargarDatosEmpleados(dgvEmpleados);
-                            txtNombre.Text = "";
-                            txtApellido.Text = "";
-                            txtIdentidad.Text = "";
+                            txtNombre.Clear();
+                            txtApellido.Clear();
+                            txtIdentidad.Clear();
                             
-                            txtNumeroTel.Text = "";
+                            txtNumeroTel.Clear();
                             dtpFechaNacimiento.Value = DateTime.Now.AddYears(-19);
                             dtpFechaIngreso.Text = DateTime.Now.ToShortDateString();
                             cmbGenero.SelectedIndex = -1;
@@ -370,11 +370,11 @@ namespace Pantallas_proyecto
                         MessageBox.Show("El registro fue actualizado exitosamente");
                         conect.cargarDatosEmpleados(dgvEmpleados);
                         conect.cerrar();
-                        txtNombre.Text = "";
-                        txtApellido.Text = "";
-                        txtIdentidad.Text = "";
+                        txtNombre.Clear();
+                        txtApellido.Clear();
+                        txtIdentidad.Clear();
                         
-                        txtNumeroTel.Text = "";
+                        txtNumeroTel.Clear();
                         dtpFechaNacimiento.Value = DateTime.Now.AddYears(-19);
                         dtpFechaIngreso.Text = DateTime.Now.ToShortDateString();
                         cmbGenero.SelectedIndex = -1;
@@ -433,6 +433,11 @@ namespace Pantallas_proyecto
         }
 
         private void dtpFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumeroTel_TextChanged(object sender, EventArgs e)
         {
 
         }
