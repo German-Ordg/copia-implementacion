@@ -71,7 +71,7 @@ namespace Pantallas_proyecto
         {
             dtpFechaNacimiento.MaxDate = DateTime.Now.AddYears(-18);
             dtpFechaIngreso.MaxDate = DateTime.Now.AddMonths(3);
-            dtpFechaIngreso.MinDate = DateTime.Now.AddMonths(-3);
+            dtpFechaIngreso.MinDate = DateTime.Now.AddYears(-200);
             dtpFechaNacimiento.MinDate = DateTime.Now.AddYears(-90);
             conect.abrir();
             conect.cargarDatosEmpleados(dgvEmpleados);
@@ -175,7 +175,7 @@ namespace Pantallas_proyecto
 
 
 
-                if (numero1 && letra1 && letra2 && numero2 && numero3)
+                if (numero1 && letra1 && letra2 && numero2 && numero3 && letra4)
                 {
 
                     conect.abrir();
@@ -260,7 +260,17 @@ namespace Pantallas_proyecto
             int codigo;
             indice = dgvEmpleados.CurrentRow.Index;
 
-            letra1 = false; letra2 = false; numero1 = false; numero2 = false;
+            letra1 = false; letra2 = false; letra4 = false; numero1 = false; numero2 = false;
+
+            if (validacion.Espacio_Blanco_CB(ErrorProvider1, cmbGenero))
+            {
+                if (validacion.Espacio_Blanco_CB(ErrorProvider1, cmbGenero))
+                    ErrorProvider1.SetError(cmbGenero, "no se puede dejar en blanco");
+            }
+            else
+            {
+                letra4 = true;
+            }
 
             if (validacion.Espacio_Blanco(ErrorProvider1, txtNombre) || validacion.Solo_Letras(ErrorProvider1, txtNombre))
             {
@@ -329,7 +339,7 @@ namespace Pantallas_proyecto
                     numero2 = true;
                 }
 
-                if (numero1 && letra1 && letra2 && numero2)
+                if (numero1 && letra1 && letra2 && numero2 && letra4)
                 {
 
                     try
