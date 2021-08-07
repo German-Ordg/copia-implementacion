@@ -52,7 +52,7 @@ namespace Pantallas_proyecto
         {
             FrmInventario menu = new FrmInventario();
             menu.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -71,7 +71,7 @@ namespace Pantallas_proyecto
         {
             frmPantallaFacturacion facturacion = new frmPantallaFacturacion();
             facturacion.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void label4_Click(object sender, EventArgs e)
