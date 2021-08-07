@@ -38,7 +38,7 @@ namespace Pantallas_proyecto
         {
             FrmAcceso acceso = new FrmAcceso();
             acceso.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnIngreso_Click(object sender, EventArgs e)
