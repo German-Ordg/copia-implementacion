@@ -58,9 +58,10 @@ namespace Pantallas_proyecto
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(59, 119);
+            label2.Location = new System.Drawing.Point(79, 146);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(82, 20);
+            label2.Size = new System.Drawing.Size(103, 25);
             label2.TabIndex = 33;
             label2.Text = "Categoría:";
             // 
@@ -70,9 +71,10 @@ namespace Pantallas_proyecto
             this.btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnregresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregresar.ForeColor = System.Drawing.Color.White;
-            this.btnregresar.Location = new System.Drawing.Point(550, 33);
+            this.btnregresar.Location = new System.Drawing.Point(733, 41);
+            this.btnregresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnregresar.Name = "btnregresar";
-            this.btnregresar.Size = new System.Drawing.Size(112, 26);
+            this.btnregresar.Size = new System.Drawing.Size(149, 32);
             this.btnregresar.TabIndex = 31;
             this.btnregresar.Text = "Regresar";
             this.btnregresar.UseVisualStyleBackColor = false;
@@ -80,9 +82,10 @@ namespace Pantallas_proyecto
             // 
             // txtcodigo
             // 
-            this.txtcodigo.Location = new System.Drawing.Point(178, 75);
+            this.txtcodigo.Location = new System.Drawing.Point(237, 92);
+            this.txtcodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(159, 20);
+            this.txtcodigo.Size = new System.Drawing.Size(211, 22);
             this.txtcodigo.TabIndex = 37;
             this.txtcodigo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -90,9 +93,10 @@ namespace Pantallas_proyecto
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(50, 171);
+            this.label3.Location = new System.Drawing.Point(67, 210);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 20);
+            this.label3.Size = new System.Drawing.Size(120, 25);
             this.label3.TabIndex = 34;
             this.label3.Text = "Descripción:";
             // 
@@ -100,9 +104,10 @@ namespace Pantallas_proyecto
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(78, 73);
+            this.label1.Location = new System.Drawing.Point(104, 90);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 20);
+            this.label1.Size = new System.Drawing.Size(81, 25);
             this.label1.TabIndex = 32;
             this.label1.Text = "Código:";
             // 
@@ -110,9 +115,10 @@ namespace Pantallas_proyecto
             // 
             this.cmbcategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbcategoria.FormattingEnabled = true;
-            this.cmbcategoria.Location = new System.Drawing.Point(178, 121);
+            this.cmbcategoria.Location = new System.Drawing.Point(237, 149);
+            this.cmbcategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbcategoria.Name = "cmbcategoria";
-            this.cmbcategoria.Size = new System.Drawing.Size(159, 21);
+            this.cmbcategoria.Size = new System.Drawing.Size(211, 24);
             this.cmbcategoria.TabIndex = 42;
             this.cmbcategoria.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -122,9 +128,10 @@ namespace Pantallas_proyecto
             this.btnaceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnaceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaceptar.ForeColor = System.Drawing.Color.White;
-            this.btnaceptar.Location = new System.Drawing.Point(550, 366);
+            this.btnaceptar.Location = new System.Drawing.Point(733, 450);
+            this.btnaceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnaceptar.Name = "btnaceptar";
-            this.btnaceptar.Size = new System.Drawing.Size(112, 26);
+            this.btnaceptar.Size = new System.Drawing.Size(149, 32);
             this.btnaceptar.TabIndex = 44;
             this.btnaceptar.Text = "Aceptar";
             this.btnaceptar.UseVisualStyleBackColor = false;
@@ -135,22 +142,24 @@ namespace Pantallas_proyecto
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gold;
-            this.label6.Location = new System.Drawing.Point(259, 12);
+            this.label6.Location = new System.Drawing.Point(345, 15);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(191, 49);
+            this.label6.Size = new System.Drawing.Size(241, 61);
             this.label6.TabIndex = 57;
             this.label6.Text = "HEAVEN";
             // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.toolStripLabel2,
             this.toolStripLabel3});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 407);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 497);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(684, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(912, 25);
             this.toolStrip1.TabIndex = 59;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -158,14 +167,14 @@ namespace Pantallas_proyecto
             // 
             this.toolStripLabel1.ForeColor = System.Drawing.Color.Black;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(111, 22);
             this.toolStripLabel1.Text = "toolStripLabel1";
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.ForeColor = System.Drawing.Color.Black;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(86, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(111, 22);
             this.toolStripLabel2.Text = "toolStripLabel2";
             // 
             // toolStripLabel3
@@ -179,10 +188,11 @@ namespace Pantallas_proyecto
             // 
             // txtdescripcion
             // 
-            this.txtdescripcion.Location = new System.Drawing.Point(178, 171);
+            this.txtdescripcion.Location = new System.Drawing.Point(237, 210);
+            this.txtdescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtdescripcion.Multiline = true;
             this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(464, 158);
+            this.txtdescripcion.Size = new System.Drawing.Size(617, 194);
             this.txtdescripcion.TabIndex = 60;
             // 
             // btnBuscar
@@ -191,9 +201,10 @@ namespace Pantallas_proyecto
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(377, 71);
+            this.btnBuscar.Location = new System.Drawing.Point(503, 87);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(112, 26);
+            this.btnBuscar.Size = new System.Drawing.Size(149, 32);
             this.btnBuscar.TabIndex = 61;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -209,10 +220,10 @@ namespace Pantallas_proyecto
             // 
             // frmInventarioParaEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(684, 432);
+            this.ClientSize = new System.Drawing.Size(912, 522);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtdescripcion);
             this.Controls.Add(this.toolStrip1);
@@ -226,9 +237,10 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.btnregresar);
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(710, 471);
-            this.MinimumSize = new System.Drawing.Size(700, 471);
+            this.MaximumSize = new System.Drawing.Size(930, 569);
+            this.MinimumSize = new System.Drawing.Size(930, 569);
             this.Name = "frmInventarioParaEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heaven Store - Inventario";
