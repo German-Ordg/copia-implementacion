@@ -26,7 +26,16 @@ namespace Pantallas_proyecto
         ClsConexionBD conect = new ClsConexionBD();
         SqlCommand cmd;
         validaciones validacion = new validaciones();
-
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -37,6 +46,8 @@ namespace Pantallas_proyecto
             //FrmInventario_Gerente menu = new FrmInventario_Gerente();
          //   menu.Show();
             this.Close();
+            FrmInventario_Gerente invtGer = new FrmInventario_Gerente();
+            invtGer.Show();
         }
 
       /*  private void button1_Click(object sender, EventArgs e)

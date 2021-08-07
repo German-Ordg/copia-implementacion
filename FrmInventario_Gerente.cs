@@ -43,7 +43,7 @@ namespace Pantallas_proyecto
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             frmInventarioParaEmpleado fact = new frmInventarioParaEmpleado();
             fact.Show();
         }
