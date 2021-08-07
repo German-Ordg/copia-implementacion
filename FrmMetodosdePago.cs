@@ -39,7 +39,7 @@ namespace Pantallas_proyecto
         {
             FrmMenuCRUD cRUD = new FrmMenuCRUD();
             cRUD.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void FrmMetodosdePago_Load(object sender, EventArgs e)
