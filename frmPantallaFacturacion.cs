@@ -181,20 +181,33 @@ namespace Pantallas_proyecto
 
                         cmd = new SqlCommand(buscarProducto, con.conexion);
                         dr = cmd.ExecuteReader();
-                        while (dr.Read())
+                        if (dr.HasRows)
                         {
-                            fac.DescripcionProducto = dr["descripcion"].ToString();
-                            fac.CantidadInventario = Int32.Parse(dr["cantidad"].ToString());
-                            fac.PrecioProducto = Double.Parse(dr["precio"].ToString());
-                            fac.DescuentoProducto = Double.Parse(dr["descuento"].ToString());
+                            while (dr.Read())
+                            {
+                                fac.DescripcionProducto = dr["descripcion"].ToString();
+                                fac.CantidadInventario = Int32.Parse(dr["cantidad"].ToString());
+                                fac.PrecioProducto = Double.Parse(dr["precio"].ToString());
+                                fac.DescuentoProducto = Double.Parse(dr["descuento"].ToString());
+
+                            }
+                            dr.Close();
+
+                            txtDescuento.Text = fac.DescuentoProducto.ToString();
+                            txtPrecioUnitario.Text = fac.PrecioProducto.ToString();
+                            txtDescripcion.Text = fac.DescripcionProducto;
+                            btnAgregar.Enabled = true;
                         }
-                        dr.Close();
+                        else
+                        {
+                            dr.Close();
+                            MessageBox.Show("No existe el producto en el sistema");
+                            txtDescuento.Clear();
+                            txtPrecioUnitario.Clear();
+                            txtDescripcion.Clear();
+                            btnAgregar.Enabled = false;
 
-                        txtDescuento.Text = fac.DescuentoProducto.ToString();
-                        txtPrecioUnitario.Text = fac.PrecioProducto.ToString();
-                        txtDescripcion.Text = fac.DescripcionProducto;
-                        btnAgregar.Enabled = true;
-
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -823,7 +836,7 @@ namespace Pantallas_proyecto
         {
             frmPantallaFacturacion ss = new frmPantallaFacturacion();
             ss.Show();
-            this.Hide();
+            this.Close();
         }
     }
 

@@ -55,12 +55,6 @@ namespace Pantallas_proyecto
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.lstCompras = new System.Windows.Forms.DataGridView();
-            this.CodProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -109,6 +103,12 @@ namespace Pantallas_proyecto
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnNuevaFactura = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CodProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lstCompras)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -133,7 +133,7 @@ namespace Pantallas_proyecto
             this.brnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brnRegresar.ForeColor = System.Drawing.Color.White;
             this.brnRegresar.Location = new System.Drawing.Point(1188, 13);
-            this.brnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brnRegresar.Margin = new System.Windows.Forms.Padding(4);
             this.brnRegresar.Name = "brnRegresar";
             this.brnRegresar.Size = new System.Drawing.Size(139, 28);
             this.brnRegresar.TabIndex = 23;
@@ -163,9 +163,9 @@ namespace Pantallas_proyecto
             this.groupBox5.Controls.Add(this.label20);
             this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(28, 498);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(920, 134);
             this.groupBox5.TabIndex = 22;
             this.groupBox5.TabStop = false;
@@ -175,7 +175,7 @@ namespace Pantallas_proyecto
             // 
             this.txtTotalPagar.Enabled = false;
             this.txtTotalPagar.Location = new System.Drawing.Point(759, 86);
-            this.txtTotalPagar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotalPagar.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalPagar.Name = "txtTotalPagar";
             this.txtTotalPagar.Size = new System.Drawing.Size(132, 22);
             this.txtTotalPagar.TabIndex = 27;
@@ -184,7 +184,7 @@ namespace Pantallas_proyecto
             // 
             this.txtISV18.Enabled = false;
             this.txtISV18.Location = new System.Drawing.Point(759, 55);
-            this.txtISV18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtISV18.Margin = new System.Windows.Forms.Padding(4);
             this.txtISV18.Name = "txtISV18";
             this.txtISV18.Size = new System.Drawing.Size(132, 22);
             this.txtISV18.TabIndex = 26;
@@ -193,7 +193,7 @@ namespace Pantallas_proyecto
             // 
             this.txtISV15.Enabled = false;
             this.txtISV15.Location = new System.Drawing.Point(759, 23);
-            this.txtISV15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtISV15.Margin = new System.Windows.Forms.Padding(4);
             this.txtISV15.Name = "txtISV15";
             this.txtISV15.Size = new System.Drawing.Size(132, 22);
             this.txtISV15.TabIndex = 25;
@@ -232,7 +232,7 @@ namespace Pantallas_proyecto
             // 
             this.txtImporteAgrabado18.Enabled = false;
             this.txtImporteAgrabado18.Location = new System.Drawing.Point(517, 86);
-            this.txtImporteAgrabado18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtImporteAgrabado18.Margin = new System.Windows.Forms.Padding(4);
             this.txtImporteAgrabado18.Name = "txtImporteAgrabado18";
             this.txtImporteAgrabado18.Size = new System.Drawing.Size(132, 22);
             this.txtImporteAgrabado18.TabIndex = 21;
@@ -241,7 +241,7 @@ namespace Pantallas_proyecto
             // 
             this.txtImporteAgrabado15.Enabled = false;
             this.txtImporteAgrabado15.Location = new System.Drawing.Point(517, 55);
-            this.txtImporteAgrabado15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtImporteAgrabado15.Margin = new System.Windows.Forms.Padding(4);
             this.txtImporteAgrabado15.Name = "txtImporteAgrabado15";
             this.txtImporteAgrabado15.Size = new System.Drawing.Size(132, 22);
             this.txtImporteAgrabado15.TabIndex = 20;
@@ -250,7 +250,7 @@ namespace Pantallas_proyecto
             // 
             this.txtImporteExonerado.Enabled = false;
             this.txtImporteExonerado.Location = new System.Drawing.Point(517, 23);
-            this.txtImporteExonerado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtImporteExonerado.Margin = new System.Windows.Forms.Padding(4);
             this.txtImporteExonerado.Name = "txtImporteExonerado";
             this.txtImporteExonerado.Size = new System.Drawing.Size(132, 22);
             this.txtImporteExonerado.TabIndex = 19;
@@ -289,7 +289,7 @@ namespace Pantallas_proyecto
             // 
             this.txtImporteExcento.Enabled = false;
             this.txtImporteExcento.Location = new System.Drawing.Point(204, 86);
-            this.txtImporteExcento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtImporteExcento.Margin = new System.Windows.Forms.Padding(4);
             this.txtImporteExcento.Name = "txtImporteExcento";
             this.txtImporteExcento.Size = new System.Drawing.Size(132, 22);
             this.txtImporteExcento.TabIndex = 15;
@@ -298,7 +298,7 @@ namespace Pantallas_proyecto
             // 
             this.txtSubTotal.Enabled = false;
             this.txtSubTotal.Location = new System.Drawing.Point(204, 55);
-            this.txtSubTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSubTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtSubTotal.Name = "txtSubTotal";
             this.txtSubTotal.Size = new System.Drawing.Size(132, 22);
             this.txtSubTotal.TabIndex = 14;
@@ -307,7 +307,7 @@ namespace Pantallas_proyecto
             // 
             this.txtDescuentosOtorgados.Enabled = false;
             this.txtDescuentosOtorgados.Location = new System.Drawing.Point(204, 23);
-            this.txtDescuentosOtorgados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescuentosOtorgados.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescuentosOtorgados.Name = "txtDescuentosOtorgados";
             this.txtDescuentosOtorgados.Size = new System.Drawing.Size(132, 22);
             this.txtDescuentosOtorgados.TabIndex = 13;
@@ -351,7 +351,7 @@ namespace Pantallas_proyecto
             this.btnCalcularFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalcularFactura.ForeColor = System.Drawing.Color.White;
             this.btnCalcularFactura.Location = new System.Drawing.Point(984, 508);
-            this.btnCalcularFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCalcularFactura.Margin = new System.Windows.Forms.Padding(4);
             this.btnCalcularFactura.Name = "btnCalcularFactura";
             this.btnCalcularFactura.Size = new System.Drawing.Size(201, 43);
             this.btnCalcularFactura.TabIndex = 28;
@@ -367,7 +367,7 @@ namespace Pantallas_proyecto
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Location = new System.Drawing.Point(27, 167);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(91, 37);
             this.btnAgregar.TabIndex = 7;
@@ -383,7 +383,7 @@ namespace Pantallas_proyecto
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Location = new System.Drawing.Point(123, 167);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(92, 37);
             this.btnEditar.TabIndex = 8;
@@ -404,7 +404,7 @@ namespace Pantallas_proyecto
             this.Total});
             this.lstCompras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lstCompras.Location = new System.Drawing.Point(72, 246);
-            this.lstCompras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstCompras.Margin = new System.Windows.Forms.Padding(4);
             this.lstCompras.MultiSelect = false;
             this.lstCompras.Name = "lstCompras";
             this.lstCompras.ReadOnly = true;
@@ -413,59 +413,6 @@ namespace Pantallas_proyecto
             this.lstCompras.Size = new System.Drawing.Size(1136, 234);
             this.lstCompras.TabIndex = 20;
             this.lstCompras.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.editar);
-            // 
-            // CodProducto
-            // 
-            this.CodProducto.HeaderText = "CodProducto";
-            this.CodProducto.MinimumWidth = 100;
-            this.CodProducto.Name = "CodProducto";
-            this.CodProducto.ReadOnly = true;
-            this.CodProducto.Width = 125;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 50;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 93;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.MinimumWidth = 270;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 270;
-            // 
-            // PrecioUnitario
-            // 
-            this.PrecioUnitario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.PrecioUnitario.HeaderText = "PrecioUnitario";
-            this.PrecioUnitario.MinimumWidth = 6;
-            this.PrecioUnitario.Name = "PrecioUnitario";
-            this.PrecioUnitario.ReadOnly = true;
-            this.PrecioUnitario.Width = 126;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column2.HeaderText = "Descuentos y Rebajas Otorgadas";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 167;
-            // 
-            // Total
-            // 
-            this.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 102;
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Width = 102;
             // 
             // label10
             // 
@@ -502,9 +449,9 @@ namespace Pantallas_proyecto
             this.groupBox3.Controls.Add(this.lblRTN);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(17, 114);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(628, 124);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
@@ -513,7 +460,7 @@ namespace Pantallas_proyecto
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(435, 32);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(185, 69);
@@ -532,7 +479,7 @@ namespace Pantallas_proyecto
             // txtNombreCliente
             // 
             this.txtNombreCliente.Location = new System.Drawing.Point(229, 79);
-            this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(172, 22);
             this.txtNombreCliente.TabIndex = 10;
@@ -592,7 +539,7 @@ namespace Pantallas_proyecto
             // txtRTN
             // 
             this.txtRTN.Location = new System.Drawing.Point(229, 32);
-            this.txtRTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRTN.Margin = new System.Windows.Forms.Padding(4);
             this.txtRTN.MaxLength = 14;
             this.txtRTN.Name = "txtRTN";
             this.txtRTN.Size = new System.Drawing.Size(172, 22);
@@ -619,9 +566,9 @@ namespace Pantallas_proyecto
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(17, 17);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(628, 89);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
@@ -633,7 +580,7 @@ namespace Pantallas_proyecto
             this.cmbVendedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVendedor.FormattingEnabled = true;
             this.cmbVendedor.Location = new System.Drawing.Point(400, 54);
-            this.cmbVendedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbVendedor.Margin = new System.Windows.Forms.Padding(4);
             this.cmbVendedor.Name = "cmbVendedor";
             this.cmbVendedor.Size = new System.Drawing.Size(209, 24);
             this.cmbVendedor.TabIndex = 5;
@@ -654,7 +601,7 @@ namespace Pantallas_proyecto
             this.cmbTipoPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoPago.FormattingEnabled = true;
             this.cmbTipoPago.Location = new System.Drawing.Point(400, 21);
-            this.cmbTipoPago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTipoPago.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipoPago.Name = "cmbTipoPago";
             this.cmbTipoPago.Size = new System.Drawing.Size(209, 24);
             this.cmbTipoPago.TabIndex = 3;
@@ -673,7 +620,7 @@ namespace Pantallas_proyecto
             // 
             this.dtFecha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtFecha.Location = new System.Drawing.Point(67, 33);
-            this.dtFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(245, 22);
             this.dtFecha.TabIndex = 1;
@@ -710,9 +657,9 @@ namespace Pantallas_proyecto
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(653, 21);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(633, 217);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
@@ -726,7 +673,7 @@ namespace Pantallas_proyecto
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
             this.btnActualizar.Location = new System.Drawing.Point(227, 167);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(96, 37);
             this.btnActualizar.TabIndex = 22;
@@ -742,7 +689,7 @@ namespace Pantallas_proyecto
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Location = new System.Drawing.Point(331, 167);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(96, 37);
             this.btnEliminar.TabIndex = 21;
@@ -771,6 +718,7 @@ namespace Pantallas_proyecto
             this.nudCantidad.Location = new System.Drawing.Point(483, 26);
             this.nudCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nudCantidad.Name = "nudCantidad";
+            this.nudCantidad.ReadOnly = true;
             this.nudCantidad.Size = new System.Drawing.Size(120, 24);
             this.nudCantidad.TabIndex = 19;
             // 
@@ -778,7 +726,7 @@ namespace Pantallas_proyecto
             // 
             this.txtDescuento.Enabled = false;
             this.txtDescuento.Location = new System.Drawing.Point(492, 129);
-            this.txtDescuento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescuento.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescuento.Name = "txtDescuento";
             this.txtDescuento.Size = new System.Drawing.Size(111, 24);
             this.txtDescuento.TabIndex = 17;
@@ -797,7 +745,7 @@ namespace Pantallas_proyecto
             // 
             this.txtPrecioUnitario.Enabled = false;
             this.txtPrecioUnitario.Location = new System.Drawing.Point(132, 129);
-            this.txtPrecioUnitario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrecioUnitario.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioUnitario.Name = "txtPrecioUnitario";
             this.txtPrecioUnitario.Size = new System.Drawing.Size(132, 24);
             this.txtPrecioUnitario.TabIndex = 15;
@@ -827,7 +775,7 @@ namespace Pantallas_proyecto
             // 
             this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Location = new System.Drawing.Point(132, 63);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(481, 58);
@@ -858,7 +806,7 @@ namespace Pantallas_proyecto
             // txtCodProducto
             // 
             this.txtCodProducto.Location = new System.Drawing.Point(132, 26);
-            this.txtCodProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodProducto.Name = "txtCodProducto";
             this.txtCodProducto.Size = new System.Drawing.Size(135, 24);
             this.txtCodProducto.TabIndex = 1;
@@ -883,7 +831,7 @@ namespace Pantallas_proyecto
             this.btnImprimirFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimirFactura.ForeColor = System.Drawing.Color.White;
             this.btnImprimirFactura.Location = new System.Drawing.Point(984, 572);
-            this.btnImprimirFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnImprimirFactura.Margin = new System.Windows.Forms.Padding(4);
             this.btnImprimirFactura.Name = "btnImprimirFactura";
             this.btnImprimirFactura.Size = new System.Drawing.Size(201, 48);
             this.btnImprimirFactura.TabIndex = 29;
@@ -1023,13 +971,66 @@ namespace Pantallas_proyecto
             // 
             this.pictureBox1.Image = global::Pantallas_proyecto.Properties.Resources.Letras1;
             this.pictureBox1.Location = new System.Drawing.Point(36, 14);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(191, 37);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // CodProducto
+            // 
+            this.CodProducto.HeaderText = "Codigo Producto";
+            this.CodProducto.MinimumWidth = 100;
+            this.CodProducto.Name = "CodProducto";
+            this.CodProducto.ReadOnly = true;
+            this.CodProducto.Width = 125;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 50;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 93;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.MinimumWidth = 270;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 270;
+            // 
+            // PrecioUnitario
+            // 
+            this.PrecioUnitario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.PrecioUnitario.HeaderText = "Precio Unitario";
+            this.PrecioUnitario.MinimumWidth = 6;
+            this.PrecioUnitario.Name = "PrecioUnitario";
+            this.PrecioUnitario.ReadOnly = true;
+            this.PrecioUnitario.Width = 119;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column2.HeaderText = "Descuentos y Rebajas Otorgadas";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 167;
+            // 
+            // Total
+            // 
+            this.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 102;
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            this.Total.Width = 102;
             // 
             // frmPantallaFacturacion
             // 
@@ -1045,7 +1046,7 @@ namespace Pantallas_proyecto
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1358, 845);
             this.MinimumSize = new System.Drawing.Size(1358, 845);
@@ -1151,14 +1152,14 @@ namespace Pantallas_proyecto
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ErrorProvider ErrorProvider;
+        private System.Windows.Forms.Button btnNuevaFactura;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.ErrorProvider ErrorProvider;
-        private System.Windows.Forms.Button btnNuevaFactura;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
