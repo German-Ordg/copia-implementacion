@@ -43,14 +43,14 @@ namespace Pantallas_proyecto
         {
             frmPuestosTrabajo clientes = new frmPuestosTrabajo();
             clientes.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             FrmMenuPrincipalGerente principalGerente = new FrmMenuPrincipalGerente();
             principalGerente.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -94,28 +94,28 @@ namespace Pantallas_proyecto
         {
             FrmEmpleados empleados = new FrmEmpleados();
             empleados.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmUsuarios usuarios = new frmUsuarios();
             usuarios.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmProveedores proveedores = new frmProveedores();
             proveedores.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void métodoDePagoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmMetodosdePago metodosdePago = new FrmMetodosdePago();
             metodosdePago.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -146,7 +146,7 @@ namespace Pantallas_proyecto
         {
             FrmCategorias categorias = new FrmCategorias();
             categorias.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }
