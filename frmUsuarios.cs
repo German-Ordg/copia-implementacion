@@ -52,7 +52,7 @@ namespace Pantallas_proyecto
         {
             FrmMenuCRUD cRUD = new FrmMenuCRUD();
             cRUD.Show();
-            this.Hide();
+            this.Close();
         }
 
         private Boolean email_bien_escrito(String email)
