@@ -42,7 +42,7 @@ namespace Pantallas_proyecto
         {
             FrmMenuCRUD menuCRUD = new FrmMenuCRUD();
             menuCRUD.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
