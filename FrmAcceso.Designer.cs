@@ -45,7 +45,6 @@ namespace Pantallas_proyecto
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -251,17 +250,6 @@ namespace Pantallas_proyecto
             this.lblHora.Text = "12:47";
             this.lblHora.Click += new System.EventHandler(this.lblHora_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(674, 254);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 19);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -293,7 +281,6 @@ namespace Pantallas_proyecto
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(818, 467);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.btnSalir);
@@ -334,7 +321,6 @@ namespace Pantallas_proyecto
         private System.Windows.Forms.Label lblError;
         public System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContrasena;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
