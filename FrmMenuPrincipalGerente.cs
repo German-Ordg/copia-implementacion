@@ -36,35 +36,35 @@ namespace Pantallas_proyecto
         {
             FrmInventario_Gerente inventario_Gerente = new FrmInventario_Gerente();
             inventario_Gerente.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             frmReportes reportes = new frmReportes();
             reportes.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             frmPantallaFacturacion facturacion = new frmPantallaFacturacion();
             facturacion.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             FrmCompras compras = new FrmCompras();
             compras.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             FrmMenuCRUD cRUD = new FrmMenuCRUD();
             cRUD.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
